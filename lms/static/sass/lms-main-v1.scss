@@ -1,0 +1,208 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  margin: 0;
+  background-color: #fbfbfb;
+  font-family: 'Open Sans', sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #a1a1a1; }
+  a:hover {
+    cursor: pointer; }
+
+:focus {
+  outline: none; }
+
+.hidden {
+  display: none; }
+
+.nav-skip {
+  display: none; }
+
+h2 .text {
+  color: #0a4f7d;
+  text-transform: uppercase; }
+
+.form-field input, .form-field textarea {
+  border: none;
+  border-radius: 2px; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+.login-register {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+  .login-register::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-top: 30px;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  padding: 20px 20px; }
+  .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child {
+    margin-right: 0; }
+  .login-register .form-wrapper .login-form .section-title.lines, .login-register .form-wrapper .register-form .section-title.lines {
+    position: absolute;
+    top: 20px; }
+    .login-register .form-wrapper .login-form .section-title.lines h2 .text, .login-register .form-wrapper .register-form .section-title.lines h2 .text {
+      background-color: #323232;
+      color: white;
+      padding: 9px 15px;
+      border-radius: 2px;
+      font-size: 17px;
+      font-weight: lighter; }
+  .login-register .form-wrapper .login-form p.sr, .login-register .form-wrapper .register-form p.sr {
+    display: none; }
+  .login-register .form-wrapper .login-form .form-field, .login-register .form-wrapper .register-form .form-field {
+    margin: 20px 0;
+    font-size: 1em; }
+    .login-register .form-wrapper .login-form .form-field .tip.tip-input, .login-register .form-wrapper .register-form .form-field .tip.tip-input {
+      color: #a1a1a1; }
+    .login-register .form-wrapper .login-form .form-field > *, .login-register .form-wrapper .register-form .form-field > * {
+      display: block;
+      line-height: 2em;
+      font-size: 0.8em; }
+    .login-register .form-wrapper .login-form .form-field > input, .login-register .form-wrapper .login-form .form-field > textarea, .login-register .form-wrapper .register-form .form-field > input, .login-register .form-wrapper .register-form .form-field > textarea {
+      background-color: #f2f2f2;
+      padding: 5px 12px;
+      font-size: 1em;
+      width: 100%; }
+    .login-register .form-wrapper .login-form .form-field > label, .login-register .form-wrapper .register-form .form-field > label {
+      text-transform: uppercase;
+      font-weight: bold; }
+    .login-register .form-wrapper .login-form .form-field.checkbox-remember > *, .login-register .form-wrapper .register-form .form-field.checkbox-remember > * {
+      display: inline-block;
+      width: auto;
+      vertical-align: middle; }
+    .login-register .form-wrapper .login-form .form-field.checkbox-remember > label, .login-register .form-wrapper .register-form .form-field.checkbox-remember > label {
+      text-transform: none;
+      font-weight: normal; }
+    .login-register .form-wrapper .login-form .form-field.checkbox-remember > input, .login-register .form-wrapper .register-form .form-field.checkbox-remember > input {
+      font-size: 0.8em; }
+  .login-register .form-wrapper .login-form button.action.action-primary, .login-register .form-wrapper .register-form button.action.action-primary {
+    background-color: #efa82c;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    padding: 9px 15px;
+    font-size: 17px;
+    font-weight: lighter; }
+    .login-register .form-wrapper .login-form button.action.action-primary:hover, .login-register .form-wrapper .register-form button.action.action-primary:hover {
+      cursor: pointer; }
+
+.login-register .form-wrapper .toggle-form {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-top: 30px; }
+  .login-register .form-wrapper .toggle-form:last-child {
+    margin-right: 0; }
+  .login-register .form-wrapper .toggle-form .section-title {
+    margin-bottom: 30px; }
+  .login-register .form-wrapper .toggle-form h2 .text {
+    font-size: 17px;
+    font-weight: bold; }
+  .login-register .form-wrapper .toggle-form .nav-btn.form-toggle {
+    background-color: #323232;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    padding: 9px 15px;
+    font-size: 17px;
+    font-weight: lighter; }
+    .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:hover {
+      cursor: pointer; }
+
+.header-global-new {
+  background-color: #fbfaf8;
+  border-bottom: #dddddd 1px solid;
+  box-shadow: 0 1px 1px #dddddd;
+  padding: 15px 0;
+  margin-bottom: 20px; }
+
+.wrapper-header {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto; }
+  .wrapper-header::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .wrapper-header .logo, .wrapper-header .item, .wrapper-header .list-inline, .wrapper-header .nav-account-management {
+    display: inline-block;
+    float: left; }
+  .wrapper-header .nav-account-management {
+    margin-left: 30px; }
+    .wrapper-header .nav-account-management .item {
+      margin: 0 5px; }
+      .wrapper-header .nav-account-management .item .btn.btn-login, .wrapper-header .nav-account-management .item .btn-neutral.btn-register {
+        line-height: 50px;
+        padding: 0 10px;
+        vertical-align: middle;
+        display: inline-block;
+        text-transform: uppercase;
+        color: #777777; }
