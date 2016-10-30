@@ -115,8 +115,13 @@ html {
   .login-register .form-wrapper .login-form p.sr, .login-register .form-wrapper .register-form p.sr {
     display: none; }
   .login-register .form-wrapper .login-form .form-field, .login-register .form-wrapper .register-form .form-field {
+    display: block;
     margin: 20px 0;
     font-size: 1em; }
+    .login-register .form-wrapper .login-form .form-field::after, .login-register .form-wrapper .register-form .form-field::after {
+      clear: both;
+      content: "";
+      display: block; }
     .login-register .form-wrapper .login-form .form-field .tip.tip-input, .login-register .form-wrapper .register-form .form-field .tip.tip-input {
       color: #a1a1a1; }
     .login-register .form-wrapper .login-form .form-field > *, .login-register .form-wrapper .register-form .form-field > * {
