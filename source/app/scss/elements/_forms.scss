@@ -26,9 +26,12 @@
 
   input[type="checkbox"] {
     width: auto;
-    display: inline-block;
+    position: absolute;
+    // font size will affect only mobile browsers
+    font-size: .6em;
+    transform: scale(1.2);
     &+label {
-      display: inline-block;
+      text-indent: 2em;
     }
   }
 
