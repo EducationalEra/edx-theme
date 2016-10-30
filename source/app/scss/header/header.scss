@@ -1,0 +1,30 @@
+.header-global-new {
+  background-color: #fbfaf8;
+  border-bottom: #dddddd 1px solid;
+  box-shadow: 0 1px 1px #dddddd;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.wrapper-header {
+  @include outer-container();
+
+  .logo, .item, .list-inline, .nav-account-management {
+    display: inline-block;
+    float: left;
+  }
+  .nav-account-management {
+    margin-left: 30px;
+    .item {
+      margin: 0 5px;
+      .btn.btn-login, .btn-neutral.btn-register {
+        line-height: 50px;
+        padding: 0 10px;
+        vertical-align: middle;
+        display: inline-block;
+        text-transform: uppercase;
+        color: #777777;
+      }
+    }
+  }
+}
