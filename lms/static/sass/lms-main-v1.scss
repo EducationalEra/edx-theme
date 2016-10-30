@@ -81,7 +81,7 @@ html {
   box-sizing: inherit; }
 
 .login-register {
-  max-width: 1200px;
+  max-width: 75em;
   margin-left: auto;
   margin-right: auto;
   position: relative; }
@@ -91,17 +91,35 @@ html {
     display: block; }
 
 .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
   margin-top: 30px;
   border-radius: 2px;
   border: 1px solid #dddddd;
   background-color: #ffffff;
   padding: 20px 20px; }
-  .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child {
-    margin-right: 0; }
+  @media screen and (min-width: 62.5em) {
+    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 62.4375em) {
+    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 20em) {
+    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child {
+        margin-right: 0; } }
   .login-register .form-wrapper .login-form .section-title.lines, .login-register .form-wrapper .register-form .section-title.lines {
     position: absolute;
     top: 20px; }
@@ -158,13 +176,31 @@ html {
       cursor: pointer; }
 
 .login-register .form-wrapper .toggle-form {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
   margin-top: 30px; }
-  .login-register .form-wrapper .toggle-form:last-child {
-    margin-right: 0; }
+  @media screen and (min-width: 62.5em) {
+    .login-register .form-wrapper .toggle-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .login-register .form-wrapper .toggle-form:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 62.4375em) {
+    .login-register .form-wrapper .toggle-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .login-register .form-wrapper .toggle-form:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 20em) {
+    .login-register .form-wrapper .toggle-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .login-register .form-wrapper .toggle-form:last-child {
+        margin-right: 0; } }
   .login-register .form-wrapper .toggle-form .section-title {
     margin-bottom: 30px; }
   .login-register .form-wrapper .toggle-form h2 .text {
@@ -190,7 +226,7 @@ html {
   margin-bottom: 20px; }
 
 .wrapper-header {
-  max-width: 1200px;
+  max-width: 75em;
   margin-left: auto;
   margin-right: auto; }
   .wrapper-header::after {
@@ -211,3 +247,90 @@ html {
         display: inline-block;
         text-transform: uppercase;
         color: #777777; }
+
+.wrapper-footer {
+  background-color: #323232;
+  color: #fff;
+  padding: 50px 0; }
+  .wrapper-footer .container {
+    max-width: 75em;
+    margin-left: auto;
+    margin-right: auto; }
+    .wrapper-footer .container::after {
+      clear: both;
+      content: "";
+      display: block; }
+  .wrapper-footer .col {
+    margin: 0;
+    box-sizing: border-box; }
+    @media screen and (min-width: 62.5em) {
+      .wrapper-footer .col {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%; }
+        .wrapper-footer .col:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 62.4375em) {
+      .wrapper-footer .col {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 23.23176%;
+        padding: 0 10px; }
+        .wrapper-footer .col:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 20em) {
+      .wrapper-footer .col {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%;
+        padding: 0 30px; }
+        .wrapper-footer .col:last-child {
+          margin-right: 0; } }
+    .wrapper-footer .col .footer_logo {
+      width: 100px;
+      display: block;
+      margin: 0 0 20px; }
+      .wrapper-footer .col .footer_logo + p {
+        margin-top: 20px; }
+    .wrapper-footer .col p, .wrapper-footer .col li {
+      font-size: 12px;
+      line-height: 17px;
+      color: #eee;
+      margin-top: 0; }
+    .wrapper-footer .col ul {
+      margin: 8px 0;
+      padding: 0;
+      display: block; }
+      .wrapper-footer .col ul li {
+        margin: 0 0 0 10px;
+        padding: 0;
+        display: block; }
+        .wrapper-footer .col ul li + li {
+          margin-top: 8px; }
+      .wrapper-footer .col ul + p {
+        margin-top: 17px; }
+    .wrapper-footer .col a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+      .wrapper-footer .col a:hover {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.8); }
+  .wrapper-footer .footer_menu_links {
+    margin-top: 0 !important; }
+    .wrapper-footer .footer_menu_links li {
+      margin-left: 0 !important; }
+      .wrapper-footer .footer_menu_links li.login {
+        margin-top: 16px; }
+  .wrapper-footer .copy {
+    position: absolute;
+    bottom: 0; }
+    @media screen and (max-width: 20em) {
+      .wrapper-footer .copy {
+        position: relative; } }
+
+@media screen and (max-width: 20em) {
+  .mh {
+    display: none !important; } }
