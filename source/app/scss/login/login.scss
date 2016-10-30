@@ -1,3 +1,5 @@
+@import "grid/media";
+
 @mixin button($color) {
   background-color: $color;
   text-transform: uppercase;
@@ -21,7 +23,18 @@
 
 .login-register .form-wrapper {
   .login-form, .register-form {
-    @include span-columns(6 of 12);
+    @include media($desktop) {
+      @include span-columns(6 of 12);
+    }
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+    }
+
+    @include media($mobile) {
+      @include span-columns(12 of 12);
+    }
+
     margin-top: 30px;
     border-radius: 2px;
     border: 1px solid #dddddd;
@@ -99,7 +112,18 @@
   }
 
   .toggle-form {
-    @include span-columns(6 of 12);
+    @include media($desktop) {
+      @include span-columns(6 of 12);
+    }
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+    }
+
+    @include media($mobile) {
+      @include span-columns(12 of 12);
+    }
+
     margin-top: 30px;
 
     .section-title {
