@@ -1,0 +1,61 @@
+.home {
+  @include responsive-outer-container();
+  .courses-container {
+    .courses-listing {
+      .courses-listing-item .course {
+        @include row();
+
+        border-bottom: 1px solid $light-gray;
+        border-top: 1px solid $light-gray;
+        margin-top: -1px;
+
+        padding: 2em 0;
+        position: relative;
+        box-sizing: border-box;
+
+        margin: 0;
+        box-sizing: border-box;
+
+        .course-image {
+          @include span-columns(3 of 12);
+        }
+
+        .course-info {
+          @include span-columns(6 of 12);
+        }
+
+        .sr {
+          @include span-columns(3 of 12);
+        }
+
+        .learn-more {
+          font-size: 1em;
+          font-weight: bold;
+          @include edx-button($yellow);
+        }
+
+        .course-name {
+          & > * {
+            display: block;
+          }
+
+          .course-organization {
+            text-transform: uppercase;
+            color: $dark-gray;
+            font: {
+              size: .7em;
+            }
+            margin-bottom: 1em;
+          }
+
+          .course-code, .course-title {
+            font: {
+              size: 2em;
+              weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}

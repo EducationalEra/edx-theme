@@ -1,6 +1,5 @@
+// resets unneeded styles
 @import "normalize.css";
-@import "main/main";
-
 // bourbon framework
 @import "bourbon";
 // set of helpers for responsiveness
@@ -8,11 +7,16 @@
 // bourbon bitters, set of predefined with bare minimum design base elements
 @import "base/base";
 
+@import "main/main";
+
 // elements
 @import "elements/forms";
 @import "elements/buttons";
 
+// pages
 @import "login/login";
-@import "header/header";
+@import "dashboard/dashboard";
 
+// parts
+@import "header/header";
 @import "footer/footer";

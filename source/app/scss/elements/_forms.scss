@@ -28,8 +28,8 @@
     width: auto;
     position: absolute;
     // font size will affect only mobile browsers
-    font-size: .6em;
-    transform: scale(1.2);
+    font-size: .8em;
+    vertical-align: middle;
     &+label {
       text-indent: 2em;
     }
@@ -44,7 +44,7 @@
   }
 }
 
-.tip.tip-input {
+.tip {
   color: $light-gray-link;
   font-size: .8em;
 }

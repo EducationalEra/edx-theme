@@ -1,15 +1,31 @@
 @mixin edx-button($color) {
   background-color: $color;
-  text-transform: uppercase;
   color: $white;
-  border-radius: $base-border-radius;
+
   border: none;
-  padding: 9px 15px;
-  font: {
-    size: 17px;
-    weight: lighter;
+  border-radius: $base-border-radius;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.75em 1em;
+
+  text: {
+    align: center;
+    transform: uppercase;
   }
+  font: {
+    size: $base-font-size;
+    weight: normal;
+    family: $base-font-family;
+  }
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  @extend .z-depth-1;
+  transition: .1s ease-out;
+
   &:hover {
-    cursor: pointer;
+    background-color: lighten($color, 10%);
+    @extend .z-depth-2;
   }
 }

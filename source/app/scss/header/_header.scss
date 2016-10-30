@@ -8,7 +8,7 @@
 .wrapper-header {
   @include responsive-outer-container();
 
-  // make everything float from left corner and display in one line
+  // makes everything float from left corner and display in one line
   .logo, .item, .list-inline, .nav-account-management {
     display: inline-block;
     float: left;

@@ -86,14 +86,6 @@
       }
     }
   }
-  .copy {
-    position: absolute;
-    bottom: 0;
-
-    @include media($mobile) {
-      position: relative;
-    }
-  }
 }
 
 .mh {

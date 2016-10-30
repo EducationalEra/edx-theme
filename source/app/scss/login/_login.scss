@@ -19,7 +19,7 @@
       @include span-columns(12 of 12);
     }
 
-    margin-top: 30px;
+    margin-top: 3em;
   }
 
   .login-form, .register-form {
@@ -38,7 +38,7 @@
           padding: 9px 15px;
           border-radius: $base-border-radius;
           font: {
-            size: 17px;
+            size: 1em;
             weight: lighter;
           }
         }
@@ -49,24 +49,14 @@
       display: none;
     }
 
-    .form-field {
-
-      // &.checkbox-remember {
-      //   & > * {
-      //     display: inline-block;
-      //     width: auto;
-      //     vertical-align: middle;
-      //   }
-      //
-      //   & > label {
-      //     text-transform: none;
-      //     font-weight: normal;
-      //   }
-      // }
-    }
-
     button.action.action-primary {
       @include edx-button($yellow);
+    }
+
+    button[type="submit"]+p.note {
+      float: right;
+      line-height: 40px;
+      color: $light-gray-link;;
     }
   }
 
@@ -77,7 +67,7 @@
     h2 {
       .text {
         font: {
-          size: 17px;
+          size: 1em;
           weight: bold;
         }
       }
