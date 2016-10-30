@@ -4,8 +4,11 @@ var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
 var notify = require('gulp-notify');
 var rename = require('gulp-rename');
+
+// includes
 var bourbon = require('bourbon').includePaths;
 var neat = require('bourbon-neat').includePaths;
+var normalizeCSS = path.join(__dirname, 'node_modules/normalize.css');
 
 var targetPath = path.join(__dirname, '../lms/static/sass');
 
@@ -24,7 +27,7 @@ gulp.task('serve', ['sass'], function () {
                     return [
                       '<link rel="stylesheet" type="text/css" href="lms-main-v1.css"/>',
                       browserSyncJS
-                    ];
+                    ].join('');
                 }
             }
         }
@@ -41,6 +44,7 @@ gulp.task('sass', function () {
         .pipe(sass({
             // load bourbon and bourbon-neat properly in scss environment
             includePaths: [].concat(
+              normalizeCSS,
               bourbon,
               neat
             )

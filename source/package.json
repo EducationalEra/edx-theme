@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "bourbon": "^4.2.7",
-    "bourbon-neat": "^1.8.0"
+    "bourbon-neat": "^1.8.0",
+    "normalize.css": "^5.0.0"
   }
 }
