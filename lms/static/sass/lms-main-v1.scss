@@ -1,64 +1,74 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+@import url(normalize.css);
+html {
+  box-sizing: border-box; }
 
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+ul,
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+dl {
+  margin-bottom: 0.75em; }
+  dl dt {
+    font-weight: bold;
+    margin-top: 0.75em; }
+  dl dd {
+    margin: 0; }
 
 body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-body {
-  margin: 0;
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  -moz-font-feature-settings: "kern", "liga", "pnum";
+  -ms-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
+  color: #323232;
+  font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
   background-color: #fbfbfb;
-  font-family: 'Open Sans', sans-serif; }
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border: 0; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+p {
+  margin: 0 0 0.75em; }
 
 a {
+  color: #a1a1a1;
   text-decoration: none;
-  color: #a1a1a1; }
-  a:hover {
-    cursor: pointer; }
+  transition: color 0.1s linear; }
+  a:active, a:focus, a:hover {
+    color: #7b7b7b; }
+  a:active, a:focus {
+    outline: none; }
 
-:focus {
-  outline: none; }
+hr {
+  border-bottom: 1px solid #dddddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0; }
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%; }
 
 .hidden {
   display: none; }
@@ -66,164 +76,279 @@ a {
 .nav-skip {
   display: none; }
 
+:focus {
+  outline: none; }
+
+a:hover, a:active {
+  cursor: pointer;
+  color: #6e6e6e; }
+
+.z-depth-0 {
+  box-shadow: none !important; }
+
+.z-depth-1, .login-register .form-wrapper .login-form button.action.action-primary, .login-register .form-wrapper .register-form button.action.action-primary, .login-register .form-wrapper .toggle-form .nav-btn.form-toggle, .home .courses-container .courses-listing .courses-listing-item .course .learn-more {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+
+.z-depth-1-half {
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2); }
+
+.z-depth-2, .login-register .form-wrapper .login-form button.action.action-primary:hover, .login-register .form-wrapper .register-form button.action.action-primary:hover, .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:hover, .home .courses-container .courses-listing .courses-listing-item .course .learn-more:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
+
+.z-depth-3 {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3); }
+
+.z-depth-4 {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3); }
+
+.z-depth-5 {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3); }
+
 h2 .text {
   color: #0a4f7d;
   text-transform: uppercase; }
 
-.form-field input, .form-field textarea {
-  border: none;
-  border-radius: 2px; }
+.form-field {
+  display: block;
+  margin: 2em 0; }
+  .form-field::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .form-field input, .form-field label, .form-field textarea, .form-field select {
+    display: block; }
+  .form-field label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+    margin: .3em 0; }
+  .form-field input, .form-field textarea, .form-field select {
+    border: none;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: .7em 1em;
+    font-size: 1em;
+    width: 100%; }
+  .form-field input[type="checkbox"] {
+    width: auto;
+    position: absolute;
+    font-size: .8em;
+    vertical-align: middle; }
+    .form-field input[type="checkbox"] + label {
+      text-indent: 2em; }
+  .form-field select {
+    height: 2.5em; }
+  .form-field textarea {
+    height: 6em; }
 
-html {
-  box-sizing: border-box; }
-
-*, *::after, *::before {
-  box-sizing: inherit; }
+.tip {
+  color: #a1a1a1;
+  font-size: .8em; }
 
 .login-register {
   max-width: 75em;
   margin-left: auto;
-  margin-right: auto;
-  position: relative; }
+  margin-right: auto; }
   .login-register::after {
     clear: both;
     content: "";
     display: block; }
+  @media screen and (min-width: 62.5em) {
+    .login-register {
+      padding: 0 10px; } }
+  @media screen and (max-width: 62.4375em) {
+    .login-register {
+      padding: 0 10px; } }
+  @media screen and (max-width: 20em) {
+    .login-register {
+      padding: 0 10px; } }
+
+.login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form {
+  margin-top: 3em; }
+  @media screen and (min-width: 62.5em) {
+    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 62.4375em) {
+    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 20em) {
+    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child {
+        margin-right: 0; } }
 
 .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
-  margin-top: 30px;
   border-radius: 2px;
   border: 1px solid #dddddd;
   background-color: #ffffff;
-  padding: 20px 20px; }
-  @media screen and (min-width: 62.5em) {
-    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 62.4375em) {
-    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 20em) {
-    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child {
-        margin-right: 0; } }
-  .login-register .form-wrapper .login-form .section-title.lines, .login-register .form-wrapper .register-form .section-title.lines {
-    position: absolute;
-    top: 20px; }
-    .login-register .form-wrapper .login-form .section-title.lines h2 .text, .login-register .form-wrapper .register-form .section-title.lines h2 .text {
-      background-color: #323232;
-      color: white;
-      padding: 9px 15px;
-      border-radius: 2px;
-      font-size: 17px;
-      font-weight: lighter; }
+  padding: 20px; }
+  .login-register .form-wrapper .login-form .section-title, .login-register .form-wrapper .register-form .section-title {
+    position: relative; }
+    .login-register .form-wrapper .login-form .section-title h2, .login-register .form-wrapper .register-form .section-title h2 {
+      position: absolute;
+      top: -30px; }
+      .login-register .form-wrapper .login-form .section-title h2 .text, .login-register .form-wrapper .register-form .section-title h2 .text {
+        background-color: #323232;
+        color: #ffffff;
+        padding: 9px 15px;
+        border-radius: 3px;
+        font-size: 1em;
+        font-weight: lighter; }
   .login-register .form-wrapper .login-form p.sr, .login-register .form-wrapper .register-form p.sr {
     display: none; }
-  .login-register .form-wrapper .login-form .form-field, .login-register .form-wrapper .register-form .form-field {
+  .login-register .form-wrapper .login-form button.action.action-primary, .login-register .form-wrapper .register-form button.action.action-primary {
+    background-color: #efa82c;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.75em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: .1s ease-out; }
+    .login-register .form-wrapper .login-form button.action.action-primary:hover, .login-register .form-wrapper .register-form button.action.action-primary:hover {
+      background-color: #f3bc5b; }
+  .login-register .form-wrapper .login-form button[type="submit"] + p.note, .login-register .form-wrapper .register-form button[type="submit"] + p.note {
+    float: right;
+    line-height: 40px;
+    color: #a1a1a1; }
+
+.login-register .form-wrapper .toggle-form .section-title {
+  margin-bottom: 30px; }
+
+.login-register .form-wrapper .toggle-form h2 .text {
+  font-size: 1em;
+  font-weight: bold; }
+
+.login-register .form-wrapper .toggle-form .nav-btn.form-toggle {
+  background-color: #323232;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.75em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: .1s ease-out; }
+  .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:hover {
+    background-color: #4c4c4c; }
+
+.home {
+  max-width: 75em;
+  margin-left: auto;
+  margin-right: auto; }
+  .home::after {
+    clear: both;
+    content: "";
+    display: block; }
+  @media screen and (min-width: 62.5em) {
+    .home {
+      padding: 0 10px; } }
+  @media screen and (max-width: 62.4375em) {
+    .home {
+      padding: 0 10px; } }
+  @media screen and (max-width: 20em) {
+    .home {
+      padding: 0 10px; } }
+  .home .courses-container .courses-listing .courses-listing-item .course {
     display: block;
-    margin: 20px 0;
-    font-size: 1em; }
-    .login-register .form-wrapper .login-form .form-field::after, .login-register .form-wrapper .register-form .form-field::after {
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    margin-top: -1px;
+    padding: 2em 0;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box; }
+    .home .courses-container .courses-listing .courses-listing-item .course::after {
       clear: both;
       content: "";
       display: block; }
-    .login-register .form-wrapper .login-form .form-field .tip.tip-input, .login-register .form-wrapper .register-form .form-field .tip.tip-input {
-      color: #a1a1a1; }
-    .login-register .form-wrapper .login-form .form-field > *, .login-register .form-wrapper .register-form .form-field > * {
+    .home .courses-container .courses-listing .courses-listing-item .course .course-image {
+      float: left;
       display: block;
-      line-height: 2em;
-      font-size: 0.8em; }
-    .login-register .form-wrapper .login-form .form-field > input, .login-register .form-wrapper .login-form .form-field > textarea, .login-register .form-wrapper .register-form .form-field > input, .login-register .form-wrapper .register-form .form-field > textarea {
-      background-color: #f2f2f2;
-      padding: 5px 12px;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .home .courses-container .courses-listing .courses-listing-item .course .course-image:last-child {
+        margin-right: 0; }
+    .home .courses-container .courses-listing .courses-listing-item .course .course-info {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .home .courses-container .courses-listing .courses-listing-item .course .course-info:last-child {
+        margin-right: 0; }
+    .home .courses-container .courses-listing .courses-listing-item .course .sr {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 23.23176%; }
+      .home .courses-container .courses-listing .courses-listing-item .course .sr:last-child {
+        margin-right: 0; }
+    .home .courses-container .courses-listing .courses-listing-item .course .learn-more {
       font-size: 1em;
-      width: 100%; }
-    .login-register .form-wrapper .login-form .form-field > label, .login-register .form-wrapper .register-form .form-field > label {
+      font-weight: bold;
+      background-color: #efa82c;
+      color: #ffffff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.75em 1em;
+      text-align: center;
       text-transform: uppercase;
-      font-weight: bold; }
-    .login-register .form-wrapper .login-form .form-field.checkbox-remember > *, .login-register .form-wrapper .register-form .form-field.checkbox-remember > * {
-      display: inline-block;
-      width: auto;
-      vertical-align: middle; }
-    .login-register .form-wrapper .login-form .form-field.checkbox-remember > label, .login-register .form-wrapper .register-form .form-field.checkbox-remember > label {
-      text-transform: none;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: "Proxima Nova", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      transition: .1s ease-out; }
+      .home .courses-container .courses-listing .courses-listing-item .course .learn-more:hover {
+        background-color: #f3bc5b; }
+    .home .courses-container .courses-listing .courses-listing-item .course .course-name > * {
+      display: block; }
+    .home .courses-container .courses-listing .courses-listing-item .course .course-name .course-organization {
+      text-transform: uppercase;
+      color: #323232;
+      font-size: .7em;
+      margin-bottom: 1em; }
+    .home .courses-container .courses-listing .courses-listing-item .course .course-name .course-code, .home .courses-container .courses-listing .courses-listing-item .course .course-name .course-title {
+      font-size: 2em;
       font-weight: normal; }
-    .login-register .form-wrapper .login-form .form-field.checkbox-remember > input, .login-register .form-wrapper .register-form .form-field.checkbox-remember > input {
-      font-size: 0.8em; }
-  .login-register .form-wrapper .login-form button.action.action-primary, .login-register .form-wrapper .register-form button.action.action-primary {
-    background-color: #efa82c;
-    text-transform: uppercase;
-    color: white;
-    border-radius: 2px;
-    border: none;
-    padding: 9px 15px;
-    font-size: 17px;
-    font-weight: lighter; }
-    .login-register .form-wrapper .login-form button.action.action-primary:hover, .login-register .form-wrapper .register-form button.action.action-primary:hover {
-      cursor: pointer; }
-
-.login-register .form-wrapper .toggle-form {
-  margin-top: 30px; }
-  @media screen and (min-width: 62.5em) {
-    .login-register .form-wrapper .toggle-form {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      .login-register .form-wrapper .toggle-form:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 62.4375em) {
-    .login-register .form-wrapper .toggle-form {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      .login-register .form-wrapper .toggle-form:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 20em) {
-    .login-register .form-wrapper .toggle-form {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .login-register .form-wrapper .toggle-form:last-child {
-        margin-right: 0; } }
-  .login-register .form-wrapper .toggle-form .section-title {
-    margin-bottom: 30px; }
-  .login-register .form-wrapper .toggle-form h2 .text {
-    font-size: 17px;
-    font-weight: bold; }
-  .login-register .form-wrapper .toggle-form .nav-btn.form-toggle {
-    background-color: #323232;
-    text-transform: uppercase;
-    color: white;
-    border-radius: 2px;
-    border: none;
-    padding: 9px 15px;
-    font-size: 17px;
-    font-weight: lighter; }
-    .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:hover {
-      cursor: pointer; }
 
 .header-global-new {
   background-color: #fbfaf8;
-  border-bottom: #dddddd 1px solid;
   box-shadow: 0 1px 1px #dddddd;
-  padding: 15px 0;
-  margin-bottom: 20px; }
+  border-bottom: #dddddd 1px solid;
+  margin-bottom: 1.5em; }
 
 .wrapper-header {
   max-width: 75em;
@@ -233,24 +358,30 @@ html {
     clear: both;
     content: "";
     display: block; }
+  @media screen and (min-width: 62.5em) {
+    .wrapper-header {
+      padding: 0 10px; } }
+  @media screen and (max-width: 62.4375em) {
+    .wrapper-header {
+      padding: 0 10px; } }
+  @media screen and (max-width: 20em) {
+    .wrapper-header {
+      padding: 0 10px; } }
   .wrapper-header .logo, .wrapper-header .item, .wrapper-header .list-inline, .wrapper-header .nav-account-management {
     display: inline-block;
     float: left; }
-  .wrapper-header .nav-account-management {
-    margin-left: 30px; }
-    .wrapper-header .nav-account-management .item {
-      margin: 0 5px; }
-      .wrapper-header .nav-account-management .item .btn.btn-login, .wrapper-header .nav-account-management .item .btn-neutral.btn-register {
-        line-height: 50px;
-        padding: 0 10px;
-        vertical-align: middle;
-        display: inline-block;
-        text-transform: uppercase;
-        color: #777777; }
+  .wrapper-header .logo, .wrapper-header .item {
+    margin: 1em .3em; }
+  .wrapper-header .nav-account-management .item .btn.btn-login, .wrapper-header .nav-account-management .item .btn-neutral.btn-register {
+    line-height: 45px;
+    padding: 0 1em;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #a1a1a1; }
 
 .wrapper-footer {
   background-color: #323232;
-  color: #fff;
+  color: #ffffff;
   padding: 50px 0; }
   .wrapper-footer .container {
     max-width: 75em;
@@ -260,6 +391,15 @@ html {
       clear: both;
       content: "";
       display: block; }
+    @media screen and (min-width: 62.5em) {
+      .wrapper-footer .container {
+        padding: 0 10px; } }
+    @media screen and (max-width: 62.4375em) {
+      .wrapper-footer .container {
+        padding: 0 10px; } }
+    @media screen and (max-width: 20em) {
+      .wrapper-footer .container {
+        padding: 0 10px; } }
   .wrapper-footer .col {
     margin: 0;
     box-sizing: border-box; }
@@ -276,8 +416,7 @@ html {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 23.23176%;
-        padding: 0 10px; }
+        width: 23.23176%; }
         .wrapper-footer .col:last-child {
           margin-right: 0; } }
     @media screen and (max-width: 20em) {
@@ -285,8 +424,7 @@ html {
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 100%;
-        padding: 0 30px; }
+        width: 100%; }
         .wrapper-footer .col:last-child {
           margin-right: 0; } }
     .wrapper-footer .col .footer_logo {
@@ -324,12 +462,6 @@ html {
       margin-left: 0 !important; }
       .wrapper-footer .footer_menu_links li.login {
         margin-top: 16px; }
-  .wrapper-footer .copy {
-    position: absolute;
-    bottom: 0; }
-    @media screen and (max-width: 20em) {
-      .wrapper-footer .copy {
-        position: relative; } }
 
 @media screen and (max-width: 20em) {
   .mh {
