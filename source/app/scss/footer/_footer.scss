@@ -2,17 +2,16 @@
 @import "grid/media";
 
 .wrapper-footer {
-  background-color: #323232;
-  color: #fff;
+  background-color: $dark-gray;
+  color: $white;
   padding: 50px 0;
 
   .container {
-    @include outer-container();
+    @include responsive-outer-container();
   }
 
   .col {
     margin: 0;
-    // float: left;
     box-sizing: border-box;
 
     @include media($desktop) {
@@ -21,12 +20,10 @@
 
     @include media($tablet) {
       @include span-columns(3 of 12);
-      padding: 0 10px;
     }
 
     @include media($mobile) {
       @include span-columns(12 of 12);
-      padding: 0 30px;
     }
 
     .footer_logo {

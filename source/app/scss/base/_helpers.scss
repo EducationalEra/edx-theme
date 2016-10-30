@@ -1,0 +1,42 @@
+// helper for js based hiding of elements
+.hidden {
+  display: none;
+}
+
+// hide "skip main content"
+.nav-skip {
+  display: none;
+}
+
+// disable blue glow
+:focus {
+  outline: none;
+}
+
+a {
+  &:hover, &:active {
+    cursor: pointer;
+    color: darken($action-color, 20%);
+  }
+}
+
+@mixin block-frame() {
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+}
+
+@mixin responsive-outer-container() {
+  @include outer-container();
+
+  @include media($desktop) {
+    padding: 0 10px;
+  }
+
+  @include media($tablet) {
+    padding: 0 10px;
+  }
+
+  @include media($mobile) {
+    padding: 0 10px;
+  }
+}

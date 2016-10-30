@@ -1,0 +1,91 @@
+@import "grid/media";
+
+.login-register {
+  @include responsive-outer-container();
+}
+
+.login-register .form-wrapper {
+  // make all these blocks responsive
+  .login-form, .register-form, .toggle-form {
+    @include media($desktop) {
+      @include span-columns(6 of 12);
+    }
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+    }
+
+    @include media($mobile) {
+      @include span-columns(12 of 12);
+    }
+
+    margin-top: 30px;
+  }
+
+  .login-form, .register-form {
+    @include block-frame;
+    background-color: $white;
+    padding: 20px;
+
+    .section-title {
+      position: relative;
+      h2 {
+        position: absolute;
+        top: -30px;
+        .text {
+          background-color: $dark-gray;
+          color: $white;
+          padding: 9px 15px;
+          border-radius: $base-border-radius;
+          font: {
+            size: 17px;
+            weight: lighter;
+          }
+        }
+      }
+    }
+
+    p.sr {
+      display: none;
+    }
+
+    .form-field {
+
+      // &.checkbox-remember {
+      //   & > * {
+      //     display: inline-block;
+      //     width: auto;
+      //     vertical-align: middle;
+      //   }
+      //
+      //   & > label {
+      //     text-transform: none;
+      //     font-weight: normal;
+      //   }
+      // }
+    }
+
+    button.action.action-primary {
+      @include edx-button($yellow);
+    }
+  }
+
+  .toggle-form {
+    .section-title {
+      margin-bottom: 30px;
+    }
+    h2 {
+      .text {
+        font: {
+          size: 17px;
+          weight: bold;
+        }
+      }
+    }
+
+    .nav-btn.form-toggle {
+      @include edx-button($dark-gray);
+    }
+
+  }
+}

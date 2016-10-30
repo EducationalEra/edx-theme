@@ -1,0 +1,32 @@
+.header-global-new {
+  background-color: $header-background;
+  box-shadow: 0 1px 1px $header-border;
+  border-bottom: $header-border 1px solid;
+  margin-bottom: 1.5em;
+}
+
+.wrapper-header {
+  @include responsive-outer-container();
+
+  // make everything float from left corner and display in one line
+  .logo, .item, .list-inline, .nav-account-management {
+    display: inline-block;
+    float: left;
+  }
+
+  .logo, .item {
+    margin: 1em .3em;
+  }
+
+  .nav-account-management {
+    .item {
+      .btn.btn-login, .btn-neutral.btn-register {
+        line-height: 45px;
+        padding: 0 1em;
+        display: inline-block;
+        text-transform: uppercase;
+        color: $action-color;
+      }
+    }
+  }
+}

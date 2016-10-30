@@ -1,10 +1,16 @@
 @import "normalize.css";
 @import "main/main";
 
+// bourbon framework
 @import "bourbon";
+// set of helpers for responsiveness
 @import "neat";
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+// bourbon bitters, set of predefined with bare minimum design base elements
 @import "base/base";
+
+// elements
+@import "elements/forms";
+@import "elements/buttons";
 
 @import "login/login";
 @import "header/header";

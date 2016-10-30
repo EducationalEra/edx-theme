@@ -1,0 +1,15 @@
+@mixin edx-button($color) {
+  background-color: $color;
+  text-transform: uppercase;
+  color: $white;
+  border-radius: $base-border-radius;
+  border: none;
+  padding: 9px 15px;
+  font: {
+    size: 17px;
+    weight: lighter;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
