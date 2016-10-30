@@ -1,5 +1,7 @@
 .idea
 npm-debug.log
 node_modules/
+
+# ignore built css
 source/app/css
-**/css
+lms/static/css
