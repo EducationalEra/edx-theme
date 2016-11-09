@@ -1,307 +1,44 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%! from django.utils.translation import ugettext as _ %>
+${_("Thank you for creating an account with {platform_name}!").format(platform_name=settings.PLATFORM_NAME)}
+${_("There's just one more step before you can enroll in a course: "
+    "You need to activate your {platform_name} account. To activate "
+    "your account, click the following link. If that doesn't work, "
+    "copy and paste the link into your browser's address bar.").format(
+      platform_name=settings.PLATFORM_NAME
+    )}
 
-<head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title></title>
+% if is_secure:
+  https://${ site }/activate/${ key }
+% else:
+  http://${ site }/activate/${ key }
+% endif
 
+${_("After you activate your account, you can take "
+    "any of the hundreds of courses {platform_name} "
+    "offers. You will receive occasional email "
+    "messages from {platform_name} about new courses "
+    "or other information."
+  ).format(platform_name=settings.PLATFORM_NAME)}
 
-<style type="text/css">
-	@media only screen and (max-width: 480px){
-		body,table,td,p,a,li,blockquote{
-			-webkit-text-size-adjust:none !important;
-		}
+${_("If you need help, please use our web form at "
+    "{contact_us_url}, email {info_email_address}, "
+    "or write to {info_postal_address}."
+  ).format(
+    contact_us_url="https://www.edx.org/contact-us",
+    info_email_address=settings.CONTACT_EMAIL,
+    info_postal_address=settings.CONTACT_MAILING_ADDRESS
+  )}
 
-}	@media only screen and (max-width: 480px){
-		body{
-			width:100% !important;
-			min-width:100% !important;
-		}
+${_("We hope you enjoy learning with {platform_name}!").format(
+    platform_name=settings.PLATFORM_NAME
+)}
 
-}	@media only screen and (max-width: 480px){
-		td[id=bodyCell]{
-			padding:10px !important;
-		}
+${_("The {platform_name} Team").format(platform_name=settings.PLATFORM_NAME)}
 
-}	@media only screen and (max-width: 480px){
-		table.kmMobileHide{
-			display:none !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		table[class=kmTextContentContainer]{
-			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		table[class=kmBoxedTextContentContainer]{
-			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		td[class=kmImageContent]{
-			padding-left:0 !important;
-			padding-right:0 !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		img[class=kmImage]{
-			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		table[class=kmSplitContentLeftContentContainer],table[class=kmSplitContentRightContentContainer],table[class=kmColumnContainer],td[class=kmVerticalButtonBarContentOuter] table[class=kmButtonBarContent],td[class=kmVerticalButtonCollectionContentOuter] table[class=kmButtonCollectionContent],table[class=kmVerticalButton],table[class=kmVerticalButtonContent]{
-			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		td[class=kmButtonCollectionInner]{
-			padding-left:9px !important;
-			padding-right:9px !important;
-			padding-top:9px !important;
-			padding-bottom:0 !important;
-			background-color:transparent !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		td[class=kmVerticalButtonIconContent],td[class=kmVerticalButtonTextContent],td[class=kmVerticalButtonContentOuter]{
-			padding-left:0 !important;
-			padding-right:0 !important;
-			padding-bottom:9px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		table[class=kmSplitContentLeftContentContainer] td[class=kmTextContent],table[class=kmSplitContentRightContentContainer] td[class=kmTextContent],table[class=kmColumnContainer] td[class=kmTextContent],table[class=kmSplitContentLeftContentContainer] td[class=kmImageContent],table[class=kmSplitContentRightContentContainer] td[class=kmImageContent]{
-			padding-top:9px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		td[class=rowContainer kmFloatLeft],td[class=rowContainer kmFloatLeft firstColumn],td[class=rowContainer kmFloatLeft lastColumn]{
-			float:left;
-			clear:both;
-			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		table[id=templateContainer],table[class=templateRow]{
-			max-width:600px !important;
-			width:100% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		h1{
-			font-size:24px !important;
-			line-height:130% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		h2{
-			font-size:20px !important;
-			line-height:130% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		h3{
-			font-size:18px !important;
-			line-height:130% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		h4{
-			font-size:16px !important;
-			line-height:130% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		td[class=kmTextContent]{
-			font-size:14px !important;
-			line-height:130% !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		td[class=kmTextBlockInner] td[class=kmTextContent]{
-			padding-right:18px !important;
-			padding-left:18px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		table[class=kmTableBlock kmTableMobile] td[class=kmTableBlockInner]{
-			padding-left:9px !important;
-			padding-right:9px !important;
-		}
-
-}	@media only screen and (max-width: 480px){
-		table[class=kmTableBlock kmTableMobile] td[class=kmTableBlockInner] [class=kmTextContent]{
-			font-size:14px !important;
-			line-height:130% !important;
-			padding-left:4px !important;
-			padding-right:4px !important;
-		}
-
-}</style></head>
-
-<body style="margin:0;padding:0;background-color:#FFF">
-<center>
-  <table align="center" border="0" cellpadding="0" cellspacing="0" id="bodyTable" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding:0;background-color:#FFF;height:100%;margin:0;width:100%">
-    <tbody>
-    <tr>
-      <td align="center" id="bodyCell" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:50px;padding-left:20px;padding-bottom:20px;padding-right:20px;border-top:0;height:100%;margin:0;width:100%">
-        <table border="0" cellpadding="0" cellspacing="0" id="templateContainer" width="600" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;border:1px none #AAA;background-color:#FFF;border-radius:0">
-          <tbody>
-          <tr>
-            <td id="templateContainerInner" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding:0">
-              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                <tr>
-                  <td align="center" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                    <table border="0" cellpadding="0" cellspacing="0" class="templateRow" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                      <tbody>
-                      <tr>
-                        <td class="rowContainer kmFloatLeft" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                          <table border="0" cellpadding="0" cellspacing="0" class="kmImageBlock" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                            <tbody class="kmImageBlockOuter">
-                            <tr>
-                              <td class="kmImageBlockInner" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding:0px;" valign="top">
-                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="kmImageContentContainer" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                  <tbody>
-                                  <tr>
-                                    <td class="kmImageContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding:0;padding:0;text-align: center;">
-                                      <a href="https://www.ed-era.com/" target="_self" style="word-wrap:break-word;color:#0000CD;font-weight:normal;text-decoration:underline">
-                                        <img align="center" alt="Освітній проект EdEra" class="kmImage" src="https://d3k81ch9hvuctc.cloudfront.net/company%2FeMvsbb%2Fimages%2Fheader_email_template+3.png" width="600" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;padding-bottom:0;display:inline;vertical-align:bottom;max-width:1200px;">
-                                      </a>
-                                    </td>
-                                  </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="center" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                    <table border="0" cellpadding="0" cellspacing="0" class="templateRow" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                      <tbody>
-                      <tr>
-                        <td class="rowContainer kmFloatLeft" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                          <table border="0" cellpadding="0" cellspacing="0" class="kmTextBlock" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                            <tbody class="kmTextBlockOuter">
-                            <tr>
-                              <td class="kmTextBlockInner" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
-                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="kmTextContentContainer" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                  <tbody>
-                                  <tr>
-                                    <td class="kmTextContent" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;color:#505050;font-family:Helvetica, Arial;font-size:14px;line-height:150%;text-align:left;padding-top:9px;padding-bottom:9px;padding-left:18px;padding-right:18px;">
-                                      <h1 style="color:#222;display:block;font-family:Helvetica, Arial;font-size:26px;font-style:normal;font-weight:bold;line-height:110%;letter-spacing:normal;margin:0;margin-bottom:9px;text-align:left"><span style="font-size:14px;">Hi from EdEra!</span></h1>
-                                      <h3 style="color:#666;display:block;font-family:Helvetica, Arial;font-size:16px;font-style:normal;font-weight:normal;line-height:110%;letter-spacing:normal;margin:0;margin-bottom:9px;text-align:left"><span style="font-size:14px;">Thank you for creating an account!</span></h3>
-                                      <h3 style="color:#666;display:block;font-family:Helvetica, Arial;font-size:16px;font-style:normal;font-weight:normal;line-height:110%;letter-spacing:normal;margin:0;margin-bottom:9px;text-align:left"><span style="font-size:14px;">There's just one more step before you can enroll in a course: You need to activate your Your Platform Name Here account. To activate your account, click the following link. If that doesn't work, copy and paste the link into your browser's address bar.</span></h3>
-                                      <h3 style="color:#666;display:block;font-family:Helvetica, Arial;font-size:16px;font-style:normal;font-weight:normal;line-height:110%;letter-spacing:normal;margin:0;margin-bottom:9px;text-align:left"><span style="font-size:14px;">https://${ site }/activate/${ key }</span></h3>
-                                      <h3 style="color:#666;display:block;font-family:Helvetica, Arial;font-size:16px;font-style:normal;font-weight:normal;line-height:110%;letter-spacing:normal;margin:0;margin-bottom:9px;text-align:left"><span style="font-size:14px;">If it wasn't you, you don't need to do anything - you will not receive any email from us anymore. Please, do not answer this email. For any questions please send an email to <a href="mailto:info@ed-era.com" target="_blank">info@ed-era.com</a>.</span></h3>
-                                      <h3 style="color:#666;display:block;font-family:Helvetica, Arial;font-size:16px;font-style:normal;font-weight:normal;line-height:110%;letter-spacing:normal;margin:0;margin-bottom:9px;text-align:left"><span style="font-size:14px;">Sincerely <font color="#054F81">Ed</font><font color="#EFA72D">Era</font> team</span></h3>
-                                    </td>
-                                  </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            </tbody>
-                          </table>
-                          <table border="0" cellpadding="0" cellspacing="0" class="kmButtonBarBlock" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                            <tbody class="kmButtonBarOuter">
-                            <tr>
-                              <td class="kmButtonBarInner" align="center" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-top:9px;padding-bottom:9px;padding-left:9px;padding-right:9px;">
-                                <table border="0" cellpadding="0" cellspacing="0" class="kmButtonBarContentContainer" width="100%" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                  <tbody>
-                                  <tr>
-                                    <td align="left" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-left:9px;padding-right:9px;">
-                                      <table border="0" cellpadding="0" cellspacing="0" class="kmButtonBarContent" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;font-family:Helvetica, Arial">
-                                        <tbody>
-                                        <tr>
-                                          <td align="left" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                              <tbody>
-                                              <tr>
-                                                <td valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                                  <table align="left" border="0" cellpadding="0" cellspacing="0" class="" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                                    <tbody>
-                                                    <tr>
-                                                      <td align="center" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-right:10px;">
-                                                        <a href="https://www.facebook.com/NewEdEra" target="_blank" style="word-wrap:break-word;color:#0000CD;font-weight:normal;text-decoration:underline"><img src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/facebook_48.png" alt="EdEra on FB" class="kmButtonBlockIcon" width="40" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;width:40px; max-width:40px; display:block;">
-                                                        </a>
-                                                      </td>
-                                                    </tr>
-                                                    </tbody>
-                                                  </table>
-                                                  <!--[if gte mso 6]></td><td align="left" valign="top"><![endif]-->
-                                                  <table align="left" border="0" cellpadding="0" cellspacing="0" class="" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                                    <tbody>
-                                                    <tr>
-                                                      <td align="center" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-right:10px;">
-                                                        <a href="https://vk.com/ed_era" target="_blank" style="word-wrap:break-word;color:#0000CD;font-weight:normal;text-decoration:underline"><img src="https://d3k81ch9hvuctc.cloudfront.net/company%2FeMvsbb%2Fimages%2FVk_icon.png" alt="EdEra on VK" class="kmButtonBlockIcon" width="40" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;width:40px; max-width:40px; display:block;">
-                                                        </a>
-                                                      </td>
-                                                    </tr>
-                                                    </tbody>
-                                                  </table>
-                                                  <!--[if gte mso 6]></td><td align="left" valign="top"><![endif]-->
-                                                  <table align="left" border="0" cellpadding="0" cellspacing="0" class="" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                                    <tbody>
-                                                    <tr>
-                                                      <td align="center" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;padding-right:10px;">
-                                                        <a href="https://twitter.com/info_edera" target="_blank" style="word-wrap:break-word;color:#0000CD;font-weight:normal;text-decoration:underline"><img src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/twitter_48.png" alt="EdEra on Twitter" class="kmButtonBlockIcon" width="40" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;width:40px; max-width:40px; display:block;">
-                                                        </a>
-                                                      </td>
-                                                    </tr>
-                                                    </tbody>
-                                                  </table>
-                                                  <!--[if gte mso 6]></td><td align="left" valign="top"><![endif]-->
-                                                  <table align="left" border="0" cellpadding="0" cellspacing="0" class="" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0">
-                                                    <tbody>
-                                                    <tr>
-                                                      <td align="center" valign="top" style="border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;">
-                                                        <a href="https://www.youtube.com/channel/UCBJx3fpN2SY9W9zY3e2R1RA" target="_blank" style="word-wrap:break-word;color:#0000CD;font-weight:normal;text-decoration:underline"><img src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/default/youtube_48.png" alt="EdEra on Youtube" class="kmButtonBlockIcon" width="40" style="border:0;height:auto;line-height:100%;outline:none;text-decoration:none;width:40px; max-width:40px; display:block;">
-                                                        </a>
-                                                      </td>
-                                                    </tr>
-                                                    </tbody>
-                                                  </table>
-                                                  <!--[if gte mso 6]></td><td align="left" valign="top"><![endif]-->
-                                                </td>
-                                              </tr>
-                                              </tbody>
-                                            </table>
-                                          </td>
-                                        </tr>
-                                        </tbody>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                  </tbody>
-                                </table>
-                              </td>
-                            </tr>
-                            </tbody>
-                          </table>
-                        </td>
-                      </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-</center>
-</body>
-
-</html>
+${_("This email message was automatically sent by {site_name} because "
+     "someone attempted to create an account on {platform_name} using "
+     "this email address."
+    ).format(
+      site_name=settings.SITE_NAME,
+      platform_name=settings.PLATFORM_NAME
+    )}
