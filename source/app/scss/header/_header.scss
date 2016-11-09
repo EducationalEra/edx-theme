@@ -5,28 +5,120 @@
   margin-bottom: 1.5em;
 }
 
+@mixin header-item-base($float: left) {
+  line-height: 45px;
+  display: inline-block;
+  margin: 1em .3em;
+  font-weight: 500;
+  float: $float;
+}
+
 .wrapper-header {
   @include responsive-outer-container();
 
   // makes everything float from left corner and display in one line
-  .logo, .item, .list-inline, .nav-account-management {
+  .list-inline, .nav-account-management {
     display: inline-block;
     float: left;
   }
 
-  .logo, .item {
-    margin: 1em .3em;
+  .logo {
+    @include header-item-base;
+
+    a {
+      float: left;
+      line-height: 0;
+    }
   }
 
   .nav-account-management {
     .item {
+      @include header-item-base;
       .btn.btn-login, .btn-neutral.btn-register {
-        line-height: 45px;
         padding: 0 1em;
-        display: inline-block;
         text-transform: uppercase;
         color: $action-color;
       }
     }
+  }
+
+  .user {
+    @include header-item-base(right);
+
+    position: relative;
+
+    .primary {
+      display: inline-block;
+      float: left;
+      white-space: nowrap;
+    }
+
+    .user-link {
+      @include edx-button($yellow);
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      float: left;
+      border-right: 1px solid darken($yellow, 10%);
+
+      .label-username {
+        display: inline-block;
+      }
+
+      .sr {
+        // TODO: tbd
+        display: none;
+      }
+      .user-image-frame {
+        // TODO: tbd
+        display: none;
+      }
+    }
+
+    .dropdown {
+      @include edx-button($yellow);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      float: left;
+
+      .fa {
+        margin-top: -1px;
+        font-size: 1.5em;
+        line-height: 0em;
+      }
+
+      .sr {
+        // TODO: tbd
+        display: none;
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 45px;
+      right: 0;
+      background-color: white;
+      @include block-frame;
+
+      border-radius: $base-border-radius;
+
+      .item a {
+        display: block;
+        line-height: 1em;
+        font-size: 0.9em;
+        padding: 0.9em 1.4em;
+        font-weight: normal;
+      }
+
+      &.expanded {
+        display: block;
+      }
+    }
+
+  }
+  .doc-link {
+    @include header-item-base(right);
+    @include edx-button($medium-gray);
   }
 }

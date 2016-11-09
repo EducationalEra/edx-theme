@@ -2,3 +2,7 @@ h2 .text {
   color: #0a4f7d;
   text-transform: uppercase;
 }
+
+.content-wrapper {
+  @include responsive-outer-container();
+}

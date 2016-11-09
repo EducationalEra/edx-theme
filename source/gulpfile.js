@@ -25,7 +25,7 @@ gulp.task('serve', ['sass'], function () {
                 match: /<link.*lms\-main.*>/i,
                 fn: function (browserSyncJS, match) {
                     return [
-                      '<link rel="stylesheet" type="text/css" href="lms-main-v1.css"/>',
+                      '<link rel="stylesheet" type="text/css" href="/lms-main-v1.css"/>',
                       browserSyncJS
                     ].join('');
                 }

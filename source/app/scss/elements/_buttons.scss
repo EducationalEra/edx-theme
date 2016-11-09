@@ -21,11 +21,11 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  @extend .z-depth-1;
+  // @extend .z-depth-1;
   transition: .1s ease-out;
 
   &:hover {
     background-color: lighten($color, 10%);
-    @extend .z-depth-2;
+    // @extend .z-depth-2;
   }
 }

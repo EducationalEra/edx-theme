@@ -1,6 +1,6 @@
 
 // Typography
-$base-font-family: "Proxima Nova", $helvetica;
+$base-font-family: "Rubik";
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -45,5 +45,19 @@ $base-border: 1px solid $base-border-color;
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
-
-$blue: #2993de;
+// State colors
+$state-success-text: #3c763d !default;
+$state-success-bg: #dff0d8 !default;
+$state-success-border: darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-info-text: #31708f !default;
+$state-info-bg: #d9edf7 !default;
+$state-info-border: darken(adjust-hue($state-info-bg, -10), 7%) !default;
+$state-warning-text: #8a6d3b !default;
+$state-warning-bg: #fcf8e3 !default;
+$state-warning-border: darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-danger-text: #a94442 !default;
+$state-danger-bg: #f2dede !default;
+$state-danger-border: darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$alert-padding: 15px !default;
+$alert-border-radius: $base-border-radius !default;
+$alert-link-font-weight: bold !default;

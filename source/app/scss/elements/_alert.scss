@@ -1,0 +1,51 @@
+@mixin alert() {
+    padding: $alert-padding;
+    border: 1px solid transparent;
+    border-radius: $alert-border-radius;
+    h4 {
+        margin-top: 0;
+        color: inherit;
+    }
+    .alert-link {
+        font-weight: normal;
+    }
+     > ul,
+    > p {
+        margin-bottom: 0;
+    }
+    > p + p {
+        margin-top: 5px;
+    }
+}
+@mixin alert-dismissible() {
+    padding-right: ($alert-padding + 20);
+    .close {
+        position: relative;
+        top: -2px;
+        right: -21px;
+        color: inherit;
+    }
+}
+@mixin alert-variant($background, $border, $text-color) {
+    background-color: $background;
+    border-color: $border;
+    color: $text-color;
+    hr {
+        border-top-color: darken($border, 5%);
+    }
+    .alert-link {
+        color: darken($text-color, 10%);
+    }
+}
+@mixin alert-success() {
+     @include alert-variant($state-success-bg, $state-success-border, $state-success-text);
+}
+@mixin alert-info() {
+     @include alert-variant($state-info-bg, $state-info-border, $state-info-text);
+}
+@mixin alert-warning() {
+     @include alert-variant($state-warning-bg, $state-warning-border, $state-warning-text);
+}
+@mixin alert-danger() {
+     @include alert-variant($state-danger-bg, $state-danger-border, $status-danger-text);
+}

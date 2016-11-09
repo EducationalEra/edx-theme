@@ -22,6 +22,11 @@
     margin-top: 3em;
   }
 
+  .status.submission-error {
+    @include alert;
+    @include alert-warning;
+  }
+
   .login-form, .register-form {
     @include block-frame;
     background-color: $white;

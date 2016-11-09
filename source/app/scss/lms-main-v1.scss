@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+
 // resets unneeded styles
 @import "normalize.css";
 // bourbon framework
@@ -12,10 +14,12 @@
 // elements
 @import "elements/forms";
 @import "elements/buttons";
+@import "elements/alert";
 
 // pages
 @import "login/login";
 @import "dashboard/dashboard";
+@import "course/course-info";
 
 // parts
 @import "header/header";
