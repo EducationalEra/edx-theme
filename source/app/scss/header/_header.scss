@@ -31,6 +31,21 @@
     }
   }
 
+  .course-header {
+    @include header-item-base;
+    border-left: 1px solid $light-gray;
+    padding: 0 1em;
+
+    color: $medium-gray;
+
+    .provider, .course-name {
+      font-weight: 500;
+    }
+    .course-number {
+      font-weight: normal;
+    }
+  }
+
   .nav-account-management {
     .item {
       @include header-item-base;
