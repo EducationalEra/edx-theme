@@ -1,0 +1,49 @@
+@mixin full-width-block {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.view-in-course {
+  nav.wrapper-course-material {
+    @include full-width-block;
+    margin-bottom: 2em;
+
+    .course-material, .tabs.course-tabs {
+      @include full-width-block;
+    }
+
+    .tab {
+      display: inline-block;
+      float: left;
+      padding: 0 .5em;
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      a {
+        @include edx-flat-button();
+      }
+
+      .sr {
+        // TODO: tbd
+        display: none;
+      }
+    }
+  }
+
+  main#main {
+    @include full-width-block;
+  }
+
+  .home, article {
+    @include block-frame;
+    background-color: $white;
+    margin-bottom: 2em;
+    padding: 10px;
+  }
+}

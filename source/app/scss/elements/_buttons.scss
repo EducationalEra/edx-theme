@@ -1,4 +1,5 @@
 @mixin edx-button($color) {
+  display: block;
   background-color: $color;
   color: $white;
 
@@ -6,7 +7,7 @@
   border-radius: $base-border-radius;
   cursor: pointer;
   line-height: 1;
-  padding: 0.75em 1em;
+  padding: .75em 1em;
 
   text: {
     align: center;
@@ -21,11 +22,49 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  // @extend .z-depth-1;
   transition: .1s ease-out;
 
   &:hover {
     background-color: lighten($color, 10%);
-    // @extend .z-depth-2;
+  }
+}
+
+@mixin edx-flat-button() {
+  display: block;
+  background-color: transparent;
+  color: $medium-gray;
+
+  border: none;
+  border-radius: $base-border-radius;
+  cursor: pointer;
+  line-height: 1;
+  padding: .75em 1em;
+
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  font: {
+    size: $base-font-size;
+    weight: normal;
+    family: $base-font-family;
+  }
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  transition: .1s ease-out;
+
+  &.active {
+    background-color: $yellow;
+    color: $white;
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+
+  &:hover {
+    background-color: lighten($yellow, 20%);
+    color: $white;
   }
 }
