@@ -32,6 +32,12 @@ gulp.task('serve', ['sass'], function () {
                 fn: function (req, res, match) {
                     return '';
                 }
+            },
+            {
+                match: /<link.*lms\-discussion.*>/i,
+                fn: function (req, res, match) {
+                    return '<link rel="stylesheet" type="text/css" href="/lms-discussion-main.css"/>';
+                }
             }
         ]
     });
@@ -71,6 +77,12 @@ gulp.task('copy-course-css', function() {
         .pipe(gulp.dest(targetPath));
 });
 
-gulp.task('build', ['sass', 'copy-main-css', 'copy-course-css']);
+gulp.task('copy-discussion-css', function() {
+    return gulp.src('app/css/lms-discussion-main.css')
+        .pipe(rename('lms-discussion-main.scss'))
+        .pipe(gulp.dest(targetPath));
+});
+
+gulp.task('build', ['sass', 'copy-main-css', 'copy-course-css', 'copy-discussion-css']);
 
 gulp.task('default', ['serve']);
