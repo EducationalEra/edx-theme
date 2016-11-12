@@ -80,7 +80,7 @@ gulp.task('copy-course-css', function() {
 gulp.task('copy-discussion-css', function() {
     return gulp.src('app/css/lms-discussion-main.css')
         .pipe(rename('lms-discussion-main.scss'))
-        .pipe(gulp.dest(targetPath));
+        .pipe(gulp.dest(targetPath + '/discussion'));
 });
 
 gulp.task('build', ['sass', 'copy-main-css', 'copy-course-css', 'copy-discussion-css']);
