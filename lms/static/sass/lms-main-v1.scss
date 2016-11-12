@@ -1,5 +1,408 @@
-@import url("https://fonts.googleapis.com/css?family=Rubik:300,400,500,700");
-@import url(normalize.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic-ext");
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
 html {
   box-sizing: border-box; }
 
@@ -27,7 +430,7 @@ body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: #323232;
-  font-family: "Rubik";
+  font-family: "Open Sans", sans-serif;
   font-size: 1em;
   line-height: 1.5;
   background-color: #fbfbfb;
@@ -42,7 +445,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Rubik";
+  font-family: "Open Sans", sans-serif;
   font-size: 1em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
@@ -71,7 +474,7 @@ picture {
   margin: 0;
   max-width: 100%; }
 
-.hidden, .course-info .course-sidebar {
+.hidden, .course-info .course-sidebar, .course-item .course-sidebar {
   display: none; }
 
 .nav-skip {
@@ -163,6 +566,9 @@ h2 .text {
 .tip {
   color: #a1a1a1;
   font-size: .8em; }
+
+.modal {
+  display: none; }
 
 .login-register {
   max-width: 75em;
@@ -263,7 +669,7 @@ h2 .text {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: normal;
-    font-family: "Rubik";
+    font-family: "Open Sans", sans-serif;
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
@@ -295,7 +701,7 @@ h2 .text {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: normal;
-  font-family: "Rubik";
+  font-family: "Open Sans", sans-serif;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -303,7 +709,11 @@ h2 .text {
   .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:hover {
     background-color: #4c4c4c; }
 
-.home .courses-container .courses-listing .courses-listing-item .course {
+.dashboard .wrapper-header-courses .header-courses, .home .wrapper-header-courses .header-courses, .find-courses .wrapper-header-courses .header-courses {
+  text-transform: uppercase;
+  text-align: center; }
+
+.dashboard .listing-courses .course, .dashboard .courses-listing .course, .home .listing-courses .course, .home .courses-listing .course, .find-courses .listing-courses .course, .find-courses .courses-listing .course {
   display: block;
   border-bottom: 1px solid #dddddd;
   border-top: 1px solid #dddddd;
@@ -311,34 +721,100 @@ h2 .text {
   padding: 2em 0;
   position: relative;
   box-sizing: border-box;
-  margin: 0;
-  box-sizing: border-box; }
-  .home .courses-container .courses-listing .courses-listing-item .course::after {
+  margin: 0; }
+  .dashboard .listing-courses .course::after, .dashboard .courses-listing .course::after, .home .listing-courses .course::after, .home .courses-listing .course::after, .find-courses .listing-courses .course::after, .find-courses .courses-listing .course::after {
     clear: both;
     content: "";
     display: block; }
-  .home .courses-container .courses-listing .courses-listing-item .course .course-image {
+  .dashboard .listing-courses .course .wrapper-course-image, .dashboard .courses-listing .course .wrapper-course-image, .home .listing-courses .course .wrapper-course-image, .home .courses-listing .course .wrapper-course-image, .find-courses .listing-courses .course .wrapper-course-image, .find-courses .courses-listing .course .wrapper-course-image {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 23.23176%; }
-    .home .courses-container .courses-listing .courses-listing-item .course .course-image:last-child {
+    .dashboard .listing-courses .course .wrapper-course-image:last-child, .dashboard .courses-listing .course .wrapper-course-image:last-child, .home .listing-courses .course .wrapper-course-image:last-child, .home .courses-listing .course .wrapper-course-image:last-child, .find-courses .listing-courses .course .wrapper-course-image:last-child, .find-courses .courses-listing .course .wrapper-course-image:last-child {
       margin-right: 0; }
-  .home .courses-container .courses-listing .courses-listing-item .course .course-info {
+  .dashboard .listing-courses .course .wrapper-course-details, .dashboard .courses-listing .course .wrapper-course-details, .home .listing-courses .course .wrapper-course-details, .home .courses-listing .course .wrapper-course-details, .find-courses .listing-courses .course .wrapper-course-details, .find-courses .courses-listing .course .wrapper-course-details {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%; }
-    .home .courses-container .courses-listing .courses-listing-item .course .course-info:last-child {
+    width: 74.41059%; }
+    .dashboard .listing-courses .course .wrapper-course-details:last-child, .dashboard .courses-listing .course .wrapper-course-details:last-child, .home .listing-courses .course .wrapper-course-details:last-child, .home .courses-listing .course .wrapper-course-details:last-child, .find-courses .listing-courses .course .wrapper-course-details:last-child, .find-courses .courses-listing .course .wrapper-course-details:last-child {
       margin-right: 0; }
-  .home .courses-container .courses-listing .courses-listing-item .course .sr {
-    float: left;
+    .dashboard .listing-courses .course .wrapper-course-details .course-info, .dashboard .courses-listing .course .wrapper-course-details .course-info, .home .listing-courses .course .wrapper-course-details .course-info, .home .courses-listing .course .wrapper-course-details .course-info, .find-courses .listing-courses .course .wrapper-course-details .course-info, .find-courses .courses-listing .course .wrapper-course-details .course-info {
+      margin-bottom: 1em; }
+      .dashboard .listing-courses .course .wrapper-course-details .course-info .info-university, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-university, .home .listing-courses .course .wrapper-course-details .course-info .info-university, .home .courses-listing .course .wrapper-course-details .course-info .info-university, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-university, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-university {
+        font-weight: bold;
+        text-transform: uppercase; }
+      .dashboard .listing-courses .course .wrapper-course-details .course-info .info-date-block, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-date-block, .home .listing-courses .course .wrapper-course-details .course-info .info-date-block, .home .courses-listing .course .wrapper-course-details .course-info .info-date-block, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-date-block, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-date-block {
+        float: right; }
+    .dashboard .listing-courses .course .wrapper-course-details .course-title, .dashboard .courses-listing .course .wrapper-course-details .course-title, .home .listing-courses .course .wrapper-course-details .course-title, .home .courses-listing .course .wrapper-course-details .course-title, .find-courses .listing-courses .course .wrapper-course-details .course-title, .find-courses .courses-listing .course .wrapper-course-details .course-title {
+      font-size: 2em;
+      color: #999; }
+      .dashboard .listing-courses .course .wrapper-course-details .course-title .title-id, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-id, .home .listing-courses .course .wrapper-course-details .course-title .title-id, .home .courses-listing .course .wrapper-course-details .course-title .title-id, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-id, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-id {
+        font-weight: normal; }
+      .dashboard .listing-courses .course .wrapper-course-details .course-title a, .dashboard .listing-courses .course .wrapper-course-details .course-title .title-name, .dashboard .courses-listing .course .wrapper-course-details .course-title a, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-name, .home .listing-courses .course .wrapper-course-details .course-title a, .home .listing-courses .course .wrapper-course-details .course-title .title-name, .home .courses-listing .course .wrapper-course-details .course-title a, .home .courses-listing .course .wrapper-course-details .course-title .title-name, .find-courses .listing-courses .course .wrapper-course-details .course-title a, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-name, .find-courses .courses-listing .course .wrapper-course-details .course-title a, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-name {
+        color: #999; }
+  .dashboard .listing-courses .course .wrapper-course-actions, .dashboard .courses-listing .course .wrapper-course-actions, .home .listing-courses .course .wrapper-course-actions, .home .courses-listing .course .wrapper-course-actions, .find-courses .listing-courses .course .wrapper-course-actions, .find-courses .courses-listing .course .wrapper-course-actions {
     display: block;
-    margin-right: 2.35765%;
-    width: 23.23176%; }
-    .home .courses-container .courses-listing .courses-listing-item .course .sr:last-child {
-      margin-right: 0; }
-  .home .courses-container .courses-listing .courses-listing-item .course .learn-more {
+    width: 100%; }
+    .dashboard .listing-courses .course .wrapper-course-actions::after, .dashboard .courses-listing .course .wrapper-course-actions::after, .home .listing-courses .course .wrapper-course-actions::after, .home .courses-listing .course .wrapper-course-actions::after, .find-courses .listing-courses .course .wrapper-course-actions::after, .find-courses .courses-listing .course .wrapper-course-actions::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .dashboard .listing-courses .course .wrapper-course-actions .course-actions, .dashboard .courses-listing .course .wrapper-course-actions .course-actions, .home .listing-courses .course .wrapper-course-actions .course-actions, .home .courses-listing .course .wrapper-course-actions .course-actions, .find-courses .listing-courses .course .wrapper-course-actions .course-actions, .find-courses .courses-listing .course .wrapper-course-actions .course-actions {
+      float: right; }
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *, .home .listing-courses .course .wrapper-course-actions .course-actions > *, .home .courses-listing .course .wrapper-course-actions .course-actions > *, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > * {
+        float: left;
+        margin: 0 .5em; }
+        .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *:first-child, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *:first-child, .home .listing-courses .course .wrapper-course-actions .course-actions > *:first-child, .home .courses-listing .course .wrapper-course-actions .course-actions > *:first-child, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *:first-child, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > *:first-child {
+          margin-left: 0; }
+        .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .home .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .home .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > *:last-child {
+          margin-right: 0; }
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course {
+        display: block;
+        background-color: #efa82c;
+        color: #ffffff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        line-height: 1;
+        padding: .75em 1em;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: normal;
+        font-family: "Open Sans", sans-serif;
+        user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        transition: .1s ease-out; }
+        .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr {
+          display: none; }
+        .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover {
+          background-color: #f3bc5b; }
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action, .home .listing-courses .course .wrapper-course-actions .course-actions .action, .home .courses-listing .course .wrapper-course-actions .course-actions .action, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action {
+        display: block;
+        background-color: #efa82c;
+        color: #ffffff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        line-height: 1;
+        padding: .75em 1em;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: normal;
+        font-family: "Open Sans", sans-serif;
+        user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        transition: .1s ease-out; }
+        .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action .sr {
+          display: none; }
+        .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action:hover {
+          background-color: #f3bc5b; }
+  .dashboard .listing-courses .course .learn-more, .dashboard .courses-listing .course .learn-more, .home .listing-courses .course .learn-more, .home .courses-listing .course .learn-more, .find-courses .listing-courses .course .learn-more, .find-courses .courses-listing .course .learn-more {
     font-size: 1em;
     font-weight: bold;
     display: block;
@@ -353,25 +829,43 @@ h2 .text {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: normal;
-    font-family: "Rubik";
+    font-family: "Open Sans", sans-serif;
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
     transition: .1s ease-out; }
-    .home .courses-container .courses-listing .courses-listing-item .course .learn-more:hover {
+    .dashboard .listing-courses .course .learn-more:hover, .dashboard .courses-listing .course .learn-more:hover, .home .listing-courses .course .learn-more:hover, .home .courses-listing .course .learn-more:hover, .find-courses .listing-courses .course .learn-more:hover, .find-courses .courses-listing .course .learn-more:hover {
       background-color: #f3bc5b; }
-  .home .courses-container .courses-listing .courses-listing-item .course .course-name > * {
-    display: block; }
-  .home .courses-container .courses-listing .courses-listing-item .course .course-name .course-organization {
-    text-transform: uppercase;
-    color: #323232;
-    font-size: .7em;
-    margin-bottom: 1em; }
-  .home .courses-container .courses-listing .courses-listing-item .course .course-name .course-code, .home .courses-container .courses-listing .courses-listing-item .course .course-name .course-title {
-    font-size: 2em;
-    font-weight: normal; }
+  .dashboard .listing-courses .course .wrapper-action-more, .dashboard .courses-listing .course .wrapper-action-more, .home .listing-courses .course .wrapper-action-more, .home .courses-listing .course .wrapper-action-more, .find-courses .listing-courses .course .wrapper-action-more, .find-courses .courses-listing .course .wrapper-action-more {
+    position: relative; }
+    .dashboard .listing-courses .course .wrapper-action-more .actions-dropdown, .dashboard .courses-listing .course .wrapper-action-more .actions-dropdown, .home .listing-courses .course .wrapper-action-more .actions-dropdown, .home .courses-listing .course .wrapper-action-more .actions-dropdown, .find-courses .listing-courses .course .wrapper-action-more .actions-dropdown, .find-courses .courses-listing .course .wrapper-action-more .actions-dropdown {
+      display: none;
+      position: absolute;
+      top: 45px;
+      right: 0;
+      background-color: white;
+      z-index: 1;
+      border-radius: 2px;
+      border: 1px solid #dddddd;
+      border-radius: 3px; }
+      .dashboard .listing-courses .course .wrapper-action-more .actions-dropdown .actions-item a, .dashboard .courses-listing .course .wrapper-action-more .actions-dropdown .actions-item a, .home .listing-courses .course .wrapper-action-more .actions-dropdown .actions-item a, .home .courses-listing .course .wrapper-action-more .actions-dropdown .actions-item a, .find-courses .listing-courses .course .wrapper-action-more .actions-dropdown .actions-item a, .find-courses .courses-listing .course .wrapper-action-more .actions-dropdown .actions-item a {
+        display: block;
+        line-height: 1em;
+        font-size: 0.9em;
+        padding: 0.9em 1.4em;
+        font-weight: normal; }
+      .dashboard .listing-courses .course .wrapper-action-more .actions-dropdown.is-visible, .dashboard .courses-listing .course .wrapper-action-more .actions-dropdown.is-visible, .home .listing-courses .course .wrapper-action-more .actions-dropdown.is-visible, .home .courses-listing .course .wrapper-action-more .actions-dropdown.is-visible, .find-courses .listing-courses .course .wrapper-action-more .actions-dropdown.is-visible, .find-courses .courses-listing .course .wrapper-action-more .actions-dropdown.is-visible {
+        display: block; }
 
-.course-info .intro .register {
+.profile-sidebar {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .profile-sidebar:last-child {
+    margin-right: 0; }
+
+.course-info .intro .register, .course-item .intro .register {
   display: block;
   background-color: #efa82c;
   color: #ffffff;
@@ -384,48 +878,43 @@ h2 .text {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: normal;
-  font-family: "Rubik";
+  font-family: "Open Sans", sans-serif;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   transition: .1s ease-out; }
-  .course-info .intro .register:hover {
+  .course-info .intro .register:hover, .course-item .intro .register:hover {
     background-color: #f3bc5b; }
 
-.course-info .details .programm {
+.course-info .details .programm, .course-item .details .programm {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 14.70196%; }
-  .course-info .details .programm:last-child {
+  .course-info .details .programm:last-child, .course-item .details .programm:last-child {
     margin-right: 0; }
 
-.course-info .details .about, .course-info .details .course-staff {
+.course-info .details .about, .course-info .details .course-staff, .course-item .details .about, .course-item .details .course-staff {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 82.94039%; }
-  .course-info .details .about:last-child, .course-info .details .course-staff:last-child {
+  .course-info .details .about:last-child, .course-info .details .course-staff:last-child, .course-item .details .about:last-child, .course-item .details .course-staff:last-child {
     margin-right: 0; }
 
-.view-in-course nav.wrapper-course-material {
+.view-in-course nav.wrapper-course-material, .discussion nav.wrapper-course-material {
   display: block;
   float: left;
   width: 100%;
   margin-bottom: 2em; }
-  .view-in-course nav.wrapper-course-material .course-material, .view-in-course nav.wrapper-course-material .tabs.course-tabs {
-    display: block;
-    float: left;
-    width: 100%; }
-  .view-in-course nav.wrapper-course-material .tab {
+  .view-in-course nav.wrapper-course-material .tab, .view-in-course nav.wrapper-course-material .right, .discussion nav.wrapper-course-material .tab, .discussion nav.wrapper-course-material .right {
     display: inline-block;
-    float: left;
     padding: 0 .5em; }
-    .view-in-course nav.wrapper-course-material .tab:first-child {
+    .view-in-course nav.wrapper-course-material .tab:first-child, .view-in-course nav.wrapper-course-material .right:first-child, .discussion nav.wrapper-course-material .tab:first-child, .discussion nav.wrapper-course-material .right:first-child {
       padding-left: 0; }
-    .view-in-course nav.wrapper-course-material .tab:last-child {
+    .view-in-course nav.wrapper-course-material .tab:last-child, .view-in-course nav.wrapper-course-material .right:last-child, .discussion nav.wrapper-course-material .tab:last-child, .discussion nav.wrapper-course-material .right:last-child {
       padding-right: 0; }
-    .view-in-course nav.wrapper-course-material .tab a {
+    .view-in-course nav.wrapper-course-material .tab a, .view-in-course nav.wrapper-course-material .tab button, .view-in-course nav.wrapper-course-material .right a, .view-in-course nav.wrapper-course-material .right button, .discussion nav.wrapper-course-material .tab a, .discussion nav.wrapper-course-material .tab button, .discussion nav.wrapper-course-material .right a, .discussion nav.wrapper-course-material .right button {
       display: block;
       background-color: transparent;
       color: #999;
@@ -438,33 +927,117 @@ h2 .text {
       text-transform: uppercase;
       font-size: 1em;
       font-weight: normal;
-      font-family: "Rubik";
+      font-family: "Open Sans", sans-serif;
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
       transition: .1s ease-out; }
-      .view-in-course nav.wrapper-course-material .tab a.active {
+      .view-in-course nav.wrapper-course-material .tab a.active, .view-in-course nav.wrapper-course-material .tab button.active, .view-in-course nav.wrapper-course-material .right a.active, .view-in-course nav.wrapper-course-material .right button.active, .discussion nav.wrapper-course-material .tab a.active, .discussion nav.wrapper-course-material .tab button.active, .discussion nav.wrapper-course-material .right a.active, .discussion nav.wrapper-course-material .right button.active {
         background-color: #efa82c;
         color: #ffffff; }
-        .view-in-course nav.wrapper-course-material .tab a.active:hover {
+        .view-in-course nav.wrapper-course-material .tab a.active:hover, .view-in-course nav.wrapper-course-material .tab button.active:hover, .view-in-course nav.wrapper-course-material .right a.active:hover, .view-in-course nav.wrapper-course-material .right button.active:hover, .discussion nav.wrapper-course-material .tab a.active:hover, .discussion nav.wrapper-course-material .tab button.active:hover, .discussion nav.wrapper-course-material .right a.active:hover, .discussion nav.wrapper-course-material .right button.active:hover {
           background-color: #efa82c; }
-      .view-in-course nav.wrapper-course-material .tab a:hover {
+      .view-in-course nav.wrapper-course-material .tab a:hover, .view-in-course nav.wrapper-course-material .tab button:hover, .view-in-course nav.wrapper-course-material .right a:hover, .view-in-course nav.wrapper-course-material .right button:hover, .discussion nav.wrapper-course-material .tab a:hover, .discussion nav.wrapper-course-material .tab button:hover, .discussion nav.wrapper-course-material .right a:hover, .discussion nav.wrapper-course-material .right button:hover {
         background-color: #f6cf8b;
         color: #ffffff; }
-    .view-in-course nav.wrapper-course-material .tab .sr {
+    .view-in-course nav.wrapper-course-material .tab .sr, .view-in-course nav.wrapper-course-material .right .sr, .discussion nav.wrapper-course-material .tab .sr, .discussion nav.wrapper-course-material .right .sr {
       display: none; }
+  .view-in-course nav.wrapper-course-material .tab, .discussion nav.wrapper-course-material .tab {
+    float: left; }
+  .view-in-course nav.wrapper-course-material .right, .discussion nav.wrapper-course-material .right {
+    float: right; }
 
-.view-in-course main#main {
+.view-in-course main#main, .view-in-course .discussion.container, .discussion main#main, .discussion .discussion.container {
   display: block;
   float: left;
   width: 100%; }
 
-.view-in-course .home, .view-in-course article {
+.view-in-course .home, .view-in-course article, .discussion .home, .discussion article {
   border-radius: 2px;
   border: 1px solid #dddddd;
   background-color: #ffffff;
   margin-bottom: 2em;
   padding: 10px; }
+
+.view-in-course .xmodule_display.xmodule_SequenceModule .seq_contents, .discussion .xmodule_display.xmodule_SequenceModule .seq_contents {
+  display: none; }
+
+.view-in-course .container, .view-in-course .tabs.course-tabs {
+  display: block;
+  float: left;
+  width: 100%; }
+
+.view-in-course .course-wrapper {
+  position: relative;
+  float: left; }
+  .view-in-course .course-wrapper .course-index {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    border-radius: 3px;
+    background-color: #ffffff; }
+    .view-in-course .course-wrapper .course-index:last-child {
+      margin-right: 0; }
+    .view-in-course .course-wrapper .course-index .wrapper-course-modes {
+      display: none; }
+    .view-in-course .course-wrapper .course-index .course-navigation a {
+      color: #323232; }
+    .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter {
+      display: block; }
+      .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter.is-open {
+        background-color: #e5f2fa; }
+      .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading {
+        width: 100%;
+        padding: 1em;
+        display: block;
+        position: relative;
+        padding-left: 2em; }
+        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading a {
+          font-weight: bold; }
+        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .fa {
+          display: block;
+          position: absolute;
+          left: 1em;
+          top: 50%;
+          margin-top: -8px; }
+    .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu {
+      margin-left: 2em;
+      margin-right: 1em;
+      margin-bottom: 1em; }
+      .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav {
+        display: block;
+        box-sizing: border-box;
+        padding: .5em 1em;
+        border-radius: 3px;
+        margin-bottom: .5em; }
+        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav:hover {
+          background-color: #baddf2; }
+        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav p {
+          margin: 0; }
+        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .accordion-display-name {
+          color: #477dca;
+          font-weight: bold; }
+        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .subtitle {
+          font-size: .85em;
+          color: #999; }
+        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .sr {
+          display: none; }
+    .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container.is-open {
+      background-color: #e5f2fa; }
+  .view-in-course .course-wrapper .course-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    border-radius: 3px;
+    background-color: #ffffff;
+    margin-right: 0;
+    padding: 2em; }
+    .view-in-course .course-wrapper .course-content:last-child {
+      margin-right: 0; }
+  .view-in-course .course-wrapper .courseware-results-wrapper {
+    display: none; }
 
 .header-global-new, .header-global {
   background-color: #fbfaf8;
@@ -511,7 +1084,7 @@ h2 .text {
     padding: 0 1em;
     color: #999; }
     .wrapper-header .course-header .provider, .wrapper-header .course-header .course-name {
-      font-weight: 500; }
+      font-weight: bold; }
     .wrapper-header .course-header .course-number {
       font-weight: normal; }
   .wrapper-header .nav-account-management .item {
@@ -524,6 +1097,15 @@ h2 .text {
       padding: 0 1em;
       text-transform: uppercase;
       color: #a1a1a1; }
+  .wrapper-header .nav-main .item {
+    line-height: 45px;
+    display: inline-block;
+    margin: 1em .3em;
+    font-weight: 500;
+    float: left;
+    padding: 0 1em;
+    text-transform: uppercase;
+    color: #a1a1a1; }
   .wrapper-header .user {
     line-height: 45px;
     display: inline-block;
@@ -548,7 +1130,7 @@ h2 .text {
       text-transform: uppercase;
       font-size: 1em;
       font-weight: normal;
-      font-family: "Rubik";
+      font-family: "Open Sans", sans-serif;
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
@@ -578,7 +1160,7 @@ h2 .text {
       text-transform: uppercase;
       font-size: 1em;
       font-weight: normal;
-      font-family: "Rubik";
+      font-family: "Open Sans", sans-serif;
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
@@ -600,6 +1182,7 @@ h2 .text {
       top: 45px;
       right: 0;
       background-color: white;
+      z-index: 1;
       border-radius: 2px;
       border: 1px solid #dddddd;
       border-radius: 3px; }
@@ -629,13 +1212,96 @@ h2 .text {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: normal;
-    font-family: "Rubik";
+    font-family: "Open Sans", sans-serif;
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
     transition: .1s ease-out; }
     .wrapper-header .doc-link:hover {
       background-color: #b3b3b3; }
+
+.discussion .wrapper-header .wrapper-user-menu {
+  line-height: 45px;
+  display: inline-block;
+  margin: 1em .3em;
+  font-weight: 500;
+  float: right;
+  z-index: 1;
+  position: relative; }
+  .discussion .wrapper-header .wrapper-user-menu .menu-title {
+    display: block;
+    background-color: #efa82c;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1;
+    padding: .75em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Open Sans", sans-serif;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: .1s ease-out;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    float: left;
+    border-right: 1px solid #d88f10; }
+    .discussion .wrapper-header .wrapper-user-menu .menu-title:hover {
+      background-color: #f3bc5b; }
+    .discussion .wrapper-header .wrapper-user-menu .menu-title .sr-only {
+      display: none; }
+    .discussion .wrapper-header .wrapper-user-menu .menu-title .menu-image {
+      display: none; }
+
+.discussion .wrapper-header .menu-button {
+  display: block;
+  background-color: #efa82c;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1;
+  padding: .75em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Open Sans", sans-serif;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: .1s ease-out;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  float: left; }
+  .discussion .wrapper-header .menu-button:hover {
+    background-color: #f3bc5b; }
+  .discussion .wrapper-header .menu-button .fa {
+    margin-top: -1px;
+    font-size: 1.5em;
+    line-height: 0em; }
+
+.discussion .wrapper-header .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #dddddd;
+  border-radius: 3px; }
+  .discussion .wrapper-header .dropdown-menu .item a {
+    display: block;
+    line-height: 1em;
+    font-size: 0.9em;
+    padding: 0.9em 1.4em;
+    font-weight: normal; }
+  .discussion .wrapper-header .dropdown-menu.is-visible {
+    display: block; }
 
 .wrapper-footer {
   background-color: #323232;
