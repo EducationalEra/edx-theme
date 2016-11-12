@@ -5,8 +5,10 @@
   background-color: $dark-gray;
   color: $white;
   padding: 50px 0;
+  float: left;
+  width: 100%;
 
-  .container {
+  #page_footer {
     @include responsive-outer-container();
   }
 
