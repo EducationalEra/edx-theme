@@ -4,7 +4,76 @@
   width: 100%;
 }
 
+@mixin course-nav-button {
+  background-color: $soft-blue;
+  border: 0;
+  width: 3.5em;
+  height: 3.5em;
+  display: inline-block;
+  float: left;
+  .sr {
+    display: none;
+  }
+  .sequence-tooltip {
+    // TODO: tbd
+    display: none;
+  }
+
+  & .fa-chevron-prev:before {
+    content: "\f0d9";
+    font-size: 2em;
+  }
+  & .fa-chevron-next:before {
+    content: "\f0da";
+    font-size: 2em;
+  }
+
+  & .fa.seq_problem:before {
+    // TODO: tbd
+    content: "\f008";
+  }
+  & .fa.seq_other:before {
+    // TODO: tbd
+    content: "\f008";
+  }
+
+
+  &:hover, &.active {
+    background-color: darken($soft-blue, 10%);
+    cursor: pointer;
+  }
+}
+
+.view-in-course {
+  .sequence-nav {
+    margin: 0 auto;
+    @include row;
+    &-button {
+      @include course-nav-button;
+      background-color: darken($soft-blue, 10%);
+      &.button-previous {
+        border-top-left-radius: 50%;
+        border-bottom-left-radius: 50%;
+      }
+      &.button-next {
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+    }
+
+    .sequence-list-wrapper {
+        .nav-item {
+          @include course-nav-button;
+        }
+    }
+  }
+}
+
 .view-in-course, .discussion {
+  #seq_content {
+    float: left;
+    margin-top: 5em;
+  }
   nav.wrapper-course-material {
     @include full-width-block;
     margin-bottom: 2em;
