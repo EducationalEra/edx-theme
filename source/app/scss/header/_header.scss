@@ -39,7 +39,7 @@
     color: $medium-gray;
 
     .provider, .course-name {
-      font-weight: 500;
+      font-weight: bold;
     }
     .course-number {
       font-weight: normal;
@@ -54,6 +54,15 @@
         text-transform: uppercase;
         color: $action-color;
       }
+    }
+  }
+
+  .nav-main {
+    .item {
+      @include header-item-base;
+      padding: 0 1em;
+      text-transform: uppercase;
+      color: $action-color;
     }
   }
 
@@ -114,6 +123,7 @@
       top: 45px;
       right: 0;
       background-color: white;
+      z-index: 1;
       @include block-frame;
 
       border-radius: $base-border-radius;
@@ -135,5 +145,71 @@
   .doc-link {
     @include header-item-base(right);
     @include edx-button($medium-gray);
+  }
+}
+
+// specific overrides for discussion
+.discussion {
+  .wrapper-header {
+
+    .wrapper-user-menu {
+      @include header-item-base(right);
+      z-index: 1;
+      position: relative;
+
+      .menu-title {
+        @include edx-button($yellow);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        float: left;
+        border-right: 1px solid darken($yellow, 10%);
+
+        .sr-only {
+          // TODO: tbd
+          display: none;
+        }
+        .menu-image {
+          // TODO: tbd
+          display: none;
+        }
+      }
+    }
+
+    .menu-button {
+      @include edx-button($yellow);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      float: left;
+
+      .fa {
+        margin-top: -1px;
+        font-size: 1.5em;
+        line-height: 0em;
+      }
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 45px;
+      right: 0;
+      background-color: white;
+      @include block-frame;
+
+      border-radius: $base-border-radius;
+
+      .item a {
+        display: block;
+        line-height: 1em;
+        font-size: 0.9em;
+        padding: 0.9em 1.4em;
+        font-weight: normal;
+      }
+
+      &.is-visible {
+        display: block;
+      }
+    }
   }
 }

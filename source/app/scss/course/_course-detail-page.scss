@@ -4,18 +4,13 @@
   width: 100%;
 }
 
-.view-in-course {
+.view-in-course, .discussion {
   nav.wrapper-course-material {
     @include full-width-block;
     margin-bottom: 2em;
 
-    .course-material, .tabs.course-tabs {
-      @include full-width-block;
-    }
-
-    .tab {
+    .tab, .right {
       display: inline-block;
-      float: left;
       padding: 0 .5em;
       &:first-child {
         padding-left: 0;
@@ -25,7 +20,7 @@
         padding-right: 0;
       }
 
-      a {
+      a, button {
         @include edx-flat-button();
       }
 
@@ -34,16 +29,29 @@
         display: none;
       }
     }
+
+    .tab {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
   }
 
-  main#main {
+  main#main, .discussion.container {
     @include full-width-block;
   }
 
   .home, article {
+    // TODO: tbd
     @include block-frame;
     background-color: $white;
     margin-bottom: 2em;
     padding: 10px;
+  }
+
+  .xmodule_display.xmodule_SequenceModule .seq_contents {
+    display: none;
   }
 }

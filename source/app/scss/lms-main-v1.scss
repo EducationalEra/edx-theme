@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700');
+// @import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&subset=cyrillic-ext');
 
 // resets unneeded styles
-@import "normalize.css";
+@import "base/normalize";
 // bourbon framework
 @import "bourbon";
 // set of helpers for responsiveness
@@ -15,12 +16,15 @@
 @import "elements/forms";
 @import "elements/buttons";
 @import "elements/alert";
+@import "elements/modal";
 
 // pages
 @import "login/login";
+// @import "dashboard/home";
 @import "dashboard/dashboard";
 @import "course/course-info";
 @import "course/course-detail-page";
+@import "course/course-index";
 
 // parts
 @import "header/header";

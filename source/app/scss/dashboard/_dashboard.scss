@@ -1,7 +1,12 @@
-.home {
-  .courses-container {
-    .courses-listing {
-      .courses-listing-item .course {
+.dashboard, .home, .find-courses {
+    .wrapper-header-courses {
+      .header-courses {
+        text-transform: uppercase;
+        text-align: center;
+      }
+    }
+    .listing-courses, .courses-listing {
+      .course {
         @include row();
 
         border-bottom: 1px solid $light-gray;
@@ -13,18 +18,72 @@
         box-sizing: border-box;
 
         margin: 0;
-        box-sizing: border-box;
 
-        .course-image {
+        .wrapper-course-image {
           @include span-columns(3 of 12);
         }
 
-        .course-info {
-          @include span-columns(6 of 12);
+        .wrapper-course-details {
+          @include span-columns(9 of 12);
+
+          .course-info {
+            margin-bottom: 1em;
+            .info-university {
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+            .info-date-block {
+              float: right;
+            }
+          }
+
+          .course-title {
+            font-size: 2em;
+            color: $medium-gray;
+            // text-transform: uppercase;
+            .title-id {
+              font-weight: normal;
+            }
+            a, .title-name {
+              color: $medium-gray;
+            }
+          }
         }
 
-        .sr {
-          @include span-columns(3 of 12);
+        .wrapper-course-actions {
+          @include row;
+          @include fill-parent;
+
+          .course-actions {
+            float: right;
+            & > * {
+              float: left;
+              margin: 0 .5em;
+              &:first-child {
+                margin-left: 0;
+              }
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+
+            .enter-course {
+              .sr {
+                display: none;
+              }
+
+              @include edx-button($yellow);
+            }
+
+            .action {
+              .sr {
+                display: none;
+              }
+
+              @include edx-button($yellow);
+            }
+          }
+
         }
 
         .learn-more {
@@ -33,28 +92,42 @@
           @include edx-button($yellow);
         }
 
-        .course-name {
-          & > * {
-            display: block;
-          }
+        .wrapper-action-more {
+          position: relative;
 
-          .course-organization {
-            text-transform: uppercase;
-            color: $dark-gray;
-            font: {
-              size: .7em;
+          .actions-dropdown {
+            display: none;
+            position: absolute;
+            top: 45px;
+            right: 0;
+            background-color: white;
+            z-index: 1;
+            @include block-frame;
+
+            border-radius: $base-border-radius;
+
+            .actions-item a {
+              display: block;
+              line-height: 1em;
+              font-size: 0.9em;
+              padding: 0.9em 1.4em;
+              font-weight: normal;
             }
-            margin-bottom: 1em;
-          }
 
-          .course-code, .course-title {
-            font: {
-              size: 2em;
-              weight: normal;
+            &.is-visible {
+              display: block;
             }
           }
         }
+
+        // .action.action-unenroll {
+        //   @include edx-button($yellow);
+        // }
+
       }
     }
-  }
+}
+
+.profile-sidebar {
+  @include span-columns(2 of 12);
 }

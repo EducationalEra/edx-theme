@@ -1,0 +1,110 @@
+.view-in-course {
+  .container, .tabs.course-tabs {
+    @include full-width-block;
+  }
+
+  .course-wrapper {
+    position: relative;
+    float: left;
+    .course-index {
+      @include span-columns(3 of 12);
+      border-radius: $base-border-radius;
+      background-color: $white;
+
+      .wrapper-course-modes {
+        // TODO: tbd
+        display: none;
+      }
+
+      .course-navigation {
+        a {
+          color: $dark-gray;
+        }
+        .button-chapter.chapter {
+          display: block;
+          &.is-open {
+            background-color: $soft-blue;
+          }
+          .group-heading {
+            width: 100%;
+            padding: 1em;
+            display: block;
+            position: relative;
+            padding-left: 2em;
+            a {
+              font-weight: bold;
+            }
+
+            .fa {
+              display: block;
+              position: absolute;
+              left: 1em;
+              top: 50%;
+              margin-top: -8px;
+            }
+          }
+        }
+        .chapter-content-container {
+          .chapter-menu {
+            margin: {
+              left: 2em;
+              right: 1em;
+              bottom: 1em;
+            }
+
+            .accordion-nav {
+              display: block;
+              box-sizing: border-box;
+              padding: .5em 1em;
+              border-radius: $base-border-radius;
+
+              margin: {
+                bottom: .5em;
+              }
+
+              &:hover {
+                background-color: darken($soft-blue, 10%);
+              }
+
+              p {
+                margin: 0;
+              }
+
+              .accordion-display-name {
+                color: $blue;
+                font-weight: bold;
+              }
+
+              .subtitle {
+                font-size: .85em;
+                color: $medium-gray;
+              }
+
+              .sr {
+                // TODO: tbd
+                display: none;
+              }
+            }
+          }
+          &.is-open {
+            background-color: $soft-blue;
+          }
+        }
+      }
+
+    }
+    .course-content {
+      @include span-columns(9 of 12);
+      border-radius: $base-border-radius;
+      background-color: $white;
+      margin-right: 0;
+
+      padding: 2em;
+    }
+
+    .courseware-results-wrapper {
+      // TODO: tbd
+      display: none;
+    }
+  }
+}

@@ -110,9 +110,9 @@ from student.helpers import (
           <span class="title-id">${course_overview.display_number_with_default}</span>
           % if show_courseware_link:
             % if not is_course_blocked:
-              <a data-course-key="${enrollment.course_id}" href="${course_target}">${course_overview.display_name_with_default}</a>
+              <a class="title-name" data-course-key="${enrollment.course_id}" href="${course_target}">${course_overview.display_name_with_default}</a>
             % else:
-              <a class="disable-look" data-course-key="${enrollment.course_id}">${course_overview.display_name_with_default}</a>
+              <a class="title-name disable-look" data-course-key="${enrollment.course_id}">${course_overview.display_name_with_default}</a>
             % endif
           % else:
             <span class="title-name">${course_overview.display_name_with_default}</span>
