@@ -474,7 +474,7 @@ picture {
   margin: 0;
   max-width: 100%; }
 
-.hidden, .course-info .course-sidebar, .course-item .course-sidebar {
+.hidden, .course-info .course-sidebar, .course-item .course-sidebar, .is-hidden {
   display: none; }
 
 .nav-skip {
@@ -902,6 +902,73 @@ h2 .text {
   .course-info .details .about:last-child, .course-info .details .course-staff:last-child, .course-item .details .about:last-child, .course-item .details .course-staff:last-child {
     margin-right: 0; }
 
+.view-in-course .sequence-nav {
+  margin: 0 auto;
+  display: block; }
+  .view-in-course .sequence-nav::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .view-in-course .sequence-nav-button {
+    background-color: #e5f2fa;
+    border: 0;
+    width: 3.5em;
+    height: 3.5em;
+    display: inline-block;
+    float: left;
+    background-color: #baddf2; }
+    .view-in-course .sequence-nav-button .sr {
+      display: none; }
+    .view-in-course .sequence-nav-button .sequence-tooltip {
+      display: none; }
+    .view-in-course .sequence-nav-button .fa-chevron-prev:before {
+      content: "\f0d9";
+      font-size: 2em; }
+    .view-in-course .sequence-nav-button .fa-chevron-next:before {
+      content: "\f0da";
+      font-size: 2em; }
+    .view-in-course .sequence-nav-button .fa.seq_problem:before {
+      content: "\f008"; }
+    .view-in-course .sequence-nav-button .fa.seq_other:before {
+      content: "\f008"; }
+    .view-in-course .sequence-nav-button:hover, .view-in-course .sequence-nav-button.active {
+      background-color: #baddf2;
+      cursor: pointer; }
+    .view-in-course .sequence-nav-button.button-previous {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%; }
+    .view-in-course .sequence-nav-button.button-next {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%; }
+  .view-in-course .sequence-nav .sequence-list-wrapper .nav-item {
+    background-color: #e5f2fa;
+    border: 0;
+    width: 3.5em;
+    height: 3.5em;
+    display: inline-block;
+    float: left; }
+    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .sr {
+      display: none; }
+    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .sequence-tooltip {
+      display: none; }
+    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa-chevron-prev:before {
+      content: "\f0d9";
+      font-size: 2em; }
+    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa-chevron-next:before {
+      content: "\f0da";
+      font-size: 2em; }
+    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa.seq_problem:before {
+      content: "\f008"; }
+    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa.seq_other:before {
+      content: "\f008"; }
+    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item:hover, .view-in-course .sequence-nav .sequence-list-wrapper .nav-item.active {
+      background-color: #baddf2;
+      cursor: pointer; }
+
+.view-in-course #seq_content, .discussion #seq_content {
+  float: left;
+  margin-top: 5em; }
+
 .view-in-course nav.wrapper-course-material, .discussion nav.wrapper-course-material {
   display: block;
   float: left;
@@ -984,47 +1051,53 @@ h2 .text {
     .view-in-course .course-wrapper .course-index .course-navigation a {
       color: #323232; }
     .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter {
-      display: block; }
-      .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter.is-open {
-        background-color: #e5f2fa; }
+      width: 100%;
+      display: block;
+      float: left; }
       .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading {
         width: 100%;
-        padding: 1em;
         display: block;
-        position: relative;
-        padding-left: 2em; }
+        float: left;
+        padding: 1em;
+        position: relative; }
         .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading a {
           font-weight: bold; }
-        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .fa {
+        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name {
+          display: table-cell; }
+        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name {
+          vertical-align: top; }
+        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .icon {
+          vertical-align: middle;
+          padding-right: .7em; }
+      .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter.is-open {
+        background-color: #e5f2fa; }
+    .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container {
+      float: left;
+      width: 100%; }
+      .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu {
+        margin-left: 2em;
+        margin-right: 1em;
+        margin-bottom: 1em; }
+        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav {
           display: block;
-          position: absolute;
-          left: 1em;
-          top: 50%;
-          margin-top: -8px; }
-    .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu {
-      margin-left: 2em;
-      margin-right: 1em;
-      margin-bottom: 1em; }
-      .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav {
-        display: block;
-        box-sizing: border-box;
-        padding: .5em 1em;
-        border-radius: 3px;
-        margin-bottom: .5em; }
-        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav:hover {
-          background-color: #baddf2; }
-        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav p {
-          margin: 0; }
-        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .accordion-display-name {
-          color: #477dca;
-          font-weight: bold; }
-        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .subtitle {
-          font-size: .85em;
-          color: #999; }
-        .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .sr {
-          display: none; }
-    .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container.is-open {
-      background-color: #e5f2fa; }
+          box-sizing: border-box;
+          padding: .5em 1em;
+          border-radius: 3px;
+          margin-bottom: .5em; }
+          .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav:hover {
+            background-color: #baddf2; }
+          .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav p {
+            margin: 0; }
+          .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .accordion-display-name {
+            color: #477dca;
+            font-weight: bold; }
+          .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .subtitle {
+            font-size: .85em;
+            color: #999; }
+          .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .sr {
+            display: none; }
+      .view-in-course .course-wrapper .course-index .course-navigation .chapter-content-container.is-open {
+        background-color: #e5f2fa; }
   .view-in-course .course-wrapper .course-content {
     float: left;
     display: block;
