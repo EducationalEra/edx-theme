@@ -430,7 +430,7 @@ body {
   font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: #323232;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 1em;
   line-height: 1.5;
   background-color: #fbfbfb;
@@ -445,7 +445,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   font-size: 1em;
   line-height: 1.2;
   margin: 0 0 0.75em; }
@@ -482,6 +482,24 @@ picture {
 
 :focus {
   outline: none; }
+
+.icon, .view-in-course .choicegroup fieldset label:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0); }
+
+.video-fullscreen {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #323232; }
 
 a:hover, a:active {
   cursor: pointer;
@@ -669,7 +687,7 @@ h2 .text {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: normal;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans";
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
@@ -701,7 +719,7 @@ h2 .text {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -783,7 +801,7 @@ h2 .text {
         text-transform: uppercase;
         font-size: 1em;
         font-weight: normal;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Open Sans";
         user-select: none;
         vertical-align: middle;
         white-space: nowrap;
@@ -805,7 +823,7 @@ h2 .text {
         text-transform: uppercase;
         font-size: 1em;
         font-weight: normal;
-        font-family: "Open Sans", sans-serif;
+        font-family: "Open Sans";
         user-select: none;
         vertical-align: middle;
         white-space: nowrap;
@@ -829,7 +847,7 @@ h2 .text {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: normal;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans";
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
@@ -878,7 +896,7 @@ h2 .text {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -902,13 +920,17 @@ h2 .text {
   .course-info .details .about:last-child, .course-info .details .course-staff:last-child, .course-item .details .about:last-child, .course-item .details .course-staff:last-child {
     margin-right: 0; }
 
+.view-in-course .path {
+  display: none; }
+
+.view-in-course .sequence {
+  text-align: center; }
+
 .view-in-course .sequence-nav {
-  margin: 0 auto;
-  display: block; }
-  .view-in-course .sequence-nav::after {
-    clear: both;
-    content: "";
-    display: block; }
+  display: inline-block; }
+  .view-in-course .sequence-nav .sequence-nav-button, .view-in-course .sequence-nav .sequence-list-wrapper, .view-in-course .sequence-nav ol, .view-in-course .sequence-nav li {
+    display: block;
+    float: left; }
   .view-in-course .sequence-nav-button {
     background-color: #e5f2fa;
     border: 0;
@@ -928,9 +950,11 @@ h2 .text {
       content: "\f0da";
       font-size: 2em; }
     .view-in-course .sequence-nav-button .fa.seq_problem:before {
+      content: "\f0ca"; }
+    .view-in-course .sequence-nav-button .fa.seq_video:before {
       content: "\f008"; }
     .view-in-course .sequence-nav-button .fa.seq_other:before {
-      content: "\f008"; }
+      content: "\f129"; }
     .view-in-course .sequence-nav-button:hover, .view-in-course .sequence-nav-button.active {
       background-color: #baddf2;
       cursor: pointer; }
@@ -958,16 +982,189 @@ h2 .text {
       content: "\f0da";
       font-size: 2em; }
     .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa.seq_problem:before {
+      content: "\f0ca"; }
+    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa.seq_video:before {
       content: "\f008"; }
     .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa.seq_other:before {
-      content: "\f008"; }
+      content: "\f129"; }
     .view-in-course .sequence-nav .sequence-list-wrapper .nav-item:hover, .view-in-course .sequence-nav .sequence-list-wrapper .nav-item.active {
       background-color: #baddf2;
       cursor: pointer; }
 
+.view-in-course .sequence-bottom {
+  display: inline-block; }
+  .view-in-course .sequence-bottom button {
+    display: block;
+    float: left; }
+
+.view-in-course .bookmark-button-wrapper {
+  display: none; }
+
+.view-in-course p img {
+  float: left;
+  display: block; }
+
+.view-in-course .problem .action {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #dddddd; }
+  .view-in-course .problem .action > * {
+    display: inline-block;
+    float: left;
+    margin: 0 .5em; }
+    .view-in-course .problem .action > *:first-of-type {
+      margin-left: 0; }
+    .view-in-course .problem .action > *:last-of-type {
+      margin-right: 0; }
+  .view-in-course .problem .action .check {
+    display: block;
+    background-color: #efa82c;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1;
+    padding: .75em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Open Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: .1s ease-out; }
+    .view-in-course .problem .action .check:hover {
+      background-color: #f3bc5b; }
+  .view-in-course .problem .action .show {
+    display: block;
+    background-color: #323232;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1;
+    padding: .75em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Open Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: .1s ease-out; }
+    .view-in-course .problem .action .show:hover {
+      background-color: #4c4c4c; }
+    .view-in-course .problem .action .show .sr {
+      display: none; }
+
+.view-in-course .problem .solution-span {
+  margin-bottom: 1em; }
+  .view-in-course .problem .solution-span solution {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f; }
+    .view-in-course .problem .solution-span solution h4 {
+      margin-top: 0;
+      color: inherit; }
+    .view-in-course .problem .solution-span solution .alert-link {
+      font-weight: normal; }
+    .view-in-course .problem .solution-span solution > ul,
+    .view-in-course .problem .solution-span solution > p {
+      margin-bottom: 0; }
+    .view-in-course .problem .solution-span solution > p + p {
+      margin-top: 5px; }
+    .view-in-course .problem .solution-span solution hr {
+      border-top-color: #a6e1ec; }
+    .view-in-course .problem .solution-span solution .alert-link {
+      color: #245269; }
+
+.view-in-course .discussion-module {
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 1em;
+  background-color: #fbfbfb;
+  border-radius: 3px;
+  margin-bottom: 1em; }
+  .view-in-course .discussion-module a {
+    color: #efa82c;
+    line-height: 40px; }
+  .view-in-course .discussion-module .new-post-btn {
+    display: block;
+    background-color: #efa82c;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1;
+    padding: .75em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Open Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    transition: .1s ease-out;
+    float: right; }
+    .view-in-course .discussion-module .new-post-btn:hover {
+      background-color: #f3bc5b; }
+
+.view-in-course .choicegroup fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid #dddddd;
+  margin: 2em 0 2em 3em;
+  position: relative; }
+  .view-in-course .choicegroup fieldset label {
+    display: block;
+    margin: 1em 0; }
+    .view-in-course .choicegroup fieldset label .sr.status {
+      display: none;
+      color: #999; }
+    .view-in-course .choicegroup fieldset label:before {
+      content: "\f111";
+      position: absolute;
+      font-size: 2em;
+      left: -1.5em;
+      width: 1em;
+      top: 0;
+      color: #dddddd; }
+    .view-in-course .choicegroup fieldset label.choicegroup_correct:before, .view-in-course .choicegroup fieldset label.choicegroup_incorrect:before {
+      background-color: white;
+      z-index: 1; }
+    .view-in-course .choicegroup fieldset label.choicegroup_correct:before {
+      color: #4CAF50;
+      content: "\f00c"; }
+    .view-in-course .choicegroup fieldset label.choicegroup_incorrect:before {
+      color: #F44336;
+      content: "\f00d"; }
+    .view-in-course .choicegroup fieldset label:first-of-type {
+      margin-top: 0; }
+    .view-in-course .choicegroup fieldset label:last-of-type {
+      margin-bottom: 0; }
+    .view-in-course .choicegroup fieldset label input {
+      margin: 0 .5em 0 2em; }
+
+.view-in-course .choicegroup .indicator-container {
+  display: none; }
+
 .view-in-course #seq_content, .discussion #seq_content {
   float: left;
-  margin-top: 5em; }
+  margin: 3em 0;
+  display: block;
+  width: 100%;
+  text-align: left; }
 
 .view-in-course nav.wrapper-course-material, .discussion nav.wrapper-course-material {
   display: block;
@@ -994,7 +1191,7 @@ h2 .text {
       text-transform: uppercase;
       font-size: 1em;
       font-weight: normal;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans";
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
@@ -1062,11 +1259,11 @@ h2 .text {
         position: relative; }
         .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading a {
           font-weight: bold; }
-        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name {
+        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .choicegroup fieldset label:before, .view-in-course .choicegroup fieldset .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name {
           display: table-cell; }
         .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name {
           vertical-align: top; }
-        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .icon {
+        .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading .choicegroup fieldset label:before, .view-in-course .choicegroup fieldset .course-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading label:before {
           vertical-align: middle;
           padding-right: .7em; }
       .view-in-course .course-wrapper .course-index .course-navigation .button-chapter.chapter.is-open {
@@ -1111,6 +1308,149 @@ h2 .text {
       margin-right: 0; }
   .view-in-course .course-wrapper .courseware-results-wrapper {
     display: none; }
+
+.tc-wrapper .video-wrapper {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%; }
+  .tc-wrapper .video-wrapper:last-child {
+    margin-right: 0; }
+  .tc-wrapper .video-wrapper .video-player {
+    overflow: hidden;
+    width: 100%;
+    float: left; }
+    .tc-wrapper .video-wrapper .video-player iframe {
+      width: 100%; }
+    .tc-wrapper .video-wrapper .video-player > * {
+      float: left; }
+  .tc-wrapper .video-wrapper .video-controls, .tc-wrapper .video-wrapper .closed-captions {
+    float: left;
+    display: block;
+    width: 100%;
+    background-color: #323232; }
+    .tc-wrapper .video-wrapper .video-controls .slider, .tc-wrapper .video-wrapper .closed-captions .slider {
+      background: #191919;
+      border: none; }
+      .tc-wrapper .video-wrapper .video-controls .slider .ui-slider-range, .tc-wrapper .video-wrapper .closed-captions .slider .ui-slider-range {
+        background: #efa82c; }
+  .tc-wrapper .video-wrapper .vcr {
+    padding: .5em;
+    display: block;
+    float: left; }
+    .tc-wrapper .video-wrapper .vcr .control.video_control {
+      border: 0;
+      color: #efa82c;
+      background-color: transparent; }
+    .tc-wrapper .video-wrapper .vcr .vidtime {
+      color: #efa82c;
+      display: inline-block;
+      margin: 0 2em; }
+  .tc-wrapper .video-wrapper .secondary-controls {
+    padding: .5em;
+    display: block;
+    float: right; }
+    .tc-wrapper .video-wrapper .secondary-controls .speeds.menu-container {
+      position: relative;
+      float: right; }
+      .tc-wrapper .video-wrapper .secondary-controls .speeds.menu-container .control.speed-button {
+        border: 0;
+        color: #efa82c;
+        background-color: transparent; }
+        .tc-wrapper .video-wrapper .secondary-controls .speeds.menu-container .control.speed-button > span {
+          margin: 0 .2em; }
+      .tc-wrapper .video-wrapper .secondary-controls .speeds.menu-container .video-speeds.menu {
+        display: none; }
+      .tc-wrapper .video-wrapper .secondary-controls .speeds.menu-container.is-opened {
+        background-color: #252525; }
+        .tc-wrapper .video-wrapper .secondary-controls .speeds.menu-container.is-opened .video-speeds.menu {
+          display: block;
+          position: absolute;
+          bottom: 1.5em;
+          right: 0;
+          left: 0;
+          padding-bottom: 1em;
+          background-color: #252525; }
+          .tc-wrapper .video-wrapper .secondary-controls .speeds.menu-container.is-opened .video-speeds.menu .control.speed-option {
+            width: 100%;
+            border: 0;
+            text-align: center;
+            padding: .5em 0;
+            color: #efa82c;
+            background-color: transparent; }
+    .tc-wrapper .video-wrapper .secondary-controls .volume {
+      position: relative;
+      float: right; }
+      .tc-wrapper .video-wrapper .secondary-controls .volume .control {
+        width: 1.5em;
+        border: 0;
+        color: #efa82c;
+        background-color: transparent; }
+      .tc-wrapper .video-wrapper .secondary-controls .volume .volume-slider-container {
+        display: none; }
+        .tc-wrapper .video-wrapper .secondary-controls .volume .volume-slider-container .volume-slider {
+          background: none;
+          border: none;
+          width: 100%; }
+          .tc-wrapper .video-wrapper .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-handle {
+            width: 1.9em; }
+          .tc-wrapper .video-wrapper .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-range {
+            width: 100%; }
+      .tc-wrapper .video-wrapper .secondary-controls .volume.is-opened {
+        background-color: #252525; }
+        .tc-wrapper .video-wrapper .secondary-controls .volume.is-opened .volume-slider-container {
+          display: block;
+          position: absolute;
+          bottom: 1.5em;
+          padding-bottom: 1em;
+          right: 0;
+          left: 0;
+          background: #252525; }
+    .tc-wrapper .video-wrapper .secondary-controls .control.quality-control {
+      position: relative;
+      float: right;
+      border: 0;
+      color: #efa82c;
+      background-color: transparent; }
+    .tc-wrapper .video-wrapper .secondary-controls .control.add-fullscreen {
+      position: relative;
+      float: right;
+      border: 0;
+      color: #efa82c;
+      background-color: transparent; }
+    .tc-wrapper .video-wrapper .secondary-controls .grouped-controls {
+      position: relative;
+      float: right; }
+      .tc-wrapper .video-wrapper .secondary-controls .grouped-controls .control {
+        border: 0;
+        color: #efa82c;
+        background-color: transparent; }
+    .tc-wrapper .video-wrapper .secondary-controls .sr {
+      display: none; }
+
+.tc-wrapper .closed-captions {
+  display: none !important;
+  text-align: center;
+  font-size: 1.5em;
+  color: yellow;
+  text-shadow: 0 0 1px black;
+  font-weight: bold; }
+
+.tc-wrapper .subtitles {
+  overflow: hidden;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .tc-wrapper .subtitles:last-child {
+    margin-right: 0; }
+  .tc-wrapper .subtitles li[role="link"] {
+    display: none; }
+    .tc-wrapper .subtitles li[role="link"].current {
+      display: block; }
+
+.wrapper-downloads {
+  display: none; }
 
 .header-global-new, .header-global {
   background-color: #fbfaf8;
@@ -1203,7 +1543,7 @@ h2 .text {
       text-transform: uppercase;
       font-size: 1em;
       font-weight: normal;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans";
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
@@ -1233,7 +1573,7 @@ h2 .text {
       text-transform: uppercase;
       font-size: 1em;
       font-weight: normal;
-      font-family: "Open Sans", sans-serif;
+      font-family: "Open Sans";
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
@@ -1285,7 +1625,7 @@ h2 .text {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: normal;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans";
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
@@ -1314,7 +1654,7 @@ h2 .text {
     text-transform: uppercase;
     font-size: 1em;
     font-weight: normal;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans";
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
@@ -1343,7 +1683,7 @@ h2 .text {
   text-transform: uppercase;
   font-size: 1em;
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans";
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
