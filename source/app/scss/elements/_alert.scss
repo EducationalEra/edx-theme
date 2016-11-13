@@ -47,5 +47,5 @@
      @include alert-variant($state-warning-bg, $state-warning-border, $state-warning-text);
 }
 @mixin alert-danger() {
-     @include alert-variant($state-danger-bg, $state-danger-border, $status-danger-text);
+     @include alert-variant($state-danger-bg, $state-danger-border, $state-danger-text);
 }
