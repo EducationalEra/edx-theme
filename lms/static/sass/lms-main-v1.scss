@@ -1452,6 +1452,103 @@ h2 .text {
 .wrapper-downloads {
   display: none; }
 
+.discussion .discussion-body .forum-nav {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  background-color: white; }
+  .discussion .discussion-body .forum-nav:last-child {
+    margin-right: 0; }
+  .discussion .discussion-body .forum-nav .forum-nav-header, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper,
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper, .discussion .discussion-body .forum-nav .forum-nav-refine-bar, .discussion .discussion-body .forum-nav .forum-nav-thread-list {
+    display: block;
+    width: 100%;
+    float: left; }
+  .discussion .discussion-body .forum-nav .forum-nav-header {
+    padding: 1em .5em;
+    position: relative; }
+    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse {
+      display: inline-block; }
+    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse {
+      background: none;
+      border: 0;
+      float: left; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse .sr {
+        display: none; }
+    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search {
+      position: absolute;
+      right: 1em; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .sr {
+        display: none; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input {
+        position: absolute;
+        float: right;
+        right: 1.4em;
+        text-align: right;
+        width: 3em;
+        transition: .2s width ease-out; }
+        .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input:focus {
+          transition: .2s width ease-in;
+          width: 14em; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .choicegroup fieldset label:before, .view-in-course .choicegroup fieldset .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before {
+        position: absolute;
+        right: 0;
+        line-height: 24px;
+        color: #efa82c; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .choicegroup fieldset label:before, .view-in-course .choicegroup fieldset .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before {
+        display: inline-block;
+        float: right; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar {
+    background-color: #e5f2fa;
+    padding: 1em .5em; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-filter-main, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-sort {
+      display: inline-block; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-filter-main {
+      float: left; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-sort {
+      float: left; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .sr {
+      display: none; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar select {
+      background: none;
+      border: none; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link {
+    display: block;
+    width: 100%;
+    float: left; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .sr {
+    display: none; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels {
+    display: none; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-title {
+    white-space: nowrap; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    padding: 1em; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0:last-child, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:last-child {
+      margin-right: 0; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%;
+    padding: 1em 0; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1:last-child {
+      margin-right: 0; }
+
+.discussion .discussion-body .discussion-column {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  background-color: white; }
+  .discussion .discussion-body .discussion-column:last-child {
+    margin-right: 0; }
+
 .header-global-new, .header-global {
   background-color: #fbfaf8;
   box-shadow: 0 1px 1px #dddddd;
