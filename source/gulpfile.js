@@ -19,7 +19,7 @@ gulp.task('serve', ['sass'], function () {
     // from current directory + ./app/css
     browserSync.init({
         proxy: 'http://52.51.3.205/',
-        serveStatic: ['app/css', '../lms/static/images'],
+        serveStatic: ['app/css', '../lms'],
         rewriteRules: [
             {
                 match: /<link.*lms\-main.*>/i,

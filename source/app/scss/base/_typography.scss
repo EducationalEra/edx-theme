@@ -24,6 +24,25 @@ h6 {
   margin: 0 0 $small-spacing;
 }
 
+h1 {
+  font-size: 2.25em;
+  color: $blue;
+}
+
+h2 {
+  font-size: 2.5em;
+  color: $gray;
+}
+
+h3 {
+  font-size: 1.6em;
+  color: $dark-gray;
+}
+
+h4, h5, h6 {
+  font-size: 1.25em;
+}
+
 p {
   margin: 0 0 $small-spacing;
 }

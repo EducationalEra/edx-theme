@@ -16,9 +16,7 @@
       }
     }
     .video-controls, .closed-captions {
-      float: left;
-      display: block;
-      width: 100%;
+      @include full-width-block;
       background-color: $dark-gray;
       .slider {
         background: darken($dark-gray, 10%);

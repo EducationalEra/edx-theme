@@ -1,9 +1,3 @@
-@mixin full-width-block {
-  display: block;
-  float: left;
-  width: 100%;
-}
-
 @mixin course-nav-button {
   background-color: $soft-blue;
   border: 0;
@@ -288,14 +282,6 @@
 
   main#main, .discussion.container {
     @include full-width-block;
-  }
-
-  .home, article {
-    // TODO: tbd
-    @include block-frame;
-    background-color: $white;
-    margin-bottom: 2em;
-    padding: 10px;
   }
 
   .xmodule_display.xmodule_SequenceModule .seq_contents {

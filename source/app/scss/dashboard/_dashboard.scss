@@ -7,7 +7,7 @@
     }
     .listing-courses, .courses-listing {
       .course {
-        @include row();
+        @include full-width-block;
 
         border-bottom: 1px solid $light-gray;
         border-top: 1px solid $light-gray;
@@ -51,14 +51,12 @@
         }
 
         .wrapper-course-actions {
-          @include row;
-          @include fill-parent;
 
           .course-actions {
             float: right;
             & > * {
               float: left;
-              margin: 0 .5em;
+              margin: 0 .3em;
               &:first-child {
                 margin-left: 0;
               }
@@ -79,8 +77,6 @@
               .sr {
                 display: none;
               }
-
-              @include edx-button($yellow);
             }
           }
 
@@ -89,6 +85,10 @@
         .learn-more {
           font-size: 1em;
           font-weight: bold;
+          @include edx-button($yellow);
+        }
+
+        .action-more {
           @include edx-button($yellow);
         }
 

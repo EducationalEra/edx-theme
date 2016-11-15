@@ -21,14 +21,10 @@
           color: $dark-gray;
         }
         .button-chapter.chapter {
-          width: 100%;
-          display: block;
-          float: left;
+          @include full-width-block;
 
           .group-heading {
-            width: 100%;
-            display: block;
-            float: left;
+            @include full-width-block;
             padding: 1em;
             position: relative;
 
@@ -56,8 +52,7 @@
           }
         }
         .chapter-content-container {
-          float: left;
-          width: 100%;
+          @include full-width-block;
           .chapter-menu {
             margin: {
               left: 2em;
@@ -67,7 +62,6 @@
 
             .accordion-nav {
               display: block;
-              box-sizing: border-box;
               padding: .5em 1em;
               border-radius: $base-border-radius;
 

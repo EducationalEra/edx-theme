@@ -24,6 +24,7 @@
 
   .logo {
     @include header-item-base;
+    font-size: 1em;
 
     a {
       float: left;
@@ -35,8 +36,7 @@
     @include header-item-base;
     border-left: 1px solid $light-gray;
     padding: 0 1em;
-
-    color: $medium-gray;
+    font-size: 1em;
 
     .provider, .course-name {
       font-weight: bold;

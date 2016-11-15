@@ -47,6 +47,12 @@ a {
   border: 1px solid #dddddd;
 }
 
+@mixin full-width-block {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
 @mixin responsive-outer-container() {
   @include outer-container();
 
