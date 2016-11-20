@@ -1,3 +1,15 @@
+@import "course-home";
+@import "course-sidebar";
+@import "course-top-nav";
+@import "course-internal-nav";
+
+@import "course-problem";
+@import "course-progress";
+
+@import "course-discussion";
+@import "video-player";
+
+
 .view-in-course {
   .container, .tabs.course-tabs {
     @include full-width-block;

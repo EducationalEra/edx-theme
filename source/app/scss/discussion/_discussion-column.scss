@@ -1,0 +1,151 @@
+.discussion .discussion-body .discussion-column {
+    @include span-columns(9);
+    background-color: white;
+    padding: 2em;
+    .discussion-article {
+        .thread-wrapper {
+            .thread-responses-wrapper {
+                margin: 2em 0;
+                .response-count {
+                    color: $blue;
+                    font-weight: bold;
+                }
+                .add-response {
+                    float: right;
+                    &-btn {
+                        @include edx-button($yellow);
+                    }
+                }
+            }
+            .thread-responses-wrapper {
+                .js-response-list {
+                    margin: 2em 0;
+                }
+            }
+            .thread-main-wrapper {
+                padding-bottom: 1em;
+                margin-bottom: 1em;
+                border-bottom: 1px solid $light-gray;
+            }
+            .wrapper-post-header {
+                .post-header-content {
+                    .post-title {
+                        margin-bottom: 0;
+                    }
+                    .posted-details {
+                        color: $medium-gray;
+                    }
+                }
+            }
+            .post-context {
+                color: $blue;
+                .group-visibility-label {
+                    float: right;
+                    display: inline;
+                }
+            }
+        }
+        .wrapper-post-header,
+        .wrapper-response-header {
+            @include full-width-block;
+        }
+        .post-header-content,
+        .response-header-content {
+            @include span-columns(10);
+        }
+        .post-header-actions,
+        .response-header-actions {
+            @include span-columns(2);
+        }
+        .discussion-comment,
+        .forum-response {
+            border: 1px solid $light-gray;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+        // still in discussion, but just about actions
+        .comment-actions-list,
+        .post-actions-list,
+        .response-actions-list {
+            text-align: right;
+            .action-button {
+                &.action-vote {
+                    .sr {
+                        // TODO: tbd
+                        display: none;
+                    }
+                }
+                &.action-follow {
+                    .sr {
+                        // TODO: tbd
+                        display: none;
+                    }
+                    //
+                    .label-unchecked {
+                        color: $gray;
+                        display: inline;
+                    }
+                    .label-checked {
+                        display: none;
+                    }
+                    .action-icon {
+                        color: $gray;
+                    }
+                    //
+                    &.is-checked {
+                        .action-icon {
+                            color: $yellow;
+                        }
+                        .label-unchecked {
+                            display: none;
+                        }
+                        .label-checked {
+                            color: $yellow;
+                            display: inline;
+                        }
+                    }
+                }
+            }
+            .more-wrapper {
+                position: relative;
+                .actions-dropdown {
+                    display: none;
+                    position: absolute;
+                    top: 1.5em;
+                    right: 0;
+                    background-color: white;
+                    z-index: 1;
+                    @include block-frame;
+                    border-radius: $base-border-radius;
+                    .actions-item a {
+                        display: block;
+                        line-height: 1em;
+                        font-size: 0.9em;
+                        padding: 0.7em 1.4em;
+                        font-weight: normal;
+                    }
+                    &.is-expanded {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .reply-post-control {
+        a {
+            @include edx-button($yellow);
+        }
+    }
+    .comment-form {
+        .sr {
+            // TODO: tbd
+            display: none;
+        }
+    }
+    .comment-actions-list {
+        float: right;
+    }
+    .posted-details {
+        color: $blue;
+    }
+}

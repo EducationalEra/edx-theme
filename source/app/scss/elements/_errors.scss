@@ -1,0 +1,7 @@
+.post-errors,
+.discussion-errors,
+.comment-errors,
+.status.submission-error {
+  @include alert;
+  @include alert-warning;
+}

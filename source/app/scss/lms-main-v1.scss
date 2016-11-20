@@ -17,16 +17,14 @@
 @import "elements/buttons";
 @import "elements/alert";
 @import "elements/modal";
+@import "elements/errors";
 
 // pages
 @import "login/login";
 // @import "dashboard/home";
 @import "dashboard/dashboard";
-@import "course/course-info";
-@import "course/course-detail-page";
-@import "course/course-index";
-@import "course/video-player";
-@import "course/discussion";
+@import "course/course";
+@import "discussion/discussion";
 
 // parts
 @import "header/header";

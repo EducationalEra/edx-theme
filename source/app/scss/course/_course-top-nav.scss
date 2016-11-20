@@ -1,0 +1,29 @@
+nav.wrapper-course-material {
+    @include full-width-block;
+    margin-bottom: 2em;
+    .right,
+    .tab {
+        display: inline-block;
+        padding: 0 0.5em;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+        a,
+        button {
+            @include edx-flat-button();
+        }
+        .sr {
+            // TODO: tbd
+            display: none;
+        }
+    }
+    .tab {
+        float: left;
+    }
+    .right {
+        float: right;
+    }
+}

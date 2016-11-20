@@ -1,0 +1,43 @@
+@mixin course-nav-button {
+  background-color: $soft-blue;
+  border: 0;
+  width: 3.5em;
+  height: 3.5em;
+  display: inline-block;
+  float: left;
+  .sr {
+    display: none;
+  }
+  .sequence-tooltip {
+    // TODO: tbd
+    display: none;
+  }
+
+  & .fa-chevron-prev:before {
+    content: "\f0d9";
+    font-size: 2em;
+  }
+  & .fa-chevron-next:before {
+    content: "\f0da";
+    font-size: 2em;
+  }
+
+  & .fa.seq_problem:before {
+    // TODO: tbd
+    content: "\f0ca";
+  }
+  & .fa.seq_video:before {
+    // TODO: tbd
+    content: "\f008";
+  }
+  & .fa.seq_other:before {
+    // TODO: tbd
+    content: "\f129";
+  }
+
+
+  &:hover, &.active {
+    background-color: darken($soft-blue, 10%);
+    cursor: pointer;
+  }
+}

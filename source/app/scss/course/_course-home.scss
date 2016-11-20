@@ -1,0 +1,39 @@
+.view-in-course {
+    p img {
+        float: left;
+        display: block;
+    }
+}
+.discussion,
+.view-in-course {
+    #seq_content {
+        float: left;
+        margin: 3em 0;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+    .info-wrapper {
+        @include block-frame;
+        background-color: $white;
+        padding: 1em;
+        margin-bottom: 1em;
+        .updates {
+            h1 {
+                display: none;
+            }
+        }
+    }
+    .home {
+      .page-title {
+        display: none;
+      }
+    }
+    .discussion.container,
+    main#main {
+        @include full-width-block;
+    }
+    .xmodule_display.xmodule_SequenceModule .seq_contents {
+        display: none;
+    }
+}

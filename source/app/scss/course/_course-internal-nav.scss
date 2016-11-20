@@ -1,0 +1,47 @@
+.view-in-course {
+    .path {
+        // TODO: tbd
+        display: none;
+    }
+    .sequence {
+        text-align: center;
+    }
+    .sequence-nav {
+        display: inline-block;
+        .sequence-list-wrapper,
+        .sequence-nav-button,
+        li,
+        ol {
+            display: block;
+            float: left;
+        }
+        &-button {
+            @include course-nav-button;
+            background-color: darken($soft-blue, 10%);
+            &.button-previous {
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+            }
+            &.button-next {
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+            }
+        }
+        .sequence-list-wrapper {
+            .nav-item {
+                @include course-nav-button;
+            }
+        }
+    }
+    .sequence-bottom {
+        display: inline-block;
+        button {
+            display: block;
+            float: left;
+        }
+    }
+    .bookmark-button-wrapper {
+        // TODO: tbd
+        display: none;
+    }
+}

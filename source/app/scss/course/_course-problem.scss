@@ -1,0 +1,130 @@
+.view-in-course {
+    .problems-wrapper {
+      .problem-header {
+        @include span-columns(9);
+      }
+      .problem-progress {
+        @include span-columns(3);
+        margin-right: 0;
+        text-align: right;
+      }
+    }
+    .problem {
+        .action {
+            @include full-width-block;
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+            border-bottom: 1px solid $light-gray;
+            & > * {
+                display: inline-block;
+                float: left;
+                margin: 0 0.5em;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+            .check {
+                @include edx-button($yellow);
+            }
+            .show {
+                @include edx-button($dark-gray);
+                .sr {
+                    // TODO: tbd
+                    display: none;
+                }
+            }
+            .save {
+                @include edx-button($dark-gray);
+                .sr {
+                    // TODO: tbd
+                    display: none;
+                }
+            }
+            .submission_feedback {
+                line-height: 45px;
+                float: right;
+            }
+        }
+        .solution-span {
+            solution {
+                @include alert;
+                @include alert-info;
+            }
+            margin-bottom: 1em;
+        }
+    }
+    .choicegroup {
+        fieldset {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            border-left: 1px solid $light-gray;
+            margin: 2em 0 2em 3em;
+            position: relative;
+            label {
+                display: block;
+                margin: 1em 0;
+                .sr.status {
+                    // TODO: tbd
+                    display: none;
+                    color: $medium-gray;
+                }
+                &:before {
+                    @extend .icon;
+                    content: "\f111";
+                    position: absolute;
+                    font-size: 2em;
+                    left: -1.5em;
+                    width: 1em;
+                    top: 0;
+                    color: $light-gray;
+                }
+                &.choicegroup_correct:before,
+                &.choicegroup_incorrect:before {
+                    background-color: white;
+                    z-index: 1;
+                }
+                &.choicegroup_correct:before {
+                    color: #4CAF50;
+                    content: "\f00c";
+                }
+                &.choicegroup_incorrect:before {
+                    color: #F44336;
+                    content: "\f00d";
+                }
+                &:first-of-type {
+                    margin-top: 0;
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                input {
+                    // TODO: tbd
+                    margin: 0 0.5em 0 2em;
+                }
+            }
+        }
+        .indicator-container {
+            display: none;
+            // margin-bottom: 1em;
+            // .status {
+            //   display: block;
+            //   padding: .5em;
+            //   @include alert;
+            //   &.unanswered {
+            //     display: none;
+            //   }
+            //   &.incorrect {
+            //     @include alert-danger;
+            //   }
+            //   &.correct {
+            //     @include alert-success;
+            //   }
+            //
+            // }
+        }
+    }
+}

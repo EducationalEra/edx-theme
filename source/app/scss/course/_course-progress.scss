@@ -1,0 +1,173 @@
+// .chapters > section {
+//   & > h2 {
+//     font-size: 1em;
+//     font-weight: normal;
+//     @include span-columns(2);
+//   }
+// }
+.auto-cert-message {
+  display: none;
+}
+.profile-wrapper .course-info {
+  header {
+    margin-bottom: 1.41575em;
+    h1 {
+      float: left;
+      font-size: 1em;
+      font-weight: 100;
+      margin: 0;
+    }
+  }
+  #course-success {
+    margin-bottom: 30px;
+    text-align: center;
+    > a {
+      border: 1px solid #b37900;
+      border-radius: 3px;
+      box-shadow: inset 0 1px 0 0 #f8c24f;
+      color: #333;
+      display: inline-block;
+      font-size: inherit;
+      font-weight: bold;
+      background-color: #faaa00;
+      background-image: -webkit-linear-gradient(#faaa00, #c28400);
+      background-image: linear-gradient(#faaa00, #c28400);
+      padding: 7px 18px;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #ffb20f;
+      background-clip: padding-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      border-radius: 3px;
+      font: normal 15px/1.6rem "Open Sans","Open Sans",Verdana,Geneva,sans-serif,sans-serif;
+      letter-spacing: 0;
+      padding: 5px 18px 6px;
+      text-align: center;
+      &:hover:not(:disabled) {
+        box-shadow: inset 0 1px 0 0 #f7b11d;
+        cursor: pointer;
+        background-color: #dc9704;
+        background-image: -webkit-linear-gradient(#dc9704, #b37900);
+        background-image: linear-gradient(#dc9704, #b37900);
+      }
+    }
+  }
+  div.info-wrapper section.handouts ol li #course-success > div.hitarea:hover + h4:not(:disabled) {
+    box-shadow: inset 0 1px 0 0 #f7b11d;
+    cursor: pointer;
+    background-color: #dc9704;
+    background-image: -webkit-linear-gradient(#dc9704, #b37900);
+    background-image: linear-gradient(#dc9704, #b37900);
+  }
+}
+
+div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:hover + h4:not(:disabled), .profile-wrapper .course-info div.info-wrapper section.handouts ol li #course-success > div.hitarea:focus + h4:not(:disabled), div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:focus + h4:not(:disabled) {
+  box-shadow: inset 0 1px 0 0 #f7b11d;
+  cursor: pointer;
+  background-color: #dc9704;
+  background-image: -webkit-linear-gradient(#dc9704, #b37900);
+  background-image: linear-gradient(#dc9704, #b37900);
+}
+
+.profile-wrapper .course-info {
+  #course-success > a {
+    &:active:not(:disabled), &:focus:not(:disabled) {
+      border: 1px solid #b37900;
+      box-shadow: inset 0 0 8px 4px #a36f00, inset 0 0 8px 4px #a36f00;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  div.info-wrapper section.handouts ol li #course-success > div.hitarea:hover + h4 {
+    text-decoration: none;
+  }
+}
+
+.profile-wrapper .course-info {
+  #course-success > a:focus {
+    text-decoration: none;
+  }
+  #grade-detail-graph {
+    min-height: 400px;
+    width: 100%;
+  }
+  > .chapters {
+    border-top: 1px solid #e3e3e3;
+    margin-top: 1.41575em;
+    padding-left: 0;
+    > section {
+      border-bottom: 1px solid #e3e3e3;
+      display: table;
+      padding: 1.41575em 0;
+      width: 100%;
+      &:last-child {
+        border-bottom: 0px;
+      }
+      h2 {
+        border-right: 1px dashed #ddd;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        display: table-cell;
+        letter-spacing: 0;
+        margin: 0;
+        padding: 0;
+        padding-right: 2.27273%;
+        text-transform: none;
+        width: 20.45455%;
+        font-size: 1.5em;
+      }
+      .sections {
+        display: table-cell;
+        padding-left: 2.27273%;
+        width: 77.27273%;
+        > div {
+          padding: 0 0 1.41575em 0;
+          &:first-child {
+            padding-top: 0;
+          }
+          &:last-child {
+            border-bottom: 0;
+          }
+          h3 {
+            color: #666;
+            span {
+              color: #999;
+              font-size: 0.875em;
+              font-weight: 100;
+            }
+          }
+          p {
+            color: #999;
+            font-size: 0.875em;
+          }
+          .scores {
+            margin: 0.70788em 0;
+            h3 {
+              font-size: 0.875em;
+              display: inline-block;
+            }
+            ol {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              display: inline-block;
+              li {
+                display: inline-block;
+                font-size: 0.875em;
+                font-weight: normal;
+                padding-right: 1em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.view-in-course {
+    .course-index {
+        @include span-columns(3 of 12);
+        border-radius: $base-border-radius;
+        background-color: $white;
+        .wrapper-course-modes {
+            // TODO: tbd
+            display: none;
+        }
+        .course-navigation {
+            a {
+                color: $dark-gray;
+            }
+            .button-chapter.chapter {
+                @include full-width-block;
+                .group-heading {
+                    @include full-width-block;
+                    padding: 1em;
+                    position: relative;
+                    a {
+                        font-weight: bold;
+                    }
+                    .chapter-label-name,
+                    .icon {
+                        display: table-cell;
+                    }
+                    .chapter-label-name {
+                        vertical-align: top;
+                    }
+                    .icon {
+                        vertical-align: middle;
+                        padding-right: 0.7em;
+                    }
+                }
+                &.is-open {
+                    background-color: $soft-blue;
+                }
+            }
+            .chapter-content-container {
+                @include full-width-block;
+                .chapter-menu {
+                    margin: {
+                        left: 2em;
+                        right: 1em;
+                        bottom: 1em;
+                    }
+                    .menu-item {
+                        border-radius: $base-border-radius;
+                        &.active,
+                        &:hover {
+                            background-color: darken($soft-blue, 10%);
+                        }
+                    }
+                    .accordion-nav {
+                        display: block;
+                        padding: 0.5em 1em;
+                        margin: {
+                            bottom: 0.5em;
+                        }
+                        p {
+                            margin: 0;
+                        }
+                        .accordion-display-name {
+                            color: $blue;
+                            font-weight: bold;
+                        }
+                        .subtitle {
+                            font-size: 0.85em;
+                            color: $medium-gray;
+                        }
+                        .sr {
+                            // TODO: tbd
+                            display: none;
+                        }
+                    }
+                }
+                &.is-open {
+                    background-color: $soft-blue;
+                }
+            }
+        }
+    }
+}

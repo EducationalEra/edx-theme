@@ -1,0 +1,19 @@
+.view-in-course {
+    .discussion-module {
+        display: block;
+        float: left;
+        width: 100%;
+        padding: 1em;
+        background-color: $slightly-gray;
+        border-radius: $base-border-radius;
+        margin-bottom: 1em;
+        a {
+            color: $yellow;
+            line-height: 40px;
+        }
+        .new-post-btn {
+            @include edx-button($yellow);
+            float: right;
+        }
+    }
+}
