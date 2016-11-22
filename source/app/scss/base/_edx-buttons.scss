@@ -1,14 +1,10 @@
-@mixin edx-button($color) {
+@mixin base-button () {
   display: block;
-  background-color: $color;
-  color: $white;
-
   border: none;
   border-radius: $base-border-radius;
   cursor: pointer;
-  line-height: 1;
-  padding: .75em 1em;
-
+  line-height: $base-line-height;
+  padding: .5em 1em;
   text: {
     align: center;
     transform: uppercase;
@@ -21,7 +17,16 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
 
+@mixin edx-button($color) {
+  @include base-button;
+  background-color: $color;
+  color: $white;
   transition: .1s ease-out;
 
   &:hover {
@@ -30,28 +35,9 @@
 }
 
 @mixin edx-flat-button() {
-  display: block;
+  @include base-button;
   background-color: transparent;
   color: $medium-gray;
-
-  border: none;
-  border-radius: $base-border-radius;
-  cursor: pointer;
-  line-height: 1;
-  padding: .75em 1em;
-
-  text: {
-    align: center;
-    transform: uppercase;
-  }
-  font: {
-    size: $base-font-size;
-    weight: normal;
-    family: $base-font-family;
-  }
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
 
   transition: .1s ease-out;
 

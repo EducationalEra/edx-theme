@@ -1,15 +1,43 @@
+@mixin default-unanswered {
+  @extend .icon;
+  content: "\f111";
+  position: absolute;
+  font-size: 2em;
+  left: -1.5em;
+  width: 1em;
+  top: 0;
+  color: $light-gray;
+}
+
+@mixin answer-correct {
+  color: #4CAF50;
+  content: "\f00c";
+}
+
+@mixin answer-incorrect {
+  color: #F44336;
+  content: "\f00d";
+}
+
 .view-in-course {
     .problems-wrapper {
-      .problem-header {
-        @include span-columns(9);
-      }
-      .problem-progress {
-        @include span-columns(3);
-        margin-right: 0;
-        text-align: right;
-      }
+        .problem-header {
+            @include span-columns(9);
+        }
+        .problem-progress {
+            @include span-columns(3);
+            margin-right: 0;
+            text-align: right;
+        }
     }
     .problem {
+        float: left;
+        width: 100%;
+        // WTF!!!
+        & > div > div > p {
+            font-size: 1.5em;
+            margin: $base-spacing 0;
+        }
         .action {
             @include full-width-block;
             padding-bottom: 1em;
@@ -49,82 +77,124 @@
             }
         }
         .solution-span {
-            solution {
+            .detailed-solution {
                 @include alert;
                 @include alert-info;
             }
             margin-bottom: 1em;
         }
     }
-    .choicegroup {
+    .capa_inputtype, .inputtype, .chemicalequationinput, .designprotein2dinput {
+        position: relative;
+        border-left: 1px solid $light-gray;
+        margin: 2em 0 2em 3em;
+        label,
+        select {
+            display: block;
+            margin: 1em 0;
+        }
+        input, textarea, select {
+          width: auto;
+        }
+        .sr.status,
+        .status .sr {
+            // TODO: tbd
+            display: none;
+        }
+        // WTF!!!
+        .status {
+          visibility: hidden;
+          &:before {
+            visibility: visible;
+          }
+        }
+
+        label {
+            &:before {
+              @include default-unanswered;
+            }
+            &.choicegroup_correct:before,
+            &.choicegroup_incorrect:before {
+                background-color: white;
+                z-index: 1;
+            }
+            &.choicegroup_correct:before {
+                @include answer-correct;
+            }
+            &.choicegroup_incorrect:before {
+                @include answer-incorrect;
+            }
+            &:first-of-type {
+                margin-top: 0;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        input,
+        select {
+            &+* {
+                vertical-align: middle;
+            }
+        }
+        input,
+        select,
+        .equation {
+          margin: 0 0.5em 0 2em;
+        }
         fieldset {
             margin: 0;
             padding: 0;
             border: 0;
-            border-left: 1px solid $light-gray;
-            margin: 2em 0 2em 3em;
             position: relative;
-            label {
-                display: block;
-                margin: 1em 0;
-                .sr.status {
-                    // TODO: tbd
-                    display: none;
-                    color: $medium-gray;
-                }
+        }
+    }
+
+    .capa_inputtype.textline, .chemicalequationinput, .designprotein2dinput {
+      .status {
+        &:before {
+          @include default-unanswered;
+        }
+      }
+      .correct .status {
+        &:before {
+          @include answer-correct;
+        }
+      }
+      .incorrect .status {
+        &:before {
+          @include answer-incorrect;
+        }
+      }
+    }
+
+    .indicator-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        .status {
+            display: block;
+            position: relative;
+            &:before {
+                @include default-unanswered;
+            }
+            &.correct:before,
+            &.incorrect:before {
+                background-color: white;
+                z-index: 1;
+            }
+            &.correct:before {
+                @include answer-correct;
+            }
+            &.incorrect:before {
+                @include answer-incorrect;
+            }
+            &.unanswered {
                 &:before {
-                    @extend .icon;
-                    content: "\f111";
-                    position: absolute;
-                    font-size: 2em;
-                    left: -1.5em;
-                    width: 1em;
-                    top: 0;
-                    color: $light-gray;
-                }
-                &.choicegroup_correct:before,
-                &.choicegroup_incorrect:before {
-                    background-color: white;
-                    z-index: 1;
-                }
-                &.choicegroup_correct:before {
-                    color: #4CAF50;
-                    content: "\f00c";
-                }
-                &.choicegroup_incorrect:before {
-                    color: #F44336;
-                    content: "\f00d";
-                }
-                &:first-of-type {
-                    margin-top: 0;
-                }
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
-                input {
-                    // TODO: tbd
-                    margin: 0 0.5em 0 2em;
+                    @include default-unanswered;
                 }
             }
-        }
-        .indicator-container {
-            display: none;
-            // margin-bottom: 1em;
-            // .status {
-            //   display: block;
-            //   padding: .5em;
-            //   @include alert;
-            //   &.unanswered {
-            //     display: none;
-            //   }
-            //   &.incorrect {
-            //     @include alert-danger;
-            //   }
-            //   &.correct {
-            //     @include alert-success;
-            //   }
-            //
-            // }
         }
     }
 }

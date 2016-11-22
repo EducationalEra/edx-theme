@@ -1,18 +1,35 @@
 .tc-wrapper {
   .video-wrapper {
     @include span-columns(9);
+  }
+  .subtitles {
+    @include span-columns(3);
+  }
+}
 
+.has-captions {
+  .tc-wrapper {
+    .video-wrapper {
+      @include span-columns(12);
+    }
+    .subtitles {
+      display: none;
+    }
+  }
+}
+
+.tc-wrapper {
+  .video-wrapper {
     .video-player {
       overflow: hidden;
       width: 100%;
-      float: left;
 
       iframe {
-        width: 100%;
-      }
-
-      & > * {
-        float: left;
+        border: none;
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        height: auto;
       }
     }
     .video-controls, .closed-captions {
@@ -27,18 +44,21 @@
       }
     }
 
+    & .control, & .vidtime {
+      line-height: $base-line-height;
+      display: inline-block;
+      border: 0;
+      color: $yellow;
+      background-color: transparent;
+      vertical-align: middle;
+    }
+
     .vcr {
       padding: .5em;
       display: block;
       float: left;
-      .control.video_control {
-        border: 0;
-        color: $yellow;
-        background-color: transparent;
-      }
       .vidtime {
-        color: $yellow;
-        display: inline-block;
+        vertical-align: inherit;
         margin: 0 2em;
       }
     }
@@ -48,14 +68,12 @@
       padding: .5em;
       display: block;
       float: right;
+
       .speeds.menu-container {
         position: relative;
         float: right;
 
         .control.speed-button {
-          border: 0;
-          color: $yellow;
-          background-color: transparent;
           & > span {
             margin: 0 .2em;
           }
@@ -73,9 +91,13 @@
             bottom: 1.5em;
             right: 0;
             left: 0;
+            z-index: 1000;
             padding-bottom: 1em;
 
             background-color: darken($dark-gray, 5%);
+            & .is-active {
+              font-weight: bold;
+            }
             .control.speed-option {
               width: 100%;
               border: 0;
@@ -94,9 +116,6 @@
 
         .control {
           width: 1.5em;
-          border: 0;
-          color: $yellow;
-          background-color: transparent;
         }
 
         .volume-slider-container {
@@ -124,6 +143,7 @@
             padding-bottom: 1em;
             right: 0;
             left: 0;
+            z-index: 1000;
             background: darken($dark-gray, 5%);
           }
         }
@@ -131,28 +151,16 @@
 
       .control.quality-control {
         position: relative;
-        float: right;
-        border: 0;
-        color: $yellow;
-        background-color: transparent;
+
       }
 
       .control.add-fullscreen {
         position: relative;
-        float: right;
-        border: 0;
-        color: $yellow;
-        background-color: transparent;
       }
 
       .grouped-controls {
         position: relative;
         float: right;
-        .control {
-          border: 0;
-          color: $yellow;
-          background-color: transparent;
-        }
       }
 
       // TODO: tbd
@@ -178,7 +186,6 @@
 
   .subtitles {
     overflow: hidden;
-    @include span-columns(3);
     li[role="link"] {
       display: none;
       &.current {
@@ -191,4 +198,32 @@
 .wrapper-downloads {
   // TODO: tbd
   display: none;
+}
+
+.video-fullscreen {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #323232;
+
+  .tc-wrapper {
+    width: 100%;
+    height: 100%;
+    position: static;
+  }
+
+  .video-wrapper {
+    height: 100%;
+    position: static;
+    vertical-align: middle;
+  }
+
+  .subtitles {
+    li[role="link"].current {
+      color: white;
+    }
+  }
 }
