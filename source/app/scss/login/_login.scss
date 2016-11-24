@@ -32,15 +32,16 @@
       h2 {
         position: absolute;
         top: -30px;
+        font: {
+          size: 1em;
+          weight: lighter;
+        }
         .text {
           background-color: $dark-gray;
           color: $white;
           padding: 9px 15px;
           border-radius: $base-border-radius;
-          font: {
-            size: 1em;
-            weight: lighter;
-          }
+
         }
       }
     }

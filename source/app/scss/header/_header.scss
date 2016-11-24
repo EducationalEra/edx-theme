@@ -52,7 +52,7 @@
       .btn.btn-login, .btn-neutral.btn-register {
         padding: 0 1em;
         text-transform: uppercase;
-        color: $action-color;
+        color: $medium-gray;
       }
     }
   }
@@ -63,6 +63,9 @@
       padding: 0 1em;
       text-transform: uppercase;
       color: $medium-gray;
+      a {
+        color: $medium-gray;
+      }
     }
   }
 

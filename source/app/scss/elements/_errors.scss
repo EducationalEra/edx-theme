@@ -2,6 +2,9 @@
 .discussion-errors,
 .comment-errors,
 .status.submission-error {
+  &:empty {
+    display: none;
+  }
   @include alert;
   @include alert-warning;
 }

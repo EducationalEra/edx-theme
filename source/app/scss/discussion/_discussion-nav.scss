@@ -12,8 +12,11 @@
         width: 100%;
         float: left;
     }
+    .forum-nav-thread-list {
+      overflow: hidden;
+    }
     .forum-nav-header {
-        padding: 1em 0.5em;
+        padding: 0 0.5em;
         position: relative;
         .forum-nav-browse,
         .forum-nav-search {
@@ -26,6 +29,7 @@
             }
             background: none;
             border: 0;
+            margin: 1em 0;
             float: left;
         }
         .forum-nav-search {
@@ -42,14 +46,22 @@
                 text-align: right;
                 width: 3.5em;
                 border: 0;
-                padding: .1em;
+                margin: .5em 0;
+                padding-right: 0;
+                padding-left: 0;
+                // padding: .1em;
+                background-color: white;
+                cursor: pointer;
                 &:focus {
+                    padding-right: 1em;
+                    padding-left: 1em;
                     width: 14em;
                 }
             }
             .icon {
                 position: absolute;
                 right: 0;
+                margin: 1em 0;
                 line-height: 24px;
                 color: $yellow;
             }
@@ -63,7 +75,7 @@
     .forum-nav-thread-list-wrapper {
         .forum-nav-refine-bar {
             background-color: $soft-blue;
-            padding: 1em 0.5em;
+            padding: .5em;
             .forum-nav-filter-main,
             .forum-nav-sort {
                 display: inline-block;
@@ -153,13 +165,13 @@
           }
           input {
             border: 0;
-            padding: .1em;
           }
           .icon {
-            color: $yellow;
-            float: right;
-            vertical-align: middle;
-            line-height: 22px;
+            // color: $yellow;
+            // float: right;
+            // vertical-align: middle;
+            // line-height: 22px;
+            display: none;
           }
         }
 

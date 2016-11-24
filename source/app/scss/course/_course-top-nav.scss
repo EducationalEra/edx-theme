@@ -11,9 +11,11 @@ nav.wrapper-course-material {
         &:last-child {
             padding-right: 0;
         }
-        a,
-        button {
+        a {
             @include edx-flat-button();
+        }
+        .new-post-btn {
+            @include edx-button($yellow);
         }
         .sr {
             // TODO: tbd

@@ -1,5 +1,51 @@
 .view-in-course, .discussion {
   .new-post-article {
-    
+    .post-field {
+      @include row();
+      margin-bottom: $base-spacing;
+
+      .field-label {
+        &-text, .sr {
+          display: block;
+          @include form-label;
+        }
+      }
+
+      .field-input {
+        border: none;
+        margin: 0;
+        display: block;
+        .sr {
+          display: none;
+        }
+      }
+      .field-help {
+        display: block;
+        color: $medium-gray;
+      }
+    }
+
+    .post-options {
+      @include row();
+      margin-bottom: $base-spacing;
+      .post-option {
+        vertical-align: middle;
+        @include form-label;
+        input {
+          vertical-align: middle;
+        }
+      }
+    }
+
+    .submit {
+      @include edx-button($yellow);
+    }
+    .cancel {
+      @include edx-button($dark-gray);
+    }
+    .submit, .cancel {
+      width: auto;
+      display: inline-block;
+    }
   }
 }

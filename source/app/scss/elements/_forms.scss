@@ -1,35 +1,4 @@
 // openedx form field
-.form-field {
-  @include row();
-  margin: 2em 0;
-
-  input, label, textarea, select {
-    display: block;
-  }
-
-  label {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: .8em;
-    margin: .3em 0;
-  }
-
-  input[type="checkbox"] {
-    width: auto;
-    position: absolute;
-    // font size will affect only mobile browsers
-    font-size: .8em;
-    vertical-align: middle;
-    &+label {
-      text-indent: 2em;
-    }
-  }
-
-  textarea {
-    height: 6em;
-  }
-}
-
 input, textarea, select {
   border: none;
   border-radius: $base-border-radius;
@@ -42,6 +11,42 @@ input, textarea, select {
 
 select {
   height: 2.5em;
+}
+
+@mixin form-label {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: .8em;
+  margin: .3em 0;
+}
+
+.form-field {
+  @include row();
+  margin: 2em 0;
+
+  input, label, textarea, select {
+    display: block;
+  }
+
+  label {
+    @include form-label;
+  }
+
+  textarea {
+    height: 6em;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  display: inline;
+  vertical-align: baseline;
+  &+label {
+    margin-left: $small-spacing / 2;
+    display: inline;
+    vertical-align: baseline;
+  }
 }
 
 .tip {
