@@ -2439,6 +2439,12 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
     .wrapper-header .logo a {
       float: left;
       line-height: 0; }
+  .wrapper-header .nav-global {
+    line-height: 45px;
+    display: inline-block;
+    margin: 1em .3em;
+    font-weight: 500;
+    float: left; }
   .wrapper-header .course-header {
     line-height: 45px;
     display: inline-block;
@@ -2484,6 +2490,10 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       display: inline-block;
       float: left;
       white-space: nowrap; }
+      .wrapper-header .user .primary .sr {
+        display: none; }
+    .wrapper-header .user .settings-language-form, .wrapper-header .user select {
+      display: block; }
     .wrapper-header .user .user-link {
       display: block;
       border: none;
@@ -2513,8 +2523,6 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
         background-color: #f3b842; }
       .wrapper-header .user .user-link .label-username {
         display: inline-block; }
-      .wrapper-header .user .user-link .sr {
-        display: none; }
       .wrapper-header .user .user-link .user-image-frame {
         display: none; }
     .wrapper-header .user .dropdown {
