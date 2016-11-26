@@ -32,6 +32,10 @@
     }
   }
 
+  .nav-global {
+    @include header-item-base;
+  }
+
   .course-header {
     @include header-item-base;
     border-left: 1px solid $light-gray;
@@ -78,6 +82,14 @@
       display: inline-block;
       float: left;
       white-space: nowrap;
+      .sr {
+        // TODO: tbd
+        display: none;
+      }
+    }
+
+    .settings-language-form, select {
+      display: block;
     }
 
     .user-link {
@@ -91,10 +103,7 @@
         display: inline-block;
       }
 
-      .sr {
-        // TODO: tbd
-        display: none;
-      }
+
       .user-image-frame {
         // TODO: tbd
         display: none;
