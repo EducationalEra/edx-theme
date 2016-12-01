@@ -68,6 +68,9 @@ site_status_msg = get_site_status_msg(course_id)
         %>
         <span class="course-name">${display_name}</span></h2>
       % endif
+      <button class="collapse-navigation">
+        <span class="icon collaps-menu"></span>
+      </button>
       <div class="header-navigation">
       % if user.is_authenticated():
         <ol class="left nav-global list-inline authenticated">
