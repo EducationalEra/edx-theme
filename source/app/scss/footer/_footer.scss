@@ -24,8 +24,9 @@
       @include span-columns(3 of 12);
     }
 
-    @include media($mobile) {
-      @include span-columns(12 of 12);
+    @include media($mobile-l) {
+      @include span-columns(6);
+      @include omega(2n);
     }
 
     .footer_logo {

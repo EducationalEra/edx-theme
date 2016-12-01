@@ -13,21 +13,48 @@
         border-top: 1px solid $light-gray;
         margin-top: -1px;
 
-        padding: 2em 0;
+        padding: $base-margin * 2 0;
         position: relative;
         box-sizing: border-box;
 
         margin: 0;
 
         .wrapper-course-image {
-          @include span-columns(3 of 12);
+          @include span-columns(3);
         }
 
         .wrapper-course-details {
-          @include span-columns(9 of 12);
+          @include span-columns(9);
+        }
+
+        @include media($mobile-m) {
+          .wrapper-course-image {
+            @include span-columns(12);
+          }
+
+          .wrapper-course-details {
+            @include span-columns(12);
+          }
+        }
+
+        @include media($mobile-l) {
+          .wrapper-course-image {
+            @include span-columns(4);
+          }
+
+          .wrapper-course-details {
+            @include span-columns(8);
+          }
+        }
+
+        .wrapper-course-image {
+          text-align: center;
+        }
+
+        .wrapper-course-details {
 
           .course-info {
-            margin-bottom: 1em;
+            margin-bottom: $base-margin;
             .info-university {
               font-weight: bold;
               text-transform: uppercase;
@@ -38,8 +65,9 @@
           }
 
           .course-title {
-            font-size: 2em;
+            // font-size: 2em;
             color: $medium-gray;
+            word-break: break-all;
             // text-transform: uppercase;
             .title-id {
               font-weight: normal;
@@ -129,5 +157,5 @@
 }
 
 .profile-sidebar {
-  @include span-columns(2 of 12);
+  display: none;
 }

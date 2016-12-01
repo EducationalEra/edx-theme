@@ -1,176 +1,245 @@
-.header-global-new, .header-global {
+.header-global-new, .header-global, .header-global {
   background-color: $header-background;
   box-shadow: 0 1px 1px $header-border;
   border-bottom: $header-border 1px solid;
-  margin-bottom: 1.5em;
+  margin-bottom: $base-margin * 2;
 }
 
-@mixin header-item-base($float: left) {
-  line-height: 45px;
-  display: inline-block;
-  margin: 1em .3em;
+$header-item-side-margin: .3em;
+$menu-breakpoint: $tablet;
+
+@mixin header-item-base() {
+  display: block;
+  float: left;
+  line-height: em(45);
+  margin: $base-margin em(5);
   font-weight: 500;
-  float: $float;
 }
 
-.wrapper-header {
-  @include responsive-outer-container();
+@mixin edx-button-height {
+  line-height: em(45) - 1em;
+}
 
-  // makes everything float from left corner and display in one line
-  .list-inline, .nav-account-management {
-    display: inline-block;
-    float: left;
-  }
-
-  .logo {
-    @include header-item-base;
-    font-size: 1em;
-
-    a {
-      float: left;
-      line-height: 0;
+@mixin dropdown-menu {
+  .dropdown-menu {
+    @include media($menu-breakpoint) {
+        display: block;
+        position: inherit;
+        border-radius: 0;
+        background: none;
+        border: 0;
     }
-  }
 
-  .nav-global {
-    @include header-item-base;
-  }
+    z-index: 100;
+    display: none;
+    position: absolute;
+    top: em(45);
+    right: 0;
+    background: white;
+    @include block-frame;
 
-  .course-header {
-    @include header-item-base;
-    border-left: 1px solid $light-gray;
-    padding: 0 1em;
-    font-size: 1em;
+    border-radius: $base-border-radius;
 
-    .provider, .course-name {
-      font-weight: bold;
-    }
-    .course-number {
+    .item a {
+      display: block;
+      line-height: $base-line-height;
+      padding: $base-margin 1.4em;
       font-weight: normal;
     }
-  }
 
-  .nav-account-management {
-    .item {
-      @include header-item-base;
-      .btn.btn-login, .btn-neutral.btn-register {
-        padding: 0 1em;
-        text-transform: uppercase;
-        color: $medium-gray;
-      }
-    }
-  }
-
-  .nav-main {
-    .item {
-      @include header-item-base;
-      padding: 0 1em;
-      text-transform: uppercase;
-      color: $medium-gray;
-      a {
-        color: $medium-gray;
-      }
-    }
-  }
-
-  .user {
-    @include header-item-base(right);
-
-    position: relative;
-
-    .primary {
-      display: inline-block;
-      float: left;
-      white-space: nowrap;
-      .sr {
-        // TODO: tbd
-        display: none;
-      }
-    }
-
-    .settings-language-form, select {
+    &.is-visible, &.expanded {
       display: block;
     }
+  }
+}
 
-    .user-link {
-      @include edx-button($yellow);
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      float: left;
-      border-right: 1px solid darken($yellow, 10%);
+.header-global-new, .header-global {
 
-      .label-username {
-        display: inline-block;
-      }
+  .header-navigation {
+    float: none;
 
-
-      .user-image-frame {
-        // TODO: tbd
-        display: none;
-      }
-    }
-
-    .dropdown {
-      @include edx-button($yellow);
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-
-      float: left;
-
-      .fa {
-        margin-top: -1px;
-        font-size: 1.5em;
-        line-height: 0em;
-      }
-
-      .sr {
-        // TODO: tbd
-        display: none;
-      }
-    }
-
-    .dropdown-menu {
+    @include media($menu-breakpoint) {
       display: none;
-      position: absolute;
-      top: 45px;
-      right: 0;
-      background-color: white;
-      z-index: 1;
-      @include block-frame;
-
-      border-radius: $base-border-radius;
-
-      .item a {
-        display: block;
-        line-height: 1em;
-        font-size: 0.9em;
-        padding: 0.9em 1.4em;
-        font-weight: normal;
-      }
+      width: 100%;
+      float: left;
 
       &.expanded {
         display: block;
       }
     }
 
-  }
-  .doc-link {
-    @include header-item-base(right);
-    @include edx-button($medium-gray);
-  }
-}
+    .nav-global,
+    .nav-courseware,
+    .wrapper-user-menu,
+    .user {
+      @include header-item-base;
 
-// specific overrides for discussion
-.discussion {
+      @include media($menu-breakpoint) {
+          float: none;
+          text-align: center;
+          margin: 0;
+          margin-bottom: $base-margin / 2;
+      }
+
+      a {
+        // @include edx-flat-button;
+        color: $medium-gray;
+      }
+    }
+
+    .nav-global,
+    .nav-courseware {
+      float: left;
+    }
+
+    .wrapper-user-menu,
+    .user {
+      float: right;
+    }
+  }
+
   .wrapper-header {
+    @include responsive-outer-container();
+    width: 100%;
+    display: block;
+    overflow: hidden;
+
+    .collapse-navigation {
+      @include header-item-base;
+      @include edx-button($yellow);
+      @include edx-button-height;
+      width: em(50);
+      padding: .5em;
+      float: right;
+      display: none;
+
+      @include media($menu-breakpoint) {
+        display: block;
+      }
+
+      .collaps-menu:before {
+        content: "\f0c9";
+      }
+    }
+
+    // makes everything float from left corner and display in one line
+    .logo,
+    .course-header {
+      @include header-item-base;
+    }
+
+    .logo {
+      width: em(50);
+
+      a {
+        float: left;
+        line-height: 0;
+      }
+    }
+
+    .course-header {
+      @include header-item-base;
+      border-left: 1px solid $light-gray;
+      padding: 0 $base-margin;
+      font-size: 1em;
+
+      @include media($menu-breakpoint) {
+        float: none;
+      }
+      float: left;
+      width: auto;
+      display: block;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .provider, .course-name {
+        font-weight: bold;
+      }
+      .course-number {
+        font-weight: normal;
+      }
+    }
+
+    .user {
+      .primary {
+        display: inline-block;
+        white-space: nowrap;
+        float: left;
+        .sr {
+          // TODO: tbd
+          display: none;
+        }
+      }
+
+      .settings-language-form, select {
+        display: block;
+        height: em(45);
+      }
+
+      .user-link {
+        @include edx-button($yellow);
+        @include edx-button-height;
+
+        @include media($menu-breakpoint) {
+          display: none;
+        }
+
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        float: left;
+        border-right: 1px solid darken($yellow, 10%);
+
+        .label-username {
+          display: inline-block;
+        }
+
+
+        .user-image-frame {
+          // TODO: tbd
+          display: none;
+        }
+      }
+
+      .dropdown {
+        @include edx-button($yellow);
+        @include edx-button-height;
+
+        @include media($menu-breakpoint) {
+          display: none;
+        }
+
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        float: left;
+
+        .fa {
+          margin-top: -1px;
+          font-size: 1.5em;
+          line-height: 0em;
+        }
+
+        .sr {
+          // TODO: tbd
+          display: none;
+        }
+      }
+      @include dropdown-menu;
+    }
 
     .wrapper-user-menu {
-      @include header-item-base(right);
       z-index: 1;
-      position: relative;
 
       .menu-title {
         @include edx-button($yellow);
+        @include edx-button-height;
+
+        @include media($menu-breakpoint) {
+          display: none;
+        }
+
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
         float: left;
@@ -185,43 +254,33 @@
           display: none;
         }
       }
-    }
 
-    .menu-button {
-      @include edx-button($yellow);
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      .menu-button {
+        @include edx-button($yellow);
+        @include edx-button-height;
 
-      float: left;
+        @include media($menu-breakpoint) {
+          display: none;
+        }
 
-      .fa {
-        margin-top: -1px;
-        font-size: 1.5em;
-        line-height: 0em;
-      }
-    }
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
 
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 45px;
-      right: 0;
-      background-color: white;
-      @include block-frame;
+        float: left;
 
-      border-radius: $base-border-radius;
-
-      .item a {
-        display: block;
-        line-height: 1em;
-        font-size: 0.9em;
-        padding: 0.9em 1.4em;
-        font-weight: normal;
+        .icon.icon-angle-down {
+          margin-top: -1px;
+          font-size: 1.5em;
+          line-height: 0em;
+          @extend .icon;
+          &:before {
+            content: "\f0dd";
+          }
+        }
       }
 
-      &.is-visible {
-        display: block;
-      }
+      @include dropdown-menu;
     }
+
   }
 }
