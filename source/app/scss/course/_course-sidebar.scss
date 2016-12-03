@@ -1,6 +1,5 @@
 .view-in-course {
     .course-index {
-        @include span-columns(3 of 12);
         border-radius: $base-border-radius;
         background-color: $white;
         .wrapper-course-modes {
@@ -12,9 +11,9 @@
                 color: $dark-gray;
             }
             .button-chapter.chapter {
-                @include full-width-block;
+                @include row;
                 .group-heading {
-                    @include full-width-block;
+                    @include row;
                     padding: 1em;
                     position: relative;
                     a {
@@ -37,7 +36,7 @@
                 }
             }
             .chapter-content-container {
-                @include full-width-block;
+                @include row;
                 .chapter-menu {
                     margin: {
                         left: 2em;

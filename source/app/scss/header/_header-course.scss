@@ -1,0 +1,39 @@
+.wrapper-header {
+  .course-header {
+    border-left: 1px solid $light-gray;
+    padding-left: $base-margin;
+    font-size: $base-font-size;
+
+    .provider, .course-name {
+      font-weight: bold;
+    }
+    .course-number {
+      font-weight: normal;
+    }
+  }
+
+  .logo {
+    font-size: $base-font-size;
+    img {
+      vertical-align: top;
+    }
+  }
+
+  .collapse-navigation {
+    @include edx-button($yellow);
+    height: $header-button-height;
+    width: $header-button-height;
+
+    padding: 0 $base-margin;
+    float: right;
+    display: none;
+
+    @include media($menu-breakpoint) {
+      display: block;
+    }
+
+    .collaps-menu:before {
+      content: "\f0c9";
+    }
+  }
+}

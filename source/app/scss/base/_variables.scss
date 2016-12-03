@@ -17,6 +17,9 @@ $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 $base-margin: em(10);
+$big-margin: $base-margin * 2;
+$small-margin: $base-margin / 2;
+
 
 // Colors
 $white: #ffffff;

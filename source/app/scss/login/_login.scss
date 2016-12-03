@@ -19,7 +19,8 @@
       @include span-columns(12 of 12);
     }
 
-    margin-top: 3em;
+    margin-top: $base-spacing;
+    margin-bottom: $base-spacing;
   }
 
   .login-form, .register-form {
@@ -75,7 +76,7 @@
     }
 
     .nav-btn.form-toggle {
-      @include edx-button($dark-gray);
+      @include edx-button($yellow);
     }
 
   }

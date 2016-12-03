@@ -1,0 +1,67 @@
+.header-navigation {
+  .user {
+    .sr {
+      // TODO: tbd
+      display: none;
+    }
+
+    .primary {
+      white-space: nowrap;
+      float: left;
+      @include media($menu-breakpoint) {
+        float: none;
+      }
+    }
+    .settings-language-form, select {
+      height: $header-button-height;
+    }
+
+    .dropdown {
+      @include edx-button($yellow);
+      display: inline;
+      height: $header-button-height;
+
+      @include media($menu-breakpoint) {
+        display: none;
+      }
+
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+
+      float: left;
+
+      .fa {
+        margin-top: -1px;
+        font-size: 1.5em;
+        vertical-align: super;
+      }
+    }
+    @include dropdown-menu;
+  }
+
+  .user-link {
+    @include edx-button($yellow);
+    display: inline;
+    vertical-align: middle;
+    height: $header-button-height;
+
+    @include media($menu-breakpoint) {
+      display: none;
+    }
+
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    float: left;
+    border-right: 1px solid darken($yellow, 10%);
+
+    .label-username {
+      color: white;
+      display: inline-block;
+    }
+
+    .user-image-frame {
+      // TODO: tbd
+      display: none;
+    }
+  }
+}

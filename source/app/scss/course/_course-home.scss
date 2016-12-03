@@ -31,7 +31,7 @@
     }
     .discussion.container,
     main#main {
-        @include full-width-block;
+        @include row;
     }
     .xmodule_display.xmodule_SequenceModule .seq_contents {
         display: none;

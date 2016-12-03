@@ -1,6 +1,6 @@
 .wrapper-account-settings {
   .wrapper-header {
-    
+
     .account-nav {
       .account-nav-item {
         display: inline-block;
@@ -20,34 +20,34 @@
     }
   }
 }
-nav.wrapper-course-material {
-    @include full-width-block;
-    margin-bottom: 2em;
-    .right,
-    .tab {
-        display: inline-block;
-        padding: 0 0.5em;
-        &:first-child {
-            padding-left: 0;
-        }
-        &:last-child {
-            padding-right: 0;
-        }
-        a {
-            @include edx-flat-button();
-        }
-        .new-post-btn {
-            @include edx-button($yellow);
-        }
-        .sr {
-            // TODO: tbd
-            display: none;
-        }
-    }
-    .tab {
-        float: left;
-    }
-    .right {
-        float: right;
-    }
-}
+// nav.wrapper-course-material {
+//     @include full-width-block;
+//     margin-bottom: 2em;
+//     .right,
+//     .tab {
+//         display: inline-block;
+//         padding: 0 0.5em;
+//         &:first-child {
+//             padding-left: 0;
+//         }
+//         &:last-child {
+//             padding-right: 0;
+//         }
+//         a {
+//             @include edx-flat-button();
+//         }
+//         .new-post-btn {
+//             @include edx-button($yellow);
+//         }
+//         .sr {
+//             // TODO: tbd
+//             display: none;
+//         }
+//     }
+//     .tab {
+//         float: left;
+//     }
+//     .right {
+//         float: right;
+//     }
+// }

@@ -8,12 +8,17 @@
     }
     .sequence-nav {
         display: inline-block;
+        margin: 0 auto;
         .sequence-list-wrapper,
         .sequence-nav-button,
-        li,
-        ol {
-            display: block;
+        li {
+            position: relative;
             float: left;
+        }
+        @include media($mobile-l) {
+          .sequence-list-wrapper {
+            display: none;
+          }
         }
         &-button {
             @include course-nav-button;

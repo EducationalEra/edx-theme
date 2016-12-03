@@ -1,0 +1,22 @@
+.content-wrapper > .course-info {
+  .course-profile, .container {
+    @include responsive-outer-container();
+  }
+  .course-profile {
+    background: $dark-gray;
+    .intro-inner-wrapper {
+      float: left;
+    }
+    .heading-group {
+      margin: $base-spacing * 3 0;
+      text-align: center;
+      h1 {
+        color: white;
+      }
+    }
+    
+    .register {
+      @include edx-button($yellow);
+    }
+  }
+}

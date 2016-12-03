@@ -1,9 +1,12 @@
-nav.wrapper-course-material {
-    @include full-width-block;
+$menu-breakpoint: $tablet;
+
+.wrapper-course-material {
+    @include row;
     margin-bottom: 2em;
     .right,
     .tab {
-        display: inline-block;
+
+        display: block;
         padding: 0 $base-margin / 2;
         &:first-child {
             padding-left: 0;
@@ -15,7 +18,7 @@ nav.wrapper-course-material {
             @include edx-flat-button();
         }
         .new-post-btn {
-            @include edx-button($yellow);
+            @include edx-button($dark-gray);
         }
         .sr {
             // TODO: tbd
@@ -27,5 +30,13 @@ nav.wrapper-course-material {
     }
     .right {
         float: right;
+    }
+    @include media($menu-breakpoint) {
+      .tab, .right {
+        float: none;
+      }
+      .right button {
+        width: 100%;
+      }
     }
 }

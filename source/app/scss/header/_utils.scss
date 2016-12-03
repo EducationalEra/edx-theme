@@ -1,0 +1,36 @@
+$header-item-side-margin: .3em;
+// $header-button-height: em(45) - 1em;
+$header-button-height: em(45);
+
+@mixin dropdown-menu {
+  .dropdown-menu {
+    @include media($menu-breakpoint) {
+        display: block;
+        position: inherit;
+        border-radius: 0;
+        background: none;
+        border: 0;
+    }
+
+    z-index: 100;
+    display: none;
+    position: absolute;
+    top: em(45);
+    right: 0;
+    background: white;
+    @include block-frame;
+
+    border-radius: $base-border-radius;
+
+    .item a {
+      display: block;
+      line-height: $base-line-height;
+      padding: $base-margin 1.4em;
+      font-weight: normal;
+    }
+
+    &.is-visible, &.expanded {
+      display: block;
+    }
+  }
+}
