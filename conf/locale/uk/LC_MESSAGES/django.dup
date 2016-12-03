@@ -1,0 +1,45 @@
+Multiple translations found for single string.
+	String "Submit"
+	Present in files [u'common/lib/xmodule/xmodule/capa_base.py', u'lms/templates/help_modal.html', u'lms/templates/manage_user_standing.html', u'lms/templates/register-shib.html', u'lms/templates/peer_grading/peer_grading_problem.html', u'lms/templates/survey/survey.html', u'themes/stanford-style/lms/templates/register-shib.html']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+Надіслати
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+Підтвердити
+
+Multiple translations found for single string.
+	String "Instructions"
+	Present in files [u'common/lib/xmodule/xmodule/word_cloud_module.py', u'lms/templates/annotatable.html', u'lms/templates/imageannotation.html', u'lms/templates/textannotation.html', u'lms/templates/videoannotation.html', u'lms/templates/peer_grading/peer_grading.html']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+Інструкція
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+Інструкції
+
+Multiple translations found for single string.
+	String "Email"
+	Present in files [u'lms/djangoapps/instructor/views/api.py', u'lms/djangoapps/instructor/views/instructor_dashboard.py', u'openedx/core/djangoapps/user_api/views.py', u'lms/templates/instructor/instructor_dashboard_2/generate_registarion_codes_modal.html']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+Email
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+Електронна пошта
+
+Multiple translations found for single string.
+	String "Full Name"
+	Present in files [u'lms/djangoapps/instructor/views/tools.py', u'lms/djangoapps/instructor_task/tasks_helper.py', u'cms/templates/register.html', u'lms/templates/register-form.html', u'lms/templates/register-shib.html', u'lms/templates/signup_modal.html', u'lms/templates/sysadmin_dashboard.html', u'themes/stanford-style/lms/templates/register-form.html', u'themes/stanford-style/lms/templates/register-shib.html']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+Повне ім'я
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+Ім'я та прізвище
+
+Multiple translations found for single string.
+	String "Enrollment"
+	Present in files [u'lms/djangoapps/support/views/index.py', u'lms/templates/ccx/coach_dashboard.html', u'lms/templates/support/enrollment.html']
+Translations found were:
+	#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+Зарахування на курс
+#-#-#-#-#  mako.po (edx-platform)  #-#-#-#-#
+Запис на курс
+

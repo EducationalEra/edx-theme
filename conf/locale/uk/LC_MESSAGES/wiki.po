@@ -1,0 +1,720 @@
+# edX translation file
+# Copyright (C) 2016 edX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# IvanPrimachenko <jastudent1@gmail.com>, 2014
+# Ксенія Воронова <ksenya.voronova@gmail.com>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: edx-platform\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2016-11-22 16:37+0000\n"
+"PO-Revision-Date: 2016-09-23 09:56+0000\n"
+"Last-Translator: Ксенія Воронова <ksenya.voronova@gmail.com>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/open-edx/edx-platform/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: wiki/admin.py wiki/models/article.py
+msgid "created"
+msgstr "створено"
+
+#: wiki/forms.py
+msgid "Only localhost... muahahaha"
+msgstr "Тільки локальний комп'ютер ... муахахаха"
+
+#: wiki/forms.py wiki/forms.py wiki/forms.py
+msgid "Title"
+msgstr "Назва"
+
+#: wiki/forms.py
+msgid "Initial title of the article. May be overridden with revision titles."
+msgstr "Початкова назва статті. Може бути замінена заголовками інших версій."
+
+#: wiki/forms.py
+msgid "Type in some contents"
+msgstr "Введіть що-небудь у якості змісту"
+
+#: wiki/forms.py
+msgid ""
+"This is just the initial contents of your article. After creating it, you "
+"can use more complex features like adding plugins, meta data, related "
+"articles etc..."
+msgstr ""
+"Це лише початковий зміст вашої статті. Після її створення, ви зможете "
+"використовувати більш складні функції такі, як додавання плагінів, "
+"метаданих, пов'язаних статей і т.д."
+
+#: wiki/forms.py wiki/forms.py
+msgid "Contents"
+msgstr "Зміст"
+
+#: wiki/forms.py wiki/forms.py
+msgid "Summary"
+msgstr "Коротко"
+
+#: wiki/forms.py
+msgid ""
+"Give a short reason for your edit, which will be stated in the revision log."
+msgstr ""
+"Коротко опишіть причину редагування, яка буде записана в журнал виправлень."
+
+#: wiki/forms.py
+msgid ""
+"While you were editing, someone else changed the revision. Your contents "
+"have been automatically merged with the new contents. Please review the text"
+" below."
+msgstr ""
+"Поки ви редагували, хтось вже вніс зміни в поточну версію. Ваш зміст було "
+"автоматично злито з новим змістом. Будь ласка, перевірте текст внизу."
+
+#: wiki/forms.py
+msgid "No changes made. Nothing to save."
+msgstr "Змін не було. Нічого зберігати."
+
+#: wiki/forms.py
+msgid "Select an option"
+msgstr "Оберіть опцію"
+
+#: wiki/forms.py
+msgid "Slug"
+msgstr "Slug-рядок"
+
+#: wiki/forms.py
+msgid ""
+"This will be the address where your article can be found. Use only "
+"alphanumeric characters and - or _. Note that you cannot change the slug "
+"after creating the article."
+msgstr ""
+"Це адреса, за якою буде доступна ваша стаття. Використовуйте тільки "
+"алфавітно-цифрові символи, дефіс та нижнє підкреслювання. Пам'ятайте, що ви "
+"не зможете змінити посилання після створення статті."
+
+#: wiki/forms.py
+msgid "Write a brief message for the article's history log."
+msgstr "Напишіть коротке повідомлення для журналу історії статті."
+
+#: wiki/forms.py
+msgid "A slug may not begin with an underscore."
+msgstr "Slug-рядок не може починатися з символу підкреслення"
+
+#: wiki/forms.py
+#, python-format
+msgid "A deleted article with slug \"%s\" already exists."
+msgstr "Видалена стаття зі slug-рядком \"%s\" вже існує."
+
+#: wiki/forms.py
+#, python-format
+msgid "A slug named \"%s\" already exists."
+msgstr "Стаття зі slug-рядком \"%s\" вже існує."
+
+#: wiki/forms.py
+msgid "Yes, I am sure"
+msgstr "Так, я впевнений"
+
+#: wiki/forms.py
+msgid "Purge"
+msgstr "Очищення"
+
+#: wiki/forms.py
+msgid ""
+"Purge the article: Completely remove it (and all its contents) with no undo."
+" Purging is a good idea if you want to free the slug such that users can "
+"create new articles in its place."
+msgstr ""
+"Очищення статті: Відбувається її повне видалення (включаючи весь вміст) без "
+"можливості відновлення. Очищення підходить в тому випадку, коли ви хочете "
+"вивільнити коротку назва, щоб користувачі могли створювати нові статті на "
+"відповідному місці."
+
+#: wiki/forms.py wiki/plugins/attachments/forms.py
+#: wiki/plugins/images/forms.py
+msgid "You are not sure enough!"
+msgstr "Ви впевнені?!"
+
+#: wiki/forms.py
+msgid "While you tried to delete this article, it was modified. TAKE CARE!"
+msgstr ""
+"Поки ви намагалися видалити цю статтю, вона була змінена. БУДЬТЕ ОБЕРЕЖНІ!"
+
+#: wiki/forms.py
+msgid "Lock article"
+msgstr "Заборонити редагування"
+
+#: wiki/forms.py
+msgid "Deny all users access to edit this article."
+msgstr "Заборонити всім користувачам редагувати цю статтю."
+
+#: wiki/forms.py
+msgid "Permissions"
+msgstr "Права доступу"
+
+#: wiki/forms.py
+msgid "Owner"
+msgstr "Власник"
+
+#: wiki/forms.py
+msgid "Enter the username of the owner."
+msgstr "Введіть ім'я користувача власника."
+
+#: wiki/forms.py
+msgid "(none)"
+msgstr "(немає)"
+
+#: wiki/forms.py
+msgid "Inherit permissions"
+msgstr "Успадковувати права доступу"
+
+#: wiki/forms.py
+msgid ""
+"Check here to apply the above permissions recursively to articles under this"
+" one."
+msgstr ""
+"Відзначте тут, щоб послідовно застосувати вищевказані права доступу до "
+"статей, які перебувають під цією."
+
+#: wiki/forms.py
+msgid "Permission settings for the article were updated."
+msgstr "Налаштування прав доступу для цієї статті були оновлені."
+
+#: wiki/forms.py
+msgid "Your permission settings were unchanged, so nothing saved."
+msgstr "Ваші налаштування прав доступу не змінено, нічого зберігати."
+
+#: wiki/forms.py
+msgid "No user with that username"
+msgstr "Немає користувачів з таким ім'ям користувача"
+
+#: wiki/forms.py
+msgid "Article locked for editing"
+msgstr "Стаття заблокована для редагування"
+
+#: wiki/forms.py
+msgid "Article unlocked for editing"
+msgstr "Стаття розблокована для редагування"
+
+#: wiki/forms.py
+msgid "Filter..."
+msgstr "Фільтр ..."
+
+#: wiki/core/plugins/base.py
+msgid "Settings for plugin"
+msgstr "Налаштування плагіна"
+
+#: wiki/models/article.py wiki/models/pluginbase.py
+#: wiki/plugins/attachments/models.py
+msgid "current revision"
+msgstr "поточна версія"
+
+#: wiki/models/article.py
+msgid ""
+"The revision being displayed for this article. If you need to do a roll-"
+"back, simply change the value of this field."
+msgstr ""
+"Версія даної статті, що відображається. Якщо вам необхідно зробити відкат, "
+"просто змініть значення цього поля."
+
+#: wiki/models/article.py
+msgid "modified"
+msgstr "змінено"
+
+#: wiki/models/article.py
+msgid "Article properties last modified"
+msgstr "Властивості статті востаннє були змінені"
+
+#: wiki/models/article.py
+msgid "owner"
+msgstr "власник"
+
+#: wiki/models/article.py
+msgid ""
+"The owner of the article, usually the creator. The owner always has both "
+"read and write access."
+msgstr ""
+"Власник статті, зазвичай її творець. Власник завжди має права на читання і "
+"запис."
+
+#: wiki/models/article.py
+msgid "group"
+msgstr "група"
+
+#: wiki/models/article.py
+msgid ""
+"Like in a UNIX file system, permissions can be given to a user according to "
+"group membership. Groups are handled through the Django auth system."
+msgstr ""
+"Як і в файловій системі UNIX, користувачеві надаються ті ж права доступу до "
+"файлу, що і користувальницькій групі, до якої він належить. Управління "
+"групами організовано через систему авторизації Django."
+
+#: wiki/models/article.py
+msgid "group read access"
+msgstr "право на читання для групи"
+
+#: wiki/models/article.py
+msgid "group write access"
+msgstr "право на запис для групи"
+
+#: wiki/models/article.py
+msgid "others read access"
+msgstr "право на читання для інших користувачів"
+
+#: wiki/models/article.py
+msgid "others write access"
+msgstr "право на запис для інших користувачів"
+
+#: wiki/models/article.py
+#, python-format
+msgid "Article without content (%(id)d)"
+msgstr "Стаття без dмісту (%(id)d)"
+
+#: wiki/models/article.py
+msgid "content type"
+msgstr "тип вмісту"
+
+#: wiki/models/article.py
+msgid "object ID"
+msgstr "ID об'єкта"
+
+#: wiki/models/article.py
+msgid "Article for object"
+msgstr "Стаття для об'єкта"
+
+#: wiki/models/article.py
+msgid "Articles for object"
+msgstr "Статті для об'єкта"
+
+#: wiki/models/article.py
+msgid "revision number"
+msgstr "номер версії"
+
+#: wiki/models/article.py
+msgid "IP address"
+msgstr "IP адреса"
+
+#: wiki/models/article.py
+msgid "user"
+msgstr "користувач"
+
+#: wiki/models/article.py
+msgid "deleted"
+msgstr "видалено"
+
+#: wiki/models/article.py
+msgid "locked"
+msgstr "заблоковано"
+
+#: wiki/models/article.py wiki/models/pluginbase.py
+msgid "article"
+msgstr "стаття"
+
+#: wiki/models/article.py
+msgid "article contents"
+msgstr "вміст статті"
+
+#: wiki/models/article.py
+msgid "article title"
+msgstr "заголовок статті"
+
+#: wiki/models/article.py
+msgid ""
+"Each revision contains a title field that must be filled out, even if the "
+"title has not changed"
+msgstr ""
+"Кожна версія містить поле заголовка, яке необхідно заповнити, навіть якщо "
+"заголовок не змінився"
+
+#: wiki/models/pluginbase.py
+msgid "original article"
+msgstr "оригінальний текст статті"
+
+#: wiki/models/pluginbase.py
+msgid "Permissions are inherited from this article"
+msgstr "Права доступу успадковані від даної статті"
+
+#: wiki/models/pluginbase.py
+msgid "A plugin was changed"
+msgstr "Плагін був змінений"
+
+#: wiki/models/pluginbase.py
+msgid ""
+"The revision being displayed for this plugin.If you need to do a roll-back, "
+"simply change the value of this field."
+msgstr ""
+"Показана версія для даного плагіна. Якщо Вам необхідно зробити відкат, "
+"просто змініть значення цього поля.  "
+
+#: wiki/models/urlpath.py
+msgid "Cache lookup value for articles"
+msgstr "Пошук за значенням кеша для статей"
+
+#: wiki/models/urlpath.py
+msgid "slug"
+msgstr "коротка назва"
+
+#: wiki/models/urlpath.py
+msgid "(root)"
+msgstr "(корінь)"
+
+#: wiki/models/urlpath.py
+msgid "URL path"
+msgstr "URL шлях"
+
+#: wiki/models/urlpath.py
+msgid "URL paths"
+msgstr "URL шляхи"
+
+#: wiki/models/urlpath.py
+msgid "Sorry but you cannot have a root article with a slug."
+msgstr ""
+"На жаль, коротке найменування для кореневої статті не може бути задане."
+
+#: wiki/models/urlpath.py
+msgid "A non-root note must always have a slug."
+msgstr "Некоренева замітка повинна завжди мати коротку назву."
+
+#: wiki/models/urlpath.py
+#, python-format
+msgid "There is already a root node on %s"
+msgstr "Вже існує кореневий вузол на %s"
+
+#: wiki/models/urlpath.py
+msgid ""
+"Articles who lost their parents\n"
+"===============================\n"
+"\n"
+"The children of this article have had their parents deleted. You should probably find a new home for them."
+msgstr ""
+"Статті, які втратили своїх батьків\n"
+"=============================== \n"
+"\n"
+"У нащадків цієї статті були видалені батьки. Напевно, Вам слід знайти їм новий будинок."
+
+#: wiki/models/urlpath.py
+msgid "Lost and found"
+msgstr "Бюро знахідок"
+
+#: wiki/plugins/attachments/forms.py
+msgid "Description"
+msgstr "Опис"
+
+#: wiki/plugins/attachments/forms.py
+msgid "A short summary of what the file contains"
+msgstr "Коротко про зміст файлу"
+
+#: wiki/plugins/attachments/forms.py
+msgid "Yes I am sure..."
+msgstr "Так, я впевнений ..."
+
+#: wiki/plugins/attachments/markdown_extensions.py
+msgid "Click to download file"
+msgstr "Натисніть, щоб завантажити файл"
+
+#: wiki/plugins/attachments/models.py
+msgid ""
+"The revision of this attachment currently in use (on all articles using the "
+"attachment)"
+msgstr ""
+"Версія цього додатка зараз використовується (у всіх статтях, що "
+"використовують цей додаток)"
+
+#: wiki/plugins/attachments/models.py
+msgid "original filename"
+msgstr "оригінальне ім'я файлу"
+
+#: wiki/plugins/attachments/models.py
+msgid "attachment"
+msgstr "вкладення"
+
+#: wiki/plugins/attachments/models.py
+msgid "attachments"
+msgstr "вкладення"
+
+#: wiki/plugins/attachments/models.py
+msgid "file"
+msgstr "файл"
+
+#: wiki/plugins/attachments/models.py
+msgid "attachment revision"
+msgstr "версія вкладення"
+
+#: wiki/plugins/attachments/models.py
+msgid "attachment revisions"
+msgstr "версії вкладення"
+
+#: wiki/plugins/attachments/views.py
+#, python-format
+msgid "%s was successfully added."
+msgstr "%s успішно додано."
+
+#: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
+#, python-format
+msgid "Your file could not be saved: %s"
+msgstr "Ваш файл не може бути збережений: %s"
+
+#: wiki/plugins/attachments/views.py wiki/plugins/attachments/views.py
+msgid ""
+"Your file could not be saved, probably because of a permission error on the "
+"web server."
+msgstr ""
+"Ваш файл не може бути збережений, ймовірно, в результаті помилки прав "
+"доступу на веб-сервері."
+
+#: wiki/plugins/attachments/views.py
+#, python-format
+msgid "%s uploaded and replaces old attachment."
+msgstr "%s завантажено і замінило стару версію вкладення"
+
+#: wiki/plugins/attachments/views.py
+msgid ""
+"Your new file will automatically be renamed to match the file already "
+"present. Files with different extensions are not allowed."
+msgstr ""
+"Ваш новий файл буде автоматично перейменований відповідно до вже наявного "
+"файла. Файли з різними розширеннями не допускаються."
+
+#: wiki/plugins/attachments/views.py
+#, python-format
+msgid "Current revision changed for %s."
+msgstr "Поточна версія змінена на %s."
+
+#: wiki/plugins/attachments/views.py
+#, python-format
+msgid "Added a reference to \"%(att)s\" from \"%(art)s\"."
+msgstr "Додано посилання на \"%(att)s\" з \"%(art)s\"."
+
+#: wiki/plugins/attachments/views.py
+#, python-format
+msgid "The file %s was deleted."
+msgstr "Файл %s був видалений."
+
+#: wiki/plugins/attachments/views.py
+#, python-format
+msgid "This article is no longer related to the file %s."
+msgstr "Ця стаття більше не пов'язана з файлом %s."
+
+#: wiki/plugins/attachments/wiki_plugin.py
+msgid "Attachments"
+msgstr "Доданки"
+
+#: wiki/plugins/attachments/wiki_plugin.py
+#, python-format
+msgid "A file was changed: %s"
+msgstr "Файл було змінено: %s"
+
+#: wiki/plugins/attachments/wiki_plugin.py
+#, python-format
+msgid "A file was deleted: %s"
+msgstr "Файл був видалений: %s"
+
+#: wiki/plugins/help/wiki_plugin.py
+msgid "Help"
+msgstr "Допомога"
+
+#: wiki/plugins/images/forms.py
+#, python-format
+msgid ""
+"New image %s was successfully uploaded. You can use it by selecting it from "
+"the list of available images."
+msgstr ""
+"Нове зображення %s успішно завантажено. Ви можете використовувати його, "
+"вибравши зі списку доступних зображень."
+
+#: wiki/plugins/images/forms.py
+msgid "Are you sure?"
+msgstr "Ви впевнені?"
+
+#: wiki/plugins/images/models.py
+msgid "image"
+msgstr "зображення"
+
+#: wiki/plugins/images/models.py
+msgid "images"
+msgstr "зображення"
+
+#: wiki/plugins/images/models.py
+#, python-format
+msgid "Image: %s"
+msgstr "Зображення: %s"
+
+#: wiki/plugins/images/models.py
+msgid "Current revision not set!!"
+msgstr "Поточна версія не вказана!!"
+
+#: wiki/plugins/images/models.py
+msgid "image revision"
+msgstr "версія зображення"
+
+#: wiki/plugins/images/models.py
+msgid "image revisions"
+msgstr "версії зображення"
+
+#: wiki/plugins/images/models.py
+#, python-format
+msgid "Image Revsion: %d"
+msgstr "Версія зображення: %d"
+
+#: wiki/plugins/images/views.py
+#, python-format
+msgid "%s has been restored"
+msgstr "%s було відновлено"
+
+#: wiki/plugins/images/views.py
+#, python-format
+msgid "%s has been marked as deleted"
+msgstr "%s було відзначено як видалене"
+
+#: wiki/plugins/images/views.py
+#, python-format
+msgid "%(file)s has been changed to revision #%(revision)d"
+msgstr "%(file)s був змінений на версію #%(revision)d"
+
+#: wiki/plugins/images/views.py
+#, python-format
+msgid "%(file)s has been saved."
+msgstr "%(file)s був збережений."
+
+#: wiki/plugins/images/wiki_plugin.py
+msgid "Images"
+msgstr "Зображення"
+
+#: wiki/plugins/images/wiki_plugin.py
+#, python-format
+msgid "An image was added: %s"
+msgstr "Було додано зображення: %s"
+
+#: wiki/plugins/links/wiki_plugin.py
+msgid "Links"
+msgstr "Посилання"
+
+#: wiki/plugins/notifications/forms.py
+msgid "Notifications"
+msgstr "Сповіщення"
+
+#: wiki/plugins/notifications/forms.py
+msgid "When this article is edited"
+msgstr "Коли ця стаття відредагована"
+
+#: wiki/plugins/notifications/forms.py
+msgid "Also receive emails about article edits"
+msgstr "Також отримувати листи про правки статті"
+
+#: wiki/plugins/notifications/forms.py
+msgid "Your notification settings were updated."
+msgstr "Ваші налаштування повідомлень були оновлені."
+
+#: wiki/plugins/notifications/forms.py
+msgid "Your notification settings were unchanged, so nothing saved."
+msgstr "Ваші налаштування повідомлень не були змінені, чи не збережено."
+
+#: wiki/plugins/notifications/models.py
+#, python-format
+msgid "%(user)s subscribing to %(article)s (%(type)s)"
+msgstr "%(user)s підписується на %(article)s (%(type)s)"
+
+#: wiki/plugins/notifications/models.py
+#, python-format
+msgid "Article deleted: %s"
+msgstr "Стаття видалена: %s"
+
+#: wiki/plugins/notifications/models.py
+#, python-format
+msgid "Article modified: %s"
+msgstr "Стаття змінена: %s"
+
+#: wiki/plugins/notifications/models.py
+#, python-format
+msgid "New article created: %s"
+msgstr "Створена нова стаття: %s"
+
+#: wiki/views/accounts.py
+msgid "You are now sign up... and now you can sign in!"
+msgstr "Ви зареєстровані ... і тепер можете увійти!"
+
+#: wiki/views/accounts.py
+msgid "You are no longer logged in. Bye bye!"
+msgstr "Ви вийшли з системи. До побачення!"
+
+#: wiki/views/accounts.py
+msgid "You are now logged in! Have fun!"
+msgstr "Ви увійшли! Розважайтеся!"
+
+#: wiki/views/article.py
+#, python-format
+msgid "New article '%s' created."
+msgstr "Нова стаття '%s' створена."
+
+#: wiki/views/article.py
+#, python-format
+msgid "There was an error creating this article: %s"
+msgstr "При створенні статті: %s сталася помилка"
+
+#: wiki/views/article.py
+msgid "There was an error creating this article."
+msgstr "При створенні статті сталася помилка."
+
+#: wiki/views/article.py
+msgid ""
+"This article cannot be deleted because it has children or is a root article."
+msgstr ""
+"Ця стаття є кореневою або має дочірні статті, тому не може бути видалена."
+
+#: wiki/views/article.py
+msgid ""
+"This article together with all its contents are now completely gone! Thanks!"
+msgstr "Ця стаття разом з її змістом була повністю видалена! Дякуємо!"
+
+#: wiki/views/article.py
+#, python-format
+msgid ""
+"The article \"%s\" is now marked as deleted! Thanks for keeping the site "
+"free from unwanted material!"
+msgstr ""
+"Стаття \"%s\" позначена як видалена! Дякуємо за очищення даного сайту від "
+"небажаного матеріалу!"
+
+#: wiki/views/article.py
+msgid "Your changes were saved."
+msgstr "Ваші зміни були збережені."
+
+#: wiki/views/article.py
+msgid "A new revision of the article was succesfully added."
+msgstr "Нова версія статті була успішно додана."
+
+#: wiki/views/article.py
+msgid "Restoring article"
+msgstr "Відновлення статті"
+
+#: wiki/views/article.py
+#, python-format
+msgid "The article \"%s\" and its children are now restored."
+msgstr "Стаття \"%s\" та її дочірні статті були відновлені."
+
+#: wiki/views/article.py
+#, python-format
+msgid ""
+"The article %(title)s is now set to display revision #%(revision_number)d"
+msgstr ""
+"Стаття тепер налаштована на відображення ревізії %(title)s is now set to "
+"display revision #%(revision_number)d"
+
+#: wiki/views/article.py
+msgid "New title"
+msgstr "Новий заголовок"
+
+#: wiki/views/article.py
+#, python-format
+msgid "Merge between Revision #%(r1)d and Revision #%(r2)d"
+msgstr "Злиття версій #%(r1)d і #%(r2)d"
+
+#: wiki/views/article.py
+#, python-format
+msgid ""
+"A new revision was created: Merge between Revision #%(r1)d and Revision "
+"#%(r2)d"
+msgstr "Нова версія була створена: злиття версій #%(r1)d і #%(r2)d"

@@ -1,0 +1,524 @@
+# edX translation file.
+# Copyright (C) 2016 EdX
+# This file is distributed under the GNU AFFERO GENERAL PUBLIC LICENSE.
+# 
+# Translators:
+# Oleksandr Prodanyuk, 2015
+# olexiim <olexiim@gmail.com>, 2014,2016
+# Tetiana Korshun, 2014
+msgid ""
+msgstr ""
+"Project-Id-Version: edx-platform\n"
+"Report-Msgid-Bugs-To: openedx-translation@googlegroups.com\n"
+"POT-Creation-Date: 2016-11-22 16:36+0000\n"
+"PO-Revision-Date: 2016-08-11 16:27+0000\n"
+"Last-Translator: Ned Batchelder <ned@edx.org>\n"
+"Language-Team: Ukrainian (http://www.transifex.com/open-edx/edx-platform/language/uk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: cms/djangoapps/contentstore/course_group_config.py
+#: cms/djangoapps/contentstore/views/certificates.py
+msgid "invalid JSON"
+msgstr "Некоректний JSON"
+
+#: cms/djangoapps/contentstore/course_group_config.py
+msgid "must have name of the configuration"
+msgstr "повинно бути вказано ім'я конфігурації"
+
+#: cms/djangoapps/contentstore/course_group_config.py
+msgid "must have at least one group"
+msgstr "Додайте хоча б одну групу"
+
+#: cms/djangoapps/contentstore/course_info_model.py
+#: cms/djangoapps/contentstore/course_info_model.py
+msgid "Invalid course update id."
+msgstr "Неправильний id оновлень курсу"
+
+#: cms/djangoapps/contentstore/course_info_model.py
+msgid "Course update not found."
+msgstr "Оновлення курсу не знайдено"
+
+#: cms/djangoapps/contentstore/courseware_index.py
+msgid "Could not index item: {}"
+msgstr "Не вдалося проіндексувати елемент: {}"
+
+#: cms/djangoapps/contentstore/courseware_index.py
+msgid "General indexing error occurred"
+msgstr "Виникла неочікувана помилка індексації."
+
+#: cms/djangoapps/contentstore/courseware_index.py
+msgid "(Unnamed)"
+msgstr "(Без імені)"
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid ""
+"GIT_REPO_EXPORT_DIR not set or path {0} doesn't exist, please create it, or "
+"configure a different path with GIT_REPO_EXPORT_DIR"
+msgstr ""
+"Значення змінної GIT_REPO_EXPORT_DIR не установлено, або каталог {0} не "
+"існує. Будь ласка, створіть його або виберіть інший каталог для змінної "
+"GIT_REPO_EXPORT_DIR"
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid ""
+"Non writable git url provided. Expecting something like: "
+"git@github.com:mitocw/edx4edx_lite.git"
+msgstr ""
+"Надано некоректний git адрес. Приклад коректної адреси: "
+"git@github.com:mitocw/edx4edx_lite.git"
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid ""
+"If using http urls, you must provide the username and password in the url. "
+"Similar to https://user:pass@github.com/user/course."
+msgstr ""
+"При використанні http URL-адрес, ви повинні надати ім'я користувача і пароль"
+" в посиланні, наприклад, https://user:pass@github.com/user/course"
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid "Unable to determine branch, repo in detached HEAD mode"
+msgstr "Невоможно ідентифікувати гілку, сховище відключено від гілки HEAD "
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid "Unable to update or clone git repository."
+msgstr "Неможливо оновити або клонувати сховище git ."
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid "Unable to export course to xml."
+msgstr "Неможливо експортували курс у xml."
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid "Unable to configure git username and password"
+msgstr "Неможливо задати ім'я користувача і пароль для git"
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid ""
+"Unable to commit changes. This is usually because there are no changes to be"
+" committed"
+msgstr ""
+"Неможливо перенести зміни. Зазвичай це означає, що немає змін для "
+"перенесення "
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid ""
+"Unable to push changes.  This is usually because the remote repository "
+"cannot be contacted"
+msgstr ""
+"Неможливо передати зміни. Зазвичай це означає, що з віддаленим сховищем не "
+"вдалося зв'язатися"
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid "Bad course location provided"
+msgstr "Вказано невірне посилання на розташування навчального курсу"
+
+#: cms/djangoapps/contentstore/git_export_utils.py
+msgid "Missing branch on fresh clone"
+msgstr "Відсутня гілка у новому клоні"
+
+#: cms/djangoapps/contentstore/management/commands/git_export.py
+msgid ""
+"Take the specified course and attempt to export it to a git repository\n"
+". Course directory must already be a git repository. Usage:  git_export <course_loc> <git_url>"
+msgstr ""
+"Взяти зазначений навчальний курс і спробувати експортировать його в сховище "
+"git. \\nКаталог з навчальним курсом повинен вже існувати в сховище git. "
+"Використання: git_export <course_loc> <git_url>"
+
+#: cms/djangoapps/contentstore/utils.py
+msgid "Deleted group"
+msgstr "Група видалена "
+
+#: cms/djangoapps/contentstore/views/assets.py
+msgid ""
+"File {filename} exceeds maximum size of {size_mb} MB. Please follow the "
+"instructions here to upload a file elsewhere and link to it instead: "
+"{faq_url}"
+msgstr ""
+"Розмір файлу {filename} перевищує гранично допустиме значення {size_mb} МБ. "
+"Щоб завантажити файл в інше місце і вставити посилання на файл, дотримуйтесь"
+" інструкцій: {faq_url}"
+
+#: cms/djangoapps/contentstore/views/assets.py
+msgid "Upload completed"
+msgstr "Вивантаження завершено"
+
+#: cms/djangoapps/contentstore/views/certificates.py
+msgid "must have name of the certificate"
+msgstr "повинно бути вказана назва сертифікату"
+
+#: cms/djangoapps/contentstore/views/certificates.py
+msgid "Certificate dict {0} missing value key '{1}'"
+msgstr "У словнику для сертифіката {0} відсутнє значення з ключем '{1}'."
+
+#: cms/djangoapps/contentstore/views/certificates.py
+#: cms/djangoapps/contentstore/views/certificates.py
+msgid "PermissionDenied: Failed in authenticating {user}"
+msgstr "PermissionDenied: помилка аутентифікації користувача {user}"
+
+#: cms/djangoapps/contentstore/views/component.py
+msgid "{platform_name} Support Levels:"
+msgstr ""
+
+#: cms/djangoapps/contentstore/views/component.py
+msgid "HTML"
+msgstr "HTML"
+
+#: cms/djangoapps/contentstore/views/component.py
+msgid "Video"
+msgstr "Відео"
+
+#: cms/djangoapps/contentstore/views/component.py
+msgid "Blank"
+msgstr "Порожній"
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid "Course has been successfully reindexed."
+msgstr "Пошуковий індекс курсу успішно оновлено."
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid "Unscheduled"
+msgstr "Незапланований"
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid ""
+"Special characters not allowed in organization, course number, and course "
+"run."
+msgstr ""
+"Заборонено використання спеціальних символів для позначення організації, "
+"номеру курсу і перезапуску курсів."
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid ""
+"There is already a course defined with the same organization and course "
+"number. Please change either organization or course number to be unique."
+msgstr ""
+"Курсу із такими самими організацією і кодом вже існує. Будь ласка, змініть "
+"або організацію, або номер курсу, щоб вони були унікальними."
+
+#: cms/djangoapps/contentstore/views/course.py
+#: cms/djangoapps/contentstore/views/course.py
+msgid ""
+"Please change either the organization or course number so that it is unique."
+msgstr ""
+"Будь ласка, змініть або організацію, або номер курсу так, щоб вони були "
+"унікальними."
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid ""
+"Unable to create course '{name}'.\n"
+"\n"
+"{err}"
+msgstr ""
+"Неможливо створити курс '{name}'.\n"
+"\n"
+"{err}"
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid ""
+"You must link this course to an organization in order to continue. "
+"Organization you selected does not exist in the system, you will need to add"
+" it to the system"
+msgstr ""
+"Ви повинні прив'язати цей курс до організації, перш ніж продовжити. "
+"Організація, яку ви обрали, не існує в системі, вам потрібно буде додати її"
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid "Invalid prerequisite course key"
+msgstr "Невірний ключ обов'язкового курсу-пререквізиту"
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid "An error occurred while trying to save your tabs"
+msgstr "При збереженні ваших вкладок сталася помилка"
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid "Tabs Exception"
+msgstr "Помилка оновлення вкладок"
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid "This group configuration is in use and cannot be deleted."
+msgstr ""
+"Конфігурація групи знаходиться у використанні і не може бути видалена."
+
+#: cms/djangoapps/contentstore/views/course.py
+msgid "This content group is in use and cannot be deleted."
+msgstr ""
+"Ця група за матеріалами, що вивчаються, вже використовується та не може бути"
+" видалена."
+
+#: cms/djangoapps/contentstore/views/entrance_exam.py
+msgid "Entrance Exam - Subsection"
+msgstr "Вступний іспит - Підрозділ"
+
+#: cms/djangoapps/contentstore/views/entrance_exam.py
+msgid "Completed Course Entrance Exam"
+msgstr "Завершений вступний іспит"
+
+#: cms/djangoapps/contentstore/views/export_git.py
+msgid "Course successfully exported to git repository"
+msgstr "Навчальний курс успішно експортовано в сховище git"
+
+#: cms/djangoapps/contentstore/views/helpers.py
+msgid "Vertical"
+msgstr "Вертикальний"
+
+#: cms/djangoapps/contentstore/views/helpers.py
+msgid "Empty"
+msgstr "Порожній"
+
+#: cms/djangoapps/contentstore/views/import_export.py
+msgid "We only support uploading a .tar.gz file."
+msgstr "Ми підтримуємо вивантаження тільки файлів .tar.gz."
+
+#: cms/djangoapps/contentstore/views/import_export.py
+msgid "File upload corrupted. Please try again"
+msgstr ""
+"Під час вивантаження файлу сталась помилка. Будь ласка, спробуйте ще раз."
+
+#: cms/djangoapps/contentstore/views/import_export.py
+msgid "Could not find the {0} file in the package."
+msgstr "Неможливо знайти файл {0} у пакеті."
+
+#: cms/djangoapps/contentstore/views/item.py
+msgid "Invalid data"
+msgstr "Некоректні дані"
+
+#: cms/djangoapps/contentstore/views/item.py
+msgid "Invalid data ({details})"
+msgstr "Некоректні дані ({details})"
+
+#: cms/djangoapps/contentstore/views/item.py
+msgid "Duplicate of {0}"
+msgstr "Дублікат {0}"
+
+#: cms/djangoapps/contentstore/views/item.py
+msgid "Duplicate of '{0}'"
+msgstr "Дублювання '{0}'"
+
+#. Translators: The {pct_sign} here represents the percent sign, i.e., '%'
+#. in many languages. This is used to avoid Transifex's misinterpreting of
+#. '% o'. The percent sign is also translatable as a standalone string.
+#: cms/djangoapps/contentstore/views/item.py
+msgid ""
+"Students must score {score}{pct_sign} or higher to access course materials."
+msgstr ""
+"Слухачі повинні набрати {score}{pct_sign} або більше для доступу до "
+"матеріалів курсу."
+
+#. Translators: This is the percent sign. It will be used to represent
+#. a percent value out of 100, e.g. "58%" means "58/100".
+#: cms/djangoapps/contentstore/views/item.py
+msgid "%"
+msgstr "%"
+
+#: cms/djangoapps/contentstore/views/item.py
+msgid "{section_or_subsection} \"{display_name}\""
+msgstr "{section_or_subsection} «{display_name}»"
+
+#: cms/djangoapps/contentstore/views/library.py
+msgid "Unable to create library - missing required field '{field}'"
+msgstr "Не вдалося створити бібліотеку - відсутнє обов'язкове поле '{field}'"
+
+#: cms/djangoapps/contentstore/views/library.py
+msgid ""
+"Unable to create library '{name}'.\n"
+"\n"
+"{err}"
+msgstr ""
+"Не вдалося створити бібліотеку '{name}'.\n"
+"\n"
+"{err}"
+
+#: cms/djangoapps/contentstore/views/library.py
+msgid ""
+"There is already a library defined with the same organization and library "
+"code. Please change your library code so that it is unique within your "
+"organization."
+msgstr ""
+"Бібліотека для цієї організації з таким кодом вже існує. Будь ласка, змініть"
+" код вашої бібліотеки, щоб він був унікальним в межах вашої організації."
+
+#: cms/djangoapps/contentstore/views/transcripts_ajax.py
+msgid "Incoming video data is empty."
+msgstr "Вхідні відео дані порожні."
+
+#: cms/djangoapps/contentstore/views/transcripts_ajax.py
+msgid "Can't find item by locator."
+msgstr "Неможливо знайти елемент за ідентифіктором."
+
+#: cms/djangoapps/contentstore/views/transcripts_ajax.py
+msgid "Transcripts are supported only for \"video\" modules."
+msgstr "Субтитри підтримуються тільки для \"відео\" модулів."
+
+#: cms/djangoapps/contentstore/views/user.py
+msgid "Insufficient permissions"
+msgstr "Недостатньо прав"
+
+#: cms/djangoapps/contentstore/views/user.py
+msgid "Could not find user by email address '{email}'."
+msgstr "Неможливо знайти користувача за адресою '{email}'."
+
+#: cms/djangoapps/contentstore/views/user.py
+msgid "User {email} has registered but has not yet activated his/her account."
+msgstr ""
+"Користувач {email} зареєструвався, але ще не активував свій обліковий запис."
+
+#: cms/djangoapps/contentstore/views/user.py
+msgid "No `role` specified."
+msgstr "`Роль` не зазначена."
+
+#: cms/djangoapps/contentstore/views/user.py
+msgid "Invalid `role` specified."
+msgstr "Зазначена невірна `роль`."
+
+#: cms/djangoapps/contentstore/views/user.py
+msgid "You may not remove the last Admin. Add another Admin first."
+msgstr ""
+"Ви не можете видалити останнього Адміністратора з курсу. Додайте спочатку "
+"іншого Адміністратора."
+
+#. Translators: This is the status of an active video upload
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Uploading"
+msgstr "Завантаження"
+
+#. Translators: This is the status for a video that the servers are currently
+#. processing
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "In Progress"
+msgstr "Опрацьовується"
+
+#. Translators: This is the status for a video that the servers have
+#. successfully processed
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Ready"
+msgstr "Готово"
+
+#. Translators: This is the status for a video that the servers have failed to
+#. process
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Failed"
+msgstr "Невдало"
+
+#. Translators: This is the status for a video which has failed
+#. due to being flagged as a duplicate by an external or internal CMS
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Failed Duplicate"
+msgstr ""
+
+#. Translators: This is the status for a video for which an invalid
+#. processing token was provided in the course settings
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Invalid Token"
+msgstr "Невірний ключ"
+
+#. Translators: This is the status for a video that was included in a course
+#. import
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Imported"
+msgstr "Імпортовано"
+
+#. Translators: This is the status for a video that is in an unknown state
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Unknown"
+msgstr "Невідомий"
+
+#. Translators: This is the header for a CSV file column
+#. containing URLs for video encodings for the named profile
+#. (e.g. desktop, mobile high quality, mobile low quality)
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "{profile_name} URL"
+msgstr "UR посилання на {profile_name}"
+
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Duration"
+msgstr "Тривалість"
+
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "Date Added"
+msgstr "Дата Додавання"
+
+#. Translators: This is the suggested filename when downloading the URL
+#. listing for videos uploaded through Studio
+#: cms/djangoapps/contentstore/views/videos.py
+msgid "{course}_video_urls"
+msgstr "{course}_video_urls"
+
+#: cms/djangoapps/course_creators/models.py
+msgid "unrequested"
+msgstr "не запитане"
+
+#: cms/djangoapps/course_creators/models.py
+msgid "pending"
+msgstr "в очікуванні"
+
+#: cms/djangoapps/course_creators/models.py
+msgid "granted"
+msgstr "надано"
+
+#: cms/djangoapps/course_creators/models.py
+msgid "denied"
+msgstr "відмовлено"
+
+#: cms/djangoapps/course_creators/models.py
+msgid "Studio user"
+msgstr "Користувач студії"
+
+#: cms/djangoapps/course_creators/models.py
+msgid "The date when state was last updated"
+msgstr "Дата останньої зміни стану"
+
+#: cms/djangoapps/course_creators/models.py
+msgid "Current course creator state"
+msgstr "Поточний стан засновника курсу"
+
+#: cms/djangoapps/course_creators/models.py
+msgid ""
+"Optional notes about this user (for example, why course creation access was "
+"denied)"
+msgstr ""
+"Необов'язкові нотатки про цього користувача (наприклад, чому у створенні "
+"курсу було відмовлено)"
+
+#: cms/djangoapps/maintenance/views.py
+msgid "Force Publish Course"
+msgstr ""
+
+#: cms/djangoapps/maintenance/views.py
+msgid ""
+"Sometimes the draft and published branches of a course can get out of sync. "
+"Force publish course command resets the published branch of a course to "
+"point to the draft branch, effectively force publishing the course. This "
+"view dry runs the force publish command"
+msgstr ""
+
+#: cms/djangoapps/maintenance/views.py
+msgid "Please provide course id."
+msgstr ""
+
+#: cms/djangoapps/maintenance/views.py
+msgid "Invalid course key."
+msgstr ""
+
+#: cms/djangoapps/maintenance/views.py
+msgid "No matching course found."
+msgstr ""
+
+#: cms/djangoapps/maintenance/views.py
+msgid "Force publishing course is not supported with old mongo courses."
+msgstr ""
+
+#: cms/djangoapps/maintenance/views.py
+msgid "Course is already in published state."
+msgstr ""
+
+#: cms/djangoapps/models/settings/course_metadata.py
+msgid "Incorrect format for field '{name}'. {detailed_message}"
+msgstr "Неправильний формат поля '{name}'. {detailed_message}"
+
+#: cms/lib/xblock/tagging/tagging.py
+msgid "Dictionary with the available tags"
+msgstr ""
