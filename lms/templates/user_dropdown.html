@@ -8,6 +8,7 @@ from django.utils.translation import ugettext as _
 
 from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
 %>
+
 <ol class="user">
     <li class="primary">
         <a href="${reverse('dashboard')}" class="user-link">
@@ -20,7 +21,15 @@ from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_
     <li class="primary">
         <button class="dropdown" aria-haspopup="true" aria-expanded="false"><span class="fa fa-sort-desc" aria-hidden="true"></span></button>
         <ul class="dropdown-menu" aria-label="More Options" role="menu">
-            ${navigation_dropdown_menu_links()}
+            % if uses_pattern_library:
+                <%block name="navigation_dropdown_menu_links" >
+                    <li class="item"><a href="${reverse('dashboard')}" role="menuitem">${_("Dashboard")}</a></li>
+                    <li class="item"><a href="${reverse('learner_profile', kwargs={'username': user.username})}" role="menuitem">${_("Profile")}</a></li>
+                    <li class="item"><a href="${reverse('account_settings')}" role="menuitem">${_("Account")}</a></li>
+                </%block>
+            % else:
+                ${navigation_dropdown_menu_links()}
+            % endif
             <li class="item"><a href="${reverse('logout')}" role="menuitem">${_("Sign Out")}</a></li>
         </ul>
     </li>
