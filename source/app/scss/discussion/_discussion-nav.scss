@@ -1,7 +1,5 @@
 .discussion .discussion-body .forum-nav {
-    @include span-columns(3);
-    background-color: white;
-    position: relative;
+    background-color: $white;
 
     .forum-nav-browse-menu-wrapper,
     .forum-nav-header,

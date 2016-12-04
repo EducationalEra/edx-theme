@@ -38,12 +38,6 @@ gulp.task('serve', ['sass'], function () {
                 fn: function (req, res, match) {
                     return '<link rel="stylesheet" type="text/css" href="/lms-discussion-main.css"/>';
                 }
-            },
-            {
-                match: /<script.*lms\-base\-application.*script>/i,
-                fn: function (req, res, match) {
-                    return '<script type="text/javascript" src="application.js" charset="utf-8"></script>';
-                }
             }
         ]
     });

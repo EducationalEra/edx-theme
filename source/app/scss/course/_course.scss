@@ -9,29 +9,3 @@
 
 @import "course-discussion";
 @import "video-player";
-
-
-.view-in-course {
-  .container, .tabs.course-tabs {
-    @include full-width-block;
-  }
-
-  .course-wrapper {
-    position: relative;
-    float: left;
-
-    .course-content {
-      @include span-columns(9);
-      border-radius: $base-border-radius;
-      background-color: $white;
-      margin-right: 0;
-
-      padding: 2em;
-    }
-
-    .courseware-results-wrapper {
-      // TODO: tbd
-      display: none;
-    }
-  }
-}

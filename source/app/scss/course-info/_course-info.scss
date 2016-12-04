@@ -1,22 +1,155 @@
 .content-wrapper > .course-info {
-  .course-profile, .container {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+
+  .intro-inner-wrapper {
     @include responsive-outer-container();
   }
+
   .course-profile {
     background: $dark-gray;
-    .intro-inner-wrapper {
-      float: left;
-    }
+    padding: $base-spacing * 3 0;
+
     .heading-group {
-      margin: $base-spacing * 3 0;
       text-align: center;
       h1 {
         color: white;
+        font-size: em(45);
       }
     }
-    
-    .register {
-      @include edx-button($yellow);
+
+    .main-cta {
+      text-align: center;
+      a {
+        @include edx-button($yellow);
+        font-size: em(30);
+        display: inline;
+        @include media($tablet) {
+          display: block;
+          white-space: normal;
+        }
+      }
+    }
+
+    .media {
+      display: none;
+    }
+  }
+
+  .course-sidebar {
+    @include responsive-outer-container();
+
+    margin-bottom: $big-margin;
+
+    header {
+      @include span-columns(6);
+    }
+    .important-dates {
+      @include span-columns(6);
+    }
+
+    @include media($mobile-l) {
+      header {
+        @include span-columns(12);
+        @include omega;
+      }
+      .important-dates {
+        @include span-columns(12);
+        @include omega;
+      }
+    }
+
+    .social-sharing {
+      // display: table;
+      width: 100%;
+
+      .sharing-message {
+        @extend h2;
+        font-weight: bold;
+        display: block;
+      }
+      .sr {
+        display: none;
+      }
+      .share {
+        font-size: 500%;
+        margin: 0 5%;
+        text-align: center;
+        &:first-of-type {
+            text-align: left;
+        }
+        &:last-of-type {
+            text-align: right;
+        }
+        @include media($mobile) {
+          margin: 0 1%;
+        }
+      }
+    }
+
+    .important-dates {
+      .important-dates-item {
+        @include row;
+        float: left;
+        width: 100%;
+
+        padding: $base-margin 0;
+        font-size: 2em;
+        border-bottom: $light-gray 1px solid;
+
+        &:first-child {
+          padding-top: 0;
+        }
+        &:last-child {
+          padding-bottom: 0;
+          border: none;
+        }
+
+        & > * {
+          display: inline;
+          margin: 0 $small-margin;
+        }
+        .important-dates-item-text {
+          float: right;
+        }
+        @include media($mobile-l) {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+
+  .container {
+    .inner-wrapper {
+      @include responsive-outer-container();
+      & > * {
+        margin: $big-margin 0;
+      }
+    }
+
+    .programm {
+      li {
+        text-indent: -2em;
+        padding-left: 2em;
+      }
+
+      ol li {
+        // text-indent: 0;
+        list-style:  inside;
+      }
+    }
+
+    .course-staff {
+      .teacher {
+        @include clearfix;
+        margin: $big-margin 0;
+        .teacher-image img {
+          width: em(100);
+          border-radius: 50%;
+          margin-right: $big-margin;
+        }
+      }
     }
   }
 }

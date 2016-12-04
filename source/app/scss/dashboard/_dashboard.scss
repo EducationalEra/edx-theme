@@ -19,22 +19,22 @@
 
         margin: 0;
 
+        // @include media($mobile-m) {
+        //   .wrapper-course-image {
+        //     @include span-columns(12);
+        //   }
+        //
+        //   .wrapper-course-details {
+        //     @include span-columns(12);
+        //   }
+        // }
+
         .wrapper-course-image {
           @include span-columns(3);
         }
 
         .wrapper-course-details {
           @include span-columns(9);
-        }
-
-        @include media($mobile-m) {
-          .wrapper-course-image {
-            @include span-columns(12);
-          }
-
-          .wrapper-course-details {
-            @include span-columns(12);
-          }
         }
 
         @include media($mobile-l) {
@@ -44,6 +44,16 @@
 
           .wrapper-course-details {
             @include span-columns(8);
+          }
+        }
+
+        @include media($mobile-m) {
+          .wrapper-course-image {
+            @include span-columns(12);
+          }
+
+          .wrapper-course-details {
+            @include span-columns(12);
           }
         }
 
@@ -140,6 +150,7 @@
               font-size: 0.9em;
               padding: 0.9em 1.4em;
               font-weight: normal;
+              white-space: nowrap;
             }
 
             &.is-visible {

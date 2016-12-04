@@ -1,11 +1,5 @@
 .view-in-course {
-  .container, .tabs.course-tabs {
-    @include row;
-  }
-
   .course-wrapper {
-    position: relative;
-    float: left;
 
     .course-index {
         @include span-columns(3);
@@ -16,21 +10,21 @@
 
     @include media($mobile-l) {
       .course-index {
-          @include omega;
           @include span-columns(12);
+          @include omega;
+          
       }
       .course-content {
-          @include omega;
           @include span-columns(12);
+          @include omega;
       }
     }
 
     .course-content {
       border-radius: $base-border-radius;
       background-color: $white;
-      margin-right: 0;
 
-      padding: 2em;
+      padding: $base-margin;
     }
 
     .courseware-results-wrapper {

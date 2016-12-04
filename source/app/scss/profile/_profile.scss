@@ -1,0 +1,164 @@
+.u-field-account_privacy {
+  .u-field-value-display {
+    display: none;
+  }
+}
+
+$u-field-height: 2.5em;
+
+.u-field {
+  @include row;
+  margin: $base-margin 0;
+  max-width: em(300);
+  padding: 0 $small-margin;
+  line-height: $u-field-height;
+
+  .sr {
+    display: none;
+  }
+  vertical-align: middle;
+
+  input, select {
+    width: 100%;
+    display: inline;
+    background-color: transparent;
+    height: $u-field-height;
+    line-height: $u-field-height;
+    float: left;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &.mode-display, &.mode-placeholder {
+    input, select {
+      display: none;
+    }
+  }
+
+  &.mode-edit {
+    .u-field-value-display {
+      display: none;
+    }
+  }
+
+  &-icon {
+    float: left;
+    line-height: $u-field-height;
+  }
+
+  &-value {
+    display: inline;
+    // line-height: $u-field-height;
+    line-height: 1;
+  }
+  &-message {
+    line-height: $u-field-height;
+    float: right;
+  }
+}
+
+.wrapper-profile-field-account-privacy {
+  @include row;
+  margin: $base-margin 0;
+}
+
+.wrapper-profile-sections {
+  .wrapper-profile-section-one {
+    @include row;
+  }
+
+  .page-content-nav, .page-content-main {
+    @include row;
+  }
+
+  .profile-image-field {
+    @include span-columns(2);
+  }
+
+  .profile-section-one-fields {
+    @include span-columns(10);
+  }
+
+  @include media($mobile-l) {
+    .profile-image-field {
+      @include span-columns(12);
+    }
+
+    .profile-section-one-fields {
+      @include span-columns(12);
+      @include omega;
+    }
+  }
+
+  .profile-section-one-fields {
+    .u-field {
+      &.mode-display, &.mode-placeholder {
+        background-color: $light-gray;
+      }
+
+      &.mode-edit, &:hover {
+        background-color: $soft-blue;
+      }
+
+      input, select {
+        width: em(200);
+      }
+    }
+    .u-field.u-field-readonly:hover {
+      background-color: transparent;
+    }
+  }
+
+  .profile-image-field {
+    .wrapper-profile-section-one {
+      @include row;
+    }
+
+    .u-field-image {
+      position: relative;
+      .image-wrapper {
+        img {
+          width: em(120);
+          height: em(120);
+        }
+        &:hover {
+          .u-field-upload-button {
+            display: block;
+          }
+        }
+      }
+      .u-field-actions {
+        .u-field-upload-button {
+          display: none;
+          background: rgba(0, 0, 0, .6);
+          color: $white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: em(120);
+          height: em(120);
+          line-height: $base-line-height;
+          text-align: center;
+          .upload-button-icon {
+            display: block;
+            font-size: 3em;
+          }
+          .upload-button-icon {
+            display: block;
+            font-weight: bold;
+          }
+          .upload-button-input {
+            display: none;
+          }
+        }
+
+      }
+    }
+  }
+}

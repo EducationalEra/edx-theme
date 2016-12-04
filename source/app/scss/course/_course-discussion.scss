@@ -15,5 +15,12 @@
             @include edx-button($yellow);
             float: right;
         }
+
+        @include media($mobile-l) {
+          .new-post-btn {
+            float: none;
+            width: 100%;
+          }
+        }
     }
 }

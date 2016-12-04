@@ -1,6 +1,9 @@
 $menu-breakpoint: $tablet;
 
 .header-global-new, .header-global, .header-global {
+  @include row;
+  float: left;
+  width: 100%;
   background-color: $header-background;
   box-shadow: 0 1px 1px $header-border;
   border-bottom: $header-border 1px solid;
@@ -13,7 +16,6 @@ $menu-breakpoint: $tablet;
     @include responsive-outer-container();
     width: 100%;
     display: block;
-    overflow: hidden;
     margin-top: $base-margin;
     margin-bottom: $base-margin;
   }

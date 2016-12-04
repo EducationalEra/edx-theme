@@ -1,0 +1,33 @@
+.discussion .discussion-body {
+  .discussion-column {
+      @include span-columns(9);
+      padding: $base-margin;
+  }
+
+  .forum-nav {
+      @include span-columns(3);
+      position: relative;
+  }
+
+  @include media($tablet) {
+    .discussion-column {
+        @include span-columns(10);
+    }
+
+    .forum-nav {
+        @include span-columns(10);
+        @include omega;
+        position: initial;
+        .forum-nav-browse-menu {
+          height: auto !important;
+        }
+        .forum-nav-thread-list[style] {
+          height: auto !important;
+        }
+        &[style] {
+          top: auto !important;
+          height: auto !important;
+        }
+    }
+  }
+}

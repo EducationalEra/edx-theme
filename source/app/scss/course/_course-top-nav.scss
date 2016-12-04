@@ -1,4 +1,4 @@
-$menu-breakpoint: $tablet;
+$menu-breakpoint: $mobile-l;
 
 .wrapper-course-material {
     @include row;
@@ -7,7 +7,7 @@ $menu-breakpoint: $tablet;
     .tab {
 
         display: block;
-        padding: 0 $base-margin / 2;
+        padding: 0 $small-margin;
         &:first-child {
             padding-left: 0;
         }
@@ -34,6 +34,8 @@ $menu-breakpoint: $tablet;
     @include media($menu-breakpoint) {
       .tab, .right {
         float: none;
+        padding: 0;
+        margin: $small-margin 0;
       }
       .right button {
         width: 100%;

@@ -5,6 +5,16 @@
   .subtitles {
     @include span-columns(3);
   }
+
+  @include media($mobile-l) {
+    .video-wrapper {
+      @include span-columns(12);
+      @include omega;
+    }
+    .subtitles {
+      display: none;
+    }
+  }
 }
 
 .has-captions {
@@ -33,7 +43,7 @@
       }
     }
     .video-controls, .closed-captions {
-      @include full-width-block;
+      @include row;
       background-color: $dark-gray;
       .slider {
         background: darken($dark-gray, 10%);
@@ -68,6 +78,9 @@
       padding: .5em;
       display: block;
       float: right;
+      @include media($mobile-l) {
+        display: none;
+      }
 
       .speeds.menu-container {
         position: relative;
