@@ -6,13 +6,14 @@
     }
     .course-content {
         @include span-columns(9);
+        @include omega;
     }
 
     @include media($mobile-l) {
       .course-index {
           @include span-columns(12);
           @include omega;
-          
+
       }
       .course-content {
           @include span-columns(12);

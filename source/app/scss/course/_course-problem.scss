@@ -175,7 +175,6 @@
         left: 0;
         .status {
             display: block;
-            position: relative;
             &:before {
                 @include default-unanswered;
             }

@@ -1,0 +1,23 @@
+.wiki-wrapper {
+  .control-group {
+    .asteriskField {
+      display: none;
+    }
+    label.requiredField:after {
+      content: "*";
+    }
+  }
+  .form-actions {
+    .btn {
+      @include edx-button($dark-gray);
+    }
+    .btn-primary {
+      @include edx-button($yellow);
+    }
+    .btn {
+      display: inline
+    }
+
+    margin-bottom: $base-spacing;
+  }
+}

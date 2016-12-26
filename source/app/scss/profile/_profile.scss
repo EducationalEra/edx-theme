@@ -8,24 +8,11 @@ $u-field-height: 2.5em;
 
 .u-field {
   @include row;
-  margin: $base-margin 0;
-  max-width: em(300);
-  padding: 0 $small-margin;
-  line-height: $u-field-height;
 
   .sr {
     display: none;
   }
   vertical-align: middle;
-
-  input, select {
-    width: 100%;
-    display: inline;
-    background-color: transparent;
-    height: $u-field-height;
-    line-height: $u-field-height;
-    float: left;
-  }
 
   button {
     background-color: transparent;
@@ -35,31 +22,86 @@ $u-field-height: 2.5em;
     text-overflow: ellipsis;
   }
 
-  &.mode-display, &.mode-placeholder {
+  &-message-help {
+    color: $medium-gray;
+    line-height: normal;
+    float: none;
+  }
+
+  // following only applies for in-place editables
+  &.editable-toggle {
+    max-width: em(300);
+    margin: $base-margin 0;
+    padding: 0 $small-margin;
+    line-height: $u-field-height;
+
     input, select {
-      display: none;
+      width: 100%;
+      display: inline;
+      background-color: transparent;
+      height: $u-field-height;
+      line-height: $u-field-height;
+    }
+
+    .u-field-message {
+      line-height: $u-field-height;
+      float: right;
+    }
+
+    &.mode-display, &.mode-placeholder {
+      input, select {
+        display: none;
+      }
+    }
+
+    &.mode-edit {
+      .u-field-value-display {
+        display: none;
+      }
+    }
+    .u-field-icon {
+      float: left;
+      line-height: $u-field-height;
+    }
+
+    .u-field-value {
+      display: inline;
+      // line-height: $u-field-height;
+      line-height: 1;
     }
   }
+  &.u-field-textarea {
+    max-width: em(450);
+    cursor: pointer;
 
-  &.mode-edit {
-    .u-field-value-display {
-      display: none;
+    &.mode-placeholder {
+      border: 6px dotted $light-gray;
+      border-radius: 6px;
+      color: $medium-gray;
     }
-  }
 
-  &-icon {
-    float: left;
-    line-height: $u-field-height;
-  }
+    .u-field-header {
+      text-align: center;
+      .placeholder {
+        display: none;
+      }
+      .u-field-message {
+        float: none;
+      }
+    }
 
-  &-value {
-    display: inline;
-    // line-height: $u-field-height;
-    line-height: 1;
-  }
-  &-message {
-    line-height: $u-field-height;
-    float: right;
+    .u-field-value {
+      text-align: center;
+      line-height: $base-spacing;
+      display: inherit;
+      a {
+        color: inherit;
+      }
+    }
+
+    &:hover {
+      color: $dark-gray;
+    }
   }
 }
 
@@ -125,7 +167,7 @@ $u-field-height: 2.5em;
       .image-wrapper {
         img {
           width: em(120);
-          height: em(120);
+          max-height: em(120);
         }
         &:hover {
           .u-field-upload-button {

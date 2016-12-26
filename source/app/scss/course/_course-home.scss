@@ -18,6 +18,10 @@
         background-color: $white;
         padding: 1em;
         margin-bottom: 1em;
+        button {
+          @include edx-button($yellow);
+          margin-bottom: $base-spacing;
+        }
         .updates {
             h1 {
                 display: none;

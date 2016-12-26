@@ -30,3 +30,20 @@ $menu-breakpoint: $tablet;
     }
   }
 }
+
+.account-settings-header-subtitle {
+  padding: 20px 0;
+}
+
+.account-settings-section-body {
+  @include block-frame;
+  background-color: $white;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  .u-field-value-display {
+    display: none;
+  }
+  .u-field-link {
+    @include edx-button($yellow);
+  }
+}
