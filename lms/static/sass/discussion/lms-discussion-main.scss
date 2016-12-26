@@ -600,21 +600,21 @@ input, textarea, select {
 select {
   height: 2.5em; }
 
-.form-field {
+.form-field, .u-field, .control-group {
   display: block;
   margin: 2em 0; }
-  .form-field::after {
+  .form-field::after, .u-field::after, .control-group::after {
     clear: both;
     content: "";
     display: block; }
-  .form-field input, .form-field label, .form-field textarea, .form-field select {
+  .form-field input, .form-field label, .form-field textarea, .form-field select, .form-field .field-label, .u-field input, .u-field label, .u-field textarea, .u-field select, .u-field .field-label, .control-group input, .control-group label, .control-group textarea, .control-group select, .control-group .field-label {
     display: block; }
-  .form-field label {
+  .form-field label, .form-field .field-label, .u-field label, .u-field .field-label, .control-group label, .control-group .field-label {
     text-transform: uppercase;
     font-weight: bold;
     font-size: .8em;
     margin: .3em 0; }
-  .form-field textarea {
+  .form-field textarea, .u-field textarea, .control-group textarea {
     height: 6em; }
 
 input[type="checkbox"],
@@ -628,7 +628,7 @@ input[type="radio"] {
     display: inline;
     vertical-align: baseline; }
 
-.tip {
+.tip, .u-field-message-help, .u-field-message-notification, .help-block {
   color: #a1a1a1;
   font-size: .8em; }
 
@@ -1006,7 +1006,8 @@ input[type="radio"] {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%; }
+  width: 74.41059%;
+  margin-right: 0; }
   .view-in-course .course-wrapper .course-content:last-child {
     margin-right: 0; }
 
@@ -1055,6 +1056,33 @@ input[type="radio"] {
   background-color: #ffffff;
   padding: 1em;
   margin-bottom: 1em; }
+  .discussion .info-wrapper button,
+  .view-in-course .info-wrapper button {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #f0a612;
+    color: #ffffff;
+    transition: .1s ease-out;
+    margin-bottom: 1.5em; }
+    .discussion .info-wrapper button:disabled,
+    .view-in-course .info-wrapper button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .discussion .info-wrapper button:hover,
+    .view-in-course .info-wrapper button:hover {
+      background-color: #f3b842; }
   .discussion .info-wrapper .updates h1,
   .view-in-course .info-wrapper .updates h1 {
     display: none; }
@@ -1553,8 +1581,7 @@ input[type="radio"] {
   top: 0;
   left: 0; }
   .view-in-course .indicator-container .status {
-    display: block;
-    position: relative; }
+    display: block; }
     .view-in-course .indicator-container .status:before {
       content: "\f111";
       position: absolute;
@@ -2004,6 +2031,8 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
           .content-wrapper > .course-info .course-profile .main-cta a {
             display: block;
             white-space: normal; } }
+    .content-wrapper > .course-info .course-profile .register.disabled {
+      display: none; }
     .content-wrapper > .course-info .course-profile .media {
       display: none; }
   .content-wrapper > .course-info .course-sidebar {
@@ -2761,15 +2790,46 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       background-color: #f6ca72;
       color: #ffffff; }
 
+.account-settings-header-subtitle {
+  padding: 20px 0; }
+
+.account-settings-section-body {
+  border-radius: 3px;
+  border: 1px solid #dddddd;
+  background-color: #ffffff;
+  padding: 0 20px;
+  margin-bottom: 20px; }
+  .account-settings-section-body .u-field-value-display {
+    display: none; }
+  .account-settings-section-body .u-field-link {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #f0a612;
+    color: #ffffff;
+    transition: .1s ease-out; }
+    .account-settings-section-body .u-field-link:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .account-settings-section-body .u-field-link:hover {
+      background-color: #f3b842; }
+
 .u-field-account_privacy .u-field-value-display {
   display: none; }
 
 .u-field {
   display: block;
-  margin: 0.625em 0;
-  max-width: 18.75em;
-  padding: 0 0.3125em;
-  line-height: 2.5em;
   vertical-align: middle; }
   .u-field::after {
     clear: both;
@@ -2777,32 +2837,61 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
     display: block; }
   .u-field .sr {
     display: none; }
-  .u-field input, .u-field select {
-    width: 100%;
-    display: inline;
-    background-color: transparent;
-    height: 2.5em;
-    line-height: 2.5em;
-    float: left; }
   .u-field button {
     background-color: transparent;
     border: none;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
-  .u-field.mode-display input, .u-field.mode-display select, .u-field.mode-placeholder input, .u-field.mode-placeholder select {
-    display: none; }
-  .u-field.mode-edit .u-field-value-display {
-    display: none; }
-  .u-field-icon {
-    float: left;
+  .u-field-message-help {
+    color: #999;
+    line-height: normal;
+    float: none; }
+  .u-field.editable-toggle {
+    max-width: 18.75em;
+    margin: 0.625em 0;
+    padding: 0 0.3125em;
     line-height: 2.5em; }
-  .u-field-value {
-    display: inline;
-    line-height: 1; }
-  .u-field-message {
-    line-height: 2.5em;
-    float: right; }
+    .u-field.editable-toggle input, .u-field.editable-toggle select {
+      width: 100%;
+      display: inline;
+      background-color: transparent;
+      height: 2.5em;
+      line-height: 2.5em; }
+    .u-field.editable-toggle .u-field-message {
+      line-height: 2.5em;
+      float: right; }
+    .u-field.editable-toggle.mode-display input, .u-field.editable-toggle.mode-display select, .u-field.editable-toggle.mode-placeholder input, .u-field.editable-toggle.mode-placeholder select {
+      display: none; }
+    .u-field.editable-toggle.mode-edit .u-field-value-display {
+      display: none; }
+    .u-field.editable-toggle .u-field-icon {
+      float: left;
+      line-height: 2.5em; }
+    .u-field.editable-toggle .u-field-value {
+      display: inline;
+      line-height: 1; }
+  .u-field.u-field-textarea {
+    max-width: 28.125em;
+    cursor: pointer; }
+    .u-field.u-field-textarea.mode-placeholder {
+      border: 6px dotted #dddddd;
+      border-radius: 6px;
+      color: #999; }
+    .u-field.u-field-textarea .u-field-header {
+      text-align: center; }
+      .u-field.u-field-textarea .u-field-header .placeholder {
+        display: none; }
+      .u-field.u-field-textarea .u-field-header .u-field-message {
+        float: none; }
+    .u-field.u-field-textarea .u-field-value {
+      text-align: center;
+      line-height: 1.5em;
+      display: inherit; }
+      .u-field.u-field-textarea .u-field-value a {
+        color: inherit; }
+    .u-field.u-field-textarea:hover {
+      color: #323232; }
 
 .wrapper-profile-field-account-privacy {
   display: block;
@@ -2882,7 +2971,7 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
   position: relative; }
   .wrapper-profile-sections .profile-image-field .u-field-image .image-wrapper img {
     width: 7.5em;
-    height: 7.5em; }
+    max-height: 7.5em; }
   .wrapper-profile-sections .profile-image-field .u-field-image .image-wrapper:hover .u-field-upload-button {
     display: block; }
   .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button {
@@ -2905,12 +2994,68 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
     .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button .upload-button-input {
       display: none; }
 
+.wiki-wrapper .control-group .asteriskField {
+  display: none; }
+
+.wiki-wrapper .control-group label.requiredField:after {
+  content: "*"; }
+
+.wiki-wrapper .form-actions {
+  margin-bottom: 1.5em; }
+  .wiki-wrapper .form-actions .btn {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #323232;
+    color: #ffffff;
+    transition: .1s ease-out; }
+    .wiki-wrapper .form-actions .btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .wiki-wrapper .form-actions .btn:hover {
+      background-color: #4c4c4c; }
+  .wiki-wrapper .form-actions .btn-primary {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #f0a612;
+    color: #ffffff;
+    transition: .1s ease-out; }
+    .wiki-wrapper .form-actions .btn-primary:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .wiki-wrapper .form-actions .btn-primary:hover {
+      background-color: #f3b842; }
+  .wiki-wrapper .form-actions .btn {
+    display: inline; }
+
 .header-global-new, .header-global, .header-global {
   display: block;
   float: left;
   width: 100%;
   background-color: #fbfaf8;
-  box-shadow: 0 1px 1px #dddddd;
   border-bottom: #dddddd 1px solid;
   margin-bottom: 1.25em; }
   .header-global-new::after, .header-global::after, .header-global::after {
