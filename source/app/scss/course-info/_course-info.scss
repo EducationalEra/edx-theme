@@ -15,10 +15,24 @@
       text-align: center;
       h1 {
         color: white;
-        font-size: em(45);
+        font-size: em(35);
       }
     }
 
+    .main-cta {
+      text-align: center;
+      a {
+        @include edx-button(#00508D);
+        font-size: em(20);
+        display: inline;
+        @include media($tablet) {
+          display: block;
+          white-space: normal;
+        }
+      }
+    }
+
+/*
     .main-cta {
       text-align: center;
       a {
@@ -31,7 +45,7 @@
         }
       }
     }
-
+*/
     .register.disabled {
       display: none;
     }
@@ -130,20 +144,176 @@
       & > * {
         margin: $big-margin 0;
       }
-    }
+      section > .container {
+        @include row;
+        margin: $big-margin 0;
+        /*
 
-    .programm {
-      li {
-        text-indent: -2em;
-        padding-left: 2em;
+        @include media($mobile) {
+          visibility: hidden;
+          height: 0;
+        }
+        */
+        @include media($tablet) {
+          ul.features {
+            //@include span-columns(12);
+            & > li {
+              @include span-columns(9);
+              @include shift(1);
+              @include omega();
+              & > i {
+                margin: 10px;
+                display: inline;
+              }
+            }
+          }
+          & > .short-description {
+            @include span-columns(9);
+            @include shift(1);
+            @include omega();
+            //padding-right: 5em;
+            & > .main-staff-wrapper { 
+              & > .main-staff {
+              }
+            }
+          }
+          & > .pop-up {
+            @include span-columns(6);
+            @include shift(3);
+            margin-top: 1em;
+          }
+        }
+
+        @include media  ($desktop) {
+          ul.features {
+            @include span-columns(10);
+            @include shift(2);  
+            & > li {
+              @include span-columns(3);
+              @include omega(3n);
+              & > i {
+                margin: 10px;
+              }
+            }
+          }
+          & > .short-description {
+            @include span-columns(6);
+            @include shift(1);
+          }
+          & > .pop-up {
+            @include span-columns(4);
+            @include omega();
+          }
+
+          & > .main-staff-wrapper {
+            & > .main-staff {
+              & > p {
+                text-align: center;
+              }
+              @include span-columns(3);
+              @include shift(1);
+              & > .photo {
+                position: relative;
+              }
+            }
+            & > .main-staff-description {
+              @include span-columns(7);
+              @include omega();
+            }
+          }
+        }
+
+          & > .course-staff-wrap {
+            @include span-columns(10);
+            @include shift(1);
+            @include omega();
+            & > .course-staff {
+              @include span-columns(4);
+              @include omega(3n);
+              & > p {
+                text-align: center;
+              }
+              & > img {
+                margin: 10px auto;
+              }
+            }
+          }
+        }
+      
+      section {
+        margin-bottom: 2em;
+        & > .container {
+          @include row;
+          margin: $big-margin 0;
+          & > h2 {
+            text-transform: uppercase;
+            text-align: center;
+            margin: 35px auto; 
+          }
+          & > .program {
+            @include span-columns(6);
+            @include shift(1);
+            padding-right: 30px;
+            & > ul {
+              & > li {
+                margin-left: 20px;
+              }
+            }
+          }
+          & > .more-info {
+            @include span-columns(4);
+            @include omega();
+            & > .info {
+              margin-bottom: 10px;
+              & > p {
+                margin-bottom: auto;
+              }
+              & > span {
+              }
+            }
+            & > .social {
+              ul > li {
+                float: left;
+                & > a {
+                  /*
+                  &:hover, &:active {
+                    cursor: pointer;
+                    color: darken($action-color, 20%);
+                  }
+                  */
+                  & > i {
+                    font-size: 2em;
+                    margin-right: 15px;
+                    color: #00508D;
+                  }
+                }
+              }
+            } 
+          }
+          & > .inside {
+            @include row;
+            margin-bottom: 20px;
+            & > .inside-content {
+              @include span-columns(3);
+              @include shift(2);
+            }
+            & > .inside-description {
+              @include span-columns(6);
+              @include omega();
+            }
+          }
+        }
       }
-
-      ol li {
-        // text-indent: 0;
-        list-style:  inside;
-      }
     }
-
+    b {
+      //color: #777;
+      color: #00508D;
+    }
+    
+    img.photo {
+      border-radius: 50%;
+    }
+    /*
     .course-staff {
       .teacher {
         @include clearfix;
@@ -155,5 +325,6 @@
         }
       }
     }
+    */
   }
 }
