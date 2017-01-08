@@ -16,13 +16,15 @@
       h1 {
         color: white;
         font-size: em(35);
+        text-transform: uppercase;
+        font-weight: 300;
       }
     }
 
     .main-cta {
       text-align: center;
       a {
-        @include edx-button(#00508D);
+        @include edx-button($yellow);
         font-size: em(20);
         display: inline;
         @include media($tablet) {
@@ -191,6 +193,8 @@
             & > li {
               @include span-columns(3);
               @include omega(3n);
+              //background-color: #00508D;
+              //opacity: .9;
               & > i {
                 margin: 10px;
               }
@@ -248,7 +252,8 @@
           & > h2 {
             text-transform: uppercase;
             text-align: center;
-            margin: 35px auto; 
+            margin: 35px auto;
+            font-size: 1.375em; 
           }
           & > .program {
             @include span-columns(6);
@@ -263,6 +268,8 @@
           & > .more-info {
             @include span-columns(4);
             @include omega();
+            border: solid #eee 1px;
+            padding: 25px;
             & > .info {
               margin-bottom: 10px;
               & > p {
@@ -286,6 +293,18 @@
                     margin-right: 15px;
                     color: #00508D;
                   }
+                }
+              }
+            }
+            & > .main-cta {
+              text-align: center;
+              a {
+                @include edx-button(#00508D);
+                font-size: em(15);
+                display: inline;
+                @include media($tablet) {
+                  display: block;
+                  white-space: normal;
                 }
               }
             } 
