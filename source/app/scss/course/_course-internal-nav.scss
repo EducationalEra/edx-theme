@@ -46,7 +46,15 @@
         }
     }
     .bookmark-button-wrapper {
-        // TODO: tbd
+      @include row;
+      width: 100%;
+
+      .sr {
         display: none;
+      }
+      button {
+        @include edx-button($yellow);
+        float: right;
+      }
     }
 }

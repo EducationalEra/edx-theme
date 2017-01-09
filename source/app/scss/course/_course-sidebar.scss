@@ -4,7 +4,11 @@
         background-color: $white;
         .wrapper-course-modes {
             // TODO: tbd
-            display: none;
+            // display: none;
+            button {
+              @include edx-button($yellow);
+              margin: $small-spacing;
+            }
         }
         .course-navigation {
             a {

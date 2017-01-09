@@ -3,6 +3,26 @@
         float: left;
         display: block;
     }
+
+    .paging-footer {
+      .nav-item {
+        display: inline-block;
+        float: left;
+        text-align: center;
+        .page-number-label, .page-number-input {
+          display: none;
+        }
+        .sr {
+          display: none;
+        }
+        &.page {
+          padding: .5em 1em;
+        }
+        button {
+          @include edx-button($yellow);
+        }
+      }
+    }
 }
 .discussion,
 .view-in-course {
