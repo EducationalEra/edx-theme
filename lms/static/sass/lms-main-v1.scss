@@ -1040,6 +1040,40 @@ input[type="radio"] {
   float: left;
   display: block; }
 
+.view-in-course .paging-footer .nav-item {
+  display: inline-block;
+  float: left;
+  text-align: center; }
+  .view-in-course .paging-footer .nav-item .page-number-label, .view-in-course .paging-footer .nav-item .page-number-input {
+    display: none; }
+  .view-in-course .paging-footer .nav-item .sr {
+    display: none; }
+  .view-in-course .paging-footer .nav-item.page {
+    padding: .5em 1em; }
+  .view-in-course .paging-footer .nav-item button {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #f0a612;
+    color: #ffffff;
+    transition: .1s ease-out; }
+    .view-in-course .paging-footer .nav-item button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .view-in-course .paging-footer .nav-item button:hover {
+      background-color: #f3b842; }
+
 .discussion #seq_content,
 .view-in-course #seq_content {
   float: left;
@@ -1110,8 +1144,30 @@ input[type="radio"] {
 .view-in-course .course-index {
   border-radius: 3px;
   background-color: #ffffff; }
-  .view-in-course .course-index .wrapper-course-modes {
-    display: none; }
+  .view-in-course .course-index .wrapper-course-modes button {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #f0a612;
+    color: #ffffff;
+    transition: .1s ease-out;
+    margin: 0.75em; }
+    .view-in-course .course-index .wrapper-course-modes button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .view-in-course .course-index .wrapper-course-modes button:hover {
+      background-color: #f3b842; }
   .view-in-course .course-index .course-navigation a {
     color: #323232; }
   .view-in-course .course-index .course-navigation .button-chapter.chapter {
@@ -1351,7 +1407,38 @@ input[type="radio"] {
     float: left; }
 
 .view-in-course .bookmark-button-wrapper {
-  display: none; }
+  display: block;
+  width: 100%; }
+  .view-in-course .bookmark-button-wrapper::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .view-in-course .bookmark-button-wrapper .sr {
+    display: none; }
+  .view-in-course .bookmark-button-wrapper button {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #f0a612;
+    color: #ffffff;
+    transition: .1s ease-out;
+    float: right; }
+    .view-in-course .bookmark-button-wrapper button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .view-in-course .bookmark-button-wrapper button:hover {
+      background-color: #f3b842; }
 
 .view-in-course .problems-wrapper .problem-header {
   float: left;
