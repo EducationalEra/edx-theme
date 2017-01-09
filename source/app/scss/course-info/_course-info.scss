@@ -18,36 +18,31 @@
         font-size: em(35);
         text-transform: uppercase;
         font-weight: 300;
+        a {
+          color: white;
+        }
       }
+    }
+
+    h2 {
+      text-align: center;
+      color: white;
+      font-weight: 300;
     }
 
     .main-cta {
       text-align: center;
       a {
-        @include edx-button($yellow);
+        @include edx-button($brand-blue);
         font-size: em(20);
-        display: inline;
-        @include media($tablet) {
-          display: block;
-          white-space: normal;
-        }
-      }
-    }
+        display: inline-block;
 
-/*
-    .main-cta {
-      text-align: center;
-      a {
-        @include edx-button($yellow);
-        font-size: em(30);
-        display: inline;
-        @include media($tablet) {
+        @include media($mobile) {
           display: block;
           white-space: normal;
         }
       }
     }
-*/
     .register.disabled {
       display: none;
     }
@@ -57,300 +52,184 @@
     }
   }
 
-  .course-sidebar {
-    @include responsive-outer-container();
-
-    margin-bottom: -5em;
-
-    header {
-      @include span-columns(6);
-    }
-    .important-dates {
-      @include span-columns(6);
-    }
-
-    @include media($mobile-l) {
-      margin-bottom: -20em;
-      header {
-        @include span-columns(12);
-        @include omega;
-      }
-      .important-dates {
-        @include span-columns(12);
-        @include omega;
-      }
-    }
-
-    .social-sharing {
-      // display: table;
-      width: 100%;
-
-      .sharing-message {
-        @extend h2;
-        font-weight: bold;
-        display: block;
-      }
-      .sr {
-        display: none;
-      }
-      .share {
-        font-size: 500%;
-        margin: 0 5%;
-        text-align: center;
-        &:first-of-type {
-            text-align: left;
-        }
-        &:last-of-type {
-            text-align: right;
-        }
-        @include media($mobile) {
-          margin: 0 1%;
-        }
-      }
-    }
-
-    .important-dates {
-      .important-dates-item {
-        @include row;
-        float: left;
-        width: 100%;
-
-        padding: $base-margin 0;
-        font-size: 2em;
-        border-bottom: $light-gray 1px solid;
-
-        &:first-child {
-          padding-top: 0;
-        }
-        &:last-child {
-          padding-bottom: 0;
-          border: none;
-        }
-
-        & > * {
-          display: inline;
-          margin: 0 $small-margin;
-        }
-        .important-dates-item-text {
-          float: right;
-        }
-        @include media($mobile-l) {
-          font-size: 1.2em;
-        }
-      }
-    }
-  }
-
   .container {
-    .inner-wrapper {
-      @include responsive-outer-container();
-      & > * {
-        margin: $big-margin 0;
-      }
-      section > .container {
+    .inner-wrapper > section > .container {
+        @include responsive-outer-container();
         @include row;
-        margin: $big-margin 0;
-        /*
+
+        width: 70%;
+        margin-bottom: $big-margin;
+
+        .features {
+          @include row;
+          margin: $base-margin 0;
+          li {
+            @include span-columns(4);
+            @include omega();
+            text-align: center;
+            line-height: $base-line-height * 1.5;
+            .fa {
+              margin-right: $base-margin;
+            }
+          }
+        }
+
+        .short-description {
+          @include span-columns(8);
+        }
+
+        .pop-up {
+          @include span-columns(4);
+          @include omega();
+        }
+
+        h2 {
+          text-transform: uppercase;
+          text-align: center;
+          margin: 35px auto;
+          font-size: 1.375em;
+        }
+
+        .program {
+          @include span-columns(8);
+          padding-right: 30px;
+          & > ul {
+            & > li {
+              margin-left: 20px;
+            }
+          }
+        }
+
+        .more-info {
+          @include span-columns(4);
+          @include omega();
+          border: solid #eee 1px;
+          padding: 25px;
+          .info {
+            margin-bottom: 10px;
+            & > p {
+              margin-bottom: auto;
+            }
+            & > ul > li {
+              padding-left: 10px;
+              & > i {
+                padding-right: 10px;
+              }
+            }
+          }
+          .social {
+            ul, li {
+              display: block;
+              float: left;
+              padding: 0 .25em;
+              font-size: 1.30em;
+              color: $brand-blue;
+            }
+            li .fa {
+              color: $brand-blue;
+            }
+          }
+          .register {
+            float: left;
+            display: inline-block;
+            @include edx-button($brand-blue);
+          }
+
+        }
+
+        .inside {
+          @include row;
+          margin-bottom: 20px;
+          .inside-content {
+            @include span-columns(3);
+          }
+          .inside-description {
+            @include span-columns(9);
+            @include omega();
+          }
+        }
+
+        .course-staff-wrap {
+          .course-staff {
+            @include span-columns(4);
+            @include omega(3n);
+            p {
+              text-align: center;
+            }
+            img {
+              margin: $base-margin auto;
+            }
+          }
+        }
+
+        .main-staff-wrapper {
+          .main-staff {
+            @include span-columns(4);
+
+            p {
+              text-align: center;
+            }
+            .photo {
+              position: relative;
+            }
+          }
+          .main-staff-description {
+            @include span-columns(8);
+            @include omega();
+          }
+        }
+
+        @include media($tablet) {
+          width: 80%;
+
+          .features {
+            li {
+              text-align: left;
+              @include span-columns(12);
+              .fa {
+                display: inline;
+              }
+            }
+          }
+
+          .short-description,
+          .pop-up {
+            @include span-columns(5);
+          }
+        }
 
         @include media($mobile) {
-          visibility: hidden;
-          height: 0;
-        }
-        */
-        @include media($tablet) {
-          ul.features {
-            //@include span-columns(12);
-            & > li {
-              @include span-columns(9);
-              @include shift(1);
-              @include omega();
-              & > i {
-                margin: 10px;
-                display: inline;
-              }
-            }
-          }
-          & > .short-description {
-            @include span-columns(9);
-            @include shift(1);
-            @include omega();
-            //padding-right: 5em;
-            & > .main-staff-wrapper { 
-              & > .main-staff {
-              }
-            }
-          }
-          & > .pop-up {
-            @include span-columns(6);
-            @include shift(3);
-            margin-top: 1em;
-          }
-        }
+          width: auto;
 
-        @include media  ($desktop) {
-          ul.features {
-            @include span-columns(10);
-            @include shift(2);  
-            & > li {
-              @include span-columns(3);
-              @include omega(3n);
-              //background-color: #00508D;
-              //opacity: .9;
-              & > i {
-                margin: 10px;
-              }
-            }
-          }
-          & > .short-description {
-            @include span-columns(6);
-            @include shift(1);
-          }
-          & > .pop-up {
-            @include span-columns(4);
-            @include omega();
-          }
-
-          & > .main-staff-wrapper {
-            & > .main-staff {
-              & > p {
-                text-align: center;
-              }
-              @include span-columns(3);
-              @include shift(1);
-              & > .photo {
-                position: relative;
-              }
-            }
-            & > .main-staff-description {
-              @include span-columns(7);
-              @include omega();
-            }
+          .features li,
+          .short-description,
+          .pop-up,
+          .program,
+          .more-info,
+          .inside .inside-content,
+          .inside .inside-description,
+          .course-staff-wrap .course-staff,
+          .main-staff-wrapper .main-staff,
+          .main-staff-wrapper .main-staff-description {
+            @include span-columns(12);
           }
         }
-
-          & > .course-staff-wrap {
-            @include span-columns(10);
-            @include shift(1);
-            @include omega();
-            & > .course-staff {
-              @include span-columns(4);
-              @include omega(3n);
-              & > p {
-                text-align: center;
-              }
-              & > img {
-                margin: 10px auto;
-              }
-            }
-          }
-        }
-      
-      section {
-        margin-bottom: 2em;
-        & > .container {
-          @include row;
-          margin: $big-margin 0;
-          & > h2 {
-            text-transform: uppercase;
-            text-align: center;
-            margin: 35px auto;
-            font-size: 1.375em; 
-          }
-          & > .program {
-            @include span-columns(6);
-            @include shift(1);
-            padding-right: 30px;
-            & > ul {
-              & > li {
-                margin-left: 20px;
-              }
-            }
-          }
-          & > .more-info {
-            @include span-columns(4);
-            @include omega();
-            border: solid #eee 1px;
-            padding: 25px;
-            & > .info {
-              margin-bottom: 10px;
-              & > p {
-                margin-bottom: auto;
-              }
-              & > ul > li {
-                padding-left: 10px;
-                & > i {
-                  padding-right: 10px;
-                }
-              }
-            }
-            & > .social {
-              ul > li {
-                float: left;
-                & > a {
-                  /*
-                  &:hover, &:active {
-                    cursor: pointer;
-                    color: darken($action-color, 20%);
-                  }
-                  */
-                  & > i {
-                    font-size: 2em;
-                    margin-right: 15px;
-                    color: #00508D;
-                  }
-                }
-              }
-            }
-            & > .main-cta {
-              text-align: center;
-              a {
-                @include edx-button(#00508D);
-                font-size: em(15);
-                display: inline;
-                @include media($tablet) {
-                  display: block;
-                  white-space: normal;
-                }
-              }
-            } 
-          }
-          & > .inside {
-            @include row;
-            margin-bottom: 20px;
-            & > .inside-content {
-              @include span-columns(3);
-              @include shift(2);
-            }
-            & > .inside-description {
-              @include span-columns(6);
-              @include omega();
-            }
-          }
-        }
-      }
     }
+    // end of for each section
+
+
     b {
-      //color: #777;
-      color: #00508D;
+      color: $brand-blue;
     }
-    
+
     img.photo {
       border-radius: 50%;
     }
-    /*
-    .course-staff {
-      .teacher {
-        @include clearfix;
-        margin: $big-margin 0;
-        .teacher-image img {
-          width: em(100);
-          border-radius: 50%;
-          margin-right: $big-margin;
-        }
-      }
-    }
-    */
   }
+}
+
+.course-sidebar {
+  display: none;
 }
 
 
@@ -359,8 +238,8 @@
  */
 .mfp-fade.mfp-bg {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out; 
-  -moz-transition: all 0.15s ease-out; 
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-bg.mfp-ready {
@@ -372,8 +251,8 @@
 
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
-  -webkit-transition: all 0.15s ease-out; 
-  -moz-transition: all 0.15s ease-out; 
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
   transition: all 0.15s ease-out;
 }
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
