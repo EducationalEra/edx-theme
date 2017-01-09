@@ -894,7 +894,7 @@ input[type="radio"] {
         margin-left: 0; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .home .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .home .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > *:last-child {
         margin-right: 0; }
-    .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course {
+    .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .action, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .action, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action {
       display: block;
       border: none;
       border-radius: 3px;
@@ -912,12 +912,12 @@ input[type="radio"] {
       background-color: #f0a612;
       color: #ffffff;
       transition: .1s ease-out; }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr {
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action .sr {
         display: none; }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled {
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .action:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .action:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover {
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action:hover {
         background-color: #f3b842; }
     .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action .sr {
       display: none; }
@@ -2013,7 +2013,9 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       text-align: center; }
       .content-wrapper > .course-info .course-profile .heading-group h1 {
         color: white;
-        font-size: 2.1875em; }
+        font-size: 2.1875em;
+        text-transform: uppercase;
+        font-weight: 300; }
     .content-wrapper > .course-info .course-profile .main-cta {
       text-align: center; }
       .content-wrapper > .course-info .course-profile .main-cta a {
@@ -2031,7 +2033,7 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
         user-select: none;
         vertical-align: middle;
         white-space: nowrap;
-        background-color: #00508D;
+        background-color: #f0a612;
         color: #ffffff;
         transition: .1s ease-out;
         font-size: 1.25em;
@@ -2040,7 +2042,7 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
           cursor: not-allowed;
           opacity: 0.5; }
         .content-wrapper > .course-info .course-profile .main-cta a:hover {
-          background-color: #006dc0; }
+          background-color: #f3b842; }
         @media screen and (max-width: 62.4375em) {
           .content-wrapper > .course-info .course-profile .main-cta a {
             display: block;
@@ -2053,7 +2055,7 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
     max-width: 75em;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1.25em; }
+    margin-bottom: -5em; }
     .content-wrapper > .course-info .course-sidebar::after {
       clear: both;
       content: "";
@@ -2082,22 +2084,24 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       .content-wrapper > .course-info .course-sidebar .important-dates:last-child {
         margin-right: 0; }
     @media screen and (max-width: 26.5625em) {
-      .content-wrapper > .course-info .course-sidebar header {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin-right: 0; }
-        .content-wrapper > .course-info .course-sidebar header:last-child {
+      .content-wrapper > .course-info .course-sidebar {
+        margin-bottom: -20em; }
+        .content-wrapper > .course-info .course-sidebar header {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%;
           margin-right: 0; }
-      .content-wrapper > .course-info .course-sidebar .important-dates {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 100%;
-        margin-right: 0; }
-        .content-wrapper > .course-info .course-sidebar .important-dates:last-child {
-          margin-right: 0; } }
+          .content-wrapper > .course-info .course-sidebar header:last-child {
+            margin-right: 0; }
+        .content-wrapper > .course-info .course-sidebar .important-dates {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%;
+          margin-right: 0; }
+          .content-wrapper > .course-info .course-sidebar .important-dates:last-child {
+            margin-right: 0; } }
     .content-wrapper > .course-info .course-sidebar .social-sharing {
       width: 100%; }
       .content-wrapper > .course-info .course-sidebar .social-sharing .sharing-message {
@@ -2177,10 +2181,6 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
         display: block;
         margin: 1.25em 0;
         /*
-        @include media($tablet) {
-          visibility: hidden;
-          height: 0;
-        }
 
         @include media($mobile) {
           visibility: hidden;
@@ -2191,63 +2191,95 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
           clear: both;
           content: "";
           display: block; }
-        .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 82.94039%;
-          margin-left: 17.05961%; }
-          .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features:last-child {
-            margin-right: 0; }
+        @media screen and (max-width: 62.4375em) {
           .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li {
             float: left;
             display: block;
-            margin-right: 2.35765%;
-            width: 23.23176%; }
+            margin-right: 2.84259%;
+            width: 89.71574%;
+            margin-left: 10.28426%;
+            margin-right: 0; }
             .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li:last-child {
               margin-right: 0; }
-            .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li:nth-child(3n) {
-              margin-right: 0; }
-            .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li:nth-child(3n+1) {
-              clear: left; }
             .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li > i {
-              margin: 10px; }
-        .content-wrapper > .course-info .container .inner-wrapper section > .container > .short-description {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 48.82117%;
-          margin-left: 8.5298%; }
-          .content-wrapper > .course-info .container .inner-wrapper section > .container > .short-description:last-child {
+              margin: 10px;
+              display: inline; }
+          .content-wrapper > .course-info .container .inner-wrapper section > .container > .short-description {
+            float: left;
+            display: block;
+            margin-right: 2.84259%;
+            width: 89.71574%;
+            margin-left: 10.28426%;
             margin-right: 0; }
-        .content-wrapper > .course-info .container .inner-wrapper section > .container > .pop-up {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 31.76157%;
-          margin-right: 0; }
-          .content-wrapper > .course-info .container .inner-wrapper section > .container > .pop-up:last-child {
+            .content-wrapper > .course-info .container .inner-wrapper section > .container > .short-description:last-child {
+              margin-right: 0; }
+          .content-wrapper > .course-info .container .inner-wrapper section > .container > .pop-up {
+            float: left;
+            display: block;
+            margin-right: 2.84259%;
+            width: 58.86297%;
+            margin-left: 30.85278%;
+            margin-top: 1em; }
+            .content-wrapper > .course-info .container .inner-wrapper section > .container > .pop-up:last-child {
+              margin-right: 0; } }
+        @media screen and (min-width: 62.5em) {
+          .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 82.94039%;
+            margin-left: 17.05961%; }
+            .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features:last-child {
+              margin-right: 0; }
+            .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li {
+              float: left;
+              display: block;
+              margin-right: 2.35765%;
+              width: 23.23176%; }
+              .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li:last-child {
+                margin-right: 0; }
+              .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li:nth-child(3n) {
+                margin-right: 0; }
+              .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li:nth-child(3n+1) {
+                clear: left; }
+              .content-wrapper > .course-info .container .inner-wrapper section > .container ul.features > li > i {
+                margin: 10px; }
+          .content-wrapper > .course-info .container .inner-wrapper section > .container > .short-description {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 48.82117%;
+            margin-left: 8.5298%; }
+            .content-wrapper > .course-info .container .inner-wrapper section > .container > .short-description:last-child {
+              margin-right: 0; }
+          .content-wrapper > .course-info .container .inner-wrapper section > .container > .pop-up {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 31.76157%;
             margin-right: 0; }
-        .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 23.23176%;
-          margin-left: 8.5298%; }
-          .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff > p {
-            text-align: center; }
-          .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff:last-child {
+            .content-wrapper > .course-info .container .inner-wrapper section > .container > .pop-up:last-child {
+              margin-right: 0; }
+          .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 23.23176%;
+            margin-left: 8.5298%; }
+            .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff > p {
+              text-align: center; }
+            .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff:last-child {
+              margin-right: 0; }
+            .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff > .photo {
+              position: relative; }
+          .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff-description {
+            float: left;
+            display: block;
+            margin-right: 2.35765%;
+            width: 57.35098%;
             margin-right: 0; }
-          .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff > .photo {
-            position: relative; }
-        .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff-description {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 57.35098%;
-          margin-right: 0; }
-          .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff-description:last-child {
-            margin-right: 0; }
+            .content-wrapper > .course-info .container .inner-wrapper section > .container > .main-staff-wrapper > .main-staff-description:last-child {
+              margin-right: 0; } }
         .content-wrapper > .course-info .container .inner-wrapper section > .container > .course-staff-wrap {
           float: left;
           display: block;
@@ -2284,7 +2316,8 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
           .content-wrapper > .course-info .container .inner-wrapper section > .container > h2, .content-wrapper > .course-info .container .inner-wrapper .course-sidebar .social-sharing section > .container > .sharing-message, .content-wrapper > .course-info .course-sidebar .social-sharing .container .inner-wrapper section > .container > .sharing-message {
             text-transform: uppercase;
             text-align: center;
-            margin: 35px auto; }
+            margin: 35px auto;
+            font-size: 1.375em; }
           .content-wrapper > .course-info .container .inner-wrapper section > .container > .program {
             float: left;
             display: block;
@@ -2301,13 +2334,19 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
             display: block;
             margin-right: 2.35765%;
             width: 31.76157%;
-            margin-right: 0; }
+            margin-right: 0;
+            border: solid #eee 1px;
+            padding: 25px; }
             .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info:last-child {
               margin-right: 0; }
             .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .info {
               margin-bottom: 10px; }
               .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .info > p {
                 margin-bottom: auto; }
+              .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .info > ul > li {
+                padding-left: 10px; }
+                .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .info > ul > li > i {
+                  padding-right: 10px; }
             .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .social ul > li {
               float: left; }
               .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .social ul > li > a {
@@ -2321,6 +2360,37 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
                   font-size: 2em;
                   margin-right: 15px;
                   color: #00508D; }
+            .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .main-cta {
+              text-align: center; }
+              .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .main-cta a {
+                display: block;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                line-height: 1.5;
+                padding: .5em 1em;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 1em;
+                font-weight: normal;
+                font-family: "Noto Sans";
+                user-select: none;
+                vertical-align: middle;
+                white-space: nowrap;
+                background-color: #00508D;
+                color: #ffffff;
+                transition: .1s ease-out;
+                font-size: 0.9375em;
+                display: inline; }
+                .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .main-cta a:disabled {
+                  cursor: not-allowed;
+                  opacity: 0.5; }
+                .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .main-cta a:hover {
+                  background-color: #006dc0; }
+                @media screen and (max-width: 62.4375em) {
+                  .content-wrapper > .course-info .container .inner-wrapper section > .container > .more-info > .main-cta a {
+                    display: block;
+                    white-space: normal; } }
           .content-wrapper > .course-info .container .inner-wrapper section > .container > .inside {
             display: block;
             margin-bottom: 20px; }
@@ -2348,6 +2418,33 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       color: #00508D; }
     .content-wrapper > .course-info .container img.photo {
       border-radius: 50%; }
+
+/**
+ * Simple fade transition,
+ */
+.mfp-fade.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out; }
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 0.8; }
+
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0; }
+
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out; }
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1; }
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0; }
 
 /**
  * Simple fade transition,
