@@ -38,6 +38,9 @@
 
 .wrap-instructor-info {
   margin: $base-margin 0;
+  float: left;
+  width: 100%;
+  
   .instructor-info-action {
       @include edx-button($dark-gray);
       display: inline-block;
@@ -45,6 +48,14 @@
 
       @include media($mobile-l) {
           width: 100%;
+      }
+
+      margin: 0 $button-space;
+
+      @include media($mobile) {
+          margin: $button-space 0;
+          width: 100%;
+          display: block;
       }
   }
 }
