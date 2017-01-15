@@ -94,7 +94,7 @@
             float: right;
             & > * {
               float: left;
-              margin: 0 .3em;
+              margin: 0 $button-space;
               &:first-child {
                 margin-left: 0;
               }

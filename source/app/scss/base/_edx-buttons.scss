@@ -41,7 +41,8 @@
 
   transition: .1s ease-out;
 
-  &.active {
+  &.active,
+  &.active-section {
     background-color: $yellow;
     color: $white;
     &:hover {

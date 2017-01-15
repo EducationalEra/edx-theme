@@ -1,11 +1,8 @@
-$menu-breakpoint: $mobile-l;
-
 .wrapper-course-material {
     @include row;
     margin-bottom: 2em;
     .right,
     .tab {
-
         display: block;
         padding: 0 $small-margin;
         &:first-child {

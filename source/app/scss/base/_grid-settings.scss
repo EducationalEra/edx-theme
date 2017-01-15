@@ -25,3 +25,5 @@ $desktop: new-breakpoint(min-width $large-screen 12);
     display: none;
   }
 }
+
+$menu-breakpoint: $mobile-l;

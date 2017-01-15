@@ -34,7 +34,6 @@
         text-align: left;
     }
     .info-wrapper {
-        @include block-frame;
         background-color: $white;
         padding: 1em;
         margin-bottom: 1em;
@@ -49,6 +48,8 @@
         }
     }
     .home {
+      padding: 0 1em;
+
       .page-title {
         display: none;
       }
