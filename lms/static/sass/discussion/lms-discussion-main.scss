@@ -523,7 +523,7 @@ picture {
 :focus {
   outline: none; }
 
-.icon, .view-in-course .capa_inputtype label:before, .view-in-course .inputtype label:before, .view-in-course .chemicalequationinput label:before, .view-in-course .designprotein2dinput label:before, .view-in-course .capa_inputtype.textline .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before, .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .status.unanswered:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .wmd-panel .wmd-button > span {
+.icon, .view-in-course .capa_inputtype label:before, .view-in-course .inputtype label:before, .view-in-course .chemicalequationinput label:before, .view-in-course .designprotein2dinput label:before, .view-in-course .capa_inputtype .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before, .view-in-course .formulaequationinput .status:before, .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .status.unanswered:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .wmd-panel .wmd-button > span {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -559,34 +559,33 @@ a:hover, a:active {
 
 .window-wrap {
   overflow: hidden; }
+  .window-wrap > * {
+    float: left;
+    width: 100%; }
 
-.modal {
-  background: white;
-  border-radius: 3px;
-  padding: 1.25em;
-  left: 10% !important;
-  right: 10% !important;
-  margin: 0 !important;
-  width: 80% !important; }
-
-.content-wrapper > * {
-  max-width: 75em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1.25em; }
-  .content-wrapper > *::after {
+.content-wrapper {
+  display: block; }
+  .content-wrapper::after {
     clear: both;
     content: "";
     display: block; }
-  @media screen and (min-width: 62.5em) {
-    .content-wrapper > * {
-      padding: 0 10px; } }
-  @media screen and (max-width: 62.4375em) {
-    .content-wrapper > * {
-      padding: 0 10px; } }
-  @media screen and (max-width: 20em) {
-    .content-wrapper > * {
-      padding: 0 10px; } }
+  .content-wrapper > * {
+    max-width: 75em;
+    margin-left: auto;
+    margin-right: auto; }
+    .content-wrapper > *::after {
+      clear: both;
+      content: "";
+      display: block; }
+    @media screen and (min-width: 62.5em) {
+      .content-wrapper > * {
+        padding: 0 10px; } }
+    @media screen and (max-width: 62.4375em) {
+      .content-wrapper > * {
+        padding: 0 10px; } }
+    @media screen and (max-width: 20em) {
+      .content-wrapper > * {
+        padding: 0 10px; } }
 
 input, textarea, select {
   border: none;
@@ -633,6 +632,78 @@ input[type="radio"] {
 
 .modal {
   display: none; }
+
+.modal {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  margin: 0 !important;
+  overflow: hidden; }
+  .modal .inner-wrapper {
+    position: absolute;
+    background-color: white;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    max-height: 50%;
+    overflow: auto;
+    padding: 1.25em; }
+    @media screen and (max-width: 26.5625em) {
+      .modal .inner-wrapper {
+        left: 0;
+        right: 0; } }
+    .modal .inner-wrapper .sr {
+      display: none; }
+    .modal .inner-wrapper .close-modal {
+      float: right;
+      display: block;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      line-height: 1.5;
+      padding: .5em 1em;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: "Noto Sans";
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: #323232;
+      color: #ffffff;
+      transition: .1s ease-out; }
+      .modal .inner-wrapper .close-modal:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+      .modal .inner-wrapper .close-modal:hover {
+        background-color: #4c4c4c; }
+    .modal .inner-wrapper .submit input {
+      display: block;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      line-height: 1.5;
+      padding: .5em 1em;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: "Noto Sans";
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: #f0a612;
+      color: #ffffff;
+      transition: .1s ease-out; }
+      .modal .inner-wrapper .submit input:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+      .modal .inner-wrapper .submit input:hover {
+        background-color: #f3b842; }
 
 .post-errors,
 .discussion-errors,
@@ -813,10 +884,18 @@ input[type="radio"] {
   text-transform: uppercase;
   text-align: center; }
 
+.dashboard .listing-courses .details, .dashboard .listing-courses .wrapper-messages-primary, .dashboard .listing-courses .course, .dashboard .courses-listing .details, .dashboard .courses-listing .wrapper-messages-primary, .dashboard .courses-listing .course, .home .listing-courses .details, .home .listing-courses .wrapper-messages-primary, .home .listing-courses .course, .home .courses-listing .details, .home .courses-listing .wrapper-messages-primary, .home .courses-listing .course, .find-courses .listing-courses .details, .find-courses .listing-courses .wrapper-messages-primary, .find-courses .listing-courses .course, .find-courses .courses-listing .details, .find-courses .courses-listing .wrapper-messages-primary, .find-courses .courses-listing .course {
+  display: block; }
+  .dashboard .listing-courses .details::after, .dashboard .listing-courses .wrapper-messages-primary::after, .dashboard .listing-courses .course::after, .dashboard .courses-listing .details::after, .dashboard .courses-listing .wrapper-messages-primary::after, .dashboard .courses-listing .course::after, .home .listing-courses .details::after, .home .listing-courses .wrapper-messages-primary::after, .home .listing-courses .course::after, .home .courses-listing .details::after, .home .courses-listing .wrapper-messages-primary::after, .home .courses-listing .course::after, .find-courses .listing-courses .details::after, .find-courses .listing-courses .wrapper-messages-primary::after, .find-courses .listing-courses .course::after, .find-courses .courses-listing .details::after, .find-courses .courses-listing .wrapper-messages-primary::after, .find-courses .courses-listing .course::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.dashboard .listing-courses .wrapper-messages-primary, .dashboard .courses-listing .wrapper-messages-primary, .home .listing-courses .wrapper-messages-primary, .home .courses-listing .wrapper-messages-primary, .find-courses .listing-courses .wrapper-messages-primary, .find-courses .courses-listing .wrapper-messages-primary {
+  margin-top: 0.625em;
+  color: #666; }
+
 .dashboard .listing-courses .course, .dashboard .courses-listing .course, .home .listing-courses .course, .home .courses-listing .course, .find-courses .listing-courses .course, .find-courses .courses-listing .course {
-  display: block;
-  float: left;
-  width: 100%;
   border-bottom: 1px solid #dddddd;
   border-top: 1px solid #dddddd;
   margin-top: -1px;
@@ -878,22 +957,21 @@ input[type="radio"] {
     .dashboard .listing-courses .course .wrapper-course-details .course-info .info-date-block, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-date-block, .home .listing-courses .course .wrapper-course-details .course-info .info-date-block, .home .courses-listing .course .wrapper-course-details .course-info .info-date-block, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-date-block, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-date-block {
       float: right; }
   .dashboard .listing-courses .course .wrapper-course-details .course-title, .dashboard .courses-listing .course .wrapper-course-details .course-title, .home .listing-courses .course .wrapper-course-details .course-title, .home .courses-listing .course .wrapper-course-details .course-title, .find-courses .listing-courses .course .wrapper-course-details .course-title, .find-courses .courses-listing .course .wrapper-course-details .course-title {
-    color: #999;
     word-break: break-all; }
     .dashboard .listing-courses .course .wrapper-course-details .course-title .title-id, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-id, .home .listing-courses .course .wrapper-course-details .course-title .title-id, .home .courses-listing .course .wrapper-course-details .course-title .title-id, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-id, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-id {
       font-weight: normal; }
-    .dashboard .listing-courses .course .wrapper-course-details .course-title a, .dashboard .listing-courses .course .wrapper-course-details .course-title .title-name, .dashboard .courses-listing .course .wrapper-course-details .course-title a, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-name, .home .listing-courses .course .wrapper-course-details .course-title a, .home .listing-courses .course .wrapper-course-details .course-title .title-name, .home .courses-listing .course .wrapper-course-details .course-title a, .home .courses-listing .course .wrapper-course-details .course-title .title-name, .find-courses .listing-courses .course .wrapper-course-details .course-title a, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-name, .find-courses .courses-listing .course .wrapper-course-details .course-title a, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-name {
-      color: #999; }
+  .dashboard .listing-courses .course .wrapper-course-actions .action .sr, .dashboard .courses-listing .course .wrapper-course-actions .action .sr, .home .listing-courses .course .wrapper-course-actions .action .sr, .home .courses-listing .course .wrapper-course-actions .action .sr, .find-courses .listing-courses .course .wrapper-course-actions .action .sr, .find-courses .courses-listing .course .wrapper-course-actions .action .sr {
+    display: none; }
   .dashboard .listing-courses .course .wrapper-course-actions .course-actions, .dashboard .courses-listing .course .wrapper-course-actions .course-actions, .home .listing-courses .course .wrapper-course-actions .course-actions, .home .courses-listing .course .wrapper-course-actions .course-actions, .find-courses .listing-courses .course .wrapper-course-actions .course-actions, .find-courses .courses-listing .course .wrapper-course-actions .course-actions {
     float: right; }
     .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *, .home .listing-courses .course .wrapper-course-actions .course-actions > *, .home .courses-listing .course .wrapper-course-actions .course-actions > *, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > * {
       float: left;
-      margin: 0 .3em; }
+      margin: 0 0.25em; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *:first-child, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *:first-child, .home .listing-courses .course .wrapper-course-actions .course-actions > *:first-child, .home .courses-listing .course .wrapper-course-actions .course-actions > *:first-child, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *:first-child, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > *:first-child {
         margin-left: 0; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .home .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .home .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > *:last-child {
         margin-right: 0; }
-    .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .action, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .action, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action {
+    .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more {
       display: block;
       border: none;
       border-radius: 3px;
@@ -911,15 +989,13 @@ input[type="radio"] {
       background-color: #f0a612;
       color: #ffffff;
       transition: .1s ease-out; }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action .sr {
-        display: none; }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .action:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .action:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action:disabled {
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action:hover {
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more:hover {
         background-color: #f3b842; }
-    .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action .sr {
-      display: none; }
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more .sr {
+        display: none; }
   .dashboard .listing-courses .course .learn-more, .dashboard .courses-listing .course .learn-more, .home .listing-courses .course .learn-more, .home .courses-listing .course .learn-more, .find-courses .listing-courses .course .learn-more, .find-courses .courses-listing .course .learn-more {
     font-size: 1em;
     font-weight: bold;
@@ -945,29 +1021,6 @@ input[type="radio"] {
       opacity: 0.5; }
     .dashboard .listing-courses .course .learn-more:hover, .dashboard .courses-listing .course .learn-more:hover, .home .listing-courses .course .learn-more:hover, .home .courses-listing .course .learn-more:hover, .find-courses .listing-courses .course .learn-more:hover, .find-courses .courses-listing .course .learn-more:hover {
       background-color: #f3b842; }
-  .dashboard .listing-courses .course .action-more, .dashboard .courses-listing .course .action-more, .home .listing-courses .course .action-more, .home .courses-listing .course .action-more, .find-courses .listing-courses .course .action-more, .find-courses .courses-listing .course .action-more {
-    display: block;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    line-height: 1.5;
-    padding: .5em 1em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: normal;
-    font-family: "Noto Sans";
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    background-color: #f0a612;
-    color: #ffffff;
-    transition: .1s ease-out; }
-    .dashboard .listing-courses .course .action-more:disabled, .dashboard .courses-listing .course .action-more:disabled, .home .listing-courses .course .action-more:disabled, .home .courses-listing .course .action-more:disabled, .find-courses .listing-courses .course .action-more:disabled, .find-courses .courses-listing .course .action-more:disabled {
-      cursor: not-allowed;
-      opacity: 0.5; }
-    .dashboard .listing-courses .course .action-more:hover, .dashboard .courses-listing .course .action-more:hover, .home .listing-courses .course .action-more:hover, .home .courses-listing .course .action-more:hover, .find-courses .listing-courses .course .action-more:hover, .find-courses .courses-listing .course .action-more:hover {
-      background-color: #f3b842; }
   .dashboard .listing-courses .course .wrapper-action-more, .dashboard .courses-listing .course .wrapper-action-more, .home .listing-courses .course .wrapper-action-more, .home .courses-listing .course .wrapper-action-more, .find-courses .listing-courses .course .wrapper-action-more, .find-courses .courses-listing .course .wrapper-action-more {
     position: relative; }
     .dashboard .listing-courses .course .wrapper-action-more .actions-dropdown, .dashboard .courses-listing .course .wrapper-action-more .actions-dropdown, .home .listing-courses .course .wrapper-action-more .actions-dropdown, .home .courses-listing .course .wrapper-action-more .actions-dropdown, .find-courses .listing-courses .course .wrapper-action-more .actions-dropdown, .find-courses .courses-listing .course .wrapper-action-more .actions-dropdown {
@@ -980,7 +1033,7 @@ input[type="radio"] {
       border-radius: 3px;
       border: 1px solid #dddddd;
       border-radius: 3px; }
-      .dashboard .listing-courses .course .wrapper-action-more .actions-dropdown .actions-item a, .dashboard .courses-listing .course .wrapper-action-more .actions-dropdown .actions-item a, .home .listing-courses .course .wrapper-action-more .actions-dropdown .actions-item a, .home .courses-listing .course .wrapper-action-more .actions-dropdown .actions-item a, .find-courses .listing-courses .course .wrapper-action-more .actions-dropdown .actions-item a, .find-courses .courses-listing .course .wrapper-action-more .actions-dropdown .actions-item a {
+      .dashboard .listing-courses .course .wrapper-action-more .actions-dropdown .action, .dashboard .courses-listing .course .wrapper-action-more .actions-dropdown .action, .home .listing-courses .course .wrapper-action-more .actions-dropdown .action, .home .courses-listing .course .wrapper-action-more .actions-dropdown .action, .find-courses .listing-courses .course .wrapper-action-more .actions-dropdown .action, .find-courses .courses-listing .course .wrapper-action-more .actions-dropdown .action {
         display: block;
         line-height: 1em;
         font-size: 0.9em;
@@ -1084,8 +1137,6 @@ input[type="radio"] {
 
 .discussion .info-wrapper,
 .view-in-course .info-wrapper {
-  border-radius: 3px;
-  border: 1px solid #dddddd;
   background-color: #ffffff;
   padding: 1em;
   margin-bottom: 1em; }
@@ -1120,9 +1171,12 @@ input[type="radio"] {
   .view-in-course .info-wrapper .updates h1 {
     display: none; }
 
-.discussion .home .page-title,
-.view-in-course .home .page-title {
-  display: none; }
+.discussion .home,
+.view-in-course .home {
+  padding: 0 1em; }
+  .discussion .home .page-title,
+  .view-in-course .home .page-title {
+    display: none; }
 
 .discussion .discussion.container,
 .discussion main#main,
@@ -1187,7 +1241,7 @@ input[type="radio"] {
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading a {
         font-weight: bold; }
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name,
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype.textline .status:before, .view-in-course .capa_inputtype.textline .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before,
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before,
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-wrapper-2:before,
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel
@@ -1195,7 +1249,7 @@ input[type="radio"] {
         display: table-cell; }
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name {
         vertical-align: top; }
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype.textline .status:before, .view-in-course .capa_inputtype.textline .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-wrapper-2:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span {
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-wrapper-2:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span {
         vertical-align: middle;
         padding-right: 0.7em; }
     .view-in-course .course-index .course-navigation .button-chapter.chapter.is-open {
@@ -1208,14 +1262,12 @@ input[type="radio"] {
       display: block; }
     .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu {
       margin-left: 2em;
-      margin-right: 1em;
-      margin-bottom: 1em; }
-      .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu .menu-item {
-        border-radius: 3px; }
-        .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu .menu-item.active, .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu .menu-item:hover {
-          background-color: #baddf2; }
+      margin-right: 1em; }
+      .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu .menu-item.active .accordion-nav, .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu .menu-item:hover .accordion-nav {
+        background-color: #baddf2; }
       .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav {
-        display: block;
+        border-radius: 3px;
+        display: inline-block;
         padding: 0.5em 1em;
         margin-bottom: 0.5em; }
         .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav p {
@@ -1271,12 +1323,14 @@ input[type="radio"] {
       .wrapper-course-material .tab a:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-      .wrapper-course-material .right a.active,
-      .wrapper-course-material .tab a.active {
+      .wrapper-course-material .right a.active, .wrapper-course-material .right a.active-section,
+      .wrapper-course-material .tab a.active,
+      .wrapper-course-material .tab a.active-section {
         background-color: #f0a612;
         color: #ffffff; }
-        .wrapper-course-material .right a.active:hover,
-        .wrapper-course-material .tab a.active:hover {
+        .wrapper-course-material .right a.active:hover, .wrapper-course-material .right a.active-section:hover,
+        .wrapper-course-material .tab a.active:hover,
+        .wrapper-course-material .tab a.active-section:hover {
           background-color: #f0a612; }
       .wrapper-course-material .right a:hover,
       .wrapper-course-material .tab a:hover {
@@ -1466,19 +1520,26 @@ input[type="radio"] {
     margin: 1.5em 0; }
   .view-in-course .problem .action {
     display: block;
-    float: left;
-    width: 100%;
     padding-bottom: 1em;
     margin-bottom: 1em;
     border-bottom: 1px solid #dddddd; }
+    .view-in-course .problem .action::after {
+      clear: both;
+      content: "";
+      display: block; }
     .view-in-course .problem .action > * {
       display: inline-block;
       float: left;
-      margin: 0 0.5em; }
+      margin: 0 0.25em; }
       .view-in-course .problem .action > *:first-of-type {
         margin-left: 0; }
       .view-in-course .problem .action > *:last-of-type {
         margin-right: 0; }
+      @media screen and (max-width: 20em) {
+        .view-in-course .problem .action > * {
+          margin: 0.25em 0;
+          width: 100%;
+          display: block; } }
     .view-in-course .problem .action .check {
       display: block;
       border: none;
@@ -1502,7 +1563,7 @@ input[type="radio"] {
         opacity: 0.5; }
       .view-in-course .problem .action .check:hover {
         background-color: #f3b842; }
-    .view-in-course .problem .action .show {
+    .view-in-course .problem .action .show, .view-in-course .problem .action .save, .view-in-course .problem .action .reset {
       display: block;
       border: none;
       border-radius: 3px;
@@ -1520,63 +1581,39 @@ input[type="radio"] {
       background-color: #323232;
       color: #ffffff;
       transition: .1s ease-out; }
-      .view-in-course .problem .action .show:disabled {
+      .view-in-course .problem .action .show:disabled, .view-in-course .problem .action .save:disabled, .view-in-course .problem .action .reset:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-      .view-in-course .problem .action .show:hover {
+      .view-in-course .problem .action .show:hover, .view-in-course .problem .action .save:hover, .view-in-course .problem .action .reset:hover {
         background-color: #4c4c4c; }
-      .view-in-course .problem .action .show .sr {
-        display: none; }
-    .view-in-course .problem .action .save {
-      display: block;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      line-height: 1.5;
-      padding: .5em 1em;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 1em;
-      font-weight: normal;
-      font-family: "Noto Sans";
-      user-select: none;
-      vertical-align: middle;
-      white-space: nowrap;
-      background-color: #323232;
-      color: #ffffff;
-      transition: .1s ease-out; }
-      .view-in-course .problem .action .save:disabled {
-        cursor: not-allowed;
-        opacity: 0.5; }
-      .view-in-course .problem .action .save:hover {
-        background-color: #4c4c4c; }
-      .view-in-course .problem .action .save .sr {
+      .view-in-course .problem .action .show .sr, .view-in-course .problem .action .save .sr, .view-in-course .problem .action .reset .sr {
         display: none; }
     .view-in-course .problem .action .submission_feedback {
       line-height: 45px;
       float: right; }
   .view-in-course .problem .solution-span {
     margin-bottom: 1em; }
-    .view-in-course .problem .solution-span .detailed-solution {
+    .view-in-course .problem .solution-span solution {
+      display: block;
       padding: 15px;
       border: 1px solid transparent;
       border-radius: 3px;
       background-color: #d9edf7;
       border-color: #bce8f1;
       color: #31708f; }
-      .view-in-course .problem .solution-span .detailed-solution h4 {
+      .view-in-course .problem .solution-span solution h4 {
         margin-top: 0;
         color: inherit; }
-      .view-in-course .problem .solution-span .detailed-solution .alert-link {
+      .view-in-course .problem .solution-span solution .alert-link {
         font-weight: normal; }
-      .view-in-course .problem .solution-span .detailed-solution > ul,
-      .view-in-course .problem .solution-span .detailed-solution > p {
+      .view-in-course .problem .solution-span solution > ul,
+      .view-in-course .problem .solution-span solution > p {
         margin-bottom: 0; }
-      .view-in-course .problem .solution-span .detailed-solution > p + p {
+      .view-in-course .problem .solution-span solution > p + p {
         margin-top: 5px; }
-      .view-in-course .problem .solution-span .detailed-solution hr {
+      .view-in-course .problem .solution-span solution hr {
         border-top-color: #a6e1ec; }
-      .view-in-course .problem .solution-span .detailed-solution .alert-link {
+      .view-in-course .problem .solution-span solution .alert-link {
         color: #245269; }
 
 .view-in-course .capa_inputtype, .view-in-course .inputtype, .view-in-course .chemicalequationinput, .view-in-course .designprotein2dinput {
@@ -1631,13 +1668,17 @@ input[type="radio"] {
     vertical-align: middle; }
   .view-in-course .capa_inputtype input,
   .view-in-course .capa_inputtype select,
-  .view-in-course .capa_inputtype .equation, .view-in-course .inputtype input,
+  .view-in-course .capa_inputtype .equation,
+  .view-in-course .capa_inputtype .answer, .view-in-course .inputtype input,
   .view-in-course .inputtype select,
-  .view-in-course .inputtype .equation, .view-in-course .chemicalequationinput input,
+  .view-in-course .inputtype .equation,
+  .view-in-course .inputtype .answer, .view-in-course .chemicalequationinput input,
   .view-in-course .chemicalequationinput select,
-  .view-in-course .chemicalequationinput .equation, .view-in-course .designprotein2dinput input,
+  .view-in-course .chemicalequationinput .equation,
+  .view-in-course .chemicalequationinput .answer, .view-in-course .designprotein2dinput input,
   .view-in-course .designprotein2dinput select,
-  .view-in-course .designprotein2dinput .equation {
+  .view-in-course .designprotein2dinput .equation,
+  .view-in-course .designprotein2dinput .answer {
     margin: 0 0.5em 0 2em; }
   .view-in-course .capa_inputtype fieldset, .view-in-course .inputtype fieldset, .view-in-course .chemicalequationinput fieldset, .view-in-course .designprotein2dinput fieldset {
     margin: 0;
@@ -1645,7 +1686,7 @@ input[type="radio"] {
     border: 0;
     position: relative; }
 
-.view-in-course .capa_inputtype.textline .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before {
+.view-in-course .capa_inputtype .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before, .view-in-course .formulaequationinput .status:before {
   content: "\f111";
   position: absolute;
   font-size: 2em;
@@ -1654,11 +1695,19 @@ input[type="radio"] {
   top: 0;
   color: #dddddd; }
 
-.view-in-course .capa_inputtype.textline .correct .status:before, .view-in-course .chemicalequationinput .correct .status:before, .view-in-course .designprotein2dinput .correct .status:before {
+.view-in-course .capa_inputtype .correct.status:before,
+.view-in-course .capa_inputtype .correct .status:before, .view-in-course .chemicalequationinput .correct.status:before,
+.view-in-course .chemicalequationinput .correct .status:before, .view-in-course .designprotein2dinput .correct.status:before,
+.view-in-course .designprotein2dinput .correct .status:before, .view-in-course .formulaequationinput .correct.status:before,
+.view-in-course .formulaequationinput .correct .status:before {
   color: #4CAF50;
   content: "\f00c"; }
 
-.view-in-course .capa_inputtype.textline .incorrect .status:before, .view-in-course .chemicalequationinput .incorrect .status:before, .view-in-course .designprotein2dinput .incorrect .status:before {
+.view-in-course .capa_inputtype .incorrect.status:before,
+.view-in-course .capa_inputtype .incorrect .status:before, .view-in-course .chemicalequationinput .incorrect.status:before,
+.view-in-course .chemicalequationinput .incorrect .status:before, .view-in-course .designprotein2dinput .incorrect.status:before,
+.view-in-course .designprotein2dinput .incorrect .status:before, .view-in-course .formulaequationinput .incorrect.status:before,
+.view-in-course .formulaequationinput .incorrect .status:before {
   color: #F44336;
   content: "\f00d"; }
 
@@ -1831,6 +1880,119 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
               font-size: 0.875em;
               font-weight: normal;
               padding-right: 1em; }
+
+.content-wrapper .preview-menu {
+  padding: 0.625em 0; }
+  .content-wrapper .preview-menu .sr {
+    display: none; }
+  .content-wrapper .preview-menu .action-preview-username-container {
+    display: block !important; }
+
+.instructor-nav {
+  display: block;
+  margin-bottom: 2em; }
+  .instructor-nav::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .instructor-nav .nav-item {
+    float: left;
+    display: inline-block;
+    padding-right: 0.625em; }
+    .instructor-nav .nav-item:last-child {
+      padding-right: 0; }
+    .instructor-nav .nav-item a {
+      display: block;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      line-height: 1.5;
+      padding: .5em 1em;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: "Noto Sans";
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: transparent;
+      color: #999;
+      transition: .1s ease-out; }
+      .instructor-nav .nav-item a:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+      .instructor-nav .nav-item a.active, .instructor-nav .nav-item a.active-section {
+        background-color: #f0a612;
+        color: #ffffff; }
+        .instructor-nav .nav-item a.active:hover, .instructor-nav .nav-item a.active-section:hover {
+          background-color: #f0a612; }
+      .instructor-nav .nav-item a:hover {
+        background-color: #f6ca72;
+        color: #ffffff; }
+    @media screen and (max-width: 26.5625em) {
+      .instructor-nav .nav-item {
+        width: 100%; } }
+
+.idash-section {
+  display: none; }
+  .idash-section.active-section {
+    display: inherit; }
+  .idash-section input[type=button] {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #f0a612;
+    color: #ffffff;
+    transition: .1s ease-out;
+    margin: 0.3125em 0; }
+    .idash-section input[type=button]:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .idash-section input[type=button]:hover {
+      background-color: #f3b842; }
+
+.wrap-instructor-info {
+  margin: 0.625em 0; }
+  .wrap-instructor-info .instructor-info-action {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #323232;
+    color: #ffffff;
+    transition: .1s ease-out;
+    display: inline-block;
+    color: white; }
+    .wrap-instructor-info .instructor-info-action:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .wrap-instructor-info .instructor-info-action:hover {
+      background-color: #4c4c4c; }
+    @media screen and (max-width: 26.5625em) {
+      .wrap-instructor-info .instructor-info-action {
+        width: 100%; } }
 
 .view-in-course .discussion-module {
   display: block;
@@ -2129,6 +2291,28 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       display: none; }
     .content-wrapper > .course-info .course-profile .media {
       display: none; }
+  .content-wrapper > .course-info .container .details {
+    max-width: 75em;
+    margin-left: auto;
+    margin-right: auto;
+    display: block; }
+    .content-wrapper > .course-info .container .details::after {
+      clear: both;
+      content: "";
+      display: block; }
+    @media screen and (min-width: 62.5em) {
+      .content-wrapper > .course-info .container .details {
+        padding: 0 10px; } }
+    @media screen and (max-width: 62.4375em) {
+      .content-wrapper > .course-info .container .details {
+        padding: 0 10px; } }
+    @media screen and (max-width: 20em) {
+      .content-wrapper > .course-info .container .details {
+        padding: 0 10px; } }
+    .content-wrapper > .course-info .container .details::after {
+      clear: both;
+      content: "";
+      display: block; }
   .content-wrapper > .course-info .container .inner-wrapper > section > .container {
     max-width: 75em;
     margin-left: auto;
@@ -2499,7 +2683,8 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
         float: right;
         right: 1.4em;
         text-align: right;
-        width: 3.5em;
+        width: 5em;
+        text-overflow: ellipsis;
         border: 0;
         margin: .5em 0;
         padding-right: 0;
@@ -2510,7 +2695,7 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
           padding-right: 1em;
           padding-left: 1em;
           width: 14em; }
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype.textline .status:before, .view-in-course .capa_inputtype.textline .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-header .forum-nav-search .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span {
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-header .forum-nav-search .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span {
         position: absolute;
         right: 0;
         margin: 1em 0;
@@ -2526,11 +2711,13 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype.textline .status:before, .view-in-course .capa_inputtype.textline
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-header .forum-nav-search .forum-nav-thread-wrapper-2:before,
@@ -2552,7 +2739,8 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       display: none; }
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar select {
       background: none;
-      border: none; }
+      border: none;
+      padding: 0 .3em; }
   .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread,
   .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link {
     display: block;
@@ -2566,27 +2754,23 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       display: none; }
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels {
       display: none; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-title {
-      white-space: nowrap; }
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0,
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1,
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
+      padding: 1em 0; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0 {
       float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 14.70196%;
       padding: 1em; }
-      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0:last-child,
-      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:last-child {
-        margin-right: 0; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
+      float: right;
+      width: 2em;
+      margin: 0 .5em; }
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1 {
+      overflow: hidden;
+      max-width: 50%;
       float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%;
-      padding: 1em 0;
-      overflow: hidden; }
-      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1:last-child {
-        margin-right: 0; }
+      text-overflow: ellipsis;
+      white-space: nowrap; }
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
       position: relative;
       padding: 1em 0; }
@@ -2594,7 +2778,6 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
         content: "\f075";
         position: absolute;
         top: 12px;
-        left: 5px;
         font-size: 2em;
         color: #4a9fff;
         z-index: 1; }
@@ -2611,7 +2794,7 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
       display: none; }
     .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter input {
       border: 0; }
-    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .icon, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype.textline .status:before, .view-in-course .capa_inputtype.textline .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-button > span {
+    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .icon, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-button > span {
       display: none; }
   .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-menu {
     overflow: scroll; }
@@ -3041,10 +3224,10 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
     .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
-    .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active {
+    .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active, .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active-section {
       background-color: #f0a612;
       color: #ffffff; }
-      .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active:hover {
+      .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active:hover, .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active-section:hover {
         background-color: #f0a612; }
     .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button:hover {
       background-color: #f6ca72;
@@ -3313,8 +3496,6 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
 
 .header-global-new, .header-global, .header-global {
   display: block;
-  float: left;
-  width: 100%;
   background-color: #fbfaf8;
   border-bottom: #dddddd 1px solid;
   margin-bottom: 1.25em; }
