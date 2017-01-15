@@ -1,11 +1,6 @@
 .modal {
   display: none;
-}
-
-.modal {
-  background: rgba(0,0,0,0.3);
-  // border-radius: $base-border-radius;
-  // padding: $big-margin;
+  background: rgba(0,0,0,0.6);
   position: fixed !important;
   left: 0 !important;
   right: 0 !important;
@@ -15,22 +10,15 @@
   width: 100% !important;
   height: 100% !important;
   overflow: hidden;
-  // left: 10% !important;
-  // right: 10% !important;
-  // margin: 0 !important;
-  // width: 80% !important;
+  max-width: 100%;
+  padding: 0;
+
   .inner-wrapper {
-    position: absolute;
     background-color: white;
-    top: 5%;
-    left: 5%;
-    right: 5%;
+    margin: 5% auto;
     max-height: 90%;
+    width: 75%;
     overflow: auto;
-    @include media($mobile-l) {
-        left: 0;
-        right: 0;
-    }
     padding: $big-margin;
 
     .sr {
@@ -45,5 +33,19 @@
       @include edx-button($yellow);
       margin: $base-margin 0;
     }
+  }
+}
+
+#unenroll-modal .inner-wrapper,
+#email-settings-modal .inner-wrapper {
+
+  width: 30%;
+
+  @include media($tablet) {
+    width: 50%;
+  }
+
+  @include media($mobile-l) {
+    width: 90%;
   }
 }

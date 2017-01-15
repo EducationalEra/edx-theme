@@ -34,17 +34,17 @@
           @include span-columns(9);
         }
 
-        @include media($mobile-l) {
+        @include media($tablet) {
           .wrapper-course-image {
             @include span-columns(4);
           }
 
           .wrapper-course-details {
-            @include span-columns(8);
+            @include span-columns(6);
           }
         }
 
-        @include media($mobile-m) {
+        @include media($mobile-l) {
           .wrapper-course-image {
             @include span-columns(12);
           }
@@ -92,19 +92,33 @@
 
           .course-actions {
             float: right;
+            @include media($mobile-l) {
+              width: 100%;
+              float: left;
+            }
+
             & > * {
               float: left;
-              margin: 0 $button-space;
-              &:first-child {
-                margin-left: 0;
-              }
+              margin-right: $button-space * 2;
               &:last-child {
                 margin-right: 0;
               }
             }
 
-            .enter-course, .action-more {
+            .enter-course {
               @include edx-button($yellow);
+              @include media($mobile-l) {
+                width: 100%;
+                margin: 0;
+                margin-bottom: $button-space * 2;
+              }
+              .sr {
+                display: none;
+              }
+            }
+
+            .action-more, .action-facebook, .action-twitter {
+              @include edx-button($dark-gray);
               .sr {
                 display: none;
               }
