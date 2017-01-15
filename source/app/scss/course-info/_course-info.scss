@@ -53,6 +53,10 @@
   }
 
   .container {
+    .details {
+      @include responsive-outer-container();
+      @include row;
+    }
     .inner-wrapper > section > .container {
         @include responsive-outer-container();
         @include row;

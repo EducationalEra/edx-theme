@@ -20,6 +20,9 @@
         a {
             @include edx-flat-button();
         }
+        @include media($mobile-l) {
+            width: 100%;
+        }
     }
 }
 .idash-section {
@@ -31,4 +34,17 @@
       @include edx-button($yellow);
       margin: $small-margin 0;
     }
+}
+
+.wrap-instructor-info {
+  margin: $base-margin 0;
+  .instructor-info-action {
+      @include edx-button($dark-gray);
+      display: inline-block;
+      color: white;
+
+      @include media($mobile-l) {
+          width: 100%;
+      }
+  }
 }
