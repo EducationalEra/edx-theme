@@ -2,12 +2,24 @@
     .course-index {
         border-radius: $base-border-radius;
         background-color: $white;
-        .wrapper-course-modes {
-            // TODO: tbd
-            // display: none;
+        .courseware-bookmarks-button {
+            @include row;
+            padding: 0.5em;
+            background-color: $soft-blue;
             button {
-                @include edx-button($yellow);
-                margin: $small-spacing;
+                text-align: left;
+                color: $blue;
+                font-weight: bold;
+                padding: 0.75em 1em;
+                border-radius: $base-border-radius;
+                background-color: $soft-blue;
+                border: none;
+                width: 100%;
+                cursor: pointer;
+                &:hover,
+                &.is-active {
+                    background-color: darken($soft-blue, 10%);
+                }
             }
         }
         .course-navigation {
