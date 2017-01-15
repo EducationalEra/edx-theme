@@ -57,14 +57,7 @@
             .check {
                 @include edx-button($yellow);
             }
-            .show {
-                @include edx-button($dark-gray);
-                .sr {
-                    // TODO: tbd
-                    display: none;
-                }
-            }
-            .save {
+            .show, .save, .reset {
                 @include edx-button($dark-gray);
                 .sr {
                     // TODO: tbd
@@ -77,7 +70,8 @@
             }
         }
         .solution-span {
-            .detailed-solution {
+            solution {
+              display: block;
                 @include alert;
                 @include alert-info;
             }
@@ -140,7 +134,8 @@
         }
         input,
         select,
-        .equation {
+        .equation,
+        .answer {
           margin: 0 0.5em 0 2em;
         }
         fieldset {
@@ -151,17 +146,19 @@
         }
     }
 
-    .capa_inputtype.textline, .chemicalequationinput, .designprotein2dinput {
+    .capa_inputtype, .chemicalequationinput, .designprotein2dinput, .formulaequationinput {
       .status {
         &:before {
           @include default-unanswered;
         }
       }
+      .correct.status,
       .correct .status {
         &:before {
           @include answer-correct;
         }
       }
+      .incorrect.status,
       .incorrect .status {
         &:before {
           @include answer-incorrect;
