@@ -42,7 +42,8 @@
                 float: right;
                 right: 1.4em;
                 text-align: right;
-                width: 3.5em;
+                width: 5em;
+                text-overflow: ellipsis;
                 border: 0;
                 margin: .5em 0;
                 padding-right: 0;
@@ -91,6 +92,7 @@
             select {
                 background: none;
                 border: none;
+                padding: 0 .3em;
             }
         }
         .forum-nav-thread-list {
@@ -106,25 +108,35 @@
                   background-color: $soft-blue;
                 }
                 .sr {
-                    // TODO: tbd
                     display: none;
                 }
                 .forum-nav-thread-labels {
                     // TODO: tbd
                     display: none;
                 }
-                .forum-nav-thread-title {
-                    white-space: nowrap;
-                }
+
                 .forum-nav-thread-wrapper-0,
+                .forum-nav-thread-wrapper-1,
                 .forum-nav-thread-wrapper-2 {
-                    @include span-columns(2);
-                    padding: 1em;
+                  padding: 1em 0;
+                }
+
+                .forum-nav-thread-wrapper-0 {
+                  float: left;
+                  padding: 1em;
+                }
+
+                .forum-nav-thread-wrapper-2 {
+                  float: right;
+                  width: 2em;
+                  margin: 0 .5em;
                 }
                 .forum-nav-thread-wrapper-1 {
-                    @include span-columns(8);
-                    padding: 1em 0;
                     overflow: hidden;
+                    max-width: 50%;
+                    float: left;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }
 
                 .forum-nav-thread-wrapper-2 {
@@ -135,7 +147,6 @@
                     content: "\f075";
                     position: absolute;
                     top: 12px;
-                    left: 5px;
                     font-size: 2em;
                     color: #4a9fff;
                     z-index: 1;

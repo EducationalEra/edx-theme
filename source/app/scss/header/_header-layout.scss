@@ -2,8 +2,8 @@ $menu-breakpoint: $tablet;
 
 .header-global-new, .header-global, .header-global {
   @include row;
-  float: left;
-  width: 100%;
+  // float: left;
+  // width: 100%;
   background-color: $header-background;
   // box-shadow: 0 1px 1px $header-border;
   border-bottom: $header-border 1px solid;

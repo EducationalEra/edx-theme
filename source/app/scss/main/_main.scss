@@ -1,5 +1,9 @@
 .window-wrap {
   overflow: hidden;
+  & > * {
+    float: left;
+    width: 100%;
+  }
 }
 
 .modal {
@@ -12,7 +16,10 @@
   width: 80% !important;
 }
 
-.content-wrapper > * {
-  @include responsive-outer-container();
-  margin-top: $big-margin;
+.content-wrapper {
+  @include row;
+  & > * {
+    @include responsive-outer-container();
+    // margin-top: $big-margin;
+  }
 }

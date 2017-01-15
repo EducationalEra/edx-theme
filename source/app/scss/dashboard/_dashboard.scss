@@ -6,9 +6,16 @@
       }
     }
     .listing-courses, .courses-listing {
-      .course {
-        @include full-width-block;
+      .details, .wrapper-messages-primary, .course {
+        @include row;
+      }
 
+      .wrapper-messages-primary {
+        margin-top: $base-margin;
+        color: $gray;
+      }
+
+      .course {
         border-bottom: 1px solid $light-gray;
         border-top: 1px solid $light-gray;
         margin-top: -1px;
@@ -18,16 +25,6 @@
         box-sizing: border-box;
 
         margin: 0;
-
-        // @include media($mobile-m) {
-        //   .wrapper-course-image {
-        //     @include span-columns(12);
-        //   }
-        //
-        //   .wrapper-course-details {
-        //     @include span-columns(12);
-        //   }
-        // }
 
         .wrapper-course-image {
           @include span-columns(3);
@@ -75,20 +72,23 @@
           }
 
           .course-title {
-            // font-size: 2em;
-            color: $medium-gray;
+            // color: $medium-gray;
             word-break: break-all;
-            // text-transform: uppercase;
             .title-id {
               font-weight: normal;
             }
             a, .title-name {
-              color: $medium-gray;
+              // color: $medium-gray;
             }
           }
         }
 
         .wrapper-course-actions {
+          .action {
+            .sr {
+              display: none;
+            }
+          }
 
           .course-actions {
             float: right;
@@ -103,15 +103,8 @@
               }
             }
 
-            .enter-course, .action {
-              .sr {
-                display: none;
-              }
-
+            .enter-course, .action-more {
               @include edx-button($yellow);
-            }
-
-            .action {
               .sr {
                 display: none;
               }
@@ -123,10 +116,6 @@
         .learn-more {
           font-size: 1em;
           font-weight: bold;
-          @include edx-button($yellow);
-        }
-
-        .action-more {
           @include edx-button($yellow);
         }
 
@@ -144,7 +133,7 @@
 
             border-radius: $base-border-radius;
 
-            .actions-item a {
+            .action {
               display: block;
               line-height: 1em;
               font-size: 0.9em;
@@ -158,11 +147,6 @@
             }
           }
         }
-
-        // .action.action-unenroll {
-        //   @include edx-button($yellow);
-        // }
-
       }
     }
 }
