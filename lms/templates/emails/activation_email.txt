@@ -7,11 +7,7 @@ ${_("There's just one more step before you can enroll in a course: "
       platform_name=settings.PLATFORM_NAME
     )}
 
-% if is_secure:
   https://${ site }/activate/${ key }
-% else:
-  http://${ site }/activate/${ key }
-% endif
 
 ${_("After you activate your account, you can take "
     "any of the hundreds of courses {platform_name} "
@@ -19,15 +15,6 @@ ${_("After you activate your account, you can take "
     "messages from {platform_name} about new courses "
     "or other information."
   ).format(platform_name=settings.PLATFORM_NAME)}
-
-${_("If you need help, please use our web form at "
-    "{contact_us_url}, email {info_email_address}, "
-    "or write to {info_postal_address}."
-  ).format(
-    contact_us_url="https://www.edx.org/contact-us",
-    info_email_address=settings.CONTACT_EMAIL,
-    info_postal_address=settings.CONTACT_MAILING_ADDRESS
-  )}
 
 ${_("We hope you enjoy learning with {platform_name}!").format(
     platform_name=settings.PLATFORM_NAME
