@@ -5,14 +5,11 @@
         margin-bottom: $base-margin;
     }
     .sequence-nav {
-        display: inline-block;
-        margin: 0 auto;
-        .sequence-list-wrapper,
-        .sequence-nav-button,
-        li {
-            position: relative;
-            float: left;
-        }
+        position: relative;
+        display: block;
+        height: 3.5em;
+        margin: auto 0;
+        max-width: 50%;
         @include media($mobile-l) {
           .sequence-list-wrapper {
             display: none;
@@ -21,24 +18,60 @@
         &-button {
             @include course-nav-button;
             background-color: darken($soft-blue, 10%);
+            // display: inline-block;
+            z-index: 1000;
+            position: absolute;
             &.button-previous {
+                left: 0;
                 border-top-left-radius: 50%;
                 border-bottom-left-radius: 50%;
             }
             &.button-next {
+                right: 0;
                 border-top-right-radius: 50%;
                 border-bottom-right-radius: 50%;
             }
         }
+
         .sequence-list-wrapper {
+            position: absolute;
+            left: -1px;
+            right: -1px;
+            margin-left: 3.5em;
+            margin-right: 3.5em;
+            height: 3.5em;
+            overflow-y: auto;
+
+            ol {
+              position: absolute;
+              height: 3.5em;
+              left: 0;
+              right: 0;
+              display: inline-flex;
+            }
+            li {
+              min-width: 3.5em;
+              flex-grow: 1;
+            }
             .nav-item {
                 @include course-nav-button;
+                width: 100%;
+                position: relative;
+                .bookmark-icon {
+                  position: absolute;
+                  top: -2px;
+                  right: 5px;
+                }
             }
         }
     }
     .sequence-bottom {
-        display: inline-block;
+        display: block;
+        height: 3.5em;
+        margin: auto 0;
+
         button {
+            position: relative;
             display: block;
             float: left;
         }
