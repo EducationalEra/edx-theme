@@ -161,6 +161,15 @@
             }
           }
         }
+        .action-upgrade-container {
+          .action-upgrade {
+            .sr {
+              display: none;
+            }
+            @include edx-button($dark-gray);
+            display: inline-block;
+          }
+        }
       }
     }
 }
