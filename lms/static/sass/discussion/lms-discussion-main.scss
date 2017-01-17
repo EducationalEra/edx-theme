@@ -786,54 +786,56 @@ input[type="radio"] {
     .login-register {
       padding: 0 10px; } }
 
-.login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form {
+.login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form, .login-register .form-wrapper .password-reset-form {
   margin-top: 1.5em;
   margin-bottom: 1.5em; }
   @media screen and (min-width: 62.5em) {
-    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form {
+    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form, .login-register .form-wrapper .password-reset-form {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 48.82117%; }
-      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child {
+      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child, .login-register .form-wrapper .password-reset-form:last-child {
         margin-right: 0; } }
   @media screen and (max-width: 62.4375em) {
-    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form {
+    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form, .login-register .form-wrapper .password-reset-form {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 48.82117%; }
-      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child {
+      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child, .login-register .form-wrapper .password-reset-form:last-child {
         margin-right: 0; } }
   @media screen and (max-width: 20em) {
-    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form {
+    .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form, .login-register .form-wrapper .password-reset-form {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 100%; }
-      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child {
+      .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child, .login-register .form-wrapper .password-reset-form:last-child {
         margin-right: 0; } }
 
-.login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form {
+.login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .password-reset-form {
   border-radius: 3px;
   border: 1px solid #dddddd;
   background-color: #ffffff;
   padding: 20px; }
-  .login-register .form-wrapper .login-form .section-title, .login-register .form-wrapper .register-form .section-title {
+  .login-register .form-wrapper .login-form .action-label, .login-register .form-wrapper .register-form .action-label, .login-register .form-wrapper .password-reset-form .action-label {
+    margin: 2em 0; }
+  .login-register .form-wrapper .login-form .section-title, .login-register .form-wrapper .register-form .section-title, .login-register .form-wrapper .password-reset-form .section-title {
     position: relative; }
-    .login-register .form-wrapper .login-form .section-title h2, .login-register .form-wrapper .register-form .section-title h2 {
+    .login-register .form-wrapper .login-form .section-title h2, .login-register .form-wrapper .register-form .section-title h2, .login-register .form-wrapper .password-reset-form .section-title h2 {
       position: absolute;
       top: -30px;
       font-size: 1em;
       font-weight: lighter; }
-      .login-register .form-wrapper .login-form .section-title h2 .text, .login-register .form-wrapper .register-form .section-title h2 .text {
+      .login-register .form-wrapper .login-form .section-title h2 .text, .login-register .form-wrapper .register-form .section-title h2 .text, .login-register .form-wrapper .password-reset-form .section-title h2 .text {
         background-color: #323232;
         color: #ffffff;
         padding: 9px 15px;
         border-radius: 3px; }
-  .login-register .form-wrapper .login-form p.sr, .login-register .form-wrapper .register-form p.sr {
+  .login-register .form-wrapper .login-form p.sr, .login-register .form-wrapper .register-form p.sr, .login-register .form-wrapper .password-reset-form p.sr {
     display: none; }
-  .login-register .form-wrapper .login-form button.action.action-primary, .login-register .form-wrapper .register-form button.action.action-primary {
+  .login-register .form-wrapper .login-form button.action.action-primary, .login-register .form-wrapper .register-form button.action.action-primary, .login-register .form-wrapper .password-reset-form button.action.action-primary {
     display: block;
     border: none;
     border-radius: 3px;
@@ -851,12 +853,12 @@ input[type="radio"] {
     background-color: #f0a612;
     color: #ffffff;
     transition: .1s ease-out; }
-    .login-register .form-wrapper .login-form button.action.action-primary:disabled, .login-register .form-wrapper .register-form button.action.action-primary:disabled {
+    .login-register .form-wrapper .login-form button.action.action-primary:disabled, .login-register .form-wrapper .register-form button.action.action-primary:disabled, .login-register .form-wrapper .password-reset-form button.action.action-primary:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
-    .login-register .form-wrapper .login-form button.action.action-primary:hover, .login-register .form-wrapper .register-form button.action.action-primary:hover {
+    .login-register .form-wrapper .login-form button.action.action-primary:hover, .login-register .form-wrapper .register-form button.action.action-primary:hover, .login-register .form-wrapper .password-reset-form button.action.action-primary:hover {
       background-color: #f3b842; }
-  .login-register .form-wrapper .login-form button[type="submit"] + p.note, .login-register .form-wrapper .register-form button[type="submit"] + p.note {
+  .login-register .form-wrapper .login-form button[type="submit"] + p.note, .login-register .form-wrapper .register-form button[type="submit"] + p.note, .login-register .form-wrapper .password-reset-form button[type="submit"] + p.note {
     float: right;
     line-height: 40px;
     color: #a1a1a1; }
@@ -985,7 +987,7 @@ input[type="radio"] {
       margin-right: 0.5em; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .home .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .home .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > *:last-child {
         margin-right: 0; }
-    .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course {
+    .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more {
       display: block;
       border: none;
       border-radius: 3px;
@@ -1003,17 +1005,17 @@ input[type="radio"] {
       background-color: #f0a612;
       color: #ffffff;
       transition: .1s ease-out; }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled {
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover {
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover {
         background-color: #f3b842; }
       @media screen and (max-width: 26.5625em) {
-        .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course {
+        .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more {
           width: 100%;
           margin: 0;
           margin-bottom: 0.5em; } }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr {
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more .sr {
         display: none; }
     .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter {
       display: block;
@@ -1320,7 +1322,9 @@ input[type="radio"] {
           margin: 0; }
         .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .accordion-display-name {
           color: #0a5181;
-          font-weight: bold; }
+          font-weight: bold;
+          text-overflow: ellipsis;
+          overflow: hidden; }
         .view-in-course .course-index .course-navigation .chapter-content-container .chapter-menu .accordion-nav .subtitle {
           font-size: 0.85em;
           color: #999; }
@@ -1424,10 +1428,9 @@ input[type="radio"] {
       width: 100%; } }
 
 .view-in-course .path {
-  display: none; }
-
-.view-in-course .sequence {
-  text-align: center; }
+  padding: 0;
+  color: #666;
+  margin-bottom: 0.625em; }
 
 .view-in-course .sequence-nav {
   display: inline-block;
@@ -1479,7 +1482,8 @@ input[type="radio"] {
     width: 3.5em;
     height: 3.5em;
     display: inline-block;
-    float: left; }
+    float: left;
+    position: relative; }
     .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .sr {
       display: none; }
     .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .sequence-tooltip {
@@ -1499,6 +1503,10 @@ input[type="radio"] {
     .view-in-course .sequence-nav .sequence-list-wrapper .nav-item:hover, .view-in-course .sequence-nav .sequence-list-wrapper .nav-item.active {
       background-color: #baddf2;
       cursor: pointer; }
+    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .bookmark-icon {
+      position: absolute;
+      top: -2px;
+      right: 5px; }
 
 .view-in-course .sequence-bottom {
   display: inline-block; }
