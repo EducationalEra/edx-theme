@@ -30,7 +30,14 @@
     &.active-section {
         display: inherit;
     }
-    input[type=button] {
+    [class*=-container] {
+      margin: $small-margin 0;
+    }
+
+    input[type=button],
+    input[type=submit],
+    .gradebook-link,
+    button {
       @include edx-button($yellow);
       margin: $small-margin 0;
     }
@@ -40,7 +47,7 @@
   margin: $base-margin 0;
   float: left;
   width: 100%;
-  
+
   .instructor-info-action {
       @include edx-button($dark-gray);
       display: inline-block;

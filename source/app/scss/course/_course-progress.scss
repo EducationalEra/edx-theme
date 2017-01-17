@@ -6,16 +6,23 @@
 //   }
 // }
 .auto-cert-message {
-  display: none;
+  // display: none;
+}
+.tickLabels {
+  .xAxis .tickLabel {
+    top: auto !important;
+  }
+  .yAxis .tickLabel {
+    right: auto !important;
+  }
 }
 .profile-wrapper .course-info {
   header {
     margin-bottom: 1.41575em;
     h1 {
-      float: left;
       font-size: 1em;
       font-weight: 100;
-      margin: 0;
+      // margin: 0;
     }
   }
   #course-success {
@@ -62,13 +69,13 @@
   }
 }
 
-div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:hover + h4:not(:disabled), .profile-wrapper .course-info div.info-wrapper section.handouts ol li #course-success > div.hitarea:focus + h4:not(:disabled), div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:focus + h4:not(:disabled) {
-  box-shadow: inset 0 1px 0 0 #f7b11d;
-  cursor: pointer;
-  background-color: #dc9704;
-  background-image: -webkit-linear-gradient(#dc9704, #b37900);
-  background-image: linear-gradient(#dc9704, #b37900);
-}
+// div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:hover + h4:not(:disabled), .profile-wrapper .course-info div.info-wrapper section.handouts ol li #course-success > div.hitarea:focus + h4:not(:disabled), div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:focus + h4:not(:disabled) {
+//   box-shadow: inset 0 1px 0 0 #f7b11d;
+//   cursor: pointer;
+//   background-color: #dc9704;
+//   background-image: -webkit-linear-gradient(#dc9704, #b37900);
+//   background-image: linear-gradient(#dc9704, #b37900);
+// }
 
 .profile-wrapper .course-info {
   #course-success > a {
