@@ -18,8 +18,8 @@ gulp.task('serve', ['sass'], function () {
     // Run in proxy mode with static files also served
     // from current directory + ./app/css
     browserSync.init({
-        proxy: 'http://courses.ed-era.com:8080/',
-        logConnections: true,
+        proxy: 'https://courses.ed-era.com/',
+        https: true,
         serveStatic: ['app/css', 'app/js', '../lms'],
         rewriteRules: [
             {
