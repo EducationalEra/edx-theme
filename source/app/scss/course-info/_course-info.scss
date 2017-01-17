@@ -57,7 +57,7 @@
     .details {
       @include responsive-outer-container();
       @include row;
-      padding-top: 1.25em;
+      margin-top: 1.25em;
     }
     .inner-wrapper > section > .container {
         @include responsive-outer-container();
