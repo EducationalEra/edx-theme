@@ -1088,6 +1088,32 @@ input[type="radio"] {
         white-space: nowrap; }
       .dashboard .listing-courses .course .wrapper-action-more .actions-dropdown.is-visible, .dashboard .courses-listing .course .wrapper-action-more .actions-dropdown.is-visible, .home .listing-courses .course .wrapper-action-more .actions-dropdown.is-visible, .home .courses-listing .course .wrapper-action-more .actions-dropdown.is-visible, .find-courses .listing-courses .course .wrapper-action-more .actions-dropdown.is-visible, .find-courses .courses-listing .course .wrapper-action-more .actions-dropdown.is-visible {
         display: block; }
+  .dashboard .listing-courses .course .action-upgrade-container .action-upgrade, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade, .home .listing-courses .course .action-upgrade-container .action-upgrade, .home .courses-listing .course .action-upgrade-container .action-upgrade, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #323232;
+    color: #ffffff;
+    transition: .1s ease-out;
+    display: inline-block; }
+    .dashboard .listing-courses .course .action-upgrade-container .action-upgrade .sr, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade .sr, .home .listing-courses .course .action-upgrade-container .action-upgrade .sr, .home .courses-listing .course .action-upgrade-container .action-upgrade .sr, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade .sr, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade .sr {
+      display: none; }
+    .dashboard .listing-courses .course .action-upgrade-container .action-upgrade:disabled, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade:disabled, .home .listing-courses .course .action-upgrade-container .action-upgrade:disabled, .home .courses-listing .course .action-upgrade-container .action-upgrade:disabled, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade:disabled, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .dashboard .listing-courses .course .action-upgrade-container .action-upgrade:hover, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade:hover, .home .listing-courses .course .action-upgrade-container .action-upgrade:hover, .home .courses-listing .course .action-upgrade-container .action-upgrade:hover, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade:hover, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade:hover {
+      background-color: #4c4c4c; }
 
 .profile-sidebar {
   display: none; }
@@ -1797,16 +1823,17 @@ input[type="radio"] {
       top: 0;
       color: #dddddd; }
 
-.auto-cert-message {
-  display: none; }
+.tickLabels .xAxis .tickLabel {
+  top: auto !important; }
+
+.tickLabels .yAxis .tickLabel {
+  right: auto !important; }
 
 .profile-wrapper .course-info header {
   margin-bottom: 1.41575em; }
   .profile-wrapper .course-info header h1 {
-    float: left;
     font-size: 1em;
-    font-weight: 100;
-    margin: 0; }
+    font-weight: 100; }
 
 .profile-wrapper .course-info #course-success {
   margin-bottom: 30px;
@@ -1842,13 +1869,6 @@ input[type="radio"] {
       background-image: linear-gradient(#dc9704, #b37900); }
 
 .profile-wrapper .course-info div.info-wrapper section.handouts ol li #course-success > div.hitarea:hover + h4:not(:disabled) {
-  box-shadow: inset 0 1px 0 0 #f7b11d;
-  cursor: pointer;
-  background-color: #dc9704;
-  background-image: -webkit-linear-gradient(#dc9704, #b37900);
-  background-image: linear-gradient(#dc9704, #b37900); }
-
-div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:hover + h4:not(:disabled), .profile-wrapper .course-info div.info-wrapper section.handouts ol li #course-success > div.hitarea:focus + h4:not(:disabled), div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:focus + h4:not(:disabled) {
   box-shadow: inset 0 1px 0 0 #f7b11d;
   cursor: pointer;
   background-color: #dc9704;
@@ -1992,7 +2012,12 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
   display: none; }
   .idash-section.active-section {
     display: inherit; }
-  .idash-section input[type=button] {
+  .idash-section [class*=-container] {
+    margin: 0.3125em 0; }
+  .idash-section input[type=button],
+  .idash-section input[type=submit],
+  .idash-section .gradebook-link,
+  .idash-section button {
     display: block;
     border: none;
     border-radius: 3px;
@@ -2011,10 +2036,16 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
     color: #ffffff;
     transition: .1s ease-out;
     margin: 0.3125em 0; }
-    .idash-section input[type=button]:disabled {
+    .idash-section input[type=button]:disabled,
+    .idash-section input[type=submit]:disabled,
+    .idash-section .gradebook-link:disabled,
+    .idash-section button:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
-    .idash-section input[type=button]:hover {
+    .idash-section input[type=button]:hover,
+    .idash-section input[type=submit]:hover,
+    .idash-section .gradebook-link:hover,
+    .idash-section button:hover {
       background-color: #f3b842; }
 
 .wrap-instructor-info {
@@ -2359,7 +2390,7 @@ div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-su
     margin-left: auto;
     margin-right: auto;
     display: block;
-    padding-top: 1.25em; }
+    margin-top: 1.25em; }
     .content-wrapper > .course-info .container .details::after {
       clear: both;
       content: "";
