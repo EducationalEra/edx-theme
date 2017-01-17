@@ -33,6 +33,12 @@
         .sequence-list-wrapper {
             .nav-item {
                 @include course-nav-button;
+                position: relative;
+                .bookmark-icon {
+                  position: absolute;
+                  top: -2px;
+                  right: 5px;
+                }
             }
         }
     }

@@ -6,7 +6,7 @@
 
 .login-register .form-wrapper {
   // make all these blocks responsive
-  .login-form, .register-form, .toggle-form {
+  .login-form, .register-form, .toggle-form, .password-reset-form {
     @include media($desktop) {
       @include span-columns(6 of 12);
     }
@@ -23,10 +23,14 @@
     margin-bottom: $base-spacing;
   }
 
-  .login-form, .register-form {
+  .login-form, .register-form, .password-reset-form {
     @include block-frame;
     background-color: $white;
     padding: 20px;
+
+    .action-label {
+      margin: 2em 0;
+    }
 
     .section-title {
       position: relative;
