@@ -100,16 +100,16 @@
             & > * {
               // float: left;
               margin-right: $button-space * 2;
-              &:last-child {
-                margin-right: 0;
-              }
+              // &:last-child {
+              //   margin-right: 0;
+              // }
             }
 
             .enter-course, .learn-more {
               @include edx-button($yellow);
+              margin: 0;
               @include media($mobile-l) {
                 width: 100%;
-                margin: 0;
                 margin-bottom: $button-space * 2;
               }
               float: right;
