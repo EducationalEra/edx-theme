@@ -98,7 +98,7 @@
             }
 
             & > * {
-              float: left;
+              // float: left;
               margin-right: $button-space * 2;
               &:last-child {
                 margin-right: 0;
@@ -112,13 +112,15 @@
                 margin: 0;
                 margin-bottom: $button-space * 2;
               }
+              float: right;
               .sr {
                 display: none;
               }
             }
 
             .action-more, .action-facebook, .action-twitter {
-              @include edx-button($dark-gray);
+              @include edx-transparent-button($dark-gray);
+              float: right;
               .sr {
                 display: none;
               }
@@ -134,6 +136,7 @@
         }
 
         .wrapper-action-more {
+          float: right;
           position: relative;
 
           .actions-dropdown {

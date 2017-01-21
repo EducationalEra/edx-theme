@@ -56,6 +56,28 @@
   }
 }
 
+@mixin edx-transparent-button($color) {
+  @include base-button;
+  background-color: transparent;
+  color: $color;
+
+  transition: .1s ease-out;
+
+  &.active,
+  &.active-section {
+    background-color: $yellow;
+    color: $white;
+    &:hover {
+      background-color: $yellow;
+    }
+  }
+
+  &:hover {
+    background-color: lighten($yellow, 20%);
+    color: $white;
+  }
+}
+
 @mixin course-nav-button {
   background-color: $soft-blue;
   border: 0;
