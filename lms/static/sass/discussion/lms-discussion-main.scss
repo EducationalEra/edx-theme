@@ -564,7 +564,8 @@ a:hover, a:active {
     width: 100%; }
 
 .content-wrapper {
-  display: block; }
+  display: block;
+  min-height: 100vh; }
   .content-wrapper::after {
     clear: both;
     content: "";
@@ -805,7 +806,7 @@ input[type="radio"] {
       width: 48.82117%; }
       .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child, .login-register .form-wrapper .password-reset-form:last-child {
         margin-right: 0; } }
-  @media screen and (max-width: 20em) {
+  @media screen and (max-width: 26.5625em) {
     .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form, .login-register .form-wrapper .password-reset-form {
       float: left;
       display: block;
@@ -1174,8 +1175,6 @@ input[type="radio"] {
   display: inline-block;
   float: left;
   text-align: center; }
-  .view-in-course .paging-footer .nav-item .page-number-label, .view-in-course .paging-footer .nav-item .page-number-input {
-    display: none; }
   .view-in-course .paging-footer .nav-item .sr {
     display: none; }
   .view-in-course .paging-footer .nav-item.page {
@@ -1214,8 +1213,6 @@ input[type="radio"] {
 
 .discussion .info-wrapper,
 .view-in-course .info-wrapper {
-  background-color: #ffffff;
-  padding: 1em;
   margin-bottom: 1em; }
   .discussion .info-wrapper button,
   .view-in-course .info-wrapper button {
@@ -1244,16 +1241,99 @@ input[type="radio"] {
     .discussion .info-wrapper button:hover,
     .view-in-course .info-wrapper button:hover {
       background-color: #f3b842; }
-  .discussion .info-wrapper .updates h1,
-  .view-in-course .info-wrapper .updates h1 {
-    display: none; }
+  @media screen and (min-width: 62.5em) {
+    .discussion .info-wrapper .updates,
+    .view-in-course .info-wrapper .updates {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      .discussion .info-wrapper .updates:last-child,
+      .view-in-course .info-wrapper .updates:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 62.4375em) {
+    .discussion .info-wrapper .updates,
+    .view-in-course .info-wrapper .updates {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      .discussion .info-wrapper .updates:last-child,
+      .view-in-course .info-wrapper .updates:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 26.5625em) {
+    .discussion .info-wrapper .updates,
+    .view-in-course .info-wrapper .updates {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .discussion .info-wrapper .updates:last-child,
+      .view-in-course .info-wrapper .updates:last-child {
+        margin-right: 0; } }
+  .discussion .info-wrapper .updates article,
+  .view-in-course .info-wrapper .updates article {
+    background-color: #ffffff;
+    padding: 0.75em;
+    margin-bottom: 0.75em; }
+    .discussion .info-wrapper .updates article h2,
+    .view-in-course .info-wrapper .updates article h2 {
+      font-size: 1em; }
+  @media screen and (min-width: 62.5em) {
+    .discussion .info-wrapper .handouts,
+    .view-in-course .info-wrapper .handouts {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .discussion .info-wrapper .handouts:last-child,
+      .view-in-course .info-wrapper .handouts:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 62.4375em) {
+    .discussion .info-wrapper .handouts,
+    .view-in-course .info-wrapper .handouts {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .discussion .info-wrapper .handouts:last-child,
+      .view-in-course .info-wrapper .handouts:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 26.5625em) {
+    .discussion .info-wrapper .handouts,
+    .view-in-course .info-wrapper .handouts {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .discussion .info-wrapper .handouts:last-child,
+      .view-in-course .info-wrapper .handouts:last-child {
+        margin-right: 0; } }
+
+.discussion .home, .discussion .page-header-main, .discussion .page-title, .discussion .page-subtitle,
+.view-in-course .home,
+.view-in-course .page-header-main,
+.view-in-course .page-title,
+.view-in-course .page-subtitle {
+  display: block; }
+  .discussion .home::after, .discussion .page-header-main::after, .discussion .page-title::after, .discussion .page-subtitle::after,
+  .view-in-course .home::after,
+  .view-in-course .page-header-main::after,
+  .view-in-course .page-title::after,
+  .view-in-course .page-subtitle::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.discussion .page-title, .discussion .page-subtitle,
+.view-in-course .page-title,
+.view-in-course .page-subtitle {
+  width: 100%;
+  float: left; }
 
 .discussion .home,
 .view-in-course .home {
-  padding: 0 1em; }
-  .discussion .home .page-title,
-  .view-in-course .home .page-title {
-    display: none; }
+  margin-bottom: 0.75em; }
 
 .discussion .discussion.container,
 .discussion main#main,
@@ -1907,53 +1987,103 @@ input[type="radio"] {
     width: 100%; }
     .profile-wrapper .course-info > .chapters > section:last-child {
       border-bottom: 0px; }
+    @media screen and (min-width: 62.5em) {
+      .profile-wrapper .course-info > .chapters > section h2 {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .profile-wrapper .course-info > .chapters > section h2:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 62.4375em) {
+      .profile-wrapper .course-info > .chapters > section h2 {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        .profile-wrapper .course-info > .chapters > section h2:last-child {
+          margin-right: 0; } }
+    @media screen and (max-width: 26.5625em) {
+      .profile-wrapper .course-info > .chapters > section h2 {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        .profile-wrapper .course-info > .chapters > section h2:last-child {
+          margin-right: 0; } }
+    .profile-wrapper .course-info > .chapters > section .sections {
+      padding-left: 1.5em; }
+      @media screen and (min-width: 62.5em) {
+        .profile-wrapper .course-info > .chapters > section .sections {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 48.82117%;
+          border-left: 1px dashed #ddd; }
+          .profile-wrapper .course-info > .chapters > section .sections:last-child {
+            margin-right: 0; } }
+      @media screen and (max-width: 62.4375em) {
+        .profile-wrapper .course-info > .chapters > section .sections {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 65.88078%;
+          border-left: 1px dashed #ddd; }
+          .profile-wrapper .course-info > .chapters > section .sections:last-child {
+            margin-right: 0; } }
+      @media screen and (max-width: 26.5625em) {
+        .profile-wrapper .course-info > .chapters > section .sections {
+          float: left;
+          display: block;
+          margin-right: 2.35765%;
+          width: 100%;
+          padding: 0;
+          padding-top: 1.5em;
+          border-top: 1px dashed #ddd; }
+          .profile-wrapper .course-info > .chapters > section .sections:last-child {
+            margin-right: 0; } }
     .profile-wrapper .course-info > .chapters > section h2 {
-      border-right: 1px dashed #ddd;
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      display: table-cell;
       letter-spacing: 0;
-      margin: 0;
-      padding: 0;
-      padding-right: 2.27273%;
       text-transform: none;
-      width: 20.45455%;
       font-size: 1.5em; }
-    .profile-wrapper .course-info > .chapters > section .sections {
-      display: table-cell;
-      padding-left: 2.27273%;
-      width: 77.27273%; }
-      .profile-wrapper .course-info > .chapters > section .sections > div {
-        padding: 0 0 1.41575em 0; }
-        .profile-wrapper .course-info > .chapters > section .sections > div:first-child {
-          padding-top: 0; }
-        .profile-wrapper .course-info > .chapters > section .sections > div:last-child {
-          border-bottom: 0; }
-        .profile-wrapper .course-info > .chapters > section .sections > div h3 {
-          color: #666; }
-          .profile-wrapper .course-info > .chapters > section .sections > div h3 span {
-            color: #999;
+    .profile-wrapper .course-info > .chapters > section .sections > div {
+      padding: 0 0 1.5em 0; }
+      .profile-wrapper .course-info > .chapters > section .sections > div:first-child {
+        padding-top: 0; }
+      .profile-wrapper .course-info > .chapters > section .sections > div:last-child {
+        border-bottom: 0; }
+      .profile-wrapper .course-info > .chapters > section .sections > div h3 {
+        color: #666; }
+        .profile-wrapper .course-info > .chapters > section .sections > div h3 .sr {
+          display: none; }
+        .profile-wrapper .course-info > .chapters > section .sections > div h3 span {
+          margin-top: 0.75em;
+          display: block; }
+          .profile-wrapper .course-info > .chapters > section .sections > div h3 span::after {
+            clear: both;
+            content: "";
+            display: block; }
+      .profile-wrapper .course-info > .chapters > section .sections > div p {
+        color: #999;
+        font-size: 0.875em; }
+      .profile-wrapper .course-info > .chapters > section .sections > div .scores {
+        margin: 0.70788em 0; }
+        .profile-wrapper .course-info > .chapters > section .sections > div .scores h3 {
+          font-size: 0.875em;
+          display: inline-block; }
+        .profile-wrapper .course-info > .chapters > section .sections > div .scores ol {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          display: inline-block; }
+          .profile-wrapper .course-info > .chapters > section .sections > div .scores ol li {
+            display: inline-block;
             font-size: 0.875em;
-            font-weight: 100; }
-        .profile-wrapper .course-info > .chapters > section .sections > div p {
-          color: #999;
-          font-size: 0.875em; }
-        .profile-wrapper .course-info > .chapters > section .sections > div .scores {
-          margin: 0.70788em 0; }
-          .profile-wrapper .course-info > .chapters > section .sections > div .scores h3 {
-            font-size: 0.875em;
-            display: inline-block; }
-          .profile-wrapper .course-info > .chapters > section .sections > div .scores ol {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: inline-block; }
-            .profile-wrapper .course-info > .chapters > section .sections > div .scores ol li {
-              display: inline-block;
-              font-size: 0.875em;
-              font-weight: normal;
-              padding-right: 1em; }
+            font-weight: normal;
+            padding-right: 1em; }
 
 .content-wrapper .preview-menu {
   padding: 0.625em 0; }
