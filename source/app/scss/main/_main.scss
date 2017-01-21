@@ -8,8 +8,8 @@
 
 .content-wrapper {
   @include row;
+  min-height: 100vh;
   & > * {
     @include responsive-outer-container();
-    // margin-top: $big-margin;
   }
 }

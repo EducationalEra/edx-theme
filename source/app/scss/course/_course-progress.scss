@@ -69,14 +69,6 @@
   }
 }
 
-// div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:hover + h4:not(:disabled), .profile-wrapper .course-info div.info-wrapper section.handouts ol li #course-success > div.hitarea:focus + h4:not(:disabled), div.info-wrapper section.handouts ol li .profile-wrapper .course-info #course-success > div.hitarea:focus + h4:not(:disabled) {
-//   box-shadow: inset 0 1px 0 0 #f7b11d;
-//   cursor: pointer;
-//   background-color: #dc9704;
-//   background-image: -webkit-linear-gradient(#dc9704, #b37900);
-//   background-image: linear-gradient(#dc9704, #b37900);
-// }
-
 .profile-wrapper .course-info {
   #course-success > a {
     &:active:not(:disabled), &:focus:not(:disabled) {
@@ -117,25 +109,56 @@
         border-bottom: 0px;
       }
       h2 {
-        border-right: 1px dashed #ddd;
+        @include media($desktop) {
+          @include span-columns(6 of 12);
+        }
+
+        @include media($tablet) {
+          @include span-columns(4 of 12);
+        }
+
+        @include media($mobile-l) {
+          @include span-columns(12 of 12);
+        }
+      }
+
+      .sections {
+        padding-left: $base-spacing;
+        @include media($desktop) {
+          @include span-columns(6 of 12);
+          border-left: 1px dashed #ddd;
+        }
+
+        @include media($tablet) {
+          @include span-columns(8 of 12);
+          border-left: 1px dashed #ddd;
+        }
+
+        @include media($mobile-l) {
+          @include span-columns(12 of 12);
+          padding: 0;
+          padding-top: $base-spacing;
+          border-top: 1px dashed #ddd;
+        }
+      }
+
+
+      h2 {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        display: table-cell;
         letter-spacing: 0;
-        margin: 0;
-        padding: 0;
-        padding-right: 2.27273%;
+        // margin: 0;
+        // padding: 0;
         text-transform: none;
-        width: 20.45455%;
         font-size: 1.5em;
       }
       .sections {
-        display: table-cell;
-        padding-left: 2.27273%;
-        width: 77.27273%;
+        // display: table-cell;
+        // padding-left: 2.27273%;
+        // width: 77.27273%;
         > div {
-          padding: 0 0 1.41575em 0;
+          padding: 0 0 $base-spacing 0;
           &:first-child {
             padding-top: 0;
           }
@@ -144,10 +167,12 @@
           }
           h3 {
             color: #666;
+            .sr {
+              display: none;
+            }
             span {
-              color: #999;
-              font-size: 0.875em;
-              font-weight: 100;
+              margin-top: $small-spacing;
+              @include row;
             }
           }
           p {

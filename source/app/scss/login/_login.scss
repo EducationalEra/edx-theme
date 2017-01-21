@@ -15,7 +15,7 @@
       @include span-columns(6 of 12);
     }
 
-    @include media($mobile) {
+    @include media($mobile-l) {
       @include span-columns(12 of 12);
     }
 

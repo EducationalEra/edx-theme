@@ -10,7 +10,7 @@
         float: left;
         text-align: center;
         .page-number-label, .page-number-input {
-          display: none;
+          // display: none;
         }
         .sr {
           display: none;
@@ -34,26 +34,60 @@
         text-align: left;
     }
     .info-wrapper {
-        background-color: $white;
-        padding: 1em;
         margin-bottom: 1em;
         button {
           @include edx-button($yellow);
           margin-bottom: $base-spacing;
         }
         .updates {
-            h1 {
-                display: none;
+            @include media($desktop) {
+              @include span-columns(8 of 12);
+            }
+
+            @include media($tablet) {
+              @include span-columns(8 of 12);
+            }
+
+            @include media($mobile-l) {
+              @include span-columns(12 of 12);
+            }
+            article {
+              background-color: $white;
+              padding: $small-spacing;
+              margin-bottom: $small-spacing;
+              h2 {
+                font-size: 1em;
+              }
             }
         }
-    }
-    .home {
-      padding: 0 1em;
+        .handouts {
+          @include media($desktop) {
+            @include span-columns(4 of 12);
+          }
 
-      .page-title {
-        display: none;
-      }
+          @include media($tablet) {
+            @include span-columns(4 of 12);
+          }
+
+          @include media($mobile-l) {
+            @include span-columns(12 of 12);
+          }
+        }
     }
+
+    .home, .page-header-main, .page-title, .page-subtitle {
+      @include row;
+    }
+
+    .page-title, .page-subtitle {
+      width: 100%;
+      float: left;
+    }
+
+    .home {
+      margin-bottom: $small-spacing;
+    }
+
     .discussion.container,
     main#main {
         @include row;
