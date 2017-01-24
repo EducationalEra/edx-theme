@@ -523,7 +523,7 @@ picture {
 :focus {
   outline: none; }
 
-.icon, .view-in-course .bookmark-button-wrapper button, .view-in-course .capa_inputtype label:before, .view-in-course .inputtype label:before, .view-in-course .chemicalequationinput label:before, .view-in-course .designprotein2dinput label:before, .view-in-course .capa_inputtype .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before, .view-in-course .formulaequationinput .status:before, .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .status.unanswered:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .wmd-panel .wmd-button > span {
+.icon, .view-in-course .bookmark-button-wrapper button:before, .view-in-course .capa_inputtype label:before, .view-in-course .inputtype label:before, .view-in-course .chemicalequationinput label:before, .view-in-course .designprotein2dinput label:before, .view-in-course .capa_inputtype .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before, .view-in-course .formulaequationinput .status:before, .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .status.unanswered:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .wmd-panel .wmd-button > span {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -587,6 +587,22 @@ a:hover, a:active {
     @media screen and (max-width: 20em) {
       .content-wrapper > * {
         padding: 0 10px; } }
+
+.sr {
+  display: none; }
+
+*:hover .sr {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+  margin: -1px;
+  height: 1px;
+  width: 1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  word-wrap: normal;
+  display: block; }
 
 input, textarea, select {
   border: none;
@@ -822,21 +838,61 @@ input[type="radio"] {
   padding: 20px; }
   .login-register .form-wrapper .login-form .action-label, .login-register .form-wrapper .register-form .action-label, .login-register .form-wrapper .password-reset-form .action-label {
     margin: 2em 0; }
-  .login-register .form-wrapper .login-form .section-title, .login-register .form-wrapper .register-form .section-title, .login-register .form-wrapper .password-reset-form .section-title {
+  .login-register .form-wrapper .login-form > .section-title, .login-register .form-wrapper .register-form > .section-title, .login-register .form-wrapper .password-reset-form > .section-title {
     position: relative; }
-    .login-register .form-wrapper .login-form .section-title h2, .login-register .form-wrapper .register-form .section-title h2, .login-register .form-wrapper .password-reset-form .section-title h2 {
+    .login-register .form-wrapper .login-form > .section-title h2, .login-register .form-wrapper .register-form > .section-title h2, .login-register .form-wrapper .password-reset-form > .section-title h2 {
       position: absolute;
       top: -30px;
       font-size: 1em;
       font-weight: lighter; }
-      .login-register .form-wrapper .login-form .section-title h2 .text, .login-register .form-wrapper .register-form .section-title h2 .text, .login-register .form-wrapper .password-reset-form .section-title h2 .text {
+      .login-register .form-wrapper .login-form > .section-title h2 .text, .login-register .form-wrapper .register-form > .section-title h2 .text, .login-register .form-wrapper .password-reset-form > .section-title h2 .text {
         background-color: #323232;
         color: #ffffff;
         padding: 9px 15px;
         border-radius: 3px; }
-  .login-register .form-wrapper .login-form p.sr, .login-register .form-wrapper .register-form p.sr, .login-register .form-wrapper .password-reset-form p.sr {
-    display: none; }
-  .login-register .form-wrapper .login-form button.action.action-primary, .login-register .form-wrapper .register-form button.action.action-primary, .login-register .form-wrapper .password-reset-form button.action.action-primary {
+  .login-register .form-wrapper .login-form .login-providers, .login-register .form-wrapper .register-form .login-providers, .login-register .form-wrapper .password-reset-form .login-providers {
+    border-top: 1px solid #dddddd;
+    padding-top: 1.5em;
+    margin-top: 1.5em; }
+    .login-register .form-wrapper .login-form .login-providers .section-title, .login-register .form-wrapper .register-form .login-providers .section-title, .login-register .form-wrapper .password-reset-form .login-providers .section-title {
+      display: none; }
+    .login-register .form-wrapper .login-form .login-providers .button, .login-register .form-wrapper .register-form .login-providers .button, .login-register .form-wrapper .password-reset-form .login-providers .button {
+      display: block;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      line-height: 1.5;
+      padding: .5em 1em;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: "Noto Sans";
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: #323232;
+      color: #ffffff;
+      transition: .1s ease-out; }
+      .login-register .form-wrapper .login-form .login-providers .button:disabled, .login-register .form-wrapper .register-form .login-providers .button:disabled, .login-register .form-wrapper .password-reset-form .login-providers .button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+      .login-register .form-wrapper .login-form .login-providers .button:hover, .login-register .form-wrapper .register-form .login-providers .button:hover, .login-register .form-wrapper .password-reset-form .login-providers .button:hover {
+        background-color: #4c4c4c; }
+      .login-register .form-wrapper .login-form .login-providers .button .sr, .login-register .form-wrapper .register-form .login-providers .button .sr, .login-register .form-wrapper .password-reset-form .login-providers .button .sr {
+        display: none; }
+  .login-register .form-wrapper .login-form .button, .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .button, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .button, .login-register .form-wrapper .password-reset-form .action {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .login-register .form-wrapper .login-form .button:last-child, .login-register .form-wrapper .login-form .action:last-child, .login-register .form-wrapper .register-form .button:last-child, .login-register .form-wrapper .register-form .action:last-child, .login-register .form-wrapper .password-reset-form .button:last-child, .login-register .form-wrapper .password-reset-form .action:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 62.4375em) {
+      .login-register .form-wrapper .login-form .button, .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .button, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .button, .login-register .form-wrapper .password-reset-form .action {
+        width: 100%;
+        margin: 0.375em 0; } }
+  .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .action {
     display: block;
     border: none;
     border-radius: 3px;
@@ -853,12 +909,15 @@ input[type="radio"] {
     white-space: nowrap;
     background-color: #f0a612;
     color: #ffffff;
-    transition: .1s ease-out; }
-    .login-register .form-wrapper .login-form button.action.action-primary:disabled, .login-register .form-wrapper .register-form button.action.action-primary:disabled, .login-register .form-wrapper .password-reset-form button.action.action-primary:disabled {
+    transition: .1s ease-out;
+    float: none; }
+    .login-register .form-wrapper .login-form .action:disabled, .login-register .form-wrapper .register-form .action:disabled, .login-register .form-wrapper .password-reset-form .action:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
-    .login-register .form-wrapper .login-form button.action.action-primary:hover, .login-register .form-wrapper .register-form button.action.action-primary:hover, .login-register .form-wrapper .password-reset-form button.action.action-primary:hover {
+    .login-register .form-wrapper .login-form .action:hover, .login-register .form-wrapper .register-form .action:hover, .login-register .form-wrapper .password-reset-form .action:hover {
       background-color: #f3b842; }
+  .login-register .form-wrapper .login-form p.sr, .login-register .form-wrapper .register-form p.sr, .login-register .form-wrapper .password-reset-form p.sr {
+    display: none; }
   .login-register .form-wrapper .login-form button[type="submit"] + p.note, .login-register .form-wrapper .register-form button[type="submit"] + p.note, .login-register .form-wrapper .password-reset-form button[type="submit"] + p.note {
     float: right;
     line-height: 40px;
@@ -984,10 +1043,7 @@ input[type="radio"] {
         width: 100%;
         float: left; } }
     .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *, .home .listing-courses .course .wrapper-course-actions .course-actions > *, .home .courses-listing .course .wrapper-course-actions .course-actions > *, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > * {
-      float: left;
       margin-right: 0.5em; }
-      .dashboard .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .dashboard .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .home .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .home .courses-listing .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .listing-courses .course .wrapper-course-actions .course-actions > *:last-child, .find-courses .courses-listing .course .wrapper-course-actions .course-actions > *:last-child {
-        margin-right: 0; }
     .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more {
       display: block;
       border: none;
@@ -1005,7 +1061,9 @@ input[type="radio"] {
       white-space: nowrap;
       background-color: #f0a612;
       color: #ffffff;
-      transition: .1s ease-out; }
+      transition: .1s ease-out;
+      margin: 0;
+      float: right; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
@@ -1014,7 +1072,6 @@ input[type="radio"] {
       @media screen and (max-width: 26.5625em) {
         .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more {
           width: 100%;
-          margin: 0;
           margin-bottom: 0.5em; } }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more .sr {
         display: none; }
@@ -1033,14 +1090,21 @@ input[type="radio"] {
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
-      background-color: #323232;
-      color: #ffffff;
-      transition: .1s ease-out; }
+      background-color: transparent;
+      color: #323232;
+      transition: .1s ease-out;
+      float: right; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more:disabled, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook:disabled, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook:disabled, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook:disabled, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook:disabled, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook:disabled, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook:disabled, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
+      .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more.active, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more.active, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more.active, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more.active, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more.active, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more.active, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section {
+        background-color: #f0a612;
+        color: #ffffff; }
+        .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more.active:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more.active:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more.active:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more.active:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more.active:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more.active:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover {
+          background-color: #f0a612; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter:hover {
-        background-color: #4c4c4c; }
+        background-color: #f6ca72;
+        color: #ffffff; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more .sr, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook .sr, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter .sr {
         display: none; }
   .dashboard .listing-courses .course .learn-more, .dashboard .courses-listing .course .learn-more, .home .listing-courses .course .learn-more, .home .courses-listing .course .learn-more, .find-courses .listing-courses .course .learn-more, .find-courses .courses-listing .course .learn-more {
@@ -1069,6 +1133,7 @@ input[type="radio"] {
     .dashboard .listing-courses .course .learn-more:hover, .dashboard .courses-listing .course .learn-more:hover, .home .listing-courses .course .learn-more:hover, .home .courses-listing .course .learn-more:hover, .find-courses .listing-courses .course .learn-more:hover, .find-courses .courses-listing .course .learn-more:hover {
       background-color: #f3b842; }
   .dashboard .listing-courses .course .wrapper-action-more, .dashboard .courses-listing .course .wrapper-action-more, .home .listing-courses .course .wrapper-action-more, .home .courses-listing .course .wrapper-action-more, .find-courses .listing-courses .course .wrapper-action-more, .find-courses .courses-listing .course .wrapper-action-more {
+    float: right;
     position: relative; }
     .dashboard .listing-courses .course .wrapper-action-more .actions-dropdown, .dashboard .courses-listing .course .wrapper-action-more .actions-dropdown, .home .listing-courses .course .wrapper-action-more .actions-dropdown, .home .courses-listing .course .wrapper-action-more .actions-dropdown, .find-courses .listing-courses .course .wrapper-action-more .actions-dropdown, .find-courses .courses-listing .course .wrapper-action-more .actions-dropdown {
       display: none;
@@ -1167,10 +1232,6 @@ input[type="radio"] {
 .view-in-course .course-wrapper .courseware-results-wrapper {
   display: none; }
 
-.view-in-course p img {
-  float: left;
-  display: block; }
-
 .view-in-course .paging-footer .nav-item {
   display: inline-block;
   float: left;
@@ -1202,14 +1263,6 @@ input[type="radio"] {
       opacity: 0.5; }
     .view-in-course .paging-footer .nav-item button:hover {
       background-color: #f3b842; }
-
-.discussion #seq_content,
-.view-in-course #seq_content {
-  float: left;
-  margin: 3em 0;
-  display: block;
-  width: 100%;
-  text-align: left; }
 
 .discussion .info-wrapper,
 .view-in-course .info-wrapper {
@@ -1310,20 +1363,26 @@ input[type="radio"] {
       .view-in-course .info-wrapper .handouts:last-child {
         margin-right: 0; } }
 
-.discussion .home, .discussion .page-header-main, .discussion .page-title, .discussion .page-subtitle,
+.discussion .home, .discussion .page-header-main, .discussion .page-title, .discussion .page-subtitle, .discussion .xblock,
 .view-in-course .home,
 .view-in-course .page-header-main,
 .view-in-course .page-title,
-.view-in-course .page-subtitle {
+.view-in-course .page-subtitle,
+.view-in-course .xblock {
   display: block; }
-  .discussion .home::after, .discussion .page-header-main::after, .discussion .page-title::after, .discussion .page-subtitle::after,
+  .discussion .home::after, .discussion .page-header-main::after, .discussion .page-title::after, .discussion .page-subtitle::after, .discussion .xblock::after,
   .view-in-course .home::after,
   .view-in-course .page-header-main::after,
   .view-in-course .page-title::after,
-  .view-in-course .page-subtitle::after {
+  .view-in-course .page-subtitle::after,
+  .view-in-course .xblock::after {
     clear: both;
     content: "";
     display: block; }
+
+.discussion .xblock,
+.view-in-course .xblock {
+  margin: 1.5em 0; }
 
 .discussion .page-title, .discussion .page-subtitle,
 .view-in-course .page-title,
@@ -1394,7 +1453,7 @@ input[type="radio"] {
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading a {
         font-weight: bold; }
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name,
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before,
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before,
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-wrapper-2:before,
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel
@@ -1402,7 +1461,7 @@ input[type="radio"] {
         display: table-cell; }
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name {
         vertical-align: top; }
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-wrapper-2:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span {
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-wrapper-2:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span {
         vertical-align: middle;
         padding-right: 0.7em; }
     .view-in-course .course-index .course-navigation .button-chapter.chapter.is-open {
@@ -1441,7 +1500,7 @@ input[type="radio"] {
 
 .wrapper-course-material {
   display: block;
-  margin-bottom: 2em; }
+  margin-bottom: 1.5em; }
   .wrapper-course-material::after {
     clear: both;
     content: "";
@@ -1482,15 +1541,15 @@ input[type="radio"] {
       .wrapper-course-material .right a.active, .wrapper-course-material .right a.active-section,
       .wrapper-course-material .tab a.active,
       .wrapper-course-material .tab a.active-section {
-        background-color: #f0a612;
+        background-color: #323232;
         color: #ffffff; }
         .wrapper-course-material .right a.active:hover, .wrapper-course-material .right a.active-section:hover,
         .wrapper-course-material .tab a.active:hover,
         .wrapper-course-material .tab a.active-section:hover {
-          background-color: #f0a612; }
+          background-color: #323232; }
       .wrapper-course-material .right a:hover,
       .wrapper-course-material .tab a:hover {
-        background-color: #f6ca72;
+        background-color: #656565;
         color: #ffffff; }
     .wrapper-course-material .right .new-post-btn,
     .wrapper-course-material .tab .new-post-btn {
@@ -1539,23 +1598,70 @@ input[type="radio"] {
   margin-bottom: 0.625em; }
 
 .view-in-course .sequence-nav {
-  display: inline-block;
-  margin: 0 auto; }
-  .view-in-course .sequence-nav .sequence-list-wrapper,
-  .view-in-course .sequence-nav .sequence-nav-button,
-  .view-in-course .sequence-nav li {
+  position: relative;
+  z-index: 0;
+  display: flex; }
+  .view-in-course .sequence-nav .sequence-list-wrapper {
     position: relative;
-    float: left; }
+    height: 100%;
+    flex-grow: 1; }
+    .view-in-course .sequence-nav .sequence-list-wrapper ol {
+      display: flex;
+      list-style: none;
+      list-style-image: none;
+      margin: 0;
+      padding: 0; }
+      .view-in-course .sequence-nav .sequence-list-wrapper ol li {
+        box-sizing: border-box;
+        flex-grow: 1; }
+        .view-in-course .sequence-nav .sequence-list-wrapper ol li button {
+          background-color: #e5f2fa;
+          border: 0;
+          width: 2.5em;
+          height: 2.5em;
+          display: inline-block;
+          float: left;
+          width: 100%; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button .sr {
+            display: none; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button .sequence-tooltip {
+            display: none; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button .fa-chevron-prev:before {
+            content: "\f0d9";
+            font-size: 2em; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button .fa-chevron-next:before {
+            content: "\f0da";
+            font-size: 2em; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button .fa.seq_problem:before {
+            content: "\f0ca"; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button .fa.seq_video:before {
+            content: "\f008"; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button .fa.seq_other:before {
+            content: "\f129"; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button:hover, .view-in-course .sequence-nav .sequence-list-wrapper ol li button.active {
+            background-color: #baddf2;
+            cursor: pointer; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button:hover {
+            background-color: #8fc7ea; }
+          .view-in-course .sequence-nav .sequence-list-wrapper ol li button .bookmark-icon {
+            position: absolute;
+            top: -2px;
+            right: 5px; }
   @media screen and (max-width: 26.5625em) {
+    .view-in-course .sequence-nav .sequence-nav {
+      align-items: center;
+      justify-content: center; }
     .view-in-course .sequence-nav .sequence-list-wrapper {
       display: none; } }
   .view-in-course .sequence-nav-button {
     background-color: #e5f2fa;
     border: 0;
-    width: 3.5em;
-    height: 3.5em;
+    width: 2.5em;
+    height: 2.5em;
     display: inline-block;
     float: left;
+    min-width: 2.5em;
+    max-width: 2.5em;
     background-color: #baddf2; }
     .view-in-course .sequence-nav-button .sr {
       display: none; }
@@ -1582,101 +1688,59 @@ input[type="radio"] {
     .view-in-course .sequence-nav-button.button-next {
       border-top-right-radius: 50%;
       border-bottom-right-radius: 50%; }
-  .view-in-course .sequence-nav .sequence-list-wrapper .nav-item {
-    background-color: #e5f2fa;
-    border: 0;
-    width: 3.5em;
-    height: 3.5em;
-    display: inline-block;
-    float: left;
-    position: relative; }
-    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .sr {
-      display: none; }
-    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .sequence-tooltip {
-      display: none; }
-    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa-chevron-prev:before {
-      content: "\f0d9";
-      font-size: 2em; }
-    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa-chevron-next:before {
-      content: "\f0da";
-      font-size: 2em; }
-    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa.seq_problem:before {
-      content: "\f0ca"; }
-    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa.seq_video:before {
-      content: "\f008"; }
-    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .fa.seq_other:before {
-      content: "\f129"; }
-    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item:hover, .view-in-course .sequence-nav .sequence-list-wrapper .nav-item.active {
-      background-color: #baddf2;
-      cursor: pointer; }
-    .view-in-course .sequence-nav .sequence-list-wrapper .nav-item .bookmark-icon {
-      position: absolute;
-      top: -2px;
-      right: 5px; }
+    .view-in-course .sequence-nav-button.button-previous, .view-in-course .sequence-nav-button.button-next {
+      background-color: #8fc7ea; }
 
 .view-in-course .sequence-bottom {
-  display: inline-block; }
-  .view-in-course .sequence-bottom button {
-    display: block;
-    float: left; }
+  position: relative;
+  margin: 0 auto;
+  width: 5em; }
 
-.view-in-course .bookmark-button-wrapper {
+.view-in-course .bookmark-button-wrapper button {
   display: block;
-  width: 100%; }
-  .view-in-course .bookmark-button-wrapper::after {
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: .5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #323232;
+  color: #ffffff;
+  transition: .1s ease-out; }
+  .view-in-course .bookmark-button-wrapper button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+  .view-in-course .bookmark-button-wrapper button:hover {
+    background-color: #4c4c4c; }
+  .view-in-course .bookmark-button-wrapper button:before {
+    content: "\f097"; }
+  .view-in-course .bookmark-button-wrapper button.bookmarked:before {
+    content: "\f02e"; }
+
+.view-in-course .problems-wrapper .problem-header,
+.view-in-course .problems-wrapper .problem-progress {
+  display: block; }
+  .view-in-course .problems-wrapper .problem-header::after,
+  .view-in-course .problems-wrapper .problem-progress::after {
     clear: both;
     content: "";
     display: block; }
-  .view-in-course .bookmark-button-wrapper .sr {
-    display: none; }
-  .view-in-course .bookmark-button-wrapper button {
-    display: block;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    line-height: 1.5;
-    padding: .5em 1em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: normal;
-    font-family: "Noto Sans";
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    background-color: #f0a612;
-    color: #ffffff;
-    transition: .1s ease-out;
-    float: right; }
-    .view-in-course .bookmark-button-wrapper button:disabled {
-      cursor: not-allowed;
-      opacity: 0.5; }
-    .view-in-course .bookmark-button-wrapper button:hover {
-      background-color: #f3b842; }
-
-.view-in-course .problems-wrapper .problem-header {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%; }
-  .view-in-course .problems-wrapper .problem-header:last-child {
-    margin-right: 0; }
 
 .view-in-course .problems-wrapper .problem-progress {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  margin-right: 0;
-  text-align: right; }
-  .view-in-course .problems-wrapper .problem-progress:last-child {
-    margin-right: 0; }
+  color: #666;
+  font-size: .75em; }
 
 .view-in-course .problem {
   float: left;
   width: 100%; }
   .view-in-course .problem > div > div > p {
-    font-size: 1.5em;
     margin: 1.5em 0; }
   .view-in-course .problem .action {
     display: block;
@@ -1749,8 +1813,7 @@ input[type="radio"] {
       .view-in-course .problem .action .show .sr, .view-in-course .problem .action .save .sr, .view-in-course .problem .action .reset .sr {
         display: none; }
     .view-in-course .problem .action .submission_feedback {
-      line-height: 45px;
-      float: right; }
+      line-height: 3em; }
   .view-in-course .problem .solution-span {
     margin-bottom: 1em; }
     .view-in-course .problem .solution-span solution {
@@ -1915,6 +1978,11 @@ input[type="radio"] {
     font-size: 1em;
     font-weight: 100; }
 
+.profile-wrapper .course-info .grade-detail-graph {
+  height: 400px;
+  width: 100%;
+  overflow: scroll; }
+
 .profile-wrapper .course-info #course-success {
   margin-bottom: 30px;
   text-align: center; }
@@ -1971,10 +2039,6 @@ input[type="radio"] {
 
 .profile-wrapper .course-info #course-success > a:focus {
   text-decoration: none; }
-
-.profile-wrapper .course-info #grade-detail-graph {
-  min-height: 400px;
-  width: 100%; }
 
 .profile-wrapper .course-info > .chapters {
   border-top: 1px solid #e3e3e3;
@@ -2039,6 +2103,7 @@ input[type="radio"] {
           width: 100%;
           padding: 0;
           padding-top: 1.5em;
+          border: 0;
           border-top: 1px dashed #ddd; }
           .profile-wrapper .course-info > .chapters > section .sections:last-child {
             margin-right: 0; } }
@@ -2084,6 +2149,53 @@ input[type="radio"] {
             font-size: 0.875em;
             font-weight: normal;
             padding-right: 1em; }
+
+.book-sidebar {
+  display: block;
+  margin-bottom: 1.5em; }
+  .book-sidebar::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .book-sidebar li {
+    display: inline-block;
+    padding: 0 0.3125em; }
+    .book-sidebar li:first-child {
+      padding-left: 0; }
+    .book-sidebar li:last-child {
+      padding-right: 0; }
+    .book-sidebar li a {
+      display: block;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      line-height: 1.5;
+      padding: .5em 1em;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: "Noto Sans";
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: transparent;
+      color: #999;
+      transition: .1s ease-out;
+      display: inline-block; }
+      .book-sidebar li a:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+      .book-sidebar li a.active, .book-sidebar li a.active-section {
+        background-color: #323232;
+        color: #ffffff; }
+        .book-sidebar li a.active:hover, .book-sidebar li a.active-section:hover {
+          background-color: #323232; }
+      .book-sidebar li a:hover {
+        background-color: #656565;
+        color: #ffffff; }
+    .book-sidebar li .sr {
+      display: none; }
 
 .content-wrapper .preview-menu {
   padding: 0.625em 0; }
@@ -2256,6 +2368,10 @@ input[type="radio"] {
     .view-in-course .discussion-module .new-post-btn {
       float: none;
       width: 100%; } }
+  .view-in-course .discussion-module .home-helpgrid td,
+  .view-in-course .discussion-module .home-helpgrid th {
+    text-overflow: ellipsis;
+    word-break: break-all; }
 
 .tc-wrapper .video-wrapper {
   float: left;
@@ -2920,7 +3036,7 @@ input[type="radio"] {
           padding-right: 1em;
           padding-left: 1em;
           width: 14em; }
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-header .forum-nav-search .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span {
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-header .forum-nav-search .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span {
         position: absolute;
         right: 0;
         margin: 1em 0;
@@ -2928,8 +3044,8 @@ input[type="radio"] {
         color: #f0a612; }
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button, .view-in-course .bookmark-button-wrapper
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype
@@ -3021,7 +3137,7 @@ input[type="radio"] {
       display: none; }
     .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter input {
       border: 0; }
-    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .icon, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .bookmark-button-wrapper button, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-button > span {
+    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .icon, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-button > span {
       display: none; }
   .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-menu {
     overflow: scroll; }
