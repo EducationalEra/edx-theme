@@ -1,31 +1,10 @@
-<%! from django.utils.translation import ugettext as _ %>
-${_("Thank you for creating an account with {platform_name}!").format(platform_name=settings.PLATFORM_NAME)}
-${_("There's just one more step before you can enroll in a course: "
-    "You need to activate your {platform_name} account. To activate "
-    "your account, click the following link. If that doesn't work, "
-    "copy and paste the link into your browser's address bar.").format(
-      platform_name=settings.PLATFORM_NAME
-    )}
+Вітаємо на EdEra!
+Дякуємо за реєстрацію на нашій платформі
 
-  https://${ site }/activate/${ key }
+Щоб активувати свій обліковий запис, будь ласка, натисніть на посилання нижче (ви також можете скопіювати та вставити посилання в адресний рядок вашого браузера).
 
-${_("After you activate your account, you can take "
-    "any of the hundreds of courses {platform_name} "
-    "offers. You will receive occasional email "
-    "messages from {platform_name} about new courses "
-    "or other information."
-  ).format(platform_name=settings.PLATFORM_NAME)}
+https://${ site }/activate/${ key }
 
-${_("We hope you enjoy learning with {platform_name}!").format(
-    platform_name=settings.PLATFORM_NAME
-)}
+Якщо ви не створювали обліковий запис, не потрібно нічого робити - ви більше не будете отримувати від нас листів. Будь ласка, не відповідайте на цей лист. З будь-яких додаткових питань звертайтеся на info@ed-era.com.
 
-${_("The {platform_name} Team").format(platform_name=settings.PLATFORM_NAME)}
-
-${_("This email message was automatically sent by {site_name} because "
-     "someone attempted to create an account on {platform_name} using "
-     "this email address."
-    ).format(
-      site_name=settings.SITE_NAME,
-      platform_name=settings.PLATFORM_NAME
-    )}
+З повагою, команда EdEra.
