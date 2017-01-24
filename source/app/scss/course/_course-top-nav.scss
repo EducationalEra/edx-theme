@@ -1,6 +1,6 @@
 .wrapper-course-material {
     @include row;
-    margin-bottom: 2em;
+    margin-bottom: $base-spacing;
     .right,
     .tab {
         display: block;
@@ -12,7 +12,7 @@
             padding-right: 0;
         }
         a {
-            @include edx-flat-button();
+            @include edx-flat-button($dark-gray);
         }
         .new-post-btn {
             @include edx-button($dark-gray);

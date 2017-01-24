@@ -34,7 +34,7 @@
   }
 }
 
-@mixin edx-flat-button() {
+@mixin edx-flat-button($color: $yellow) {
   @include base-button;
   background-color: transparent;
   color: $medium-gray;
@@ -43,15 +43,15 @@
 
   &.active,
   &.active-section {
-    background-color: $yellow;
+    background-color: $color;
     color: $white;
     &:hover {
-      background-color: $yellow;
+      background-color: $color;
     }
   }
 
   &:hover {
-    background-color: lighten($yellow, 20%);
+    background-color: lighten($color, 20%);
     color: $white;
   }
 }
@@ -81,8 +81,8 @@
 @mixin course-nav-button {
   background-color: $soft-blue;
   border: 0;
-  width: 3.5em;
-  height: 3.5em;
+  width: em(40);
+  height: em(40);
   display: inline-block;
   float: left;
   .sr {

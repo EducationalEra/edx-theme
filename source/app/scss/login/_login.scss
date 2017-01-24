@@ -32,7 +32,7 @@
       margin: 2em 0;
     }
 
-    .section-title {
+    & > .section-title {
       position: relative;
       h2 {
         position: absolute;
@@ -51,12 +51,37 @@
       }
     }
 
-    p.sr {
-      display: none;
+    .login-providers {
+      border-top: $base-border;
+      padding-top: $base-spacing;
+      margin-top: $base-spacing;
+      .section-title {
+        display: none;
+      }
+      .button {
+        @include edx-button($dark-gray);
+        .sr {
+          display: none;
+        }
+      }
     }
 
-    button.action.action-primary {
+    .button, .action {
+      @include span-columns(4 of 12);
+
+      @include media($tablet) {
+        width: 100%;
+        margin: $small-spacing/2 0;
+      }
+    }
+
+    .action {
       @include edx-button($yellow);
+      float: none;
+    }
+
+    p.sr {
+      display: none;
     }
 
     button[type="submit"]+p.note {

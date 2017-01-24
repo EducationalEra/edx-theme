@@ -5,21 +5,51 @@
         margin-bottom: $base-margin;
     }
     .sequence-nav {
-        display: inline-block;
-        margin: 0 auto;
-        .sequence-list-wrapper,
-        .sequence-nav-button,
-        li {
-            position: relative;
-            float: left;
+        position: relative;
+        z-index: 0;
+        display: flex;
+
+        .sequence-list-wrapper {
+          position: relative;
+          height: 100%;
+          flex-grow: 1;
+          ol {
+            display: flex;
+            list-style: none;
+            list-style-image: none;
+            margin: 0;
+            padding: 0;
+            li {
+              box-sizing: border-box;
+              flex-grow: 1;
+              button {
+                @include course-nav-button;
+                width: 100%;
+                &:hover {
+                  background-color: darken($soft-blue, 20%);
+                }
+                .bookmark-icon {
+                  position: absolute;
+                  top: -2px;
+                  right: 5px;
+                }
+              }
+            }
+          }
         }
         @include media($mobile-l) {
+          .sequence-nav {
+            align-items: center;
+            justify-content: center;
+          }
           .sequence-list-wrapper {
             display: none;
           }
         }
         &-button {
             @include course-nav-button;
+            min-width: em(40);
+            max-width: em(40);
             background-color: darken($soft-blue, 10%);
             &.button-previous {
                 border-top-left-radius: 50%;
@@ -29,37 +59,34 @@
                 border-top-right-radius: 50%;
                 border-bottom-right-radius: 50%;
             }
-        }
-        .sequence-list-wrapper {
-            .nav-item {
-                @include course-nav-button;
-                position: relative;
-                .bookmark-icon {
-                  position: absolute;
-                  top: -2px;
-                  right: 5px;
-                }
+            &.button-previous,
+            &.button-next {
+              background-color: darken($soft-blue, 20%);
             }
         }
     }
     .sequence-bottom {
-        display: inline-block;
-        button {
-            display: block;
-            float: left;
-        }
+      position: relative;
+      margin: 0 auto;
+      width: em(80);
     }
     .bookmark-button-wrapper {
-      @include row;
-      width: 100%;
+      // @include row;
+      // width: 100%;
       .sr {
-        display: none;
+        // display: none;
       }
 
       button {
-        @include edx-button($yellow);
-        float: right;
-        @extend .icon;
+        @include edx-button($dark-gray);
+        &:before {
+          @extend .icon;
+          content: "\f097";
+        }
+        &.bookmarked:before {
+          content: "\f02e";
+        }
+
       }
     }
 }

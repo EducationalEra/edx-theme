@@ -22,5 +22,13 @@
             width: 100%;
           }
         }
+
+        .home-helpgrid {
+          td,
+          th {
+              text-overflow: ellipsis;
+              word-break: break-all;
+          }
+        }
     }
 }

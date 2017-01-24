@@ -21,21 +21,21 @@
 
 .view-in-course {
     .problems-wrapper {
-        .problem-header {
-            @include span-columns(9);
-        }
-        .problem-progress {
-            @include span-columns(3);
-            margin-right: 0;
-            text-align: right;
-        }
+      .problem-header,
+      .problem-progress {
+        @include row;
+      }
+      .problem-progress {
+        color: $gray;
+        font-size: .75em;
+      }
     }
     .problem {
         float: left;
         width: 100%;
         // WTF!!!
         & > div > div > p {
-            font-size: 1.5em;
+            // font-size: 1.5em;
             margin: $base-spacing 0;
         }
         .action {
@@ -71,8 +71,8 @@
                 }
             }
             .submission_feedback {
-                line-height: 45px;
-                float: right;
+                line-height: $base-spacing*2;
+                // float: right;
             }
         }
         .solution-span {

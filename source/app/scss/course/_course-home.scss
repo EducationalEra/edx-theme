@@ -1,8 +1,8 @@
 .view-in-course {
-    p img {
-        float: left;
-        display: block;
-    }
+    // p img {
+    //     float: left;
+    //     display: block;
+    // }
 
     .paging-footer {
       .nav-item {
@@ -26,13 +26,6 @@
 }
 .discussion,
 .view-in-course {
-    #seq_content {
-        float: left;
-        margin: 3em 0;
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
     .info-wrapper {
         margin-bottom: 1em;
         button {
@@ -75,8 +68,12 @@
         }
     }
 
-    .home, .page-header-main, .page-title, .page-subtitle {
+    .home, .page-header-main, .page-title, .page-subtitle, .xblock {
       @include row;
+    }
+
+    .xblock {
+      margin: $base-spacing 0;
     }
 
     .page-title, .page-subtitle {

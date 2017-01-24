@@ -1,0 +1,22 @@
+.book-sidebar {
+  @include row;
+  margin-bottom: $base-spacing;
+  li {
+      display: inline-block;
+      padding: 0 $small-margin;
+      &:first-child {
+          padding-left: 0;
+      }
+      &:last-child {
+          padding-right: 0;
+      }
+      a {
+          @include edx-flat-button($dark-gray);
+          display: inline-block;
+      }
+      .sr {
+          // TODO: tbd
+          display: none;
+      }
+  }
+}
