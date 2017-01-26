@@ -49,9 +49,7 @@
   width: 100%;
 
   .instructor-info-action {
-      @include edx-button($dark-gray);
       display: inline-block;
-      color: white;
 
       @include media($mobile-l) {
           width: 100%;

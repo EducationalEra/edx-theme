@@ -23,41 +23,65 @@
     margin-bottom: $base-spacing;
   }
 
+  .login-form {
+    .login-providers {
+      border-top: $base-border;
+      padding-top: $base-spacing;
+      margin-top: $base-spacing;
+      @include row;
+
+      .section-title {
+        display: none;
+      }
+    }
+  }
+
+  .register-form {
+    .login-providers {
+      border-bottom: $base-border;
+      padding-bottom: $base-spacing;
+      margin-bottom: $base-spacing;
+      @include row;
+
+      .button {
+        margin-top: $base-spacing;
+      }
+
+      &+.section-title {
+        display: none;
+      }
+    }
+  }
+
   .login-form, .register-form, .password-reset-form {
     @include block-frame;
     background-color: $white;
-    padding: 20px;
+    padding: $base-spacing;
 
     .action-label {
       margin: 2em 0;
     }
 
-    & > .section-title {
+    .section-title {
       position: relative;
-      h2 {
-        position: absolute;
-        top: -30px;
-        font: {
-          size: 1em;
-          weight: lighter;
-        }
-        .text {
-          background-color: $dark-gray;
-          color: $white;
-          padding: 9px 15px;
-          border-radius: $base-border-radius;
-
-        }
-      }
+      // h2 {
+      //   position: absolute;
+      //   top: -30px;
+      //   font: {
+      //     size: 1em;
+      //     weight: lighter;
+      //   }
+      //   .text {
+      //     background-color: $gray;
+      //     color: $white;
+      //     padding: 9px 15px;
+      //     border-radius: $base-border-radius;
+      //
+      //   }
+      // }
     }
 
     .login-providers {
-      border-top: $base-border;
-      padding-top: $base-spacing;
-      margin-top: $base-spacing;
-      .section-title {
-        display: none;
-      }
       .button {
         @include edx-button($dark-gray);
         .sr {
@@ -66,11 +90,14 @@
       }
     }
 
-    .button, .action {
+    .button {
       @include span-columns(4 of 12);
+    }
 
+    .button, .action {
       @include media($tablet) {
         width: 100%;
+        white-space: normal;
         margin: $small-spacing/2 0;
       }
     }
@@ -92,8 +119,9 @@
   }
 
   .toggle-form {
+    padding: $base-spacing;
     .section-title {
-      margin-bottom: 30px;
+      margin-bottom: $base-spacing*2;
     }
     h2 {
       .text {
@@ -106,6 +134,11 @@
 
     .nav-btn.form-toggle {
       @include edx-button($yellow);
+      @include media($tablet) {
+        width: 100%;
+        white-space: normal;
+        margin: $small-spacing/2 0;
+      }
     }
 
   }

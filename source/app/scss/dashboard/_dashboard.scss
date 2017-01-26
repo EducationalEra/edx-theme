@@ -61,13 +61,26 @@
         .wrapper-course-details {
 
           .course-info {
-            margin-bottom: $base-margin;
+            margin-bottom: $small-spacing;
+
             .info-university {
               font-weight: bold;
               text-transform: uppercase;
+
+              @include media($mobile-l) {
+                @include row;
+                width: 100%;
+                margin-bottom: $small-spacing / 2;
+              }
             }
             .info-date-block {
               float: right;
+              @include media($mobile-l) {
+                @include row;
+                width: 100%;
+                float: left;
+                margin-bottom: $small-spacing / 2;
+              }
             }
           }
 
@@ -76,8 +89,20 @@
             word-break: break-all;
             .title-id {
               font-weight: normal;
+              @include media($mobile-l) {
+                @include row;
+                width: 100%;
+                float: left;
+                margin-bottom: $small-spacing / 2;
+              }
             }
             a, .title-name {
+              @include media($mobile-l) {
+                @include row;
+                width: 100%;
+                float: left;
+                margin-bottom: $small-spacing / 2;
+              }
               // color: $medium-gray;
             }
           }

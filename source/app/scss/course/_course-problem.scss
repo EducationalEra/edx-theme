@@ -71,6 +71,8 @@
                 }
             }
             .submission_feedback {
+                @include row;
+                width: 100%;
                 line-height: $base-spacing*2;
                 // float: right;
             }

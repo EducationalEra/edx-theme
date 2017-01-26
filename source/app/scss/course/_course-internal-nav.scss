@@ -37,15 +37,7 @@
             }
           }
         }
-        @include media($mobile-l) {
-          .sequence-nav {
-            align-items: center;
-            justify-content: center;
-          }
-          .sequence-list-wrapper {
-            display: none;
-          }
-        }
+
         &-button {
             @include course-nav-button;
             min-width: em(40);
@@ -65,6 +57,15 @@
             }
         }
     }
+    @include media($mobile-l) {
+      .sequence-nav {
+        align-items: center;
+        justify-content: center;
+      }
+      .sequence-list-wrapper {
+        display: none;
+      }
+    }
     .sequence-bottom {
       position: relative;
       margin: 0 auto;
@@ -78,7 +79,11 @@
       }
 
       button {
-        @include edx-button($dark-gray);
+        // @include edx-button($dark-gray);
+        border: none;
+        background: none;
+        color: $yellow;
+        cursor: pointer;
         &:before {
           @extend .icon;
           content: "\f097";

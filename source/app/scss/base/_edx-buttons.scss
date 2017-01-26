@@ -32,6 +32,10 @@
   &:hover {
     background-color: lighten($color, 10%);
   }
+
+  @include media($mobile-l) {
+    white-space: normal;
+  }
 }
 
 @mixin edx-flat-button($color: $yellow) {
