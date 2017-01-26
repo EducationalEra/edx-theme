@@ -694,6 +694,9 @@ input[type="radio"] {
         opacity: 0.5; }
       .modal .inner-wrapper .close-modal:hover {
         background-color: #4c4c4c; }
+      @media screen and (max-width: 26.5625em) {
+        .modal .inner-wrapper .close-modal {
+          white-space: normal; } }
     .modal .inner-wrapper .submit input,
     .modal .inner-wrapper .submit button {
       display: block;
@@ -721,6 +724,10 @@ input[type="radio"] {
       .modal .inner-wrapper .submit input:hover,
       .modal .inner-wrapper .submit button:hover {
         background-color: #f3b842; }
+      @media screen and (max-width: 26.5625em) {
+        .modal .inner-wrapper .submit input,
+        .modal .inner-wrapper .submit button {
+          white-space: normal; } }
 
 #unenroll-modal .inner-wrapper,
 #email-settings-modal .inner-wrapper {
@@ -831,67 +838,81 @@ input[type="radio"] {
       .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child, .login-register .form-wrapper .password-reset-form:last-child {
         margin-right: 0; } }
 
+.login-register .form-wrapper .login-form .login-providers {
+  border-top: 1px solid #dddddd;
+  padding-top: 1.5em;
+  margin-top: 1.5em;
+  display: block; }
+  .login-register .form-wrapper .login-form .login-providers::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .login-register .form-wrapper .login-form .login-providers .section-title {
+    display: none; }
+
+.login-register .form-wrapper .register-form .login-providers {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 1.5em;
+  margin-bottom: 1.5em;
+  display: block; }
+  .login-register .form-wrapper .register-form .login-providers::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .login-register .form-wrapper .register-form .login-providers .button {
+    margin-top: 1.5em; }
+  .login-register .form-wrapper .register-form .login-providers + .section-title {
+    display: none; }
+
 .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .password-reset-form {
   border-radius: 3px;
   border: 1px solid #dddddd;
   background-color: #ffffff;
-  padding: 20px; }
+  padding: 1.5em; }
   .login-register .form-wrapper .login-form .action-label, .login-register .form-wrapper .register-form .action-label, .login-register .form-wrapper .password-reset-form .action-label {
     margin: 2em 0; }
-  .login-register .form-wrapper .login-form > .section-title, .login-register .form-wrapper .register-form > .section-title, .login-register .form-wrapper .password-reset-form > .section-title {
+  .login-register .form-wrapper .login-form .section-title, .login-register .form-wrapper .register-form .section-title, .login-register .form-wrapper .password-reset-form .section-title {
     position: relative; }
-    .login-register .form-wrapper .login-form > .section-title h2, .login-register .form-wrapper .register-form > .section-title h2, .login-register .form-wrapper .password-reset-form > .section-title h2 {
-      position: absolute;
-      top: -30px;
-      font-size: 1em;
-      font-weight: lighter; }
-      .login-register .form-wrapper .login-form > .section-title h2 .text, .login-register .form-wrapper .register-form > .section-title h2 .text, .login-register .form-wrapper .password-reset-form > .section-title h2 .text {
-        background-color: #323232;
-        color: #ffffff;
-        padding: 9px 15px;
-        border-radius: 3px; }
-  .login-register .form-wrapper .login-form .login-providers, .login-register .form-wrapper .register-form .login-providers, .login-register .form-wrapper .password-reset-form .login-providers {
-    border-top: 1px solid #dddddd;
-    padding-top: 1.5em;
-    margin-top: 1.5em; }
-    .login-register .form-wrapper .login-form .login-providers .section-title, .login-register .form-wrapper .register-form .login-providers .section-title, .login-register .form-wrapper .password-reset-form .login-providers .section-title {
+  .login-register .form-wrapper .login-form .login-providers .button, .login-register .form-wrapper .register-form .login-providers .button, .login-register .form-wrapper .password-reset-form .login-providers .button {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #323232;
+    color: #ffffff;
+    transition: .1s ease-out; }
+    .login-register .form-wrapper .login-form .login-providers .button:disabled, .login-register .form-wrapper .register-form .login-providers .button:disabled, .login-register .form-wrapper .password-reset-form .login-providers .button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .login-register .form-wrapper .login-form .login-providers .button:hover, .login-register .form-wrapper .register-form .login-providers .button:hover, .login-register .form-wrapper .password-reset-form .login-providers .button:hover {
+      background-color: #4c4c4c; }
+    @media screen and (max-width: 26.5625em) {
+      .login-register .form-wrapper .login-form .login-providers .button, .login-register .form-wrapper .register-form .login-providers .button, .login-register .form-wrapper .password-reset-form .login-providers .button {
+        white-space: normal; } }
+    .login-register .form-wrapper .login-form .login-providers .button .sr, .login-register .form-wrapper .register-form .login-providers .button .sr, .login-register .form-wrapper .password-reset-form .login-providers .button .sr {
       display: none; }
-    .login-register .form-wrapper .login-form .login-providers .button, .login-register .form-wrapper .register-form .login-providers .button, .login-register .form-wrapper .password-reset-form .login-providers .button {
-      display: block;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      line-height: 1.5;
-      padding: .5em 1em;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 1em;
-      font-weight: normal;
-      font-family: "Noto Sans";
-      user-select: none;
-      vertical-align: middle;
-      white-space: nowrap;
-      background-color: #323232;
-      color: #ffffff;
-      transition: .1s ease-out; }
-      .login-register .form-wrapper .login-form .login-providers .button:disabled, .login-register .form-wrapper .register-form .login-providers .button:disabled, .login-register .form-wrapper .password-reset-form .login-providers .button:disabled {
-        cursor: not-allowed;
-        opacity: 0.5; }
-      .login-register .form-wrapper .login-form .login-providers .button:hover, .login-register .form-wrapper .register-form .login-providers .button:hover, .login-register .form-wrapper .password-reset-form .login-providers .button:hover {
-        background-color: #4c4c4c; }
-      .login-register .form-wrapper .login-form .login-providers .button .sr, .login-register .form-wrapper .register-form .login-providers .button .sr, .login-register .form-wrapper .password-reset-form .login-providers .button .sr {
-        display: none; }
-  .login-register .form-wrapper .login-form .button, .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .button, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .button, .login-register .form-wrapper .password-reset-form .action {
+  .login-register .form-wrapper .login-form .button, .login-register .form-wrapper .register-form .button, .login-register .form-wrapper .password-reset-form .button {
     float: left;
     display: block;
     margin-right: 2.35765%;
     width: 31.76157%; }
-    .login-register .form-wrapper .login-form .button:last-child, .login-register .form-wrapper .login-form .action:last-child, .login-register .form-wrapper .register-form .button:last-child, .login-register .form-wrapper .register-form .action:last-child, .login-register .form-wrapper .password-reset-form .button:last-child, .login-register .form-wrapper .password-reset-form .action:last-child {
+    .login-register .form-wrapper .login-form .button:last-child, .login-register .form-wrapper .register-form .button:last-child, .login-register .form-wrapper .password-reset-form .button:last-child {
       margin-right: 0; }
-    @media screen and (max-width: 62.4375em) {
-      .login-register .form-wrapper .login-form .button, .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .button, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .button, .login-register .form-wrapper .password-reset-form .action {
-        width: 100%;
-        margin: 0.375em 0; } }
+  @media screen and (max-width: 62.4375em) {
+    .login-register .form-wrapper .login-form .button, .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .button, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .button, .login-register .form-wrapper .password-reset-form .action {
+      width: 100%;
+      white-space: normal;
+      margin: 0.375em 0; } }
   .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .action {
     display: block;
     border: none;
@@ -916,6 +937,9 @@ input[type="radio"] {
       opacity: 0.5; }
     .login-register .form-wrapper .login-form .action:hover, .login-register .form-wrapper .register-form .action:hover, .login-register .form-wrapper .password-reset-form .action:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .action {
+        white-space: normal; } }
   .login-register .form-wrapper .login-form p.sr, .login-register .form-wrapper .register-form p.sr, .login-register .form-wrapper .password-reset-form p.sr {
     display: none; }
   .login-register .form-wrapper .login-form button[type="submit"] + p.note, .login-register .form-wrapper .register-form button[type="submit"] + p.note, .login-register .form-wrapper .password-reset-form button[type="submit"] + p.note {
@@ -923,36 +947,44 @@ input[type="radio"] {
     line-height: 40px;
     color: #a1a1a1; }
 
-.login-register .form-wrapper .toggle-form .section-title {
-  margin-bottom: 30px; }
-
-.login-register .form-wrapper .toggle-form h2 .text {
-  font-size: 1em;
-  font-weight: bold; }
-
-.login-register .form-wrapper .toggle-form .nav-btn.form-toggle {
-  display: block;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  line-height: 1.5;
-  padding: .5em 1em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: normal;
-  font-family: "Noto Sans";
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  background-color: #f0a612;
-  color: #ffffff;
-  transition: .1s ease-out; }
-  .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:disabled {
-    cursor: not-allowed;
-    opacity: 0.5; }
-  .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:hover {
-    background-color: #f3b842; }
+.login-register .form-wrapper .toggle-form {
+  padding: 1.5em; }
+  .login-register .form-wrapper .toggle-form .section-title {
+    margin-bottom: 3em; }
+  .login-register .form-wrapper .toggle-form h2 .text {
+    font-size: 1em;
+    font-weight: bold; }
+  .login-register .form-wrapper .toggle-form .nav-btn.form-toggle {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #f0a612;
+    color: #ffffff;
+    transition: .1s ease-out; }
+    .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:hover {
+      background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .login-register .form-wrapper .toggle-form .nav-btn.form-toggle {
+        white-space: normal; } }
+    @media screen and (max-width: 62.4375em) {
+      .login-register .form-wrapper .toggle-form .nav-btn.form-toggle {
+        width: 100%;
+        white-space: normal;
+        margin: 0.375em 0; } }
 
 .dashboard .wrapper-header-courses .header-courses, .home .wrapper-header-courses .header-courses, .find-courses .wrapper-header-courses .header-courses {
   text-transform: uppercase;
@@ -1024,16 +1056,55 @@ input[type="radio"] {
   .dashboard .listing-courses .course .wrapper-course-image, .dashboard .courses-listing .course .wrapper-course-image, .home .listing-courses .course .wrapper-course-image, .home .courses-listing .course .wrapper-course-image, .find-courses .listing-courses .course .wrapper-course-image, .find-courses .courses-listing .course .wrapper-course-image {
     text-align: center; }
   .dashboard .listing-courses .course .wrapper-course-details .course-info, .dashboard .courses-listing .course .wrapper-course-details .course-info, .home .listing-courses .course .wrapper-course-details .course-info, .home .courses-listing .course .wrapper-course-details .course-info, .find-courses .listing-courses .course .wrapper-course-details .course-info, .find-courses .courses-listing .course .wrapper-course-details .course-info {
-    margin-bottom: 0.625em; }
+    margin-bottom: 0.75em; }
     .dashboard .listing-courses .course .wrapper-course-details .course-info .info-university, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-university, .home .listing-courses .course .wrapper-course-details .course-info .info-university, .home .courses-listing .course .wrapper-course-details .course-info .info-university, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-university, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-university {
       font-weight: bold;
       text-transform: uppercase; }
+      @media screen and (max-width: 26.5625em) {
+        .dashboard .listing-courses .course .wrapper-course-details .course-info .info-university, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-university, .home .listing-courses .course .wrapper-course-details .course-info .info-university, .home .courses-listing .course .wrapper-course-details .course-info .info-university, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-university, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-university {
+          display: block;
+          width: 100%;
+          margin-bottom: 0.375em; }
+          .dashboard .listing-courses .course .wrapper-course-details .course-info .info-university::after, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-university::after, .home .listing-courses .course .wrapper-course-details .course-info .info-university::after, .home .courses-listing .course .wrapper-course-details .course-info .info-university::after, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-university::after, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-university::after {
+            clear: both;
+            content: "";
+            display: block; } }
     .dashboard .listing-courses .course .wrapper-course-details .course-info .info-date-block, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-date-block, .home .listing-courses .course .wrapper-course-details .course-info .info-date-block, .home .courses-listing .course .wrapper-course-details .course-info .info-date-block, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-date-block, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-date-block {
       float: right; }
+      @media screen and (max-width: 26.5625em) {
+        .dashboard .listing-courses .course .wrapper-course-details .course-info .info-date-block, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-date-block, .home .listing-courses .course .wrapper-course-details .course-info .info-date-block, .home .courses-listing .course .wrapper-course-details .course-info .info-date-block, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-date-block, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-date-block {
+          display: block;
+          width: 100%;
+          float: left;
+          margin-bottom: 0.375em; }
+          .dashboard .listing-courses .course .wrapper-course-details .course-info .info-date-block::after, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-date-block::after, .home .listing-courses .course .wrapper-course-details .course-info .info-date-block::after, .home .courses-listing .course .wrapper-course-details .course-info .info-date-block::after, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-date-block::after, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-date-block::after {
+            clear: both;
+            content: "";
+            display: block; } }
   .dashboard .listing-courses .course .wrapper-course-details .course-title, .dashboard .courses-listing .course .wrapper-course-details .course-title, .home .listing-courses .course .wrapper-course-details .course-title, .home .courses-listing .course .wrapper-course-details .course-title, .find-courses .listing-courses .course .wrapper-course-details .course-title, .find-courses .courses-listing .course .wrapper-course-details .course-title {
     word-break: break-all; }
     .dashboard .listing-courses .course .wrapper-course-details .course-title .title-id, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-id, .home .listing-courses .course .wrapper-course-details .course-title .title-id, .home .courses-listing .course .wrapper-course-details .course-title .title-id, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-id, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-id {
       font-weight: normal; }
+      @media screen and (max-width: 26.5625em) {
+        .dashboard .listing-courses .course .wrapper-course-details .course-title .title-id, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-id, .home .listing-courses .course .wrapper-course-details .course-title .title-id, .home .courses-listing .course .wrapper-course-details .course-title .title-id, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-id, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-id {
+          display: block;
+          width: 100%;
+          float: left;
+          margin-bottom: 0.375em; }
+          .dashboard .listing-courses .course .wrapper-course-details .course-title .title-id::after, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-id::after, .home .listing-courses .course .wrapper-course-details .course-title .title-id::after, .home .courses-listing .course .wrapper-course-details .course-title .title-id::after, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-id::after, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-id::after {
+            clear: both;
+            content: "";
+            display: block; } }
+    @media screen and (max-width: 26.5625em) {
+      .dashboard .listing-courses .course .wrapper-course-details .course-title a, .dashboard .listing-courses .course .wrapper-course-details .course-title .title-name, .dashboard .courses-listing .course .wrapper-course-details .course-title a, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-name, .home .listing-courses .course .wrapper-course-details .course-title a, .home .listing-courses .course .wrapper-course-details .course-title .title-name, .home .courses-listing .course .wrapper-course-details .course-title a, .home .courses-listing .course .wrapper-course-details .course-title .title-name, .find-courses .listing-courses .course .wrapper-course-details .course-title a, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-name, .find-courses .courses-listing .course .wrapper-course-details .course-title a, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-name {
+        display: block;
+        width: 100%;
+        float: left;
+        margin-bottom: 0.375em; }
+        .dashboard .listing-courses .course .wrapper-course-details .course-title a::after, .dashboard .listing-courses .course .wrapper-course-details .course-title .title-name::after, .dashboard .courses-listing .course .wrapper-course-details .course-title a::after, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-name::after, .home .listing-courses .course .wrapper-course-details .course-title a::after, .home .listing-courses .course .wrapper-course-details .course-title .title-name::after, .home .courses-listing .course .wrapper-course-details .course-title a::after, .home .courses-listing .course .wrapper-course-details .course-title .title-name::after, .find-courses .listing-courses .course .wrapper-course-details .course-title a::after, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-name::after, .find-courses .courses-listing .course .wrapper-course-details .course-title a::after, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-name::after {
+          clear: both;
+          content: "";
+          display: block; } }
   .dashboard .listing-courses .course .wrapper-course-actions .action .sr, .dashboard .courses-listing .course .wrapper-course-actions .action .sr, .home .listing-courses .course .wrapper-course-actions .action .sr, .home .courses-listing .course .wrapper-course-actions .action .sr, .find-courses .listing-courses .course .wrapper-course-actions .action .sr, .find-courses .courses-listing .course .wrapper-course-actions .action .sr {
     display: none; }
   .dashboard .listing-courses .course .wrapper-course-actions .course-actions, .dashboard .courses-listing .course .wrapper-course-actions .course-actions, .home .listing-courses .course .wrapper-course-actions .course-actions, .home .courses-listing .course .wrapper-course-actions .course-actions, .find-courses .listing-courses .course .wrapper-course-actions .course-actions, .find-courses .courses-listing .course .wrapper-course-actions .course-actions {
@@ -1069,6 +1140,9 @@ input[type="radio"] {
         opacity: 0.5; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover {
         background-color: #f3b842; }
+      @media screen and (max-width: 26.5625em) {
+        .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more {
+          white-space: normal; } }
       @media screen and (max-width: 26.5625em) {
         .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more {
           width: 100%;
@@ -1132,6 +1206,9 @@ input[type="radio"] {
       opacity: 0.5; }
     .dashboard .listing-courses .course .learn-more:hover, .dashboard .courses-listing .course .learn-more:hover, .home .listing-courses .course .learn-more:hover, .home .courses-listing .course .learn-more:hover, .find-courses .listing-courses .course .learn-more:hover, .find-courses .courses-listing .course .learn-more:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .dashboard .listing-courses .course .learn-more, .dashboard .courses-listing .course .learn-more, .home .listing-courses .course .learn-more, .home .courses-listing .course .learn-more, .find-courses .listing-courses .course .learn-more, .find-courses .courses-listing .course .learn-more {
+        white-space: normal; } }
   .dashboard .listing-courses .course .wrapper-action-more, .dashboard .courses-listing .course .wrapper-action-more, .home .listing-courses .course .wrapper-action-more, .home .courses-listing .course .wrapper-action-more, .find-courses .listing-courses .course .wrapper-action-more, .find-courses .courses-listing .course .wrapper-action-more {
     float: right;
     position: relative; }
@@ -1180,6 +1257,9 @@ input[type="radio"] {
       opacity: 0.5; }
     .dashboard .listing-courses .course .action-upgrade-container .action-upgrade:hover, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade:hover, .home .listing-courses .course .action-upgrade-container .action-upgrade:hover, .home .courses-listing .course .action-upgrade-container .action-upgrade:hover, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade:hover, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade:hover {
       background-color: #4c4c4c; }
+    @media screen and (max-width: 26.5625em) {
+      .dashboard .listing-courses .course .action-upgrade-container .action-upgrade, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade, .home .listing-courses .course .action-upgrade-container .action-upgrade, .home .courses-listing .course .action-upgrade-container .action-upgrade, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade {
+        white-space: normal; } }
 
 .profile-sidebar {
   display: none; }
@@ -1263,6 +1343,9 @@ input[type="radio"] {
       opacity: 0.5; }
     .view-in-course .paging-footer .nav-item button:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .view-in-course .paging-footer .nav-item button {
+        white-space: normal; } }
 
 .discussion .info-wrapper,
 .view-in-course .info-wrapper {
@@ -1294,6 +1377,10 @@ input[type="radio"] {
     .discussion .info-wrapper button:hover,
     .view-in-course .info-wrapper button:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .discussion .info-wrapper button,
+      .view-in-course .info-wrapper button {
+        white-space: normal; } }
   @media screen and (min-width: 62.5em) {
     .discussion .info-wrapper .updates,
     .view-in-course .info-wrapper .updates {
@@ -1577,6 +1664,10 @@ input[type="radio"] {
       .wrapper-course-material .right .new-post-btn:hover,
       .wrapper-course-material .tab .new-post-btn:hover {
         background-color: #4c4c4c; }
+      @media screen and (max-width: 26.5625em) {
+        .wrapper-course-material .right .new-post-btn,
+        .wrapper-course-material .tab .new-post-btn {
+          white-space: normal; } }
     .wrapper-course-material .right .sr,
     .wrapper-course-material .tab .sr {
       display: none; }
@@ -1647,12 +1738,6 @@ input[type="radio"] {
             position: absolute;
             top: -2px;
             right: 5px; }
-  @media screen and (max-width: 26.5625em) {
-    .view-in-course .sequence-nav .sequence-nav {
-      align-items: center;
-      justify-content: center; }
-    .view-in-course .sequence-nav .sequence-list-wrapper {
-      display: none; } }
   .view-in-course .sequence-nav-button {
     background-color: #e5f2fa;
     border: 0;
@@ -1691,34 +1776,23 @@ input[type="radio"] {
     .view-in-course .sequence-nav-button.button-previous, .view-in-course .sequence-nav-button.button-next {
       background-color: #8fc7ea; }
 
+@media screen and (max-width: 26.5625em) {
+  .view-in-course .sequence-nav {
+    align-items: center;
+    justify-content: center; }
+  .view-in-course .sequence-list-wrapper {
+    display: none; } }
+
 .view-in-course .sequence-bottom {
   position: relative;
   margin: 0 auto;
   width: 5em; }
 
 .view-in-course .bookmark-button-wrapper button {
-  display: block;
   border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  line-height: 1.5;
-  padding: .5em 1em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: normal;
-  font-family: "Noto Sans";
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  background-color: #323232;
-  color: #ffffff;
-  transition: .1s ease-out; }
-  .view-in-course .bookmark-button-wrapper button:disabled {
-    cursor: not-allowed;
-    opacity: 0.5; }
-  .view-in-course .bookmark-button-wrapper button:hover {
-    background-color: #4c4c4c; }
+  background: none;
+  color: #f0a612;
+  cursor: pointer; }
   .view-in-course .bookmark-button-wrapper button:before {
     content: "\f097"; }
   .view-in-course .bookmark-button-wrapper button.bookmarked:before {
@@ -1787,6 +1861,9 @@ input[type="radio"] {
         opacity: 0.5; }
       .view-in-course .problem .action .check:hover {
         background-color: #f3b842; }
+      @media screen and (max-width: 26.5625em) {
+        .view-in-course .problem .action .check {
+          white-space: normal; } }
     .view-in-course .problem .action .show, .view-in-course .problem .action .save, .view-in-course .problem .action .reset {
       display: block;
       border: none;
@@ -1810,10 +1887,19 @@ input[type="radio"] {
         opacity: 0.5; }
       .view-in-course .problem .action .show:hover, .view-in-course .problem .action .save:hover, .view-in-course .problem .action .reset:hover {
         background-color: #4c4c4c; }
+      @media screen and (max-width: 26.5625em) {
+        .view-in-course .problem .action .show, .view-in-course .problem .action .save, .view-in-course .problem .action .reset {
+          white-space: normal; } }
       .view-in-course .problem .action .show .sr, .view-in-course .problem .action .save .sr, .view-in-course .problem .action .reset .sr {
         display: none; }
     .view-in-course .problem .action .submission_feedback {
+      display: block;
+      width: 100%;
       line-height: 3em; }
+      .view-in-course .problem .action .submission_feedback::after {
+        clear: both;
+        content: "";
+        display: block; }
   .view-in-course .problem .solution-span {
     margin-bottom: 1em; }
     .view-in-course .problem .solution-span solution {
@@ -2289,37 +2375,20 @@ input[type="radio"] {
     .idash-section .gradebook-link:hover,
     .idash-section button:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .idash-section input[type=button],
+      .idash-section input[type=submit],
+      .idash-section .gradebook-link,
+      .idash-section button {
+        white-space: normal; } }
 
 .wrap-instructor-info {
   margin: 0.625em 0;
   float: left;
   width: 100%; }
   .wrap-instructor-info .instructor-info-action {
-    display: block;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    line-height: 1.5;
-    padding: .5em 1em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: normal;
-    font-family: "Noto Sans";
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    background-color: #323232;
-    color: #ffffff;
-    transition: .1s ease-out;
     display: inline-block;
-    color: white;
     margin: 0 0.25em; }
-    .wrap-instructor-info .instructor-info-action:disabled {
-      cursor: not-allowed;
-      opacity: 0.5; }
-    .wrap-instructor-info .instructor-info-action:hover {
-      background-color: #4c4c4c; }
     @media screen and (max-width: 26.5625em) {
       .wrap-instructor-info .instructor-info-action {
         width: 100%; } }
@@ -2364,14 +2433,13 @@ input[type="radio"] {
       opacity: 0.5; }
     .view-in-course .discussion-module .new-post-btn:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .view-in-course .discussion-module .new-post-btn {
+        white-space: normal; } }
   @media screen and (max-width: 26.5625em) {
     .view-in-course .discussion-module .new-post-btn {
       float: none;
       width: 100%; } }
-  .view-in-course .discussion-module .home-helpgrid td,
-  .view-in-course .discussion-module .home-helpgrid th {
-    text-overflow: ellipsis;
-    word-break: break-all; }
 
 .tc-wrapper .video-wrapper {
   float: left;
@@ -2623,6 +2691,9 @@ input[type="radio"] {
           opacity: 0.5; }
         .content-wrapper > .course-info .course-profile .main-cta a:hover {
           background-color: #006dc0; }
+        @media screen and (max-width: 26.5625em) {
+          .content-wrapper > .course-info .course-profile .main-cta a {
+            white-space: normal; } }
         @media screen and (max-width: 20em) {
           .content-wrapper > .course-info .course-profile .main-cta a {
             display: block;
@@ -2778,6 +2849,9 @@ input[type="radio"] {
           opacity: 0.5; }
         .content-wrapper > .course-info .container .inner-wrapper > section > .container .more-info .register:hover {
           background-color: #006dc0; }
+        @media screen and (max-width: 26.5625em) {
+          .content-wrapper > .course-info .container .inner-wrapper > section > .container .more-info .register {
+            white-space: normal; } }
     .content-wrapper > .course-info .container .inner-wrapper > section > .container .inside {
       display: block;
       margin-bottom: 20px; }
@@ -3187,6 +3261,9 @@ input[type="radio"] {
           opacity: 0.5; }
         .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn:hover {
           background-color: #f3b842; }
+        @media screen and (max-width: 26.5625em) {
+          .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
+            white-space: normal; } }
   .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .js-response-list {
     margin: 2em 0; }
   .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-main-wrapper {
@@ -3319,6 +3396,9 @@ input[type="radio"] {
       opacity: 0.5; }
     .discussion .discussion-body .discussion-column .reply-post-control a:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .discussion .discussion-body .discussion-column .reply-post-control a {
+        white-space: normal; } }
   .discussion .discussion-body .discussion-column .comment-form .sr {
     display: none; }
   .discussion .discussion-body .discussion-column .comment-actions-list {
@@ -3388,6 +3468,9 @@ input[type="radio"] {
     opacity: 0.5; }
   .view-in-course .new-post-article .submit:hover, .discussion .new-post-article .submit:hover {
     background-color: #f3b842; }
+  @media screen and (max-width: 26.5625em) {
+    .view-in-course .new-post-article .submit, .discussion .new-post-article .submit {
+      white-space: normal; } }
 
 .view-in-course .new-post-article .cancel, .discussion .new-post-article .cancel {
   display: block;
@@ -3412,6 +3495,9 @@ input[type="radio"] {
     opacity: 0.5; }
   .view-in-course .new-post-article .cancel:hover, .discussion .new-post-article .cancel:hover {
     background-color: #4c4c4c; }
+  @media screen and (max-width: 26.5625em) {
+    .view-in-course .new-post-article .cancel, .discussion .new-post-article .cancel {
+      white-space: normal; } }
 
 .view-in-course .new-post-article .submit, .view-in-course .new-post-article .cancel, .discussion .new-post-article .submit, .discussion .new-post-article .cancel {
   width: auto;
@@ -3610,6 +3696,9 @@ input[type="radio"] {
       opacity: 0.5; }
     .account-settings-section-body .u-field-link:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .account-settings-section-body .u-field-link {
+        white-space: normal; } }
 
 .u-field-account_privacy .u-field-value-display {
   display: none; }
@@ -3811,6 +3900,9 @@ input[type="radio"] {
       opacity: 0.5; }
     .wiki-wrapper .form-actions .btn:hover {
       background-color: #4c4c4c; }
+    @media screen and (max-width: 26.5625em) {
+      .wiki-wrapper .form-actions .btn {
+        white-space: normal; } }
   .wiki-wrapper .form-actions .btn-primary {
     display: block;
     border: none;
@@ -3834,6 +3926,9 @@ input[type="radio"] {
       opacity: 0.5; }
     .wiki-wrapper .form-actions .btn-primary:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .wiki-wrapper .form-actions .btn-primary {
+        white-space: normal; } }
   .wiki-wrapper .form-actions .btn {
     display: inline; }
 
@@ -4008,6 +4103,9 @@ input[type="radio"] {
     opacity: 0.5; }
   .wrapper-header .collapse-navigation:hover {
     background-color: #f3b842; }
+  @media screen and (max-width: 26.5625em) {
+    .wrapper-header .collapse-navigation {
+      white-space: normal; } }
   @media screen and (max-width: 62.4375em) {
     .wrapper-header .collapse-navigation {
       display: block; } }
@@ -4054,6 +4152,9 @@ input[type="radio"] {
       opacity: 0.5; }
     .header-navigation .user .dropdown:hover {
       background-color: #f3b842; }
+    @media screen and (max-width: 26.5625em) {
+      .header-navigation .user .dropdown {
+        white-space: normal; } }
     @media screen and (max-width: 62.4375em) {
       .header-navigation .user .dropdown {
         display: none; } }
@@ -4116,6 +4217,9 @@ input[type="radio"] {
     opacity: 0.5; }
   .header-navigation .user-link:hover {
     background-color: #f3b842; }
+  @media screen and (max-width: 26.5625em) {
+    .header-navigation .user-link {
+      white-space: normal; } }
   @media screen and (max-width: 62.4375em) {
     .header-navigation .user-link {
       display: none; } }
