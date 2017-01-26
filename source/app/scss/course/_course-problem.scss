@@ -60,11 +60,12 @@
                     display: block;
                 }
             }
+            $bb: darken($soft-blue, 30%);
             .check {
-                @include edx-button($yellow);
+                @include edx-button($bb);
             }
             .show, .save, .reset {
-                @include edx-button($dark-gray);
+                @include edx-button($bb);
                 .sr {
                     // TODO: tbd
                     display: none;

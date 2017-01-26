@@ -23,7 +23,9 @@
               box-sizing: border-box;
               flex-grow: 1;
               button {
+
                 @include course-nav-button;
+                position: relative;
                 width: 100%;
                 &:hover {
                   background-color: darken($soft-blue, 20%);
@@ -42,7 +44,6 @@
             @include course-nav-button;
             min-width: em(40);
             max-width: em(40);
-            background-color: darken($soft-blue, 10%);
             &.button-previous {
                 border-top-left-radius: 50%;
                 border-bottom-left-radius: 50%;
@@ -53,7 +54,7 @@
             }
             &.button-previous,
             &.button-next {
-              background-color: darken($soft-blue, 20%);
+              // background-color: darken($soft-blue, 20%);
             }
         }
     }
@@ -74,6 +75,10 @@
     .bookmark-button-wrapper {
       // @include row;
       // width: 100%;
+      // float: right;
+      width: 100%;
+      display: block;
+      text-align: right;
       .sr {
         // display: none;
       }
@@ -94,4 +99,42 @@
 
       }
     }
+}
+
+.bookmarks-results-header {
+  font-size: 1em;
+}
+
+.bookmarks-results-list-item {
+  @include row;
+  color: black;
+  padding: $base-spacing;
+  margin: $base-spacing 0;
+  border: $base-border;
+  p {
+    font-size: smaller;
+    color: $gray;
+  }
+  h3 {
+    font-size: 1em;
+    font-weight: normal;
+  }
+  .list-item-right-section {
+    display: none;
+  }
+
+  position: relative;
+  &:before {
+    @extend .icon;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    content: "\f02e";
+  }
+}
+
+.pagination-form {
+  label {
+    display: none;
+  }
 }

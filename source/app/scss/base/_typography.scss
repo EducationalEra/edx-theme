@@ -48,14 +48,14 @@ p {
 }
 
 a {
-  color: $action-color;
+  color: $brand-blue;
   text-decoration: none;
   transition: color 0.1s linear;
 
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
+    color: darken($brand-blue, 15%);
   }
 
   &:active,

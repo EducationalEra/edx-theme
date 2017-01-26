@@ -38,10 +38,10 @@
     }
 
     .submit {
-      @include edx-button($yellow);
+      @include edx-button($bb);
     }
     .cancel {
-      @include edx-button($dark-gray);
+      @include edx-button($bb);
     }
     .submit, .cancel {
       width: auto;

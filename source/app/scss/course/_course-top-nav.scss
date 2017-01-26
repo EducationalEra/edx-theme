@@ -12,10 +12,10 @@
             padding-right: 0;
         }
         a {
-            @include edx-flat-button($dark-gray);
+            @include edx-flat-button($bb);
         }
         .new-post-btn {
-            @include edx-button($dark-gray);
+            @include edx-button($bb);
         }
         .sr {
             // TODO: tbd

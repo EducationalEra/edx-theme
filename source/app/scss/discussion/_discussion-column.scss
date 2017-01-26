@@ -11,7 +11,7 @@
                 .add-response {
                     float: right;
                     &-btn {
-                        @include edx-button($yellow);
+                        @include edx-button($bb);
                     }
                 }
             }

@@ -10,16 +10,31 @@
         float: left;
         text-align: center;
         .page-number-label, .page-number-input {
-          // display: none;
+          display: none;
         }
         .sr {
           display: none;
         }
         &.page {
-          padding: .5em 1em;
+          display: none;
         }
+
         button {
-          @include edx-button($yellow);
+          @include course-nav-button;
+          min-width: em(40);
+          max-width: em(40);
+          margin: 0 auto;
+          .nav-label {
+            display: none;
+          }
+          &.previous-page-link {
+              border-top-left-radius: 50%;
+              border-bottom-left-radius: 50%;
+          }
+          &.next-page-link {
+              border-top-right-radius: 50%;
+              border-bottom-right-radius: 50%;
+          }
         }
       }
     }

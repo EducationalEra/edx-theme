@@ -83,11 +83,15 @@
 }
 
 @mixin course-nav-button {
-  background-color: $soft-blue;
+  // background-color: darken($soft-blue, 10%);
+  background: none;
   border: 0;
   width: em(40);
   height: em(40);
   display: inline-block;
+  border-top: $base-border;
+  border-bottom: $base-border;
+  // color: $blue;
   float: left;
   .sr {
     display: none;
@@ -97,10 +101,12 @@
     display: none;
   }
 
-  & .fa-chevron-prev:before {
+  & .fa-chevron-prev:before,
+  & .fa-angle-left:before {
     content: "\f0d9";
     font-size: 2em;
   }
+  & .fa-angle-right:before,
   & .fa-chevron-next:before {
     content: "\f0da";
     font-size: 2em;
@@ -119,9 +125,8 @@
     content: "\f129";
   }
 
-
   &:hover, &.active {
-    background-color: darken($soft-blue, 10%);
+    background-color: $soft-blue;
     cursor: pointer;
   }
 }

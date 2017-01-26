@@ -51,9 +51,11 @@
                         padding-right: 0.7em;
                     }
                 }
-                &.is-open {
-                    background-color: $soft-blue;
+                &.active {
+                  font-weight: bold;
                 }
+                border-top: 2px solid #fbfbfb;
+
             }
             .chapter-content-container {
                 @include row;
@@ -63,7 +65,11 @@
                         right: 1em;
                     }
                     .menu-item {
-                        &.active,
+                        &.active {
+                          .accordion-nav {
+                              background-color: $soft-blue;
+                          }
+                        }
                         &:hover {
                             .accordion-nav {
                                 background-color: darken($soft-blue, 10%);
@@ -82,7 +88,7 @@
                             margin: 0;
                         }
                         .accordion-display-name {
-                            color: $blue;
+                            // color: $blue;
                             font-weight: bold;
                             text-overflow: ellipsis;
                             overflow: hidden;
@@ -98,7 +104,7 @@
                     }
                 }
                 &.is-open {
-                    background-color: $soft-blue;
+                    // border-bottom: $base-border;
                 }
             }
         }
