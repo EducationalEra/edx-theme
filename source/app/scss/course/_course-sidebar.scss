@@ -5,21 +5,25 @@
         .courseware-bookmarks-button {
             @include row;
             padding: 0.5em;
-            background-color: $soft-blue;
+            // background-color: $soft-blue;
             button {
                 text-align: left;
-                color: $blue;
+                color: $yellow;
                 font-weight: bold;
                 padding: 0.75em 1em;
                 border-radius: $base-border-radius;
-                background-color: $soft-blue;
+                background: none;
                 border: none;
                 width: 100%;
                 cursor: pointer;
-                &:hover,
-                &.is-active {
-                    background-color: darken($soft-blue, 10%);
+                &:before {
+                  @extend .icon;
+                  content: "\f02e";
                 }
+                // &:hover,
+                // &.is-active {
+                //     background-color: darken($soft-blue, 10%);
+                // }
             }
         }
         .course-navigation {

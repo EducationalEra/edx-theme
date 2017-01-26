@@ -28,6 +28,16 @@
 .view-in-course {
     .info-wrapper {
         margin-bottom: 1em;
+        background-color: $white;
+        padding: $small-spacing;
+        float: left;
+        h1 {
+          margin-top: $base-spacing;
+          font-size: 1em;
+          font-weight: normal;
+          text-transform: uppercase;
+          margin-bottom: $base-spacing;
+        }
         button {
           @include edx-button($yellow);
           margin-bottom: $base-spacing;
@@ -45,9 +55,8 @@
               @include span-columns(12 of 12);
             }
             article {
-              background-color: $white;
-              padding: $small-spacing;
-              margin-bottom: $small-spacing;
+              padding-top: $base-spacing;
+              border-top: $base-border;
               h2 {
                 font-size: 1em;
               }
@@ -68,8 +77,16 @@
         }
     }
 
-    .home, .page-header-main, .page-title, .page-subtitle, .xblock {
+    .home, .page-header-main, .page-subtitle, .xblock {
       @include row;
+    }
+
+    .info-wrapper {
+
+    }
+
+    .page-header-main {
+      display: none;
     }
 
     .xblock {
