@@ -446,7 +446,8 @@ td {
 tr,
 td,
 th {
-  vertical-align: middle; }
+  vertical-align: middle;
+  word-break: break-all; }
 
 body {
   -webkit-font-feature-settings: "kern", "liga", "pnum";
@@ -532,10 +533,6 @@ picture {
   -moz-osx-font-smoothing: grayscale;
   transform: translate(0, 0); }
 
-a:hover, a:active {
-  cursor: pointer;
-  color: #936509; }
-
 .z-depth-0 {
   box-shadow: none !important; }
 
@@ -590,19 +587,6 @@ a:hover, a:active {
 
 .sr {
   display: none; }
-
-*:hover .sr {
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute;
-  margin: -1px;
-  height: 1px;
-  width: 1px;
-  border: 0;
-  padding: 0;
-  overflow: hidden;
-  word-wrap: normal;
-  display: block; }
 
 input, textarea, select {
   border: none;
@@ -686,14 +670,14 @@ input[type="radio"] {
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
-      background-color: #323232;
+      background-color: #65b2e1;
       color: #ffffff;
       transition: .1s ease-out; }
       .modal .inner-wrapper .close-modal:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
       .modal .inner-wrapper .close-modal:hover {
-        background-color: #4c4c4c; }
+        background-color: #8fc7ea; }
       @media screen and (max-width: 26.5625em) {
         .modal .inner-wrapper .close-modal {
           white-space: normal; } }
@@ -713,7 +697,7 @@ input[type="radio"] {
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
-      background-color: #f0a612;
+      background-color: #65b2e1;
       color: #ffffff;
       transition: .1s ease-out;
       margin: 0.625em 0; }
@@ -723,7 +707,7 @@ input[type="radio"] {
         opacity: 0.5; }
       .modal .inner-wrapper .submit input:hover,
       .modal .inner-wrapper .submit button:hover {
-        background-color: #f3b842; }
+        background-color: #8fc7ea; }
       @media screen and (max-width: 26.5625em) {
         .modal .inner-wrapper .submit input,
         .modal .inner-wrapper .submit button {
@@ -888,14 +872,14 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #323232;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out; }
     .login-register .form-wrapper .login-form .login-providers .button:disabled, .login-register .form-wrapper .register-form .login-providers .button:disabled, .login-register .form-wrapper .password-reset-form .login-providers .button:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
     .login-register .form-wrapper .login-form .login-providers .button:hover, .login-register .form-wrapper .register-form .login-providers .button:hover, .login-register .form-wrapper .password-reset-form .login-providers .button:hover {
-      background-color: #4c4c4c; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .login-register .form-wrapper .login-form .login-providers .button, .login-register .form-wrapper .register-form .login-providers .button, .login-register .form-wrapper .password-reset-form .login-providers .button {
         white-space: normal; } }
@@ -928,7 +912,7 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #f0a612;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out;
     float: none; }
@@ -936,7 +920,7 @@ input[type="radio"] {
       cursor: not-allowed;
       opacity: 0.5; }
     .login-register .form-wrapper .login-form .action:hover, .login-register .form-wrapper .register-form .action:hover, .login-register .form-wrapper .password-reset-form .action:hover {
-      background-color: #f3b842; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .action {
         white-space: normal; } }
@@ -969,14 +953,14 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #f0a612;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out; }
     .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
     .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:hover {
-      background-color: #f3b842; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .login-register .form-wrapper .toggle-form .nav-btn.form-toggle {
         white-space: normal; } }
@@ -1130,7 +1114,7 @@ input[type="radio"] {
       user-select: none;
       vertical-align: middle;
       white-space: nowrap;
-      background-color: #f0a612;
+      background-color: #65b2e1;
       color: #ffffff;
       transition: .1s ease-out;
       margin: 0;
@@ -1139,7 +1123,7 @@ input[type="radio"] {
         cursor: not-allowed;
         opacity: 0.5; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover {
-        background-color: #f3b842; }
+        background-color: #8fc7ea; }
       @media screen and (max-width: 26.5625em) {
         .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more {
           white-space: normal; } }
@@ -1172,12 +1156,12 @@ input[type="radio"] {
         cursor: not-allowed;
         opacity: 0.5; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more.active, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more.active, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more.active, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more.active, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more.active, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more.active, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section {
-        background-color: #f0a612;
+        background-color: #65b2e1;
         color: #ffffff; }
         .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more.active:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more.active:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more.active:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more.active:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more.active:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more.active:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more.active-section:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook.active-section:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter.active-section:hover {
-          background-color: #f0a612; }
+          background-color: #65b2e1; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter:hover {
-        background-color: #f6ca72;
+        background-color: #baddf2;
         color: #ffffff; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-more .sr, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-facebook .sr, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .action-twitter .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-more .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-facebook .sr, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .action-twitter .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action-more .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action-facebook .sr, .home .listing-courses .course .wrapper-course-actions .course-actions .action-twitter .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action-more .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action-facebook .sr, .home .courses-listing .course .wrapper-course-actions .course-actions .action-twitter .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-more .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-facebook .sr, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .action-twitter .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-more .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-facebook .sr, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .action-twitter .sr {
         display: none; }
@@ -1198,14 +1182,14 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #f0a612;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out; }
     .dashboard .listing-courses .course .learn-more:disabled, .dashboard .courses-listing .course .learn-more:disabled, .home .listing-courses .course .learn-more:disabled, .home .courses-listing .course .learn-more:disabled, .find-courses .listing-courses .course .learn-more:disabled, .find-courses .courses-listing .course .learn-more:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
     .dashboard .listing-courses .course .learn-more:hover, .dashboard .courses-listing .course .learn-more:hover, .home .listing-courses .course .learn-more:hover, .home .courses-listing .course .learn-more:hover, .find-courses .listing-courses .course .learn-more:hover, .find-courses .courses-listing .course .learn-more:hover {
-      background-color: #f3b842; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .dashboard .listing-courses .course .learn-more, .dashboard .courses-listing .course .learn-more, .home .listing-courses .course .learn-more, .home .courses-listing .course .learn-more, .find-courses .listing-courses .course .learn-more, .find-courses .courses-listing .course .learn-more {
         white-space: normal; } }
@@ -1246,7 +1230,7 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #323232;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out;
     display: inline-block; }
@@ -1256,7 +1240,7 @@ input[type="radio"] {
       cursor: not-allowed;
       opacity: 0.5; }
     .dashboard .listing-courses .course .action-upgrade-container .action-upgrade:hover, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade:hover, .home .listing-courses .course .action-upgrade-container .action-upgrade:hover, .home .courses-listing .course .action-upgrade-container .action-upgrade:hover, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade:hover, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade:hover {
-      background-color: #4c4c4c; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .dashboard .listing-courses .course .action-upgrade-container .action-upgrade, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade, .home .listing-courses .course .action-upgrade-container .action-upgrade, .home .courses-listing .course .action-upgrade-container .action-upgrade, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade {
         white-space: normal; } }
@@ -1393,7 +1377,7 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #f0a612;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out;
     margin-bottom: 1.5em; }
@@ -1403,7 +1387,7 @@ input[type="radio"] {
       opacity: 0.5; }
     .discussion .info-wrapper button:hover,
     .view-in-course .info-wrapper button:hover {
-      background-color: #f3b842; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .discussion .info-wrapper button,
       .view-in-course .info-wrapper button {
@@ -1538,7 +1522,7 @@ input[type="radio"] {
       display: block; }
     .view-in-course .course-index .courseware-bookmarks-button button {
       text-align: left;
-      color: #f0a612;
+      color: #00508D;
       font-weight: bold;
       padding: 0.75em 1em;
       border-radius: 3px;
@@ -1826,10 +1810,12 @@ input[type="radio"] {
   width: 100%;
   display: block;
   text-align: right; }
+  .view-in-course .bookmark-button-wrapper .sr {
+    display: none; }
   .view-in-course .bookmark-button-wrapper button {
     border: none;
     background: none;
-    color: #f0a612;
+    color: #00508D;
     cursor: pointer; }
     .view-in-course .bookmark-button-wrapper button:before {
       content: "\f097"; }
@@ -2394,12 +2380,12 @@ input[type="radio"] {
         cursor: not-allowed;
         opacity: 0.5; }
       .instructor-nav .nav-item a.active, .instructor-nav .nav-item a.active-section {
-        background-color: #f0a612;
+        background-color: #65b2e1;
         color: #ffffff; }
         .instructor-nav .nav-item a.active:hover, .instructor-nav .nav-item a.active-section:hover {
-          background-color: #f0a612; }
+          background-color: #65b2e1; }
       .instructor-nav .nav-item a:hover {
-        background-color: #f6ca72;
+        background-color: #baddf2;
         color: #ffffff; }
     @media screen and (max-width: 26.5625em) {
       .instructor-nav .nav-item {
@@ -2429,7 +2415,7 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #f0a612;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out;
     margin: 0.3125em 0; }
@@ -2443,7 +2429,7 @@ input[type="radio"] {
     .idash-section input[type=submit]:hover,
     .idash-section .gradebook-link:hover,
     .idash-section button:hover {
-      background-color: #f3b842; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .idash-section input[type=button],
       .idash-section input[type=submit],
@@ -2513,17 +2499,12 @@ input[type="radio"] {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%; }
+  width: 100%; }
   .tc-wrapper .video-wrapper:last-child {
     margin-right: 0; }
 
 .tc-wrapper .subtitles {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%; }
-  .tc-wrapper .subtitles:last-child {
-    margin-right: 0; }
+  display: none; }
 
 @media screen and (max-width: 26.5625em) {
   .tc-wrapper .video-wrapper {
@@ -2541,12 +2522,17 @@ input[type="radio"] {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%; }
+  width: 74.41059%; }
   .has-captions .tc-wrapper .video-wrapper:last-child {
     margin-right: 0; }
 
 .has-captions .tc-wrapper .subtitles {
-  display: none; }
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  .has-captions .tc-wrapper .subtitles:last-child {
+    margin-right: 0; }
 
 .tc-wrapper .video-wrapper .video-player {
   overflow: hidden;
@@ -2569,13 +2555,13 @@ input[type="radio"] {
     background: #191919;
     border: none; }
     .tc-wrapper .video-wrapper .video-controls .slider .ui-slider-range, .tc-wrapper .video-wrapper .closed-captions .slider .ui-slider-range {
-      background: #f0a612; }
+      background: #65b2e1; }
 
 .tc-wrapper .video-wrapper .control, .tc-wrapper .video-wrapper .vidtime {
   line-height: 1.5;
   display: inline-block;
   border: 0;
-  color: #f0a612;
+  color: #65b2e1;
   background-color: transparent;
   vertical-align: middle; }
 
@@ -2619,7 +2605,7 @@ input[type="radio"] {
           border: 0;
           text-align: center;
           padding: .5em 0;
-          color: #f0a612;
+          color: #65b2e1;
           background-color: transparent; }
   .tc-wrapper .video-wrapper .secondary-controls .volume {
     position: relative;
@@ -3183,7 +3169,7 @@ input[type="radio"] {
         right: 0;
         margin: 1em 0;
         line-height: 24px;
-        color: #f0a612; }
+        color: #00508D; }
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button
@@ -3459,14 +3445,14 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #f0a612;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out; }
     .discussion .discussion-body .discussion-column .reply-post-control a:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
     .discussion .discussion-body .discussion-column .reply-post-control a:hover {
-      background-color: #f3b842; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .discussion .discussion-body .discussion-column .reply-post-control a {
         white-space: normal; } }
@@ -3476,6 +3462,33 @@ input[type="radio"] {
     float: right; }
   .discussion .discussion-body .discussion-column .posted-details {
     color: #0a5181; }
+
+.view-in-course .new-post-article .post-topic-button, .discussion .new-post-article .post-topic-button {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: .5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #65b2e1;
+  color: #ffffff;
+  transition: .1s ease-out; }
+  .view-in-course .new-post-article .post-topic-button:disabled, .discussion .new-post-article .post-topic-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+  .view-in-course .new-post-article .post-topic-button:hover, .discussion .new-post-article .post-topic-button:hover {
+    background-color: #8fc7ea; }
+  @media screen and (max-width: 26.5625em) {
+    .view-in-course .new-post-article .post-topic-button, .discussion .new-post-article .post-topic-button {
+      white-space: normal; } }
 
 .view-in-course .new-post-article .post-field, .discussion .new-post-article .post-field {
   display: block;
@@ -3653,40 +3666,40 @@ input[type="radio"] {
   .wmd-panel .wmd-prompt-dialog > form > input[type="file"] {
     margin-bottom: 18px; }
 
-.wmd-panel .wmd-button[title^="Bold"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+B)"] > span:before {
   content: "\f032"; }
 
-.wmd-panel .wmd-button[title^="Italic"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+I)"] > span:before {
   content: "\f033"; }
 
-.wmd-panel .wmd-button[title^="Hyperlink"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+L)"] > span:before {
   content: "\f0c1"; }
 
-.wmd-panel .wmd-button[title^="Blockquote"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+Q)"] > span:before {
   content: "\f10e"; }
 
-.wmd-panel .wmd-button[title^="Code Sample"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+K)"] > span:before {
   content: "\f121"; }
 
-.wmd-panel .wmd-button[title^="Image"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+G)"] > span:before {
   content: "\f03e"; }
 
-.wmd-panel .wmd-button[title^="Numbered List"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+O)"] > span:before {
   content: "\f0cb"; }
 
-.wmd-panel .wmd-button[title^="Bulleted List"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+U)"] > span:before {
   content: "\f0ca"; }
 
-.wmd-panel .wmd-button[title^="Heading"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+H)"] > span:before {
   content: "\f1dc"; }
 
-.wmd-panel .wmd-button[title^="Horizontal Rule"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+R)"] > span:before {
   content: "\f068"; }
 
-.wmd-panel .wmd-button[title^="Undo"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+Z)"] > span:before {
   content: "\f0e2"; }
 
-.wmd-panel .wmd-button[title^="Redo"] > span:before {
+.wmd-panel .wmd-button[title*="(Ctrl+Shift+Z)"] > span:before {
   content: "\f01e"; }
 
 .wrapper-account-settings .wrapper-header .account-nav .account-nav-item {
@@ -3725,12 +3738,12 @@ input[type="radio"] {
       cursor: not-allowed;
       opacity: 0.5; }
     .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active, .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active-section {
-      background-color: #f0a612;
+      background-color: #65b2e1;
       color: #ffffff; }
       .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active:hover, .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active-section:hover {
-        background-color: #f0a612; }
+        background-color: #65b2e1; }
     .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button:hover {
-      background-color: #f6ca72;
+      background-color: #baddf2;
       color: #ffffff; }
 
 .account-settings-header-subtitle {
@@ -3759,14 +3772,14 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #f0a612;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out; }
     .account-settings-section-body .u-field-link:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
     .account-settings-section-body .u-field-link:hover {
-      background-color: #f3b842; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .account-settings-section-body .u-field-link {
         white-space: normal; } }
@@ -3963,14 +3976,14 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #323232;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out; }
     .wiki-wrapper .form-actions .btn:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
     .wiki-wrapper .form-actions .btn:hover {
-      background-color: #4c4c4c; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .wiki-wrapper .form-actions .btn {
         white-space: normal; } }
@@ -3989,14 +4002,14 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #f0a612;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out; }
     .wiki-wrapper .form-actions .btn-primary:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
     .wiki-wrapper .form-actions .btn-primary:hover {
-      background-color: #f3b842; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .wiki-wrapper .form-actions .btn-primary {
         white-space: normal; } }
@@ -4161,7 +4174,7 @@ input[type="radio"] {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  background-color: #f0a612;
+  background-color: #65b2e1;
   color: #ffffff;
   transition: .1s ease-out;
   height: 2.8125em;
@@ -4173,7 +4186,7 @@ input[type="radio"] {
     cursor: not-allowed;
     opacity: 0.5; }
   .wrapper-header .collapse-navigation:hover {
-    background-color: #f3b842; }
+    background-color: #8fc7ea; }
   @media screen and (max-width: 26.5625em) {
     .wrapper-header .collapse-navigation {
       white-space: normal; } }
@@ -4210,7 +4223,7 @@ input[type="radio"] {
     user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-    background-color: #f0a612;
+    background-color: #65b2e1;
     color: #ffffff;
     transition: .1s ease-out;
     display: inline;
@@ -4222,7 +4235,7 @@ input[type="radio"] {
       cursor: not-allowed;
       opacity: 0.5; }
     .header-navigation .user .dropdown:hover {
-      background-color: #f3b842; }
+      background-color: #8fc7ea; }
     @media screen and (max-width: 26.5625em) {
       .header-navigation .user .dropdown {
         white-space: normal; } }
@@ -4273,7 +4286,7 @@ input[type="radio"] {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  background-color: #f0a612;
+  background-color: #65b2e1;
   color: #ffffff;
   transition: .1s ease-out;
   display: inline;
@@ -4282,12 +4295,12 @@ input[type="radio"] {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   float: left;
-  border-right: 1px solid #c3860c; }
+  border-right: 1px solid #2482bc; }
   .header-navigation .user-link:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
   .header-navigation .user-link:hover {
-    background-color: #f3b842; }
+    background-color: #8fc7ea; }
   @media screen and (max-width: 26.5625em) {
     .header-navigation .user-link {
       white-space: normal; } }
