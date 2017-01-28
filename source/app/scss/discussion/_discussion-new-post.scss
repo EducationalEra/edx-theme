@@ -1,5 +1,8 @@
 .view-in-course, .discussion {
   .new-post-article {
+    .post-topic-button {
+      @include edx-button($bb);
+    }
     .post-field {
       @include row();
       margin-bottom: $base-spacing;

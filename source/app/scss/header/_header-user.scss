@@ -5,7 +5,7 @@
       display: none;
     }
     position: relative;
-    
+
     .primary {
       white-space: nowrap;
       float: left;
@@ -18,7 +18,7 @@
     }
 
     .dropdown {
-      @include edx-button($yellow);
+      @include edx-button($bb);
       display: inline;
       height: $header-button-height;
 
@@ -41,7 +41,7 @@
   }
 
   .user-link {
-    @include edx-button($yellow);
+    @include edx-button($bb);
     display: inline;
     vertical-align: middle;
     height: $header-button-height;
@@ -53,7 +53,7 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     float: left;
-    border-right: 1px solid darken($yellow, 10%);
+    border-right: 1px solid darken($bb, 20%);
 
     .label-username {
       color: $white;

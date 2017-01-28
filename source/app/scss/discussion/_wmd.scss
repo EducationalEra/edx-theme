@@ -105,62 +105,62 @@
 
 .wmd-panel {
   .wmd-button {
-    &[title^="Bold"] {
+    &[title*="(Ctrl+B)"] {
       & > span:before {
         content: "\f032";
       }
     }
-    &[title^="Italic"] {
+    &[title*="(Ctrl+I)"] {
       & > span:before {
         content: "\f033";
       }
     }
-    &[title^="Hyperlink"] {
+    &[title*="(Ctrl+L)"] {
       & > span:before {
         content: "\f0c1";
       }
     }
-    &[title^="Blockquote"] {
+    &[title*="(Ctrl+Q)"] {
       & > span:before {
         content: "\f10e";
       }
     }
-    &[title^="Code Sample"] {
+    &[title*="(Ctrl+K)"] {
       & > span:before {
         content: "\f121";
       }
     }
-    &[title^="Image"] {
+    &[title*="(Ctrl+G)"] {
       & > span:before {
         content: "\f03e";
       }
     }
-    &[title^="Numbered List"] {
+    &[title*="(Ctrl+O)"] {
       & > span:before {
         content: "\f0cb";
       }
     }
-    &[title^="Bulleted List"] {
+    &[title*="(Ctrl+U)"] {
       & > span:before {
         content: "\f0ca";
       }
     }
-    &[title^="Heading"] {
+    &[title*="(Ctrl+H)"] {
       & > span:before {
         content: "\f1dc";
       }
     }
-    &[title^="Horizontal Rule"] {
+    &[title*="(Ctrl+R)"] {
       & > span:before {
         content: "\f068";
       }
     }
-    &[title^="Undo"] {
+    &[title*="(Ctrl+Z)"] {
       & > span:before {
         content: "\f0e2";
       }
     }
-    &[title^="Redo"] {
+    &[title*="(Ctrl+Shift+Z)"] {
       & > span:before {
         content: "\f01e";
       }

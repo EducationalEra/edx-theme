@@ -38,7 +38,7 @@
   }
 }
 
-@mixin edx-flat-button($color: $yellow) {
+@mixin edx-flat-button($color: $bb) {
   @include base-button;
   background-color: transparent;
   color: $medium-gray;
@@ -69,15 +69,15 @@
 
   &.active,
   &.active-section {
-    background-color: $yellow;
+    background-color: $bb;
     color: $white;
     &:hover {
-      background-color: $yellow;
+      background-color: $bb;
     }
   }
 
   &:hover {
-    background-color: lighten($yellow, 20%);
+    background-color: lighten($bb, 20%);
     color: $white;
   }
 }

@@ -38,7 +38,7 @@
     input[type=submit],
     .gradebook-link,
     button {
-      @include edx-button($yellow);
+      @include edx-button($bb);
       margin: $small-margin 0;
     }
 }

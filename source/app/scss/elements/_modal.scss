@@ -26,11 +26,11 @@
     }
     .close-modal {
       float: right;
-      @include edx-button($dark-gray);
+      @include edx-button($bb);
     }
     .submit input,
     .submit button {
-      @include edx-button($yellow);
+      @include edx-button($bb);
       margin: $base-margin 0;
     }
   }

@@ -60,7 +60,6 @@
                     display: block;
                 }
             }
-            $bb: darken($soft-blue, 30%);
             .check {
                 @include edx-button($bb);
             }

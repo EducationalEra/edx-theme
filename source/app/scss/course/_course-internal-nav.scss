@@ -80,14 +80,14 @@
       display: block;
       text-align: right;
       .sr {
-        // display: none;
+        display: none;
       }
 
       button {
-        // @include edx-button($dark-gray);
+        // @include edx-button($bb);
         border: none;
         background: none;
-        color: $yellow;
+        color: $brand-blue;
         cursor: pointer;
         &:before {
           @extend .icon;

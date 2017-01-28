@@ -44,6 +44,6 @@ $menu-breakpoint: $tablet;
     display: none;
   }
   .u-field-link {
-    @include edx-button($yellow);
+    @include edx-button($bb);
   }
 }

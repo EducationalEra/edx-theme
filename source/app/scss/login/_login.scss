@@ -83,7 +83,7 @@
 
     .login-providers {
       .button {
-        @include edx-button($dark-gray);
+        @include edx-button($bb);
         .sr {
           display: none;
         }
@@ -103,7 +103,7 @@
     }
 
     .action {
-      @include edx-button($yellow);
+      @include edx-button($bb);
       float: none;
     }
 
@@ -133,7 +133,7 @@
     }
 
     .nav-btn.form-toggle {
-      @include edx-button($yellow);
+      @include edx-button($bb);
       @include media($tablet) {
         width: 100%;
         white-space: normal;

@@ -9,10 +9,10 @@
   }
   .form-actions {
     .btn {
-      @include edx-button($dark-gray);
+      @include edx-button($bb);
     }
     .btn-primary {
-      @include edx-button($yellow);
+      @include edx-button($bb);
     }
     .btn {
       display: inline

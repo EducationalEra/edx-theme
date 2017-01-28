@@ -131,7 +131,7 @@
             }
 
             .enter-course, .learn-more {
-              @include edx-button($yellow);
+              @include edx-button($bb);
               margin: 0;
               @include media($mobile-l) {
                 width: 100%;
@@ -157,7 +157,7 @@
         .learn-more {
           font-size: 1em;
           font-weight: bold;
-          @include edx-button($yellow);
+          @include edx-button($bb);
         }
 
         .wrapper-action-more {
@@ -194,7 +194,7 @@
             .sr {
               display: none;
             }
-            @include edx-button($dark-gray);
+            @include edx-button($bb);
             display: inline-block;
           }
         }

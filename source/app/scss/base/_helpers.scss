@@ -23,13 +23,6 @@
   transform: translate(0, 0);
 }
 
-a {
-  &:hover, &:active {
-    cursor: pointer;
-    color: darken($action-color, 20%);
-  }
-}
-
 @mixin block-frame() {
   border-radius: $base-border-radius;
   border: 1px solid #dddddd;
