@@ -524,7 +524,7 @@ picture {
 :focus {
   outline: none; }
 
-.icon, .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .bookmark-button-wrapper button:before, .bookmarks-results-list-item:before, .view-in-course .capa_inputtype label:before, .view-in-course .inputtype label:before, .view-in-course .chemicalequationinput label:before, .view-in-course .designprotein2dinput label:before, .view-in-course .capa_inputtype .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before, .view-in-course .formulaequationinput .status:before, .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .status.unanswered:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .wmd-panel .wmd-button > span {
+.icon, .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .bookmark-button-wrapper button:before, .bookmarks-results-list-item:before, .view-in-course .capa_inputtype label:before, .view-in-course .inputtype label:before, .view-in-course .chemicalequationinput label:before, .view-in-course .designprotein2dinput label:before, .view-in-course .capa_inputtype .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before, .view-in-course .formulaequationinput .status:before, .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .status.unanswered:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .wmd-panel .wmd-button > span {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -1554,14 +1554,14 @@ input[type="radio"] {
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name,
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button:before,
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmarks-results-list-item:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before,
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-wrapper-2:before,
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-comments-count:before,
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span {
         display: table-cell; }
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name {
         vertical-align: top; }
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmarks-results-list-item:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-wrapper-2:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span {
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmarks-results-list-item:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-comments-count:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span {
         vertical-align: middle;
         padding-right: 0.7em; }
     .view-in-course .course-index .course-navigation .button-chapter.chapter.active {
@@ -2580,6 +2580,8 @@ input[type="radio"] {
   @media screen and (max-width: 26.5625em) {
     .tc-wrapper .video-wrapper .secondary-controls {
       display: none; } }
+  .tc-wrapper .video-wrapper .secondary-controls .control.is-hidden {
+    display: none; }
   .tc-wrapper .video-wrapper .secondary-controls .speeds.menu-container {
     position: relative;
     float: right; }
@@ -2621,7 +2623,8 @@ input[type="radio"] {
         .tc-wrapper .video-wrapper .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-handle {
           width: 1.9em; }
         .tc-wrapper .video-wrapper .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-range {
-          width: 100%; }
+          width: 100%;
+          background: #65b2e1; }
     .tc-wrapper .video-wrapper .secondary-controls .volume.is-opened {
       background-color: #252525; }
       .tc-wrapper .video-wrapper .secondary-controls .volume.is-opened .volume-slider-container {
@@ -2647,7 +2650,7 @@ input[type="radio"] {
   display: none !important;
   text-align: center;
   font-size: 1.5em;
-  color: yellow;
+  color: #00508D;
   text-shadow: 0 0 1px black;
   font-weight: bold; }
 
@@ -2704,6 +2707,10 @@ input[type="radio"] {
         padding: 0 10px; } }
   .content-wrapper > .course-info .course-profile {
     background: #323232;
+    min-height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 4.5em 0; }
     .content-wrapper > .course-info .course-profile .heading-group {
       text-align: center; }
@@ -2803,9 +2810,12 @@ input[type="radio"] {
       clear: both;
       content: "";
       display: block; }
+    .content-wrapper > .course-info .container .inner-wrapper > section > .container li, .content-wrapper > .course-info .container .inner-wrapper > section > .container p, .content-wrapper > .course-info .container .inner-wrapper > section > .container strong {
+      font-size: 0.875em; }
     .content-wrapper > .course-info .container .inner-wrapper > section > .container .features {
       display: block;
-      margin: 0.625em 0; }
+      margin: 0.625em 0;
+      color: #00508D; }
       .content-wrapper > .course-info .container .inner-wrapper > section > .container .features::after {
         clear: both;
         content: "";
@@ -2852,6 +2862,19 @@ input[type="radio"] {
         margin-right: 0; }
       .content-wrapper > .course-info .container .inner-wrapper > section > .container .program > ul > li {
         margin-left: 20px; }
+      .content-wrapper > .course-info .container .inner-wrapper > section > .container .program ol a {
+        color: #666;
+        padding-bottom: 3px;
+        border-bottom: 1px dashed #666;
+        font-weight: 500; }
+        .content-wrapper > .course-info .container .inner-wrapper > section > .container .program ol a:hover {
+          color: #999;
+          border-bottom: 1px dashed #999; }
+        .content-wrapper > .course-info .container .inner-wrapper > section > .container .program ol a.programm {
+          margin-left: 18px; }
+      .content-wrapper > .course-info .container .inner-wrapper > section > .container .program ul {
+        margin-left: 15px;
+        margin-top: 5px; }
     .content-wrapper > .course-info .container .inner-wrapper > section > .container .more-info {
       float: left;
       display: block;
@@ -2878,6 +2901,8 @@ input[type="radio"] {
         color: #00508D; }
       .content-wrapper > .course-info .container .inner-wrapper > section > .container .more-info .social li .fa {
         color: #00508D; }
+      .content-wrapper > .course-info .container .inner-wrapper > section > .container .more-info .social li:hover {
+        opacity: 0.6; }
       .content-wrapper > .course-info .container .inner-wrapper > section > .container .more-info .register {
         float: left;
         display: inline-block;
@@ -2947,7 +2972,7 @@ input[type="radio"] {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%; }
+      width: 23.23176%; }
       .content-wrapper > .course-info .container .inner-wrapper > section > .container .main-staff-wrapper .main-staff:last-child {
         margin-right: 0; }
       .content-wrapper > .course-info .container .inner-wrapper > section > .container .main-staff-wrapper .main-staff p {
@@ -2958,7 +2983,7 @@ input[type="radio"] {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 65.88078%;
+      width: 74.41059%;
       margin-right: 0; }
       .content-wrapper > .course-info .container .inner-wrapper > section > .container .main-staff-wrapper .main-staff-description:last-child {
         margin-right: 0; }
@@ -3012,40 +3037,88 @@ input[type="radio"] {
           .content-wrapper > .course-info .container .inner-wrapper > section > .container .main-staff-wrapper .main-staff:last-child,
           .content-wrapper > .course-info .container .inner-wrapper > section > .container .main-staff-wrapper .main-staff-description:last-child {
             margin-right: 0; } }
+  .content-wrapper > .course-info .container .partners {
+    text-align: center; }
+    .content-wrapper > .course-info .container .partners .partner-logo {
+      height: 9.375em;
+      margin: 0.75em; }
   .content-wrapper > .course-info .container b {
     color: #00508D; }
-  .content-wrapper > .course-info .container img.photo {
-    border-radius: 50%; }
 
 .course-sidebar {
   display: none; }
 
-/**
- * Simple fade transition,
- */
-.mfp-fade.mfp-bg {
-  opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out; }
+/* POP UP */
+.circle {
+  stroke: #fff;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 650;
+  -webkit-transition: all 0.5s ease-in-out;
+  opacity: 0.3; }
 
-.mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8; }
+.playBut {
+  /*  border: 1px solid red;*/
+  display: inline-block;
+  -webkit-transition: all 0.5s ease; }
 
-.mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0; }
+.playBut .triangle {
+  -webkit-transition: all 0.7s ease-in-out;
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: #fff;
+  transform: translateY(0); }
 
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out; }
+.playBut:hover .triangle {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: #fff;
+  animation: nudge 0.7s ease-in-out; }
 
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+@keyframes nudge {
+  0% {
+    transform: translateX(0); }
+  30% {
+    transform: translateX(-5px); }
+  50% {
+    transform: translateX(5px); }
+  70% {
+    transform: translateX(-2px); }
+  100% {
+    transform: translateX(0); } }
+
+.playBut:hover .circle {
+  stroke-dashoffset: 0;
   opacity: 1; }
 
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0; }
+.partners-wrapper {
+  width: 70%;
+  margin: 0 auto; }
+
+button.mfp-close:hover {
+  background: rgba(255, 0, 0, 0) !important; }
+
+figure.highlight {
+  margin: 0; }
+
+/* Flashing */
+figure.highlight:hover a img {
+  opacity: 1;
+  -webkit-animation: flash 1.5s;
+  -o-animation: flash 1.5s;
+  -moz-transition: flash 1.5s;
+  animation: flash 1.5s; }
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: .4; }
+  100% {
+    opacity: 1; } }
+
+@keyframes flash {
+  0% {
+    opacity: .4; }
+  100% {
+    opacity: 1; } }
 
 /**
  * Simple fade transition,
@@ -3157,14 +3230,14 @@ input[type="radio"] {
         border: 0;
         margin: .5em 0;
         padding-right: 0;
-        padding-left: 0;
+        padding-left: 1em;
         background-color: white;
         cursor: pointer; }
         .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input:focus {
           padding-right: 1em;
           padding-left: 1em;
           width: 14em; }
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .bookmarks-results-list-item:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-header .forum-nav-search .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span {
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .bookmarks-results-list-item:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-header .forum-nav-search .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span {
         position: absolute;
         right: 0;
         margin: 1em 0;
@@ -3194,7 +3267,7 @@ input[type="radio"] {
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-header .forum-nav-search .forum-nav-thread-wrapper-2:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-header .forum-nav-search .forum-nav-thread-comments-count:before,
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span {
         display: inline-block;
@@ -3248,13 +3321,16 @@ input[type="radio"] {
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
       position: relative;
       padding: 1em 0; }
-      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before {
+      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before {
         content: "\f075";
         position: absolute;
-        top: 12px;
+        left: 0;
+        top: -3px;
         font-size: 2em;
-        color: #4a9fff;
-        z-index: 1; }
+        color: #b3b3b3;
+        z-index: -1; }
+      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count.is-unread:before {
+        color: #4a9fff; }
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-comments-count {
       display: block !important;
       width: 100%;
@@ -3268,7 +3344,7 @@ input[type="radio"] {
       display: none; }
     .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter input {
       border: 0; }
-    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .icon, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .bookmarks-results-list-item:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-wrapper-2:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-button > span {
+    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .icon, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .bookmarks-results-list-item:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-button > span {
       display: none; }
   .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-menu {
     overflow: scroll; }
@@ -3339,10 +3415,15 @@ input[type="radio"] {
   .discussion .discussion-body .discussion-column .discussion-article .wrapper-post-header,
   .discussion .discussion-body .discussion-column .discussion-article .wrapper-response-header {
     display: block;
-    float: left;
-    width: 100%; }
+    margin-bottom: 1.5em; }
+    .discussion .discussion-body .discussion-column .discussion-article .wrapper-post-header::after,
+    .discussion .discussion-body .discussion-column .discussion-article .wrapper-response-header::after {
+      clear: both;
+      content: "";
+      display: block; }
   .discussion .discussion-body .discussion-column .discussion-article .post-header-content,
   .discussion .discussion-body .discussion-column .discussion-article .response-header-content {
+    color: #666;
     float: left;
     display: block;
     margin-right: 2.35765%;
@@ -3359,6 +3440,44 @@ input[type="radio"] {
     .discussion .discussion-body .discussion-column .discussion-article .post-header-actions:last-child,
     .discussion .discussion-body .discussion-column .discussion-article .response-header-actions:last-child {
       margin-right: 0; }
+  @media screen and (max-width: 62.4375em) {
+    .discussion .discussion-body .discussion-column .discussion-article .post-header-content,
+    .discussion .discussion-body .discussion-column .discussion-article .response-header-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      .discussion .discussion-body .discussion-column .discussion-article .post-header-content:last-child,
+      .discussion .discussion-body .discussion-column .discussion-article .response-header-content:last-child {
+        margin-right: 0; }
+    .discussion .discussion-body .discussion-column .discussion-article .post-header-actions,
+    .discussion .discussion-body .discussion-column .discussion-article .response-header-actions {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      .discussion .discussion-body .discussion-column .discussion-article .post-header-actions:last-child,
+      .discussion .discussion-body .discussion-column .discussion-article .response-header-actions:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 26.5625em) {
+    .discussion .discussion-body .discussion-column .discussion-article .post-header-content,
+    .discussion .discussion-body .discussion-column .discussion-article .response-header-content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .discussion .discussion-body .discussion-column .discussion-article .post-header-content:last-child,
+      .discussion .discussion-body .discussion-column .discussion-article .response-header-content:last-child {
+        margin-right: 0; }
+    .discussion .discussion-body .discussion-column .discussion-article .post-header-actions,
+    .discussion .discussion-body .discussion-column .discussion-article .response-header-actions {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .discussion .discussion-body .discussion-column .discussion-article .post-header-actions:last-child,
+      .discussion .discussion-body .discussion-column .discussion-article .response-header-actions:last-child {
+        margin-right: 0; } }
   .discussion .discussion-body .discussion-column .discussion-article .discussion-comment,
   .discussion .discussion-body .discussion-column .discussion-article .forum-response {
     border: 1px solid #dddddd;
@@ -3392,7 +3511,7 @@ input[type="radio"] {
     .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow.is-checked .action-icon,
     .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow.is-checked .action-icon,
     .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow.is-checked .action-icon {
-      color: #f0a612; }
+      color: #00508D; }
     .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-unchecked,
     .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-unchecked,
     .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-unchecked {
@@ -3400,7 +3519,7 @@ input[type="radio"] {
     .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-checked,
     .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-checked,
     .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-checked {
-      color: #f0a612;
+      color: #00508D;
       display: inline; }
     .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper,
     .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper,
@@ -3426,6 +3545,18 @@ input[type="radio"] {
           font-size: 0.9em;
           padding: 0.7em 1.4em;
           font-weight: normal; }
+        .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item .label-checked,
+        .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item .label-checked,
+        .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item .label-checked {
+          display: none; }
+        .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-checked,
+        .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-checked,
+        .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-checked {
+          display: inline; }
+        .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-unchecked,
+        .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-unchecked,
+        .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-unchecked {
+          display: none; }
         .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown.is-expanded,
         .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown.is-expanded,
         .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown.is-expanded {
@@ -3456,12 +3587,40 @@ input[type="radio"] {
     @media screen and (max-width: 26.5625em) {
       .discussion .discussion-body .discussion-column .reply-post-control a {
         white-space: normal; } }
+  .discussion .discussion-body .discussion-column .comment-form .discussion-submit-comment {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #65b2e1;
+    color: #ffffff;
+    transition: .1s ease-out; }
+    .discussion .discussion-body .discussion-column .comment-form .discussion-submit-comment:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .discussion .discussion-body .discussion-column .comment-form .discussion-submit-comment:hover {
+      background-color: #8fc7ea; }
+    @media screen and (max-width: 26.5625em) {
+      .discussion .discussion-body .discussion-column .comment-form .discussion-submit-comment {
+        white-space: normal; } }
   .discussion .discussion-body .discussion-column .comment-form .sr {
     display: none; }
   .discussion .discussion-body .discussion-column .comment-actions-list {
     float: right; }
   .discussion .discussion-body .discussion-column .posted-details {
-    color: #0a5181; }
+    color: #666; }
+  .discussion .discussion-body .discussion-column .user-label-staff {
+    font-weight: bold; }
 
 .view-in-course .new-post-article .post-topic-button, .discussion .new-post-article .post-topic-button {
   display: block;
@@ -4102,7 +4261,6 @@ input[type="radio"] {
   margin-right: 0; }
 
 .header-global-new .course-header, .header-global .course-header {
-  max-width: 40%;
   width: auto;
   display: block;
   overflow: hidden;
@@ -4129,13 +4287,12 @@ input[type="radio"] {
     .header-global .user .primary {
       float: none; } }
 
-@media screen and (max-width: 62.4375em) {
-  .header-global-new .course-header, .header-global .course-header {
-    float: none;
-    max-width: 100%; } }
+.header-global-new .course-header, .header-global .course-header {
+  float: none;
+  max-width: 100%; }
 
 .header-global-new .header-navigation, .header-global .header-navigation {
-  float: none; }
+  float: right; }
   @media screen and (max-width: 62.4375em) {
     .header-global-new .header-navigation, .header-global .header-navigation {
       display: none;
@@ -4227,6 +4384,7 @@ input[type="radio"] {
     color: #ffffff;
     transition: .1s ease-out;
     display: inline;
+    line-height: 2.8125em;
     height: 2.8125em;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
