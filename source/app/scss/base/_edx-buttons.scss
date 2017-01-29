@@ -46,12 +46,10 @@
   transition: .1s ease-out;
 
   &.active,
+  &.current-page,
   &.active-section {
     background-color: $color;
     color: $white;
-    &:hover {
-      background-color: $color;
-    }
   }
 
   &:hover {

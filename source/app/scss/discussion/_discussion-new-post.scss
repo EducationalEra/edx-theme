@@ -1,4 +1,9 @@
 .view-in-course, .discussion {
+  .post-field.editor,
+  .comment-body,
+  .reply-body {
+    overflow-x: scroll;
+  }
   .new-post-article {
     .post-topic-button {
       @include edx-button($bb);
@@ -32,8 +37,9 @@
       @include row();
       margin-bottom: $base-spacing;
       .post-option {
+        @include row;
         vertical-align: middle;
-        @include form-label;
+        // @include form-label;
         input {
           vertical-align: middle;
         }

@@ -1,6 +1,20 @@
 .discussion .discussion-body .discussion-column {
     background-color: $white;
+}
     .discussion-article {
+        .forum-thread-expand,
+        .forum-thread-collapse {
+          @include edx-button($bb);
+          .icon {
+            margin-right: $small-spacing / 2;
+          }
+        }
+        .post-tools {
+          @include row;
+          line-height: em(45);
+          margin: $base-spacing 0;
+        }
+
         .thread-wrapper {
             .thread-responses-wrapper {
                 margin: 2em 0;
@@ -38,7 +52,6 @@
             .post-context {
                 color: $blue;
                 .group-visibility-label {
-                    float: right;
                     display: inline;
                 }
             }
@@ -191,4 +204,3 @@
     .user-label-staff {
       font-weight: bold;
     }
-}

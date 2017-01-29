@@ -6,11 +6,17 @@
         padding: 1em;
         background-color: $slightly-gray;
         border-radius: $base-border-radius;
-        margin-bottom: 1em;
-        a {
-            // color: $yellow;
+        margin-bottom: $base-spacing;
+
+        a.discussion-show {
             line-height: 40px;
         }
+
+        .new-post-article {
+          margin-top: $base-spacing;
+          margin-bottom: $base-spacing;
+        }
+
         .new-post-btn {
             @include edx-button($bb);
             float: right;
@@ -24,9 +30,19 @@
         }
     }
     .discussion-paginator {
+      @include row;
+      line-height: em(45);
       li {
-        &.current-page {
-          // color: $yell;
+        @include edx-flat-button($bb);
+        display: inline;
+        float: left;
+        margin: 0 $small-margin / 2;
+
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
         }
       }
     }
