@@ -10,6 +10,10 @@
 
   .course-profile {
     background: $dark-gray;
+    min-height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: $base-spacing * 3 0;
 
     .heading-group {
@@ -66,9 +70,14 @@
         width: 70%;
         margin-bottom: $big-margin;
 
+        li, p, strong {
+          font-size: em(14);
+        }
+
         .features {
           @include row;
           margin: $base-margin 0;
+          color: $brand-blue;
           li {
             @include span-columns(4);
             @include omega();
@@ -104,6 +113,24 @@
               margin-left: 20px;
             }
           }
+
+          ol a {
+          	color: #666;
+            padding-bottom: 3px;
+            border-bottom: 1px dashed #666;
+            font-weight: 500;
+            &:hover {
+            	color: #999;
+              border-bottom: 1px dashed #999;
+            }
+            &.programm {
+              margin-left: 18px;
+            }
+          }
+          ul {
+            margin-left: 15px;
+            margin-top: 5px;
+          }
         }
 
         .more-info {
@@ -133,6 +160,9 @@
             }
             li .fa {
               color: $brand-blue;
+            }
+            li:hover {
+              opacity: 0.6;
             }
           }
           .register {
@@ -170,7 +200,7 @@
 
         .main-staff-wrapper {
           .main-staff {
-            @include span-columns(4);
+            @include span-columns(3);
 
             p {
               text-align: center;
@@ -180,7 +210,7 @@
             }
           }
           .main-staff-description {
-            @include span-columns(8);
+            @include span-columns(9);
             @include omega();
           }
         }
@@ -221,49 +251,22 @@
           }
         }
     }
+    .partners {
+      text-align: center;
+      .partner-logo {
+        height: em(150);
+        margin: $base-spacing /2;
+      }
+    }
     // end of for each section
 
 
     b {
       color: $brand-blue;
     }
-
-    img.photo {
-      border-radius: 50%;
-    }
   }
 }
 
 .course-sidebar {
   display: none;
-}
-
-
-/**
- * Simple fade transition,
- */
-.mfp-fade.mfp-bg {
-  opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-.mfp-fade.mfp-bg.mfp-ready {
-  opacity: 0.8;
-}
-.mfp-fade.mfp-bg.mfp-removing {
-  opacity: 0;
-}
-
-.mfp-fade.mfp-wrap .mfp-content {
-  opacity: 0;
-  -webkit-transition: all 0.15s ease-out;
-  -moz-transition: all 0.15s ease-out;
-  transition: all 0.15s ease-out;
-}
-.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
-  opacity: 1;
-}
-.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
-  opacity: 0;
 }

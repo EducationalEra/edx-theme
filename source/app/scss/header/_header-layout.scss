@@ -2,10 +2,7 @@ $menu-breakpoint: $tablet;
 
 .header-global-new, .header-global, .header-global {
   @include row;
-  // float: left;
-  // width: 100%;
   background-color: $header-background;
-  // box-shadow: 0 1px 1px $header-border;
   border-bottom: $header-border 1px solid;
   margin-bottom: $big-margin;
 }
@@ -61,8 +58,6 @@ $menu-breakpoint: $tablet;
   }
 
   .course-header {
-    max-width: 40%;
-
     width: auto;
     display: block;
 
@@ -87,14 +82,12 @@ $menu-breakpoint: $tablet;
   }
 
   .course-header {
-    @include media($menu-breakpoint) {
-      float: none;
-      max-width: 100%;
-    }
+    float: none;
+    max-width: 100%;
   }
 
   .header-navigation {
-    float: none;
+    float: right;
 
     @include media($menu-breakpoint) {
       display: none;

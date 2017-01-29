@@ -45,16 +45,41 @@
         }
         .wrapper-post-header,
         .wrapper-response-header {
-            @include full-width-block;
+          @include row;
+          margin-bottom: $base-spacing;
         }
         .post-header-content,
         .response-header-content {
+            color: $gray;
             @include span-columns(10);
         }
         .post-header-actions,
         .response-header-actions {
             @include span-columns(2);
         }
+
+        @include media($tablet) {
+          .post-header-content,
+          .response-header-content {
+              @include span-columns(8 of 12);
+          }
+          .post-header-actions,
+          .response-header-actions {
+              @include span-columns(4 of 12);
+          }
+        }
+
+        @include media($mobile-l) {
+          .post-header-content,
+          .response-header-content {
+              @include span-columns(12 of 12);
+          }
+          .post-header-actions,
+          .response-header-actions {
+              @include span-columns(12 of 12);
+          }
+        }
+
         .discussion-comment,
         .forum-response {
             border: 1px solid $light-gray;
@@ -92,13 +117,13 @@
                     //
                     &.is-checked {
                         .action-icon {
-                            color: $yellow;
+                            color: $brand-blue;
                         }
                         .label-unchecked {
                             display: none;
                         }
                         .label-checked {
-                            color: $yellow;
+                            color: $brand-blue;
                             display: inline;
                         }
                     }
@@ -122,6 +147,19 @@
                         padding: 0.7em 1.4em;
                         font-weight: normal;
                     }
+                    .actions-item {
+                      .label-checked {
+                        display: none;
+                      }
+                      .is-checked {
+                        .label-checked {
+                          display: inline;
+                        }
+                        .label-unchecked {
+                          display: none;
+                        }
+                      }
+                    }
                     &.is-expanded {
                         display: block;
                     }
@@ -135,6 +173,9 @@
         }
     }
     .comment-form {
+      .discussion-submit-comment {
+        @include edx-button($bb);
+      }
         .sr {
             // TODO: tbd
             display: none;
@@ -144,6 +185,10 @@
         float: right;
     }
     .posted-details {
-        color: $blue;
+        // color: $blue;
+        color: $gray;
+    }
+    .user-label-staff {
+      font-weight: bold;
     }
 }

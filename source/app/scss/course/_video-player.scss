@@ -82,6 +82,10 @@
         display: none;
       }
 
+      .control.is-hidden {
+        display: none;
+      }
+
       .speeds.menu-container {
         position: relative;
         float: right;
@@ -143,6 +147,7 @@
             }
             .ui-slider-range {
               width: 100%;
+              background: $bb;
             }
           }
         }
@@ -188,7 +193,7 @@
     display: none !important;
     text-align: center;
     font-size: 1.5em;
-    color: yellow;
+    color: $brand-blue;
     text-shadow: 0 0 1px black;
     font-weight: bold;
 

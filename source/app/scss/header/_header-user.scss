@@ -20,6 +20,7 @@
     .dropdown {
       @include edx-button($bb);
       display: inline;
+      line-height: $header-button-height;
       height: $header-button-height;
 
       @include media($menu-breakpoint) {
