@@ -524,7 +524,7 @@ picture {
 :focus {
   outline: none; }
 
-.icon, .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .bookmark-button-wrapper button:before, .bookmarks-results-list-item:before, .view-in-course .capa_inputtype label:before, .view-in-course .inputtype label:before, .view-in-course .chemicalequationinput label:before, .view-in-course .designprotein2dinput label:before, .view-in-course .capa_inputtype .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before, .view-in-course .formulaequationinput .status:before, .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .status.unanswered:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .wmd-panel .wmd-button > span {
+.icon, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .wmd-panel .wmd-button > span, .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .bookmark-button-wrapper button:before, .bookmarks-results-list-item:before, .view-in-course .capa_inputtype label:before, .view-in-course .inputtype label:before, .view-in-course .chemicalequationinput label:before, .view-in-course .designprotein2dinput label:before, .view-in-course .capa_inputtype .status:before, .view-in-course .chemicalequationinput .status:before, .view-in-course .designprotein2dinput .status:before, .view-in-course .formulaequationinput .status:before, .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .status.unanswered:before {
   display: inline-block;
   font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
@@ -1248,6 +1248,816 @@ input[type="radio"] {
 .profile-sidebar {
   display: none; }
 
+.discussion .discussion-body .discussion-column {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  padding: 0.625em; }
+  .discussion .discussion-body .discussion-column:last-child {
+    margin-right: 0; }
+
+.discussion .discussion-body .forum-nav {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  position: relative; }
+  .discussion .discussion-body .forum-nav:last-child {
+    margin-right: 0; }
+
+@media screen and (max-width: 62.4375em) {
+  .discussion .discussion-body .discussion-column {
+    float: left;
+    display: block;
+    margin-right: 2.84259%;
+    width: 100%; }
+    .discussion .discussion-body .discussion-column:last-child {
+      margin-right: 0; }
+  .discussion .discussion-body .forum-nav {
+    float: left;
+    display: block;
+    margin-right: 2.84259%;
+    width: 100%;
+    margin-right: 0;
+    position: initial; }
+    .discussion .discussion-body .forum-nav:last-child {
+      margin-right: 0; }
+    .discussion .discussion-body .forum-nav .forum-nav-browse-menu {
+      height: auto !important; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list[style] {
+      height: auto !important; }
+    .discussion .discussion-body .forum-nav[style] {
+      top: auto !important;
+      height: auto !important; } }
+
+.discussion .discussion-body .forum-nav {
+  background-color: #ffffff; }
+  .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper,
+  .discussion .discussion-body .forum-nav .forum-nav-header,
+  .discussion .discussion-body .forum-nav .forum-nav-refine-bar,
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list,
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper {
+    display: block;
+    width: 100%;
+    float: left; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list {
+    overflow: hidden; }
+  .discussion .discussion-body .forum-nav .forum-nav-header {
+    padding: 0 0.5em;
+    position: relative; }
+    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse,
+    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search {
+      display: inline-block; }
+    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse {
+      background: none;
+      border: 0;
+      margin: 1em 0;
+      float: left; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse .sr {
+        display: none; }
+    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search {
+      position: absolute;
+      right: 1em; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .sr {
+        display: none; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input {
+        position: absolute;
+        float: right;
+        right: 1.4em;
+        text-align: right;
+        width: 5em;
+        text-overflow: ellipsis;
+        border: 0;
+        margin: .5em 0;
+        padding-right: 0;
+        padding-left: 1em;
+        background-color: white;
+        cursor: pointer; }
+        .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input:focus {
+          padding-right: 1em;
+          padding-left: 1em;
+          width: 14em; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-header .forum-nav-search .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .bookmarks-results-list-item:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before {
+        position: absolute;
+        right: 0;
+        margin: 1em 0;
+        line-height: 24px;
+        color: #00508D; }
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-header .forum-nav-search .forum-nav-thread-comments-count:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .bookmarks-results-list-item:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container
+      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before {
+        display: inline-block;
+        float: right; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar {
+    background-color: #e5f2fa;
+    padding: .5em; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-filter-main,
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-sort {
+      display: inline-block; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-filter-main {
+      float: left; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-sort {
+      float: left; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .sr {
+      display: none; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar select {
+      background: none;
+      border: none;
+      padding: 0 .3em; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread,
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link {
+    display: block;
+    width: 100%;
+    float: left; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link {
+    color: #666; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link.is-active {
+      background-color: #e5f2fa; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .sr {
+      display: none; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels {
+      display: none; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0,
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1,
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
+      padding: 1em 0; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0 {
+      float: left;
+      padding: 1em; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
+      float: right;
+      width: 2em;
+      margin: 0 .5em; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1 {
+      overflow: hidden;
+      max-width: 50%;
+      float: left;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
+      position: relative;
+      padding: 1em 0; }
+      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before {
+        content: "\f075";
+        position: absolute;
+        left: 0;
+        top: -3px;
+        font-size: 2em;
+        color: #b3b3b3;
+        z-index: -1; }
+      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count.is-unread:before {
+        color: #4a9fff; }
+    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-comments-count {
+      display: block !important;
+      width: 100%;
+      z-index: 2;
+      position: relative;
+      color: white;
+      text-align: center; }
+  .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter {
+    padding: 0.9em 1.4em; }
+    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .sr {
+      display: none; }
+    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter input {
+      border: 0; }
+    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .icon, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-button > span, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .bookmarks-results-list-item:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before {
+      display: none; }
+  .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-menu {
+    overflow: scroll; }
+  .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-menu-item button {
+    display: block;
+    line-height: 1em;
+    font-size: 0.9em;
+    padding: 0.9em 1.4em;
+    font-weight: normal;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer; }
+    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-menu-item button:hover {
+      background-color: #e5f2fa; }
+
+.discussion .discussion-body .discussion-column {
+  background-color: #ffffff; }
+
+.discussion-article .forum-thread-expand,
+.discussion-article .forum-thread-collapse {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: .5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #65b2e1;
+  color: #ffffff;
+  transition: .1s ease-out; }
+  .discussion-article .forum-thread-expand:disabled,
+  .discussion-article .forum-thread-collapse:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+  .discussion-article .forum-thread-expand:hover,
+  .discussion-article .forum-thread-collapse:hover {
+    background-color: #8fc7ea; }
+  @media screen and (max-width: 26.5625em) {
+    .discussion-article .forum-thread-expand,
+    .discussion-article .forum-thread-collapse {
+      white-space: normal; } }
+  .discussion-article .forum-thread-expand .icon, .discussion-article .forum-thread-expand .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .discussion-article .forum-thread-expand .forum-nav-thread-comments-count:before, .discussion-article .forum-thread-expand .wmd-panel .wmd-button > span, .wmd-panel .discussion-article .forum-thread-expand .wmd-button > span, .discussion-article .forum-thread-expand .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion-article .forum-thread-expand button:before, .discussion-article .forum-thread-expand .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion-article .forum-thread-expand button:before, .discussion-article .forum-thread-expand .bookmarks-results-list-item:before, .discussion-article .forum-thread-expand .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion-article .forum-thread-expand label:before, .discussion-article .forum-thread-expand .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion-article .forum-thread-expand label:before, .discussion-article .forum-thread-expand .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion-article .forum-thread-expand label:before, .discussion-article .forum-thread-expand .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion-article .forum-thread-expand label:before, .discussion-article .forum-thread-expand .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion-article .forum-thread-expand .status:before, .discussion-article .forum-thread-expand .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion-article .forum-thread-expand .status:before, .discussion-article .forum-thread-expand .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion-article .forum-thread-expand .status:before, .discussion-article .forum-thread-expand .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion-article .forum-thread-expand .status:before, .discussion-article .forum-thread-expand .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion-article .forum-thread-expand .status:before,
+  .discussion-article .forum-thread-collapse .icon,
+  .discussion-article .forum-thread-collapse .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2
+  .discussion-article .forum-thread-collapse .forum-nav-thread-comments-count:before,
+  .discussion-article .forum-thread-collapse .wmd-panel .wmd-button > span, .wmd-panel
+  .discussion-article .forum-thread-collapse .wmd-button > span,
+  .discussion-article .forum-thread-collapse .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button
+  .discussion-article .forum-thread-collapse button:before,
+  .discussion-article .forum-thread-collapse .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper
+  .discussion-article .forum-thread-collapse button:before,
+  .discussion-article .forum-thread-collapse .bookmarks-results-list-item:before,
+  .discussion-article .forum-thread-collapse .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype
+  .discussion-article .forum-thread-collapse label:before,
+  .discussion-article .forum-thread-collapse .view-in-course .inputtype label:before, .view-in-course .inputtype
+  .discussion-article .forum-thread-collapse label:before,
+  .discussion-article .forum-thread-collapse .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput
+  .discussion-article .forum-thread-collapse label:before,
+  .discussion-article .forum-thread-collapse .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput
+  .discussion-article .forum-thread-collapse label:before,
+  .discussion-article .forum-thread-collapse .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype
+  .discussion-article .forum-thread-collapse .status:before,
+  .discussion-article .forum-thread-collapse .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput
+  .discussion-article .forum-thread-collapse .status:before,
+  .discussion-article .forum-thread-collapse .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput
+  .discussion-article .forum-thread-collapse .status:before,
+  .discussion-article .forum-thread-collapse .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput
+  .discussion-article .forum-thread-collapse .status:before,
+  .discussion-article .forum-thread-collapse .view-in-course .indicator-container .status:before, .view-in-course .indicator-container
+  .discussion-article .forum-thread-collapse .status:before {
+    margin-right: 0.375em; }
+
+.discussion-article .post-tools {
+  display: block;
+  line-height: 2.8125em;
+  margin: 1.5em 0; }
+  .discussion-article .post-tools::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.discussion-article .thread-wrapper .thread-responses-wrapper {
+  margin: 2em 0; }
+  .discussion-article .thread-wrapper .thread-responses-wrapper .response-count {
+    color: #0a5181;
+    font-weight: bold; }
+  .discussion-article .thread-wrapper .thread-responses-wrapper .add-response {
+    float: right; }
+    .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
+      display: block;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      line-height: 1.5;
+      padding: .5em 1em;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: "Noto Sans";
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: #65b2e1;
+      color: #ffffff;
+      transition: .1s ease-out; }
+      .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+      .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn:hover {
+        background-color: #8fc7ea; }
+      @media screen and (max-width: 26.5625em) {
+        .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
+          white-space: normal; } }
+
+.discussion-article .thread-wrapper .thread-responses-wrapper .js-response-list {
+  margin: 2em 0; }
+
+.discussion-article .thread-wrapper .thread-main-wrapper {
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #dddddd; }
+
+.discussion-article .thread-wrapper .wrapper-post-header .post-header-content .post-title {
+  margin-bottom: 0; }
+
+.discussion-article .thread-wrapper .wrapper-post-header .post-header-content .posted-details {
+  color: #999; }
+
+.discussion-article .thread-wrapper .post-context {
+  color: #0a5181; }
+  .discussion-article .thread-wrapper .post-context .group-visibility-label {
+    display: inline; }
+
+.discussion-article .wrapper-post-header,
+.discussion-article .wrapper-response-header {
+  display: block;
+  margin-bottom: 1.5em; }
+  .discussion-article .wrapper-post-header::after,
+  .discussion-article .wrapper-response-header::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.discussion-article .post-header-content,
+.discussion-article .response-header-content {
+  color: #666;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%; }
+  .discussion-article .post-header-content:last-child,
+  .discussion-article .response-header-content:last-child {
+    margin-right: 0; }
+
+.discussion-article .post-header-actions,
+.discussion-article .response-header-actions {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 14.70196%; }
+  .discussion-article .post-header-actions:last-child,
+  .discussion-article .response-header-actions:last-child {
+    margin-right: 0; }
+
+@media screen and (max-width: 62.4375em) {
+  .discussion-article .post-header-content,
+  .discussion-article .response-header-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .discussion-article .post-header-content:last-child,
+    .discussion-article .response-header-content:last-child {
+      margin-right: 0; }
+  .discussion-article .post-header-actions,
+  .discussion-article .response-header-actions {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .discussion-article .post-header-actions:last-child,
+    .discussion-article .response-header-actions:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 26.5625em) {
+  .discussion-article .post-header-content,
+  .discussion-article .response-header-content {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .discussion-article .post-header-content:last-child,
+    .discussion-article .response-header-content:last-child {
+      margin-right: 0; }
+  .discussion-article .post-header-actions,
+  .discussion-article .response-header-actions {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .discussion-article .post-header-actions:last-child,
+    .discussion-article .response-header-actions:last-child {
+      margin-right: 0; } }
+
+.discussion-article .discussion-comment,
+.discussion-article .forum-response {
+  border: 1px solid #dddddd;
+  padding: 1em;
+  margin-bottom: 1em; }
+
+.discussion-article .comment-actions-list,
+.discussion-article .post-actions-list,
+.discussion-article .response-actions-list {
+  text-align: right; }
+  .discussion-article .comment-actions-list .action-button.action-vote .sr,
+  .discussion-article .post-actions-list .action-button.action-vote .sr,
+  .discussion-article .response-actions-list .action-button.action-vote .sr {
+    display: none; }
+  .discussion-article .comment-actions-list .action-button.action-follow .sr,
+  .discussion-article .post-actions-list .action-button.action-follow .sr,
+  .discussion-article .response-actions-list .action-button.action-follow .sr {
+    display: none; }
+  .discussion-article .comment-actions-list .action-button.action-follow .label-unchecked,
+  .discussion-article .post-actions-list .action-button.action-follow .label-unchecked,
+  .discussion-article .response-actions-list .action-button.action-follow .label-unchecked {
+    color: #666;
+    display: inline; }
+  .discussion-article .comment-actions-list .action-button.action-follow .label-checked,
+  .discussion-article .post-actions-list .action-button.action-follow .label-checked,
+  .discussion-article .response-actions-list .action-button.action-follow .label-checked {
+    display: none; }
+  .discussion-article .comment-actions-list .action-button.action-follow .action-icon,
+  .discussion-article .post-actions-list .action-button.action-follow .action-icon,
+  .discussion-article .response-actions-list .action-button.action-follow .action-icon {
+    color: #666; }
+  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .action-icon,
+  .discussion-article .post-actions-list .action-button.action-follow.is-checked .action-icon,
+  .discussion-article .response-actions-list .action-button.action-follow.is-checked .action-icon {
+    color: #00508D; }
+  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-unchecked,
+  .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-unchecked,
+  .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-unchecked {
+    display: none; }
+  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-checked,
+  .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-checked,
+  .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-checked {
+    color: #00508D;
+    display: inline; }
+  .discussion-article .comment-actions-list .more-wrapper,
+  .discussion-article .post-actions-list .more-wrapper,
+  .discussion-article .response-actions-list .more-wrapper {
+    position: relative; }
+    .discussion-article .comment-actions-list .more-wrapper .actions-dropdown,
+    .discussion-article .post-actions-list .more-wrapper .actions-dropdown,
+    .discussion-article .response-actions-list .more-wrapper .actions-dropdown {
+      display: none;
+      position: absolute;
+      top: 1.5em;
+      right: 0;
+      background-color: white;
+      z-index: 1;
+      border-radius: 3px;
+      border: 1px solid #dddddd;
+      border-radius: 3px; }
+      .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item a,
+      .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item a,
+      .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item a {
+        display: block;
+        line-height: 1em;
+        font-size: 0.9em;
+        padding: 0.7em 1.4em;
+        font-weight: normal; }
+      .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item .label-checked,
+      .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item .label-checked,
+      .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item .label-checked {
+        display: none; }
+      .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-checked,
+      .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-checked,
+      .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-checked {
+        display: inline; }
+      .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-unchecked,
+      .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-unchecked,
+      .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-unchecked {
+        display: none; }
+      .discussion-article .comment-actions-list .more-wrapper .actions-dropdown.is-expanded,
+      .discussion-article .post-actions-list .more-wrapper .actions-dropdown.is-expanded,
+      .discussion-article .response-actions-list .more-wrapper .actions-dropdown.is-expanded {
+        display: block; }
+
+.reply-post-control a {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: .5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #65b2e1;
+  color: #ffffff;
+  transition: .1s ease-out; }
+  .reply-post-control a:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+  .reply-post-control a:hover {
+    background-color: #8fc7ea; }
+  @media screen and (max-width: 26.5625em) {
+    .reply-post-control a {
+      white-space: normal; } }
+
+.comment-form .discussion-submit-comment {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: .5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #65b2e1;
+  color: #ffffff;
+  transition: .1s ease-out; }
+  .comment-form .discussion-submit-comment:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+  .comment-form .discussion-submit-comment:hover {
+    background-color: #8fc7ea; }
+  @media screen and (max-width: 26.5625em) {
+    .comment-form .discussion-submit-comment {
+      white-space: normal; } }
+
+.comment-form .sr {
+  display: none; }
+
+.comment-actions-list {
+  float: right; }
+
+.posted-details {
+  color: #666; }
+
+.user-label-staff {
+  font-weight: bold; }
+
+.view-in-course .post-field.editor,
+.view-in-course .comment-body,
+.view-in-course .reply-body, .discussion .post-field.editor,
+.discussion .comment-body,
+.discussion .reply-body {
+  overflow-x: scroll; }
+
+.view-in-course .new-post-article .post-topic-button, .discussion .new-post-article .post-topic-button {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: .5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #65b2e1;
+  color: #ffffff;
+  transition: .1s ease-out; }
+  .view-in-course .new-post-article .post-topic-button:disabled, .discussion .new-post-article .post-topic-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+  .view-in-course .new-post-article .post-topic-button:hover, .discussion .new-post-article .post-topic-button:hover {
+    background-color: #8fc7ea; }
+  @media screen and (max-width: 26.5625em) {
+    .view-in-course .new-post-article .post-topic-button, .discussion .new-post-article .post-topic-button {
+      white-space: normal; } }
+
+.view-in-course .new-post-article .post-field, .discussion .new-post-article .post-field {
+  display: block;
+  margin-bottom: 1.5em; }
+  .view-in-course .new-post-article .post-field::after, .discussion .new-post-article .post-field::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .view-in-course .new-post-article .post-field .field-label-text, .view-in-course .new-post-article .post-field .field-label .sr, .discussion .new-post-article .post-field .field-label-text, .discussion .new-post-article .post-field .field-label .sr {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+    margin: .3em 0; }
+  .view-in-course .new-post-article .post-field .field-input, .discussion .new-post-article .post-field .field-input {
+    border: none;
+    margin: 0;
+    display: block; }
+    .view-in-course .new-post-article .post-field .field-input .sr, .discussion .new-post-article .post-field .field-input .sr {
+      display: none; }
+  .view-in-course .new-post-article .post-field .field-help, .discussion .new-post-article .post-field .field-help {
+    display: block;
+    color: #999; }
+
+.view-in-course .new-post-article .post-options, .discussion .new-post-article .post-options {
+  display: block;
+  margin-bottom: 1.5em; }
+  .view-in-course .new-post-article .post-options::after, .discussion .new-post-article .post-options::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .view-in-course .new-post-article .post-options .post-option, .discussion .new-post-article .post-options .post-option {
+    display: block;
+    vertical-align: middle; }
+    .view-in-course .new-post-article .post-options .post-option::after, .discussion .new-post-article .post-options .post-option::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .view-in-course .new-post-article .post-options .post-option input, .discussion .new-post-article .post-options .post-option input {
+      vertical-align: middle; }
+
+.view-in-course .new-post-article .submit, .discussion .new-post-article .submit {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: .5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #65b2e1;
+  color: #ffffff;
+  transition: .1s ease-out; }
+  .view-in-course .new-post-article .submit:disabled, .discussion .new-post-article .submit:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+  .view-in-course .new-post-article .submit:hover, .discussion .new-post-article .submit:hover {
+    background-color: #8fc7ea; }
+  @media screen and (max-width: 26.5625em) {
+    .view-in-course .new-post-article .submit, .discussion .new-post-article .submit {
+      white-space: normal; } }
+
+.view-in-course .new-post-article .cancel, .discussion .new-post-article .cancel {
+  display: block;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 1.5;
+  padding: .5em 1em;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: normal;
+  font-family: "Noto Sans";
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #65b2e1;
+  color: #ffffff;
+  transition: .1s ease-out; }
+  .view-in-course .new-post-article .cancel:disabled, .discussion .new-post-article .cancel:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+  .view-in-course .new-post-article .cancel:hover, .discussion .new-post-article .cancel:hover {
+    background-color: #8fc7ea; }
+  @media screen and (max-width: 26.5625em) {
+    .view-in-course .new-post-article .cancel, .discussion .new-post-article .cancel {
+      white-space: normal; } }
+
+.view-in-course .new-post-article .submit, .view-in-course .new-post-article .cancel, .discussion .new-post-article .submit, .discussion .new-post-article .cancel {
+  width: auto;
+  display: inline-block; }
+
+.wmd-panel {
+  min-width: 500px;
+  width: 100%; }
+  .wmd-panel .wmd-preview-container {
+    border: 1px solid #dddddd;
+    padding: 2em 1em 1em 1em;
+    margin-bottom: 1em;
+    position: relative; }
+    .wmd-panel .wmd-preview-container .wmd-preview-label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: .5em;
+      text-transform: uppercase;
+      font-size: .7em;
+      background: #dddddd;
+      color: #666; }
+  .wmd-panel .sr {
+    display: none; }
+  .wmd-panel .wmd-button-bar {
+    width: 100%; }
+  .wmd-panel .wmd-input {
+    height: 150px; }
+  .wmd-panel .wmd-button-row {
+    position: relative;
+    overflow: hidden;
+    margin: 10px 5px 5px;
+    padding: 0;
+    height: 20px; }
+  .wmd-panel .wmd-spacer {
+    position: absolute;
+    display: inline-block;
+    margin-left: 14px;
+    width: 1px;
+    height: 20px;
+    background-color: Silver;
+    list-style: none; }
+  .wmd-panel .wmd-button {
+    position: absolute;
+    display: inline-block;
+    padding-right: 3px;
+    padding-left: 2px;
+    width: 20px;
+    height: 20px;
+    background: none;
+    list-style: none;
+    cursor: pointer; }
+    .wmd-panel .wmd-button:hover {
+      background-color: #e5f2fa; }
+  .wmd-panel .wmd-button > span {
+    display: inline-block;
+    vertical-align: top; }
+  .wmd-panel .wmd-spacer1 {
+    left: 45px; }
+  .wmd-panel .wmd-spacer2 {
+    left: 170px; }
+  .wmd-panel .wmd-spacer3 {
+    left: 295px; }
+  .wmd-panel .wmd-prompt-background {
+    background-color: Black; }
+  .wmd-panel .wmd-prompt-dialog {
+    background: #fbfbfb; }
+  .wmd-panel .wmd-prompt-dialog {
+    padding: 20px;
+    background-color: white;
+    padding: 1em; }
+  .wmd-panel .wmd-prompt-dialog > div {
+    font-size: 0.8em; }
+  .wmd-panel .wmd-prompt-dialog b {
+    font-size: 16px; }
+  .wmd-panel .wmd-prompt-dialog > form > input[type="text"] {
+    border-radius: 3px;
+    color: #333; }
+  .wmd-panel .wmd-prompt-dialog > form > input[type="button"] {
+    border: 1px solid #888;
+    font-size: 14px; }
+  .wmd-panel .wmd-prompt-dialog > form > input[type="file"] {
+    margin-bottom: 18px; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+B)"] > span:before {
+  content: "\f032"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+I)"] > span:before {
+  content: "\f033"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+L)"] > span:before {
+  content: "\f0c1"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+Q)"] > span:before {
+  content: "\f10e"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+K)"] > span:before {
+  content: "\f121"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+G)"] > span:before {
+  content: "\f03e"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+O)"] > span:before {
+  content: "\f0cb"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+U)"] > span:before {
+  content: "\f0ca"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+H)"] > span:before {
+  content: "\f1dc"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+R)"] > span:before {
+  content: "\f068"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+Z)"] > span:before {
+  content: "\f0e2"; }
+
+.wmd-panel .wmd-button[title*="(Ctrl+Shift+Z)"] > span:before {
+  content: "\f01e"; }
+
 .view-in-course .course-wrapper .course-index {
   float: left;
   display: block;
@@ -1552,16 +2362,16 @@ input[type="radio"] {
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading a {
         font-weight: bold; }
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name,
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button:before,
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmarks-results-list-item:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before,
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon,
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-comments-count:before,
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span {
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button:before,
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmarks-results-list-item:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before {
         display: table-cell; }
       .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chapter-label-name {
         vertical-align: top; }
-      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmarks-results-list-item:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-comments-count:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span {
+      .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .icon, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .forum-nav-thread-comments-count:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-panel .wmd-button > span, .wmd-panel .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .wmd-button > span, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .course-index .course-navigation .button-chapter.chapter .group-heading button:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .bookmarks-results-list-item:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype label:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .inputtype label:before, .view-in-course .inputtype .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput label:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput label:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading label:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .capa_inputtype .status:before, .view-in-course .capa_inputtype .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .formulaequationinput .status:before, .view-in-course .formulaequationinput .course-index .course-navigation .button-chapter.chapter .group-heading .status:before, .view-in-course .course-index .course-navigation .button-chapter.chapter .group-heading .indicator-container .status:before, .view-in-course .indicator-container .course-index .course-navigation .button-chapter.chapter .group-heading .status:before {
         vertical-align: middle;
         padding-right: 0.7em; }
     .view-in-course .course-index .course-navigation .button-chapter.chapter.active {
@@ -1637,15 +2447,12 @@ input[type="radio"] {
       .wrapper-course-material .tab a:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-      .wrapper-course-material .right a.active, .wrapper-course-material .right a.active-section,
+      .wrapper-course-material .right a.active, .wrapper-course-material .right a.current-page, .wrapper-course-material .right a.active-section,
       .wrapper-course-material .tab a.active,
+      .wrapper-course-material .tab a.current-page,
       .wrapper-course-material .tab a.active-section {
         background-color: #65b2e1;
         color: #ffffff; }
-        .wrapper-course-material .right a.active:hover, .wrapper-course-material .right a.active-section:hover,
-        .wrapper-course-material .tab a.active:hover,
-        .wrapper-course-material .tab a.active-section:hover {
-          background-color: #65b2e1; }
       .wrapper-course-material .right a:hover,
       .wrapper-course-material .tab a:hover {
         background-color: #baddf2;
@@ -2327,11 +3134,9 @@ input[type="radio"] {
       .book-sidebar li a:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-      .book-sidebar li a.active, .book-sidebar li a.active-section {
+      .book-sidebar li a.active, .book-sidebar li a.current-page, .book-sidebar li a.active-section {
         background-color: #323232;
         color: #ffffff; }
-        .book-sidebar li a.active:hover, .book-sidebar li a.active-section:hover {
-          background-color: #323232; }
       .book-sidebar li a:hover {
         background-color: #656565;
         color: #ffffff; }
@@ -2379,11 +3184,9 @@ input[type="radio"] {
       .instructor-nav .nav-item a:disabled {
         cursor: not-allowed;
         opacity: 0.5; }
-      .instructor-nav .nav-item a.active, .instructor-nav .nav-item a.active-section {
+      .instructor-nav .nav-item a.active, .instructor-nav .nav-item a.current-page, .instructor-nav .nav-item a.active-section {
         background-color: #65b2e1;
         color: #ffffff; }
-        .instructor-nav .nav-item a.active:hover, .instructor-nav .nav-item a.active-section:hover {
-          background-color: #65b2e1; }
       .instructor-nav .nav-item a:hover {
         background-color: #baddf2;
         color: #ffffff; }
@@ -2460,9 +3263,12 @@ input[type="radio"] {
   padding: 1em;
   background-color: #fbfbfb;
   border-radius: 3px;
-  margin-bottom: 1em; }
-  .view-in-course .discussion-module a {
+  margin-bottom: 1.5em; }
+  .view-in-course .discussion-module a.discussion-show {
     line-height: 40px; }
+  .view-in-course .discussion-module .new-post-article {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em; }
   .view-in-course .discussion-module .new-post-btn {
     display: block;
     border: none;
@@ -2494,6 +3300,48 @@ input[type="radio"] {
     .view-in-course .discussion-module .new-post-btn {
       float: none;
       width: 100%; } }
+
+.view-in-course .discussion-paginator {
+  display: block;
+  line-height: 2.8125em; }
+  .view-in-course .discussion-paginator::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .view-in-course .discussion-paginator li {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: transparent;
+    color: #999;
+    transition: .1s ease-out;
+    display: inline;
+    float: left;
+    margin: 0 0.15625em; }
+    .view-in-course .discussion-paginator li:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .view-in-course .discussion-paginator li.active, .view-in-course .discussion-paginator li.current-page, .view-in-course .discussion-paginator li.active-section {
+      background-color: #65b2e1;
+      color: #ffffff; }
+    .view-in-course .discussion-paginator li:hover {
+      background-color: #baddf2;
+      color: #ffffff; }
+    .view-in-course .discussion-paginator li:first-child {
+      margin-left: 0; }
+    .view-in-course .discussion-paginator li:last-child {
+      margin-right: 0; }
 
 .tc-wrapper .video-wrapper {
   float: left;
@@ -3147,720 +3995,6 @@ figure.highlight:hover a img {
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0; }
 
-.discussion .discussion-body .discussion-column {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 74.41059%;
-  padding: 0.625em; }
-  .discussion .discussion-body .discussion-column:last-child {
-    margin-right: 0; }
-
-.discussion .discussion-body .forum-nav {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 23.23176%;
-  position: relative; }
-  .discussion .discussion-body .forum-nav:last-child {
-    margin-right: 0; }
-
-@media screen and (max-width: 62.4375em) {
-  .discussion .discussion-body .discussion-column {
-    float: left;
-    display: block;
-    margin-right: 2.84259%;
-    width: 100%; }
-    .discussion .discussion-body .discussion-column:last-child {
-      margin-right: 0; }
-  .discussion .discussion-body .forum-nav {
-    float: left;
-    display: block;
-    margin-right: 2.84259%;
-    width: 100%;
-    margin-right: 0;
-    position: initial; }
-    .discussion .discussion-body .forum-nav:last-child {
-      margin-right: 0; }
-    .discussion .discussion-body .forum-nav .forum-nav-browse-menu {
-      height: auto !important; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list[style] {
-      height: auto !important; }
-    .discussion .discussion-body .forum-nav[style] {
-      top: auto !important;
-      height: auto !important; } }
-
-.discussion .discussion-body .forum-nav {
-  background-color: #ffffff; }
-  .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper,
-  .discussion .discussion-body .forum-nav .forum-nav-header,
-  .discussion .discussion-body .forum-nav .forum-nav-refine-bar,
-  .discussion .discussion-body .forum-nav .forum-nav-thread-list,
-  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper {
-    display: block;
-    width: 100%;
-    float: left; }
-  .discussion .discussion-body .forum-nav .forum-nav-thread-list {
-    overflow: hidden; }
-  .discussion .discussion-body .forum-nav .forum-nav-header {
-    padding: 0 0.5em;
-    position: relative; }
-    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse,
-    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search {
-      display: inline-block; }
-    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse {
-      background: none;
-      border: 0;
-      margin: 1em 0;
-      float: left; }
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse .sr {
-        display: none; }
-    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search {
-      position: absolute;
-      right: 1em; }
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .sr {
-        display: none; }
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input {
-        position: absolute;
-        float: right;
-        right: 1.4em;
-        text-align: right;
-        width: 5em;
-        text-overflow: ellipsis;
-        border: 0;
-        margin: .5em 0;
-        padding-right: 0;
-        padding-left: 1em;
-        background-color: white;
-        cursor: pointer; }
-        .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input:focus {
-          padding-right: 1em;
-          padding-left: 1em;
-          width: 14em; }
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .bookmarks-results-list-item:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-header .forum-nav-search .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span {
-        position: absolute;
-        right: 0;
-        margin: 1em 0;
-        line-height: 24px;
-        color: #00508D; }
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-search-input,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .icon,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search button:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .bookmarks-results-list-item:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .inputtype label:before, .view-in-course .inputtype
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search label:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .view-in-course .indicator-container .status:before, .view-in-course .indicator-container
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .status:before, .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-header .forum-nav-search .forum-nav-thread-comments-count:before,
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-panel .wmd-button > span, .wmd-panel
-      .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search .wmd-button > span {
-        display: inline-block;
-        float: right; }
-  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar {
-    background-color: #e5f2fa;
-    padding: .5em; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-filter-main,
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-sort {
-      display: inline-block; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-filter-main {
-      float: left; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .forum-nav-sort {
-      float: left; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar .sr {
-      display: none; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-refine-bar select {
-      background: none;
-      border: none;
-      padding: 0 .3em; }
-  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread,
-  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link {
-    display: block;
-    width: 100%;
-    float: left; }
-  .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link {
-    color: #666; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link.is-active {
-      background-color: #e5f2fa; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .sr {
-      display: none; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels {
-      display: none; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0,
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1,
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
-      padding: 1em 0; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0 {
-      float: left;
-      padding: 1em; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
-      float: right;
-      width: 2em;
-      margin: 0 .5em; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1 {
-      overflow: hidden;
-      max-width: 50%;
-      float: left;
-      text-overflow: ellipsis;
-      white-space: nowrap; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
-      position: relative;
-      padding: 1em 0; }
-      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before {
-        content: "\f075";
-        position: absolute;
-        left: 0;
-        top: -3px;
-        font-size: 2em;
-        color: #b3b3b3;
-        z-index: -1; }
-      .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count.is-unread:before {
-        color: #4a9fff; }
-    .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-comments-count {
-      display: block !important;
-      width: 100%;
-      z-index: 2;
-      position: relative;
-      color: white;
-      text-align: center; }
-  .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter {
-    padding: 0.9em 1.4em; }
-    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .sr {
-      display: none; }
-    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter input {
-      border: 0; }
-    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .icon, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter button:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .bookmarks-results-list-item:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter label:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .status:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-filter .wmd-button > span {
-      display: none; }
-  .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-menu {
-    overflow: scroll; }
-  .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-menu-item button {
-    display: block;
-    line-height: 1em;
-    font-size: 0.9em;
-    padding: 0.9em 1.4em;
-    font-weight: normal;
-    background: none;
-    border: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer; }
-    .discussion .discussion-body .forum-nav .forum-nav-browse-menu-wrapper .forum-nav-browse-menu-item button:hover {
-      background-color: #e5f2fa; }
-
-.discussion .discussion-body .discussion-column {
-  background-color: #ffffff; }
-  .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper {
-    margin: 2em 0; }
-    .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .response-count {
-      color: #0a5181;
-      font-weight: bold; }
-    .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .add-response {
-      float: right; }
-      .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
-        display: block;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
-        line-height: 1.5;
-        padding: .5em 1em;
-        text-align: center;
-        text-transform: uppercase;
-        font-size: 1em;
-        font-weight: normal;
-        font-family: "Noto Sans";
-        user-select: none;
-        vertical-align: middle;
-        white-space: nowrap;
-        background-color: #65b2e1;
-        color: #ffffff;
-        transition: .1s ease-out; }
-        .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn:disabled {
-          cursor: not-allowed;
-          opacity: 0.5; }
-        .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn:hover {
-          background-color: #8fc7ea; }
-        @media screen and (max-width: 26.5625em) {
-          .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
-            white-space: normal; } }
-  .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-responses-wrapper .js-response-list {
-    margin: 2em 0; }
-  .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .thread-main-wrapper {
-    padding-bottom: 1em;
-    margin-bottom: 1em;
-    border-bottom: 1px solid #dddddd; }
-  .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .wrapper-post-header .post-header-content .post-title {
-    margin-bottom: 0; }
-  .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .wrapper-post-header .post-header-content .posted-details {
-    color: #999; }
-  .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .post-context {
-    color: #0a5181; }
-    .discussion .discussion-body .discussion-column .discussion-article .thread-wrapper .post-context .group-visibility-label {
-      float: right;
-      display: inline; }
-  .discussion .discussion-body .discussion-column .discussion-article .wrapper-post-header,
-  .discussion .discussion-body .discussion-column .discussion-article .wrapper-response-header {
-    display: block;
-    margin-bottom: 1.5em; }
-    .discussion .discussion-body .discussion-column .discussion-article .wrapper-post-header::after,
-    .discussion .discussion-body .discussion-column .discussion-article .wrapper-response-header::after {
-      clear: both;
-      content: "";
-      display: block; }
-  .discussion .discussion-body .discussion-column .discussion-article .post-header-content,
-  .discussion .discussion-body .discussion-column .discussion-article .response-header-content {
-    color: #666;
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%; }
-    .discussion .discussion-body .discussion-column .discussion-article .post-header-content:last-child,
-    .discussion .discussion-body .discussion-column .discussion-article .response-header-content:last-child {
-      margin-right: 0; }
-  .discussion .discussion-body .discussion-column .discussion-article .post-header-actions,
-  .discussion .discussion-body .discussion-column .discussion-article .response-header-actions {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%; }
-    .discussion .discussion-body .discussion-column .discussion-article .post-header-actions:last-child,
-    .discussion .discussion-body .discussion-column .discussion-article .response-header-actions:last-child {
-      margin-right: 0; }
-  @media screen and (max-width: 62.4375em) {
-    .discussion .discussion-body .discussion-column .discussion-article .post-header-content,
-    .discussion .discussion-body .discussion-column .discussion-article .response-header-content {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%; }
-      .discussion .discussion-body .discussion-column .discussion-article .post-header-content:last-child,
-      .discussion .discussion-body .discussion-column .discussion-article .response-header-content:last-child {
-        margin-right: 0; }
-    .discussion .discussion-body .discussion-column .discussion-article .post-header-actions,
-    .discussion .discussion-body .discussion-column .discussion-article .response-header-actions {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%; }
-      .discussion .discussion-body .discussion-column .discussion-article .post-header-actions:last-child,
-      .discussion .discussion-body .discussion-column .discussion-article .response-header-actions:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 26.5625em) {
-    .discussion .discussion-body .discussion-column .discussion-article .post-header-content,
-    .discussion .discussion-body .discussion-column .discussion-article .response-header-content {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .discussion .discussion-body .discussion-column .discussion-article .post-header-content:last-child,
-      .discussion .discussion-body .discussion-column .discussion-article .response-header-content:last-child {
-        margin-right: 0; }
-    .discussion .discussion-body .discussion-column .discussion-article .post-header-actions,
-    .discussion .discussion-body .discussion-column .discussion-article .response-header-actions {
-      float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 100%; }
-      .discussion .discussion-body .discussion-column .discussion-article .post-header-actions:last-child,
-      .discussion .discussion-body .discussion-column .discussion-article .response-header-actions:last-child {
-        margin-right: 0; } }
-  .discussion .discussion-body .discussion-column .discussion-article .discussion-comment,
-  .discussion .discussion-body .discussion-column .discussion-article .forum-response {
-    border: 1px solid #dddddd;
-    padding: 1em;
-    margin-bottom: 1em; }
-  .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list,
-  .discussion .discussion-body .discussion-column .discussion-article .post-actions-list,
-  .discussion .discussion-body .discussion-column .discussion-article .response-actions-list {
-    text-align: right; }
-    .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-vote .sr,
-    .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-vote .sr,
-    .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-vote .sr {
-      display: none; }
-    .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow .sr,
-    .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow .sr,
-    .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow .sr {
-      display: none; }
-    .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow .label-unchecked,
-    .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow .label-unchecked,
-    .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow .label-unchecked {
-      color: #666;
-      display: inline; }
-    .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow .label-checked,
-    .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow .label-checked,
-    .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow .label-checked {
-      display: none; }
-    .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow .action-icon,
-    .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow .action-icon,
-    .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow .action-icon {
-      color: #666; }
-    .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow.is-checked .action-icon,
-    .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow.is-checked .action-icon,
-    .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow.is-checked .action-icon {
-      color: #00508D; }
-    .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-unchecked,
-    .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-unchecked,
-    .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-unchecked {
-      display: none; }
-    .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-checked,
-    .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-checked,
-    .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-checked {
-      color: #00508D;
-      display: inline; }
-    .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper,
-    .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper,
-    .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper {
-      position: relative; }
-      .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown,
-      .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown,
-      .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown {
-        display: none;
-        position: absolute;
-        top: 1.5em;
-        right: 0;
-        background-color: white;
-        z-index: 1;
-        border-radius: 3px;
-        border: 1px solid #dddddd;
-        border-radius: 3px; }
-        .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item a,
-        .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item a,
-        .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item a {
-          display: block;
-          line-height: 1em;
-          font-size: 0.9em;
-          padding: 0.7em 1.4em;
-          font-weight: normal; }
-        .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item .label-checked,
-        .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item .label-checked,
-        .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item .label-checked {
-          display: none; }
-        .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-checked,
-        .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-checked,
-        .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-checked {
-          display: inline; }
-        .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-unchecked,
-        .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-unchecked,
-        .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown .actions-item .is-checked .label-unchecked {
-          display: none; }
-        .discussion .discussion-body .discussion-column .discussion-article .comment-actions-list .more-wrapper .actions-dropdown.is-expanded,
-        .discussion .discussion-body .discussion-column .discussion-article .post-actions-list .more-wrapper .actions-dropdown.is-expanded,
-        .discussion .discussion-body .discussion-column .discussion-article .response-actions-list .more-wrapper .actions-dropdown.is-expanded {
-          display: block; }
-  .discussion .discussion-body .discussion-column .reply-post-control a {
-    display: block;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    line-height: 1.5;
-    padding: .5em 1em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: normal;
-    font-family: "Noto Sans";
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    background-color: #65b2e1;
-    color: #ffffff;
-    transition: .1s ease-out; }
-    .discussion .discussion-body .discussion-column .reply-post-control a:disabled {
-      cursor: not-allowed;
-      opacity: 0.5; }
-    .discussion .discussion-body .discussion-column .reply-post-control a:hover {
-      background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
-      .discussion .discussion-body .discussion-column .reply-post-control a {
-        white-space: normal; } }
-  .discussion .discussion-body .discussion-column .comment-form .discussion-submit-comment {
-    display: block;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    line-height: 1.5;
-    padding: .5em 1em;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1em;
-    font-weight: normal;
-    font-family: "Noto Sans";
-    user-select: none;
-    vertical-align: middle;
-    white-space: nowrap;
-    background-color: #65b2e1;
-    color: #ffffff;
-    transition: .1s ease-out; }
-    .discussion .discussion-body .discussion-column .comment-form .discussion-submit-comment:disabled {
-      cursor: not-allowed;
-      opacity: 0.5; }
-    .discussion .discussion-body .discussion-column .comment-form .discussion-submit-comment:hover {
-      background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
-      .discussion .discussion-body .discussion-column .comment-form .discussion-submit-comment {
-        white-space: normal; } }
-  .discussion .discussion-body .discussion-column .comment-form .sr {
-    display: none; }
-  .discussion .discussion-body .discussion-column .comment-actions-list {
-    float: right; }
-  .discussion .discussion-body .discussion-column .posted-details {
-    color: #666; }
-  .discussion .discussion-body .discussion-column .user-label-staff {
-    font-weight: bold; }
-
-.view-in-course .new-post-article .post-topic-button, .discussion .new-post-article .post-topic-button {
-  display: block;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  line-height: 1.5;
-  padding: .5em 1em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: normal;
-  font-family: "Noto Sans";
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  background-color: #65b2e1;
-  color: #ffffff;
-  transition: .1s ease-out; }
-  .view-in-course .new-post-article .post-topic-button:disabled, .discussion .new-post-article .post-topic-button:disabled {
-    cursor: not-allowed;
-    opacity: 0.5; }
-  .view-in-course .new-post-article .post-topic-button:hover, .discussion .new-post-article .post-topic-button:hover {
-    background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
-    .view-in-course .new-post-article .post-topic-button, .discussion .new-post-article .post-topic-button {
-      white-space: normal; } }
-
-.view-in-course .new-post-article .post-field, .discussion .new-post-article .post-field {
-  display: block;
-  margin-bottom: 1.5em; }
-  .view-in-course .new-post-article .post-field::after, .discussion .new-post-article .post-field::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .view-in-course .new-post-article .post-field .field-label-text, .view-in-course .new-post-article .post-field .field-label .sr, .discussion .new-post-article .post-field .field-label-text, .discussion .new-post-article .post-field .field-label .sr {
-    display: block;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: .8em;
-    margin: .3em 0; }
-  .view-in-course .new-post-article .post-field .field-input, .discussion .new-post-article .post-field .field-input {
-    border: none;
-    margin: 0;
-    display: block; }
-    .view-in-course .new-post-article .post-field .field-input .sr, .discussion .new-post-article .post-field .field-input .sr {
-      display: none; }
-  .view-in-course .new-post-article .post-field .field-help, .discussion .new-post-article .post-field .field-help {
-    display: block;
-    color: #999; }
-
-.view-in-course .new-post-article .post-options, .discussion .new-post-article .post-options {
-  display: block;
-  margin-bottom: 1.5em; }
-  .view-in-course .new-post-article .post-options::after, .discussion .new-post-article .post-options::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .view-in-course .new-post-article .post-options .post-option, .discussion .new-post-article .post-options .post-option {
-    vertical-align: middle;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: .8em;
-    margin: .3em 0; }
-    .view-in-course .new-post-article .post-options .post-option input, .discussion .new-post-article .post-options .post-option input {
-      vertical-align: middle; }
-
-.view-in-course .new-post-article .submit, .discussion .new-post-article .submit {
-  display: block;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  line-height: 1.5;
-  padding: .5em 1em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: normal;
-  font-family: "Noto Sans";
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  background-color: #65b2e1;
-  color: #ffffff;
-  transition: .1s ease-out; }
-  .view-in-course .new-post-article .submit:disabled, .discussion .new-post-article .submit:disabled {
-    cursor: not-allowed;
-    opacity: 0.5; }
-  .view-in-course .new-post-article .submit:hover, .discussion .new-post-article .submit:hover {
-    background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
-    .view-in-course .new-post-article .submit, .discussion .new-post-article .submit {
-      white-space: normal; } }
-
-.view-in-course .new-post-article .cancel, .discussion .new-post-article .cancel {
-  display: block;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-  line-height: 1.5;
-  padding: .5em 1em;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-weight: normal;
-  font-family: "Noto Sans";
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  background-color: #65b2e1;
-  color: #ffffff;
-  transition: .1s ease-out; }
-  .view-in-course .new-post-article .cancel:disabled, .discussion .new-post-article .cancel:disabled {
-    cursor: not-allowed;
-    opacity: 0.5; }
-  .view-in-course .new-post-article .cancel:hover, .discussion .new-post-article .cancel:hover {
-    background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
-    .view-in-course .new-post-article .cancel, .discussion .new-post-article .cancel {
-      white-space: normal; } }
-
-.view-in-course .new-post-article .submit, .view-in-course .new-post-article .cancel, .discussion .new-post-article .submit, .discussion .new-post-article .cancel {
-  width: auto;
-  display: inline-block; }
-
-.wmd-panel {
-  min-width: 500px;
-  width: 100%; }
-  .wmd-panel .wmd-preview-container {
-    border: 1px solid #dddddd;
-    padding: 2em 1em 1em 1em;
-    margin-bottom: 1em;
-    position: relative; }
-    .wmd-panel .wmd-preview-container .wmd-preview-label {
-      position: absolute;
-      left: 0;
-      top: 0;
-      padding: .5em;
-      text-transform: uppercase;
-      font-size: .7em;
-      background: #dddddd;
-      color: #666; }
-  .wmd-panel .sr {
-    display: none; }
-  .wmd-panel .wmd-button-bar {
-    width: 100%; }
-  .wmd-panel .wmd-input {
-    height: 150px; }
-  .wmd-panel .wmd-button-row {
-    position: relative;
-    overflow: hidden;
-    margin: 10px 5px 5px;
-    padding: 0;
-    height: 20px; }
-  .wmd-panel .wmd-spacer {
-    position: absolute;
-    display: inline-block;
-    margin-left: 14px;
-    width: 1px;
-    height: 20px;
-    background-color: Silver;
-    list-style: none; }
-  .wmd-panel .wmd-button {
-    position: absolute;
-    display: inline-block;
-    padding-right: 3px;
-    padding-left: 2px;
-    width: 20px;
-    height: 20px;
-    background: none;
-    list-style: none;
-    cursor: pointer; }
-    .wmd-panel .wmd-button:hover {
-      background-color: #e5f2fa; }
-  .wmd-panel .wmd-button > span {
-    display: inline-block;
-    vertical-align: top; }
-  .wmd-panel .wmd-spacer1 {
-    left: 45px; }
-  .wmd-panel .wmd-spacer2 {
-    left: 170px; }
-  .wmd-panel .wmd-spacer3 {
-    left: 295px; }
-  .wmd-panel .wmd-prompt-background {
-    background-color: Black; }
-  .wmd-panel .wmd-prompt-dialog {
-    background: #fbfbfb; }
-  .wmd-panel .wmd-prompt-dialog {
-    padding: 20px;
-    background-color: white;
-    padding: 1em; }
-  .wmd-panel .wmd-prompt-dialog > div {
-    font-size: 0.8em; }
-  .wmd-panel .wmd-prompt-dialog b {
-    font-size: 16px; }
-  .wmd-panel .wmd-prompt-dialog > form > input[type="text"] {
-    border-radius: 3px;
-    color: #333; }
-  .wmd-panel .wmd-prompt-dialog > form > input[type="button"] {
-    border: 1px solid #888;
-    font-size: 14px; }
-  .wmd-panel .wmd-prompt-dialog > form > input[type="file"] {
-    margin-bottom: 18px; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+B)"] > span:before {
-  content: "\f032"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+I)"] > span:before {
-  content: "\f033"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+L)"] > span:before {
-  content: "\f0c1"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+Q)"] > span:before {
-  content: "\f10e"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+K)"] > span:before {
-  content: "\f121"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+G)"] > span:before {
-  content: "\f03e"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+O)"] > span:before {
-  content: "\f0cb"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+U)"] > span:before {
-  content: "\f0ca"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+H)"] > span:before {
-  content: "\f1dc"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+R)"] > span:before {
-  content: "\f068"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+Z)"] > span:before {
-  content: "\f0e2"; }
-
-.wmd-panel .wmd-button[title*="(Ctrl+Shift+Z)"] > span:before {
-  content: "\f01e"; }
-
 .wrapper-account-settings .wrapper-header .account-nav .account-nav-item {
   display: inline-block;
   padding: 0 0.3125em; }
@@ -3896,11 +4030,9 @@ figure.highlight:hover a img {
     .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button:disabled {
       cursor: not-allowed;
       opacity: 0.5; }
-    .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active, .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active-section {
+    .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active, .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.current-page, .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active-section {
       background-color: #65b2e1;
       color: #ffffff; }
-      .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active:hover, .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button.active-section:hover {
-        background-color: #65b2e1; }
     .wrapper-account-settings .wrapper-header .account-nav .account-nav-item button:hover {
       background-color: #baddf2;
       color: #ffffff; }
