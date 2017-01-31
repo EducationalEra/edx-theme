@@ -1,5 +1,10 @@
 .discussion .discussion-body .discussion-column {
     background-color: $white;
+    .home-helpgrid {
+      td, tr, th {
+        display: block;
+      }
+    }
 }
     .discussion-article {
         .forum-thread-expand,
@@ -19,14 +24,22 @@
             .thread-responses-wrapper {
                 margin: 2em 0;
                 .response-count {
+                    @include row;
+                    margin: $small-spacing / 2 0;
                     color: $blue;
                     font-weight: bold;
                 }
                 .add-response {
-                    float: right;
+                    @include row;
                     &-btn {
                         @include edx-button($bb);
+                        @include media($mobile-l) {
+                          display: block;
+                          float: none;
+                          width: 100%;
+                        }
                     }
+
                 }
             }
             .thread-responses-wrapper {

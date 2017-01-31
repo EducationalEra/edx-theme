@@ -45,7 +45,10 @@
         margin-bottom: 1em;
         background-color: $white;
         padding: $small-spacing;
-        float: left;
+        @include row;
+        a {
+          word-break: break-all;
+        }
         h1 {
           margin-top: $base-spacing;
           font-size: 1em;
@@ -70,6 +73,7 @@
               @include span-columns(12 of 12);
             }
             article {
+              margin-top: $base-spacing;
               padding-top: $base-spacing;
               border-top: $base-border;
               h2 {

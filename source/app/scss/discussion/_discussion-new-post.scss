@@ -55,6 +55,11 @@
     .submit, .cancel {
       width: auto;
       display: inline-block;
+      @include media($mobile-l) {
+        float: none;
+        width: 100%;
+        margin: $small-spacing / 2 0;
+      }
     }
   }
 }

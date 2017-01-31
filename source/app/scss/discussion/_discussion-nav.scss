@@ -16,19 +16,18 @@
     .forum-nav-header {
         padding: 0 0.5em;
         position: relative;
-        .forum-nav-browse,
         .forum-nav-search {
-            display: inline-block;
+            display: none;
         }
         .forum-nav-browse {
             .sr {
                 // TODO: tbd
                 display: none;
             }
+            display: block;
             background: none;
             border: 0;
             margin: 1em 0;
-            float: left;
         }
         .forum-nav-search {
             .sr {

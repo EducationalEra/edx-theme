@@ -54,7 +54,7 @@
                 &:last-of-type {
                     margin-right: 0;
                 }
-                @include media($mobile) {
+                @include media($mobile-l) {
                     margin: $button-space 0;
                     width: 100%;
                     display: block;
