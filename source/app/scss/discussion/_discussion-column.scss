@@ -20,6 +20,10 @@
           margin: $base-spacing 0;
         }
 
+        .post-title {
+          font-size: em(19);
+        }
+
         .thread-wrapper {
             .thread-responses-wrapper {
                 margin: 2em 0;
@@ -77,11 +81,11 @@
         .post-header-content,
         .response-header-content {
             color: $gray;
-            @include span-columns(10 of 12);
+            @include span-columns(7 of 12);
         }
         .post-header-actions,
         .response-header-actions {
-            @include span-columns(2 of 12);
+            @include span-columns(5 of 12);
         }
 
         @include media($tablet) {
@@ -124,7 +128,8 @@
                         display: none;
                     }
                 }
-                &.action-follow {
+                &.action-follow,
+                &.action-answer {
                     .sr {
                         // TODO: tbd
                         display: none;
@@ -137,7 +142,7 @@
                     .label-checked {
                         display: none;
                     }
-                    .action-icon {
+                    .action-icon, .action-label {
                         color: $gray;
                     }
                     //

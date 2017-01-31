@@ -1,11 +1,11 @@
 .discussion .discussion-body {
   .discussion-column {
-      @include span-columns(9 of 12);
+      @include span-columns(8 of 12);
       padding: $base-margin;
   }
 
   .forum-nav {
-      @include span-columns(3 of 12);
+      @include span-columns(4 of 12);
       position: initial;
       .forum-nav-browse-menu {
         height: auto !important;

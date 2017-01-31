@@ -1325,7 +1325,7 @@ input[type="radio"] {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 74.41059%;
+  width: 65.88078%;
   padding: 0.625em; }
   .discussion .discussion-body .discussion-column:last-child {
     margin-right: 0; }
@@ -1334,7 +1334,7 @@ input[type="radio"] {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 23.23176%;
+  width: 31.76157%;
   position: initial; }
   .discussion .discussion-body .forum-nav:last-child {
     margin-right: 0; }
@@ -1494,7 +1494,9 @@ input[type="radio"] {
       margin: 0 .5em; }
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1 {
       overflow: hidden;
-      max-width: 50%;
+      max-width: 67%;
+      padding: 1.1em 0;
+      font-size: .9em;
       float: left;
       text-overflow: ellipsis;
       white-space: nowrap; }
@@ -1617,6 +1619,9 @@ input[type="radio"] {
     content: "";
     display: block; }
 
+.discussion-article .post-title {
+  font-size: 1.1875em; }
+
 .discussion-article .thread-wrapper .thread-responses-wrapper {
   margin: 2em 0; }
   .discussion-article .thread-wrapper .thread-responses-wrapper .response-count {
@@ -1701,7 +1706,7 @@ input[type="radio"] {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%; }
+  width: 57.35098%; }
   .discussion-article .post-header-content:last-child,
   .discussion-article .response-header-content:last-child {
     margin-right: 0; }
@@ -1711,7 +1716,7 @@ input[type="radio"] {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 14.70196%; }
+  width: 40.29137%; }
   .discussion-article .post-header-actions:last-child,
   .discussion-article .response-header-actions:last-child {
     margin-right: 0; }
@@ -1770,34 +1775,52 @@ input[type="radio"] {
   .discussion-article .post-actions-list .action-button.action-vote .sr,
   .discussion-article .response-actions-list .action-button.action-vote .sr {
     display: none; }
-  .discussion-article .comment-actions-list .action-button.action-follow .sr,
+  .discussion-article .comment-actions-list .action-button.action-follow .sr, .discussion-article .comment-actions-list .action-button.action-answer .sr,
   .discussion-article .post-actions-list .action-button.action-follow .sr,
-  .discussion-article .response-actions-list .action-button.action-follow .sr {
+  .discussion-article .post-actions-list .action-button.action-answer .sr,
+  .discussion-article .response-actions-list .action-button.action-follow .sr,
+  .discussion-article .response-actions-list .action-button.action-answer .sr {
     display: none; }
-  .discussion-article .comment-actions-list .action-button.action-follow .label-unchecked,
+  .discussion-article .comment-actions-list .action-button.action-follow .label-unchecked, .discussion-article .comment-actions-list .action-button.action-answer .label-unchecked,
   .discussion-article .post-actions-list .action-button.action-follow .label-unchecked,
-  .discussion-article .response-actions-list .action-button.action-follow .label-unchecked {
+  .discussion-article .post-actions-list .action-button.action-answer .label-unchecked,
+  .discussion-article .response-actions-list .action-button.action-follow .label-unchecked,
+  .discussion-article .response-actions-list .action-button.action-answer .label-unchecked {
     color: #666;
     display: inline; }
-  .discussion-article .comment-actions-list .action-button.action-follow .label-checked,
+  .discussion-article .comment-actions-list .action-button.action-follow .label-checked, .discussion-article .comment-actions-list .action-button.action-answer .label-checked,
   .discussion-article .post-actions-list .action-button.action-follow .label-checked,
-  .discussion-article .response-actions-list .action-button.action-follow .label-checked {
+  .discussion-article .post-actions-list .action-button.action-answer .label-checked,
+  .discussion-article .response-actions-list .action-button.action-follow .label-checked,
+  .discussion-article .response-actions-list .action-button.action-answer .label-checked {
     display: none; }
-  .discussion-article .comment-actions-list .action-button.action-follow .action-icon,
+  .discussion-article .comment-actions-list .action-button.action-follow .action-icon, .discussion-article .comment-actions-list .action-button.action-follow .action-label, .discussion-article .comment-actions-list .action-button.action-answer .action-icon, .discussion-article .comment-actions-list .action-button.action-answer .action-label,
   .discussion-article .post-actions-list .action-button.action-follow .action-icon,
-  .discussion-article .response-actions-list .action-button.action-follow .action-icon {
+  .discussion-article .post-actions-list .action-button.action-follow .action-label,
+  .discussion-article .post-actions-list .action-button.action-answer .action-icon,
+  .discussion-article .post-actions-list .action-button.action-answer .action-label,
+  .discussion-article .response-actions-list .action-button.action-follow .action-icon,
+  .discussion-article .response-actions-list .action-button.action-follow .action-label,
+  .discussion-article .response-actions-list .action-button.action-answer .action-icon,
+  .discussion-article .response-actions-list .action-button.action-answer .action-label {
     color: #666; }
-  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .action-icon,
+  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .action-icon, .discussion-article .comment-actions-list .action-button.action-answer.is-checked .action-icon,
   .discussion-article .post-actions-list .action-button.action-follow.is-checked .action-icon,
-  .discussion-article .response-actions-list .action-button.action-follow.is-checked .action-icon {
+  .discussion-article .post-actions-list .action-button.action-answer.is-checked .action-icon,
+  .discussion-article .response-actions-list .action-button.action-follow.is-checked .action-icon,
+  .discussion-article .response-actions-list .action-button.action-answer.is-checked .action-icon {
     color: #00508D; }
-  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-unchecked,
+  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-unchecked, .discussion-article .comment-actions-list .action-button.action-answer.is-checked .label-unchecked,
   .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-unchecked,
-  .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-unchecked {
+  .discussion-article .post-actions-list .action-button.action-answer.is-checked .label-unchecked,
+  .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-unchecked,
+  .discussion-article .response-actions-list .action-button.action-answer.is-checked .label-unchecked {
     display: none; }
-  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-checked,
+  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-checked, .discussion-article .comment-actions-list .action-button.action-answer.is-checked .label-checked,
   .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-checked,
-  .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-checked {
+  .discussion-article .post-actions-list .action-button.action-answer.is-checked .label-checked,
+  .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-checked,
+  .discussion-article .response-actions-list .action-button.action-answer.is-checked .label-checked {
     color: #00508D;
     display: inline; }
   .discussion-article .comment-actions-list .more-wrapper,
