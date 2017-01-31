@@ -42,7 +42,7 @@
         font-size: em(20);
         display: inline-block;
 
-        @include media($mobile) {
+        @include media($mobile-l) {
           display: block;
           white-space: normal;
         }
@@ -178,6 +178,7 @@
           margin-bottom: 20px;
           .inside-content {
             @include span-columns(3);
+            text-align: center;
           }
           .inside-description {
             @include span-columns(9);
@@ -234,7 +235,7 @@
           }
         }
 
-        @include media($mobile) {
+        @include media($mobile-l) {
           width: auto;
 
           .features li,
@@ -248,6 +249,19 @@
           .main-staff-wrapper .main-staff,
           .main-staff-wrapper .main-staff-description {
             @include span-columns(12);
+            margin-bottom: $small-spacing;
+          }
+
+          .pop-up {
+            @include row;
+            text-align: center;
+            a {
+              text-align: left;
+            }
+          }
+
+          .inside-content {
+            text-align: center;
           }
         }
     }
