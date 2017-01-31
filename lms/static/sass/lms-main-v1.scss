@@ -1325,8 +1325,7 @@ input[type="radio"] {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 65.88078%;
-  padding: 0.625em; }
+  width: 65.88078%; }
   .discussion .discussion-body .discussion-column:last-child {
     margin-right: 0; }
 
@@ -1545,7 +1544,8 @@ input[type="radio"] {
       background-color: #e5f2fa; }
 
 .discussion .discussion-body .discussion-column {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  padding: 1em; }
   .discussion .discussion-body .discussion-column .home-helpgrid td, .discussion .discussion-body .discussion-column .home-helpgrid tr, .discussion .discussion-body .discussion-column .home-helpgrid th {
     display: block; }
 
@@ -1761,10 +1761,17 @@ input[type="radio"] {
     .discussion-article .response-header-actions:last-child {
       margin-right: 0; } }
 
-.discussion-article .discussion-comment,
-.discussion-article .forum-response {
+.discussion-article .discussion-response {
+  padding: 1em; }
+
+.discussion-article .discussion-comment {
   border: 1px solid #dddddd;
   padding: 1em;
+  margin-top: 1em; }
+
+.discussion-article .forum-response {
+  padding: 1em;
+  border: 2px solid #dddddd;
   margin-bottom: 1em; }
 
 .discussion-article .comment-actions-list,
@@ -1775,52 +1782,36 @@ input[type="radio"] {
   .discussion-article .post-actions-list .action-button.action-vote .sr,
   .discussion-article .response-actions-list .action-button.action-vote .sr {
     display: none; }
-  .discussion-article .comment-actions-list .action-button.action-follow .sr, .discussion-article .comment-actions-list .action-button.action-answer .sr,
-  .discussion-article .post-actions-list .action-button.action-follow .sr,
-  .discussion-article .post-actions-list .action-button.action-answer .sr,
-  .discussion-article .response-actions-list .action-button.action-follow .sr,
-  .discussion-article .response-actions-list .action-button.action-answer .sr {
+  .discussion-article .comment-actions-list .action-button.action-button .sr,
+  .discussion-article .post-actions-list .action-button.action-button .sr,
+  .discussion-article .response-actions-list .action-button.action-button .sr {
     display: none; }
-  .discussion-article .comment-actions-list .action-button.action-follow .label-unchecked, .discussion-article .comment-actions-list .action-button.action-answer .label-unchecked,
-  .discussion-article .post-actions-list .action-button.action-follow .label-unchecked,
-  .discussion-article .post-actions-list .action-button.action-answer .label-unchecked,
-  .discussion-article .response-actions-list .action-button.action-follow .label-unchecked,
-  .discussion-article .response-actions-list .action-button.action-answer .label-unchecked {
+  .discussion-article .comment-actions-list .action-button.action-button .label-unchecked,
+  .discussion-article .post-actions-list .action-button.action-button .label-unchecked,
+  .discussion-article .response-actions-list .action-button.action-button .label-unchecked {
     color: #666;
     display: inline; }
-  .discussion-article .comment-actions-list .action-button.action-follow .label-checked, .discussion-article .comment-actions-list .action-button.action-answer .label-checked,
-  .discussion-article .post-actions-list .action-button.action-follow .label-checked,
-  .discussion-article .post-actions-list .action-button.action-answer .label-checked,
-  .discussion-article .response-actions-list .action-button.action-follow .label-checked,
-  .discussion-article .response-actions-list .action-button.action-answer .label-checked {
+  .discussion-article .comment-actions-list .action-button.action-button .label-checked,
+  .discussion-article .post-actions-list .action-button.action-button .label-checked,
+  .discussion-article .response-actions-list .action-button.action-button .label-checked {
     display: none; }
-  .discussion-article .comment-actions-list .action-button.action-follow .action-icon, .discussion-article .comment-actions-list .action-button.action-follow .action-label, .discussion-article .comment-actions-list .action-button.action-answer .action-icon, .discussion-article .comment-actions-list .action-button.action-answer .action-label,
-  .discussion-article .post-actions-list .action-button.action-follow .action-icon,
-  .discussion-article .post-actions-list .action-button.action-follow .action-label,
-  .discussion-article .post-actions-list .action-button.action-answer .action-icon,
-  .discussion-article .post-actions-list .action-button.action-answer .action-label,
-  .discussion-article .response-actions-list .action-button.action-follow .action-icon,
-  .discussion-article .response-actions-list .action-button.action-follow .action-label,
-  .discussion-article .response-actions-list .action-button.action-answer .action-icon,
-  .discussion-article .response-actions-list .action-button.action-answer .action-label {
+  .discussion-article .comment-actions-list .action-button.action-button .action-icon, .discussion-article .comment-actions-list .action-button.action-button .action-label,
+  .discussion-article .post-actions-list .action-button.action-button .action-icon,
+  .discussion-article .post-actions-list .action-button.action-button .action-label,
+  .discussion-article .response-actions-list .action-button.action-button .action-icon,
+  .discussion-article .response-actions-list .action-button.action-button .action-label {
     color: #666; }
-  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .action-icon, .discussion-article .comment-actions-list .action-button.action-answer.is-checked .action-icon,
-  .discussion-article .post-actions-list .action-button.action-follow.is-checked .action-icon,
-  .discussion-article .post-actions-list .action-button.action-answer.is-checked .action-icon,
-  .discussion-article .response-actions-list .action-button.action-follow.is-checked .action-icon,
-  .discussion-article .response-actions-list .action-button.action-answer.is-checked .action-icon {
+  .discussion-article .comment-actions-list .action-button.action-button.is-checked .action-icon,
+  .discussion-article .post-actions-list .action-button.action-button.is-checked .action-icon,
+  .discussion-article .response-actions-list .action-button.action-button.is-checked .action-icon {
     color: #00508D; }
-  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-unchecked, .discussion-article .comment-actions-list .action-button.action-answer.is-checked .label-unchecked,
-  .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-unchecked,
-  .discussion-article .post-actions-list .action-button.action-answer.is-checked .label-unchecked,
-  .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-unchecked,
-  .discussion-article .response-actions-list .action-button.action-answer.is-checked .label-unchecked {
+  .discussion-article .comment-actions-list .action-button.action-button.is-checked .label-unchecked,
+  .discussion-article .post-actions-list .action-button.action-button.is-checked .label-unchecked,
+  .discussion-article .response-actions-list .action-button.action-button.is-checked .label-unchecked {
     display: none; }
-  .discussion-article .comment-actions-list .action-button.action-follow.is-checked .label-checked, .discussion-article .comment-actions-list .action-button.action-answer.is-checked .label-checked,
-  .discussion-article .post-actions-list .action-button.action-follow.is-checked .label-checked,
-  .discussion-article .post-actions-list .action-button.action-answer.is-checked .label-checked,
-  .discussion-article .response-actions-list .action-button.action-follow.is-checked .label-checked,
-  .discussion-article .response-actions-list .action-button.action-answer.is-checked .label-checked {
+  .discussion-article .comment-actions-list .action-button.action-button.is-checked .label-checked,
+  .discussion-article .post-actions-list .action-button.action-button.is-checked .label-checked,
+  .discussion-article .response-actions-list .action-button.action-button.is-checked .label-checked {
     color: #00508D;
     display: inline; }
   .discussion-article .comment-actions-list .more-wrapper,

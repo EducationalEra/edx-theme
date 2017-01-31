@@ -1,10 +1,19 @@
 .discussion .discussion-body .discussion-column {
     background-color: $white;
+    padding: 1em;
+
     .home-helpgrid {
       td, tr, th {
         display: block;
       }
     }
+    // .thread-main-wrapper {
+    //   background-color: $white;
+    //   padding: 1em;
+    // }
+    // .responses li {
+    //   background-color: $white;
+    // }
 }
     .discussion-article {
         .forum-thread-expand,
@@ -110,10 +119,19 @@
           }
         }
 
-        .discussion-comment,
-        .forum-response {
+        .discussion-response {
+          padding: 1em;
+        }
+
+        .discussion-comment {
+
             border: 1px solid $light-gray;
             padding: 1em;
+            margin-top: 1em;
+        }
+        .forum-response {
+            padding: 1em;
+            border: 2px solid $light-gray;
             margin-bottom: 1em;
         }
         // still in discussion, but just about actions
@@ -128,8 +146,7 @@
                         display: none;
                     }
                 }
-                &.action-follow,
-                &.action-answer {
+                &.action-button {
                     .sr {
                         // TODO: tbd
                         display: none;

@@ -1,7 +1,6 @@
 .discussion .discussion-body {
   .discussion-column {
       @include span-columns(8 of 12);
-      padding: $base-margin;
   }
 
   .forum-nav {
