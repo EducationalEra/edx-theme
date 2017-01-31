@@ -446,8 +446,7 @@ td {
 tr,
 td,
 th {
-  vertical-align: middle;
-  word-break: break-all; }
+  vertical-align: middle; }
 
 body {
   -webkit-font-feature-settings: "kern", "liga", "pnum";
@@ -1306,14 +1305,13 @@ input[type="radio"] {
   .discussion .discussion-body .forum-nav .forum-nav-header {
     padding: 0 0.5em;
     position: relative; }
-    .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse,
     .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search {
-      display: inline-block; }
+      display: none; }
     .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse {
+      display: block;
       background: none;
       border: 0;
-      margin: 1em 0;
-      float: left; }
+      margin: 1em 0; }
       .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-browse .sr {
         display: none; }
     .discussion .discussion-body .forum-nav .forum-nav-header .forum-nav-search {
@@ -1465,6 +1463,8 @@ input[type="radio"] {
 
 .discussion .discussion-body .discussion-column {
   background-color: #ffffff; }
+  .discussion .discussion-body .discussion-column .home-helpgrid td, .discussion .discussion-body .discussion-column .home-helpgrid tr, .discussion .discussion-body .discussion-column .home-helpgrid th {
+    display: block; }
 
 .discussion-article .forum-thread-expand,
 .discussion-article .forum-thread-collapse {
@@ -1539,10 +1539,20 @@ input[type="radio"] {
 .discussion-article .thread-wrapper .thread-responses-wrapper {
   margin: 2em 0; }
   .discussion-article .thread-wrapper .thread-responses-wrapper .response-count {
+    display: block;
+    margin: 0.375em 0;
     color: #0a5181;
     font-weight: bold; }
+    .discussion-article .thread-wrapper .thread-responses-wrapper .response-count::after {
+      clear: both;
+      content: "";
+      display: block; }
   .discussion-article .thread-wrapper .thread-responses-wrapper .add-response {
-    float: right; }
+    display: block; }
+    .discussion-article .thread-wrapper .thread-responses-wrapper .add-response::after {
+      clear: both;
+      content: "";
+      display: block; }
     .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
       display: block;
       border: none;
@@ -1569,6 +1579,11 @@ input[type="radio"] {
       @media screen and (max-width: 26.5625em) {
         .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
           white-space: normal; } }
+      @media screen and (max-width: 26.5625em) {
+        .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
+          display: block;
+          float: none;
+          width: 100%; } }
 
 .discussion-article .thread-wrapper .thread-responses-wrapper .js-response-list {
   margin: 2em 0; }
@@ -1942,6 +1957,11 @@ input[type="radio"] {
 .view-in-course .new-post-article .submit, .view-in-course .new-post-article .cancel, .discussion .new-post-article .submit, .discussion .new-post-article .cancel {
   width: auto;
   display: inline-block; }
+  @media screen and (max-width: 26.5625em) {
+    .view-in-course .new-post-article .submit, .view-in-course .new-post-article .cancel, .discussion .new-post-article .submit, .discussion .new-post-article .cancel {
+      float: none;
+      width: 100%;
+      margin: 0.375em 0; } }
 
 .wmd-panel {
   min-width: 500px;
@@ -2163,7 +2183,15 @@ input[type="radio"] {
   margin-bottom: 1em;
   background-color: #ffffff;
   padding: 0.75em;
-  float: left; }
+  display: block; }
+  .discussion .info-wrapper::after,
+  .view-in-course .info-wrapper::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .discussion .info-wrapper a,
+  .view-in-course .info-wrapper a {
+    word-break: break-all; }
   .discussion .info-wrapper h1,
   .view-in-course .info-wrapper h1 {
     margin-top: 1.5em;
@@ -2234,6 +2262,7 @@ input[type="radio"] {
         margin-right: 0; } }
   .discussion .info-wrapper .updates article,
   .view-in-course .info-wrapper .updates article {
+    margin-top: 1.5em;
     padding-top: 1.5em;
     border-top: 1px solid #dddddd; }
     .discussion .info-wrapper .updates article h2,
@@ -2695,7 +2724,7 @@ input[type="radio"] {
         margin-left: 0; }
       .view-in-course .problem .action > *:last-of-type {
         margin-right: 0; }
-      @media screen and (max-width: 20em) {
+      @media screen and (max-width: 26.5625em) {
         .view-in-course .problem .action > * {
           margin: 0.25em 0;
           width: 100%;
@@ -2927,9 +2956,10 @@ input[type="radio"] {
     font-weight: 100; }
 
 .profile-wrapper .course-info .grade-detail-graph {
-  height: 400px;
-  width: 100%;
-  overflow: scroll; }
+  height: 450px;
+  overflow-x: auto; }
+  .profile-wrapper .course-info .grade-detail-graph .overlay {
+    max-width: 100%; }
 
 .profile-wrapper .course-info #course-success {
   margin-bottom: 30px;
