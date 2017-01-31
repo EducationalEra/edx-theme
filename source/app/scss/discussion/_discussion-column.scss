@@ -77,11 +77,11 @@
         .post-header-content,
         .response-header-content {
             color: $gray;
-            @include span-columns(10);
+            @include span-columns(10 of 12);
         }
         .post-header-actions,
         .response-header-actions {
-            @include span-columns(2);
+            @include span-columns(2 of 12);
         }
 
         @include media($tablet) {

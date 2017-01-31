@@ -1,12 +1,22 @@
 .discussion .discussion-body {
   .discussion-column {
-      @include span-columns(9);
+      @include span-columns(9 of 12);
       padding: $base-margin;
   }
 
   .forum-nav {
-      @include span-columns(3);
-      position: relative;
+      @include span-columns(3 of 12);
+      position: initial;
+      .forum-nav-browse-menu {
+        height: auto !important;
+      }
+      .forum-nav-thread-list[style] {
+        height: auto !important;
+      }
+      &[style] {
+        top: auto !important;
+        height: auto !important;
+      }
   }
 
   @include media($tablet) {

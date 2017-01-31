@@ -243,3 +243,10 @@ from django.utils.http import urlquote_plus
       </div>
     </div>
 </main>
+<script>
+  $('.grade-detail-graph').css({opacity: 0});
+  setTimeout(function() {
+    $('.grade-detail-graph').css({'min-width': 'auto'});
+    $('.grade-detail-graph').animate({opacity: 1}, 200);
+  }, 3000);
+</script>

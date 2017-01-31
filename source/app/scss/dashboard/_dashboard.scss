@@ -13,6 +13,29 @@
       .wrapper-messages-primary {
         margin-top: $base-margin;
         color: $gray;
+        .message {
+            @include alert;
+            @include alert-info;
+            @include row;
+            &.course-status-certavailable {
+              font-weight: bold;
+            }
+            .wrapper-message-primary {
+              @include row;
+              line-height: em(45);
+              margin-top: $small-spacing;
+            }
+            .btn {
+              @include edx-button($bb);
+              display: inline;
+              cursor: pointer;
+              @include media($mobile-l) {
+                display: block;
+                width: 100%;
+                white-space: normal;
+              }
+            }
+        }
       }
 
       .course {

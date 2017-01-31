@@ -677,7 +677,7 @@ input[type="radio"] {
         opacity: 0.5; }
       .modal .inner-wrapper .close-modal:hover {
         background-color: #8fc7ea; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .modal .inner-wrapper .close-modal {
           white-space: normal; } }
     .modal .inner-wrapper .submit input,
@@ -707,7 +707,7 @@ input[type="radio"] {
       .modal .inner-wrapper .submit input:hover,
       .modal .inner-wrapper .submit button:hover {
         background-color: #8fc7ea; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .modal .inner-wrapper .submit input,
         .modal .inner-wrapper .submit button {
           white-space: normal; } }
@@ -719,7 +719,7 @@ input[type="radio"] {
     #unenroll-modal .inner-wrapper,
     #email-settings-modal .inner-wrapper {
       width: 50%; } }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     #unenroll-modal .inner-wrapper,
     #email-settings-modal .inner-wrapper {
       width: 90%; } }
@@ -812,7 +812,7 @@ input[type="radio"] {
       width: 48.82117%; }
       .login-register .form-wrapper .login-form:last-child, .login-register .form-wrapper .register-form:last-child, .login-register .form-wrapper .toggle-form:last-child, .login-register .form-wrapper .password-reset-form:last-child {
         margin-right: 0; } }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .login-register .form-wrapper .login-form, .login-register .form-wrapper .register-form, .login-register .form-wrapper .toggle-form, .login-register .form-wrapper .password-reset-form {
       float: left;
       display: block;
@@ -879,7 +879,7 @@ input[type="radio"] {
       opacity: 0.5; }
     .login-register .form-wrapper .login-form .login-providers .button:hover, .login-register .form-wrapper .register-form .login-providers .button:hover, .login-register .form-wrapper .password-reset-form .login-providers .button:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .login-register .form-wrapper .login-form .login-providers .button, .login-register .form-wrapper .register-form .login-providers .button, .login-register .form-wrapper .password-reset-form .login-providers .button {
         white-space: normal; } }
     .login-register .form-wrapper .login-form .login-providers .button .sr, .login-register .form-wrapper .register-form .login-providers .button .sr, .login-register .form-wrapper .password-reset-form .login-providers .button .sr {
@@ -920,7 +920,7 @@ input[type="radio"] {
       opacity: 0.5; }
     .login-register .form-wrapper .login-form .action:hover, .login-register .form-wrapper .register-form .action:hover, .login-register .form-wrapper .password-reset-form .action:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .login-register .form-wrapper .login-form .action, .login-register .form-wrapper .register-form .action, .login-register .form-wrapper .password-reset-form .action {
         white-space: normal; } }
   .login-register .form-wrapper .login-form p.sr, .login-register .form-wrapper .register-form p.sr, .login-register .form-wrapper .password-reset-form p.sr {
@@ -960,7 +960,7 @@ input[type="radio"] {
       opacity: 0.5; }
     .login-register .form-wrapper .toggle-form .nav-btn.form-toggle:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .login-register .form-wrapper .toggle-form .nav-btn.form-toggle {
         white-space: normal; } }
     @media screen and (max-width: 62.4375em) {
@@ -983,6 +983,80 @@ input[type="radio"] {
 .dashboard .listing-courses .wrapper-messages-primary, .dashboard .courses-listing .wrapper-messages-primary, .home .listing-courses .wrapper-messages-primary, .home .courses-listing .wrapper-messages-primary, .find-courses .listing-courses .wrapper-messages-primary, .find-courses .courses-listing .wrapper-messages-primary {
   margin-top: 0.625em;
   color: #666; }
+  .dashboard .listing-courses .wrapper-messages-primary .message, .dashboard .courses-listing .wrapper-messages-primary .message, .home .listing-courses .wrapper-messages-primary .message, .home .courses-listing .wrapper-messages-primary .message, .find-courses .listing-courses .wrapper-messages-primary .message, .find-courses .courses-listing .wrapper-messages-primary .message {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+    display: block; }
+    .dashboard .listing-courses .wrapper-messages-primary .message h4, .dashboard .courses-listing .wrapper-messages-primary .message h4, .home .listing-courses .wrapper-messages-primary .message h4, .home .courses-listing .wrapper-messages-primary .message h4, .find-courses .listing-courses .wrapper-messages-primary .message h4, .find-courses .courses-listing .wrapper-messages-primary .message h4 {
+      margin-top: 0;
+      color: inherit; }
+    .dashboard .listing-courses .wrapper-messages-primary .message .alert-link, .dashboard .courses-listing .wrapper-messages-primary .message .alert-link, .home .listing-courses .wrapper-messages-primary .message .alert-link, .home .courses-listing .wrapper-messages-primary .message .alert-link, .find-courses .listing-courses .wrapper-messages-primary .message .alert-link, .find-courses .courses-listing .wrapper-messages-primary .message .alert-link {
+      font-weight: normal; }
+    .dashboard .listing-courses .wrapper-messages-primary .message > ul,
+    .dashboard .listing-courses .wrapper-messages-primary .message > p, .dashboard .courses-listing .wrapper-messages-primary .message > ul,
+    .dashboard .courses-listing .wrapper-messages-primary .message > p, .home .listing-courses .wrapper-messages-primary .message > ul,
+    .home .listing-courses .wrapper-messages-primary .message > p, .home .courses-listing .wrapper-messages-primary .message > ul,
+    .home .courses-listing .wrapper-messages-primary .message > p, .find-courses .listing-courses .wrapper-messages-primary .message > ul,
+    .find-courses .listing-courses .wrapper-messages-primary .message > p, .find-courses .courses-listing .wrapper-messages-primary .message > ul,
+    .find-courses .courses-listing .wrapper-messages-primary .message > p {
+      margin-bottom: 0; }
+    .dashboard .listing-courses .wrapper-messages-primary .message > p + p, .dashboard .courses-listing .wrapper-messages-primary .message > p + p, .home .listing-courses .wrapper-messages-primary .message > p + p, .home .courses-listing .wrapper-messages-primary .message > p + p, .find-courses .listing-courses .wrapper-messages-primary .message > p + p, .find-courses .courses-listing .wrapper-messages-primary .message > p + p {
+      margin-top: 5px; }
+    .dashboard .listing-courses .wrapper-messages-primary .message hr, .dashboard .courses-listing .wrapper-messages-primary .message hr, .home .listing-courses .wrapper-messages-primary .message hr, .home .courses-listing .wrapper-messages-primary .message hr, .find-courses .listing-courses .wrapper-messages-primary .message hr, .find-courses .courses-listing .wrapper-messages-primary .message hr {
+      border-top-color: #a6e1ec; }
+    .dashboard .listing-courses .wrapper-messages-primary .message .alert-link, .dashboard .courses-listing .wrapper-messages-primary .message .alert-link, .home .listing-courses .wrapper-messages-primary .message .alert-link, .home .courses-listing .wrapper-messages-primary .message .alert-link, .find-courses .listing-courses .wrapper-messages-primary .message .alert-link, .find-courses .courses-listing .wrapper-messages-primary .message .alert-link {
+      color: #245269; }
+    .dashboard .listing-courses .wrapper-messages-primary .message::after, .dashboard .courses-listing .wrapper-messages-primary .message::after, .home .listing-courses .wrapper-messages-primary .message::after, .home .courses-listing .wrapper-messages-primary .message::after, .find-courses .listing-courses .wrapper-messages-primary .message::after, .find-courses .courses-listing .wrapper-messages-primary .message::after {
+      clear: both;
+      content: "";
+      display: block; }
+    .dashboard .listing-courses .wrapper-messages-primary .message.course-status-certavailable, .dashboard .courses-listing .wrapper-messages-primary .message.course-status-certavailable, .home .listing-courses .wrapper-messages-primary .message.course-status-certavailable, .home .courses-listing .wrapper-messages-primary .message.course-status-certavailable, .find-courses .listing-courses .wrapper-messages-primary .message.course-status-certavailable, .find-courses .courses-listing .wrapper-messages-primary .message.course-status-certavailable {
+      font-weight: bold; }
+    .dashboard .listing-courses .wrapper-messages-primary .message .wrapper-message-primary, .dashboard .courses-listing .wrapper-messages-primary .message .wrapper-message-primary, .home .listing-courses .wrapper-messages-primary .message .wrapper-message-primary, .home .courses-listing .wrapper-messages-primary .message .wrapper-message-primary, .find-courses .listing-courses .wrapper-messages-primary .message .wrapper-message-primary, .find-courses .courses-listing .wrapper-messages-primary .message .wrapper-message-primary {
+      display: block;
+      line-height: 2.8125em;
+      margin-top: 0.75em; }
+      .dashboard .listing-courses .wrapper-messages-primary .message .wrapper-message-primary::after, .dashboard .courses-listing .wrapper-messages-primary .message .wrapper-message-primary::after, .home .listing-courses .wrapper-messages-primary .message .wrapper-message-primary::after, .home .courses-listing .wrapper-messages-primary .message .wrapper-message-primary::after, .find-courses .listing-courses .wrapper-messages-primary .message .wrapper-message-primary::after, .find-courses .courses-listing .wrapper-messages-primary .message .wrapper-message-primary::after {
+        clear: both;
+        content: "";
+        display: block; }
+    .dashboard .listing-courses .wrapper-messages-primary .message .btn, .dashboard .courses-listing .wrapper-messages-primary .message .btn, .home .listing-courses .wrapper-messages-primary .message .btn, .home .courses-listing .wrapper-messages-primary .message .btn, .find-courses .listing-courses .wrapper-messages-primary .message .btn, .find-courses .courses-listing .wrapper-messages-primary .message .btn {
+      display: block;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      line-height: 1.5;
+      padding: .5em 1em;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: "Noto Sans";
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: #65b2e1;
+      color: #ffffff;
+      transition: .1s ease-out;
+      display: inline;
+      cursor: pointer; }
+      .dashboard .listing-courses .wrapper-messages-primary .message .btn:disabled, .dashboard .courses-listing .wrapper-messages-primary .message .btn:disabled, .home .listing-courses .wrapper-messages-primary .message .btn:disabled, .home .courses-listing .wrapper-messages-primary .message .btn:disabled, .find-courses .listing-courses .wrapper-messages-primary .message .btn:disabled, .find-courses .courses-listing .wrapper-messages-primary .message .btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+      .dashboard .listing-courses .wrapper-messages-primary .message .btn:hover, .dashboard .courses-listing .wrapper-messages-primary .message .btn:hover, .home .listing-courses .wrapper-messages-primary .message .btn:hover, .home .courses-listing .wrapper-messages-primary .message .btn:hover, .find-courses .listing-courses .wrapper-messages-primary .message .btn:hover, .find-courses .courses-listing .wrapper-messages-primary .message .btn:hover {
+        background-color: #8fc7ea; }
+      @media screen and (max-width: 45em) {
+        .dashboard .listing-courses .wrapper-messages-primary .message .btn, .dashboard .courses-listing .wrapper-messages-primary .message .btn, .home .listing-courses .wrapper-messages-primary .message .btn, .home .courses-listing .wrapper-messages-primary .message .btn, .find-courses .listing-courses .wrapper-messages-primary .message .btn, .find-courses .courses-listing .wrapper-messages-primary .message .btn {
+          white-space: normal; } }
+      @media screen and (max-width: 45em) {
+        .dashboard .listing-courses .wrapper-messages-primary .message .btn, .dashboard .courses-listing .wrapper-messages-primary .message .btn, .home .listing-courses .wrapper-messages-primary .message .btn, .home .courses-listing .wrapper-messages-primary .message .btn, .find-courses .listing-courses .wrapper-messages-primary .message .btn, .find-courses .courses-listing .wrapper-messages-primary .message .btn {
+          display: block;
+          width: 100%;
+          white-space: normal; } }
 
 .dashboard .listing-courses .course, .dashboard .courses-listing .course, .home .listing-courses .course, .home .courses-listing .course, .find-courses .listing-courses .course, .find-courses .courses-listing .course {
   border-bottom: 1px solid #dddddd;
@@ -1021,7 +1095,7 @@ input[type="radio"] {
       width: 58.86297%; }
       .dashboard .listing-courses .course .wrapper-course-details:last-child, .dashboard .courses-listing .course .wrapper-course-details:last-child, .home .listing-courses .course .wrapper-course-details:last-child, .home .courses-listing .course .wrapper-course-details:last-child, .find-courses .listing-courses .course .wrapper-course-details:last-child, .find-courses .courses-listing .course .wrapper-course-details:last-child {
         margin-right: 0; } }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .dashboard .listing-courses .course .wrapper-course-image, .dashboard .courses-listing .course .wrapper-course-image, .home .listing-courses .course .wrapper-course-image, .home .courses-listing .course .wrapper-course-image, .find-courses .listing-courses .course .wrapper-course-image, .find-courses .courses-listing .course .wrapper-course-image {
       float: left;
       display: block;
@@ -1043,7 +1117,7 @@ input[type="radio"] {
     .dashboard .listing-courses .course .wrapper-course-details .course-info .info-university, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-university, .home .listing-courses .course .wrapper-course-details .course-info .info-university, .home .courses-listing .course .wrapper-course-details .course-info .info-university, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-university, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-university {
       font-weight: bold;
       text-transform: uppercase; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .dashboard .listing-courses .course .wrapper-course-details .course-info .info-university, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-university, .home .listing-courses .course .wrapper-course-details .course-info .info-university, .home .courses-listing .course .wrapper-course-details .course-info .info-university, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-university, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-university {
           display: block;
           width: 100%;
@@ -1054,7 +1128,7 @@ input[type="radio"] {
             display: block; } }
     .dashboard .listing-courses .course .wrapper-course-details .course-info .info-date-block, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-date-block, .home .listing-courses .course .wrapper-course-details .course-info .info-date-block, .home .courses-listing .course .wrapper-course-details .course-info .info-date-block, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-date-block, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-date-block {
       float: right; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .dashboard .listing-courses .course .wrapper-course-details .course-info .info-date-block, .dashboard .courses-listing .course .wrapper-course-details .course-info .info-date-block, .home .listing-courses .course .wrapper-course-details .course-info .info-date-block, .home .courses-listing .course .wrapper-course-details .course-info .info-date-block, .find-courses .listing-courses .course .wrapper-course-details .course-info .info-date-block, .find-courses .courses-listing .course .wrapper-course-details .course-info .info-date-block {
           display: block;
           width: 100%;
@@ -1068,7 +1142,7 @@ input[type="radio"] {
     word-break: break-all; }
     .dashboard .listing-courses .course .wrapper-course-details .course-title .title-id, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-id, .home .listing-courses .course .wrapper-course-details .course-title .title-id, .home .courses-listing .course .wrapper-course-details .course-title .title-id, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-id, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-id {
       font-weight: normal; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .dashboard .listing-courses .course .wrapper-course-details .course-title .title-id, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-id, .home .listing-courses .course .wrapper-course-details .course-title .title-id, .home .courses-listing .course .wrapper-course-details .course-title .title-id, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-id, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-id {
           display: block;
           width: 100%;
@@ -1078,7 +1152,7 @@ input[type="radio"] {
             clear: both;
             content: "";
             display: block; } }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .dashboard .listing-courses .course .wrapper-course-details .course-title a, .dashboard .listing-courses .course .wrapper-course-details .course-title .title-name, .dashboard .courses-listing .course .wrapper-course-details .course-title a, .dashboard .courses-listing .course .wrapper-course-details .course-title .title-name, .home .listing-courses .course .wrapper-course-details .course-title a, .home .listing-courses .course .wrapper-course-details .course-title .title-name, .home .courses-listing .course .wrapper-course-details .course-title a, .home .courses-listing .course .wrapper-course-details .course-title .title-name, .find-courses .listing-courses .course .wrapper-course-details .course-title a, .find-courses .listing-courses .course .wrapper-course-details .course-title .title-name, .find-courses .courses-listing .course .wrapper-course-details .course-title a, .find-courses .courses-listing .course .wrapper-course-details .course-title .title-name {
         display: block;
         width: 100%;
@@ -1092,7 +1166,7 @@ input[type="radio"] {
     display: none; }
   .dashboard .listing-courses .course .wrapper-course-actions .course-actions, .dashboard .courses-listing .course .wrapper-course-actions .course-actions, .home .listing-courses .course .wrapper-course-actions .course-actions, .home .courses-listing .course .wrapper-course-actions .course-actions, .find-courses .listing-courses .course .wrapper-course-actions .course-actions, .find-courses .courses-listing .course .wrapper-course-actions .course-actions {
     float: right; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions, .dashboard .courses-listing .course .wrapper-course-actions .course-actions, .home .listing-courses .course .wrapper-course-actions .course-actions, .home .courses-listing .course .wrapper-course-actions .course-actions, .find-courses .listing-courses .course .wrapper-course-actions .course-actions, .find-courses .courses-listing .course .wrapper-course-actions .course-actions {
         width: 100%;
         float: left; } }
@@ -1123,10 +1197,10 @@ input[type="radio"] {
         opacity: 0.5; }
       .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course:hover, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more:hover {
         background-color: #8fc7ea; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more {
           white-space: normal; } }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .dashboard .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .dashboard .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .dashboard .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .home .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .home .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .home .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .home .courses-listing .course .wrapper-course-actions .course-actions .learn-more, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .enter-course, .find-courses .listing-courses .course .wrapper-course-actions .course-actions .learn-more, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .enter-course, .find-courses .courses-listing .course .wrapper-course-actions .course-actions .learn-more {
           width: 100%;
           margin-bottom: 0.5em; } }
@@ -1189,7 +1263,7 @@ input[type="radio"] {
       opacity: 0.5; }
     .dashboard .listing-courses .course .learn-more:hover, .dashboard .courses-listing .course .learn-more:hover, .home .listing-courses .course .learn-more:hover, .home .courses-listing .course .learn-more:hover, .find-courses .listing-courses .course .learn-more:hover, .find-courses .courses-listing .course .learn-more:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .dashboard .listing-courses .course .learn-more, .dashboard .courses-listing .course .learn-more, .home .listing-courses .course .learn-more, .home .courses-listing .course .learn-more, .find-courses .listing-courses .course .learn-more, .find-courses .courses-listing .course .learn-more {
         white-space: normal; } }
   .dashboard .listing-courses .course .wrapper-action-more, .dashboard .courses-listing .course .wrapper-action-more, .home .listing-courses .course .wrapper-action-more, .home .courses-listing .course .wrapper-action-more, .find-courses .listing-courses .course .wrapper-action-more, .find-courses .courses-listing .course .wrapper-action-more {
@@ -1240,7 +1314,7 @@ input[type="radio"] {
       opacity: 0.5; }
     .dashboard .listing-courses .course .action-upgrade-container .action-upgrade:hover, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade:hover, .home .listing-courses .course .action-upgrade-container .action-upgrade:hover, .home .courses-listing .course .action-upgrade-container .action-upgrade:hover, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade:hover, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .dashboard .listing-courses .course .action-upgrade-container .action-upgrade, .dashboard .courses-listing .course .action-upgrade-container .action-upgrade, .home .listing-courses .course .action-upgrade-container .action-upgrade, .home .courses-listing .course .action-upgrade-container .action-upgrade, .find-courses .listing-courses .course .action-upgrade-container .action-upgrade, .find-courses .courses-listing .course .action-upgrade-container .action-upgrade {
         white-space: normal; } }
 
@@ -1261,9 +1335,16 @@ input[type="radio"] {
   display: block;
   margin-right: 2.35765%;
   width: 23.23176%;
-  position: relative; }
+  position: initial; }
   .discussion .discussion-body .forum-nav:last-child {
     margin-right: 0; }
+  .discussion .discussion-body .forum-nav .forum-nav-browse-menu {
+    height: auto !important; }
+  .discussion .discussion-body .forum-nav .forum-nav-thread-list[style] {
+    height: auto !important; }
+  .discussion .discussion-body .forum-nav[style] {
+    top: auto !important;
+    height: auto !important; }
 
 @media screen and (max-width: 62.4375em) {
   .discussion .discussion-body .discussion-column {
@@ -1492,7 +1573,7 @@ input[type="radio"] {
   .discussion-article .forum-thread-expand:hover,
   .discussion-article .forum-thread-collapse:hover {
     background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .discussion-article .forum-thread-expand,
     .discussion-article .forum-thread-collapse {
       white-space: normal; } }
@@ -1576,10 +1657,10 @@ input[type="radio"] {
         opacity: 0.5; }
       .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn:hover {
         background-color: #8fc7ea; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
           white-space: normal; } }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .discussion-article .thread-wrapper .thread-responses-wrapper .add-response-btn {
           display: block;
           float: none;
@@ -1655,7 +1736,7 @@ input[type="radio"] {
     .discussion-article .response-header-actions:last-child {
       margin-right: 0; } }
 
-@media screen and (max-width: 26.5625em) {
+@media screen and (max-width: 45em) {
   .discussion-article .post-header-content,
   .discussion-article .response-header-content {
     float: left;
@@ -1783,7 +1864,7 @@ input[type="radio"] {
     opacity: 0.5; }
   .reply-post-control a:hover {
     background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .reply-post-control a {
       white-space: normal; } }
 
@@ -1810,7 +1891,7 @@ input[type="radio"] {
     opacity: 0.5; }
   .comment-form .discussion-submit-comment:hover {
     background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .comment-form .discussion-submit-comment {
       white-space: normal; } }
 
@@ -1856,7 +1937,7 @@ input[type="radio"] {
     opacity: 0.5; }
   .view-in-course .new-post-article .post-topic-button:hover, .discussion .new-post-article .post-topic-button:hover {
     background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .view-in-course .new-post-article .post-topic-button, .discussion .new-post-article .post-topic-button {
       white-space: normal; } }
 
@@ -1923,7 +2004,7 @@ input[type="radio"] {
     opacity: 0.5; }
   .view-in-course .new-post-article .submit:hover, .discussion .new-post-article .submit:hover {
     background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .view-in-course .new-post-article .submit, .discussion .new-post-article .submit {
       white-space: normal; } }
 
@@ -1950,14 +2031,14 @@ input[type="radio"] {
     opacity: 0.5; }
   .view-in-course .new-post-article .cancel:hover, .discussion .new-post-article .cancel:hover {
     background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .view-in-course .new-post-article .cancel, .discussion .new-post-article .cancel {
       white-space: normal; } }
 
 .view-in-course .new-post-article .submit, .view-in-course .new-post-article .cancel, .discussion .new-post-article .submit, .discussion .new-post-article .cancel {
   width: auto;
   display: inline-block; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .view-in-course .new-post-article .submit, .view-in-course .new-post-article .cancel, .discussion .new-post-article .submit, .discussion .new-post-article .cancel {
       float: none;
       width: 100%;
@@ -2097,7 +2178,7 @@ input[type="radio"] {
   .view-in-course .course-wrapper .courseware-results-wrapper:last-child {
     margin-right: 0; }
 
-@media screen and (max-width: 26.5625em) {
+@media screen and (max-width: 45em) {
   .view-in-course .course-wrapper .course-index {
     float: left;
     display: block;
@@ -2226,7 +2307,7 @@ input[type="radio"] {
     .discussion .info-wrapper button:hover,
     .view-in-course .info-wrapper button:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .discussion .info-wrapper button,
       .view-in-course .info-wrapper button {
         white-space: normal; } }
@@ -2250,7 +2331,7 @@ input[type="radio"] {
       .discussion .info-wrapper .updates:last-child,
       .view-in-course .info-wrapper .updates:last-child {
         margin-right: 0; } }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .discussion .info-wrapper .updates,
     .view-in-course .info-wrapper .updates {
       float: left;
@@ -2288,7 +2369,7 @@ input[type="radio"] {
       .discussion .info-wrapper .handouts:last-child,
       .view-in-course .info-wrapper .handouts:last-child {
         margin-right: 0; } }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .discussion .info-wrapper .handouts,
     .view-in-course .info-wrapper .handouts {
       float: left;
@@ -2512,7 +2593,7 @@ input[type="radio"] {
       .wrapper-course-material .right .new-post-btn:hover,
       .wrapper-course-material .tab .new-post-btn:hover {
         background-color: #8fc7ea; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .wrapper-course-material .right .new-post-btn,
         .wrapper-course-material .tab .new-post-btn {
           white-space: normal; } }
@@ -2523,7 +2604,7 @@ input[type="radio"] {
     float: left; }
   .wrapper-course-material .right {
     float: right; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .wrapper-course-material .tab, .wrapper-course-material .right {
       float: none;
       padding: 0;
@@ -2630,7 +2711,7 @@ input[type="radio"] {
       border-top-right-radius: 50%;
       border-bottom-right-radius: 50%; }
 
-@media screen and (max-width: 26.5625em) {
+@media screen and (max-width: 45em) {
   .view-in-course .sequence-nav {
     align-items: center;
     justify-content: center; }
@@ -2724,7 +2805,7 @@ input[type="radio"] {
         margin-left: 0; }
       .view-in-course .problem .action > *:last-of-type {
         margin-right: 0; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .view-in-course .problem .action > * {
           margin: 0.25em 0;
           width: 100%;
@@ -2752,7 +2833,7 @@ input[type="radio"] {
         opacity: 0.5; }
       .view-in-course .problem .action .check:hover {
         background-color: #8fc7ea; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .view-in-course .problem .action .check {
           white-space: normal; } }
     .view-in-course .problem .action .show, .view-in-course .problem .action .save, .view-in-course .problem .action .reset {
@@ -2778,7 +2859,7 @@ input[type="radio"] {
         opacity: 0.5; }
       .view-in-course .problem .action .show:hover, .view-in-course .problem .action .save:hover, .view-in-course .problem .action .reset:hover {
         background-color: #8fc7ea; }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .view-in-course .problem .action .show, .view-in-course .problem .action .save, .view-in-course .problem .action .reset {
           white-space: normal; } }
       .view-in-course .problem .action .show .sr, .view-in-course .problem .action .save .sr, .view-in-course .problem .action .reset .sr {
@@ -3045,7 +3126,7 @@ input[type="radio"] {
         width: 31.76157%; }
         .profile-wrapper .course-info > .chapters > section h2:last-child {
           margin-right: 0; } }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .profile-wrapper .course-info > .chapters > section h2 {
         float: left;
         display: block;
@@ -3073,7 +3154,7 @@ input[type="radio"] {
           border-left: 1px dashed #ddd; }
           .profile-wrapper .course-info > .chapters > section .sections:last-child {
             margin-right: 0; } }
-      @media screen and (max-width: 26.5625em) {
+      @media screen and (max-width: 45em) {
         .profile-wrapper .course-info > .chapters > section .sections {
           float: left;
           display: block;
@@ -3220,7 +3301,7 @@ input[type="radio"] {
       .instructor-nav .nav-item a:hover {
         background-color: #baddf2;
         color: #ffffff; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .instructor-nav .nav-item {
         width: 100%; } }
 
@@ -3263,7 +3344,7 @@ input[type="radio"] {
     .idash-section .gradebook-link:hover,
     .idash-section button:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .idash-section input[type=button],
       .idash-section input[type=submit],
       .idash-section .gradebook-link,
@@ -3277,7 +3358,7 @@ input[type="radio"] {
   .wrap-instructor-info .instructor-info-action {
     display: inline-block;
     margin: 0 0.25em; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .wrap-instructor-info .instructor-info-action {
         width: 100%; } }
     @media screen and (max-width: 20em) {
@@ -3323,10 +3404,10 @@ input[type="radio"] {
       opacity: 0.5; }
     .view-in-course .discussion-module .new-post-btn:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .view-in-course .discussion-module .new-post-btn {
         white-space: normal; } }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .view-in-course .discussion-module .new-post-btn {
       float: none;
       width: 100%; } }
@@ -3384,7 +3465,7 @@ input[type="radio"] {
 .tc-wrapper .subtitles {
   display: none; }
 
-@media screen and (max-width: 26.5625em) {
+@media screen and (max-width: 45em) {
   .tc-wrapper .video-wrapper {
     float: left;
     display: block;
@@ -3455,7 +3536,7 @@ input[type="radio"] {
   padding: .5em;
   display: block;
   float: right; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .tc-wrapper .video-wrapper .secondary-controls {
       display: none; } }
   .tc-wrapper .video-wrapper .secondary-controls .control.is-hidden {
@@ -3630,10 +3711,10 @@ input[type="radio"] {
           opacity: 0.5; }
         .content-wrapper > .course-info .course-profile .main-cta a:hover {
           background-color: #006dc0; }
-        @media screen and (max-width: 26.5625em) {
+        @media screen and (max-width: 45em) {
           .content-wrapper > .course-info .course-profile .main-cta a {
             white-space: normal; } }
-        @media screen and (max-width: 26.5625em) {
+        @media screen and (max-width: 45em) {
           .content-wrapper > .course-info .course-profile .main-cta a {
             display: block;
             white-space: normal; } }
@@ -3806,7 +3887,7 @@ input[type="radio"] {
           opacity: 0.5; }
         .content-wrapper > .course-info .container .inner-wrapper > section > .container .more-info .register:hover {
           background-color: #006dc0; }
-        @media screen and (max-width: 26.5625em) {
+        @media screen and (max-width: 45em) {
           .content-wrapper > .course-info .container .inner-wrapper > section > .container .more-info .register {
             white-space: normal; } }
     .content-wrapper > .course-info .container .inner-wrapper > section > .container .inside {
@@ -3888,7 +3969,7 @@ input[type="radio"] {
           .content-wrapper > .course-info .container .inner-wrapper > section > .container .short-description:last-child,
           .content-wrapper > .course-info .container .inner-wrapper > section > .container .pop-up:last-child {
             margin-right: 0; } }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .content-wrapper > .course-info .container .inner-wrapper > section > .container {
         width: auto; }
         .content-wrapper > .course-info .container .inner-wrapper > section > .container .features li,
@@ -4114,7 +4195,7 @@ figure.highlight:hover a img {
       opacity: 0.5; }
     .account-settings-section-body .u-field-link:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .account-settings-section-body .u-field-link {
         white-space: normal; } }
 
@@ -4224,7 +4305,7 @@ figure.highlight:hover a img {
   .wrapper-profile-sections .profile-section-one-fields:last-child {
     margin-right: 0; }
 
-@media screen and (max-width: 26.5625em) {
+@media screen and (max-width: 45em) {
   .wrapper-profile-sections .profile-image-field {
     float: left;
     display: block;
@@ -4318,7 +4399,7 @@ figure.highlight:hover a img {
       opacity: 0.5; }
     .wiki-wrapper .form-actions .btn:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .wiki-wrapper .form-actions .btn {
         white-space: normal; } }
   .wiki-wrapper .form-actions .btn-primary {
@@ -4344,7 +4425,7 @@ figure.highlight:hover a img {
       opacity: 0.5; }
     .wiki-wrapper .form-actions .btn-primary:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .wiki-wrapper .form-actions .btn-primary {
         white-space: normal; } }
   .wiki-wrapper .form-actions .btn {
@@ -4519,7 +4600,7 @@ figure.highlight:hover a img {
     opacity: 0.5; }
   .wrapper-header .collapse-navigation:hover {
     background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .wrapper-header .collapse-navigation {
       white-space: normal; } }
   @media screen and (max-width: 62.4375em) {
@@ -4569,7 +4650,7 @@ figure.highlight:hover a img {
       opacity: 0.5; }
     .header-navigation .user .dropdown:hover {
       background-color: #8fc7ea; }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .header-navigation .user .dropdown {
         white-space: normal; } }
     @media screen and (max-width: 62.4375em) {
@@ -4634,7 +4715,7 @@ figure.highlight:hover a img {
     opacity: 0.5; }
   .header-navigation .user-link:hover {
     background-color: #8fc7ea; }
-  @media screen and (max-width: 26.5625em) {
+  @media screen and (max-width: 45em) {
     .header-navigation .user-link {
       white-space: normal; } }
   @media screen and (max-width: 62.4375em) {
@@ -4689,7 +4770,7 @@ figure.highlight:hover a img {
         width: 23.23176%; }
         .wrapper-footer .col:last-child {
           margin-right: 0; } }
-    @media screen and (max-width: 26.5625em) {
+    @media screen and (max-width: 45em) {
       .wrapper-footer .col {
         float: left;
         display: block;

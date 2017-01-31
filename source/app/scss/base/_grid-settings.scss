@@ -2,7 +2,7 @@
 // Neat Overrides
 $column: 90px;
 // $gutter: 25px;
-// $grid-columns: 12 !default;
+$grid-columns: 12 !default;
 // $visual_grid: true;
 $max-width: em(1200);
 
@@ -10,13 +10,13 @@ $max-width: em(1200);
 $small-screen: em(320);
 $small-m-screen: em(375);
 $small-l-screen: em(425);
-$medium-screen: em(640);
+$medium-screen: em(720);
 $large-screen: em(1000);
 
 
 $mobile: new-breakpoint(max-width $small-screen);
 $mobile-m: new-breakpoint(max-width $small-m-screen);
-$mobile-l: new-breakpoint(max-width $small-l-screen);
+$mobile-l: new-breakpoint(max-width $medium-screen);
 $tablet: new-breakpoint(max-width ($large-screen - em(1)) 10);
 $desktop: new-breakpoint(min-width $large-screen 12);
 
