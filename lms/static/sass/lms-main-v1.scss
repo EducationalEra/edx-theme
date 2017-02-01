@@ -724,6 +724,47 @@ input[type="radio"] {
     #email-settings-modal .inner-wrapper {
       width: 90%; } }
 
+.wmd-prompt-background {
+  background: rgba(0, 0, 0, 0.5); }
+
+.wmd-prompt-dialog {
+  background: white;
+  padding: 1.5em; }
+  .wmd-prompt-dialog .form-actions {
+    margin-top: 0.75em; }
+    .wmd-prompt-dialog .form-actions .btn {
+      display: block;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      line-height: 1.5;
+      padding: .5em 1em;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1em;
+      font-weight: normal;
+      font-family: "Noto Sans";
+      user-select: none;
+      vertical-align: middle;
+      white-space: nowrap;
+      background-color: #65b2e1;
+      color: #ffffff;
+      transition: .1s ease-out;
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .wmd-prompt-dialog .form-actions .btn:disabled {
+        cursor: not-allowed;
+        opacity: 0.5; }
+      .wmd-prompt-dialog .form-actions .btn:hover {
+        background-color: #8fc7ea; }
+      @media screen and (max-width: 45em) {
+        .wmd-prompt-dialog .form-actions .btn {
+          white-space: normal; } }
+      .wmd-prompt-dialog .form-actions .btn:last-child {
+        margin-right: 0; }
+
 .post-errors,
 .discussion-errors,
 .comment-errors,

@@ -49,3 +49,19 @@
     width: 90%;
   }
 }
+
+.wmd-prompt-background {
+  background: rgba(0, 0, 0, .5);
+}
+
+.wmd-prompt-dialog {
+  background: white;
+  padding: $base-spacing;
+  .form-actions {
+    margin-top: $small-spacing;
+    .btn {
+      @include edx-button($bb);
+      @include span-columns(6 of 12);
+    }
+  }
+}
