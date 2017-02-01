@@ -93,7 +93,8 @@
         label,
         select {
             display: block;
-            margin: 1em 0;
+            margin: $small-spacing /2 0;
+            padding: $small-spacing /2 ;
         }
         input, textarea, select {
           width: auto;
@@ -125,6 +126,13 @@
             }
             &.choicegroup_incorrect:before {
                 @include answer-incorrect;
+                z-index: 10;
+            }
+            &.choicegroup_correct {
+              background: lighten(#4CAF50, 20%);
+            }
+            &.choicegroup_incorrect {
+              background: lighten(#F44336, 20%);
             }
             &:first-of-type {
                 margin-top: 0;

@@ -2921,7 +2921,8 @@ input[type="radio"] {
   .view-in-course .chemicalequationinput select, .view-in-course .designprotein2dinput label,
   .view-in-course .designprotein2dinput select {
     display: block;
-    margin: 1em 0; }
+    margin: 0.375em 0;
+    padding: 0.375em; }
   .view-in-course .capa_inputtype input, .view-in-course .capa_inputtype textarea, .view-in-course .capa_inputtype select, .view-in-course .inputtype input, .view-in-course .inputtype textarea, .view-in-course .inputtype select, .view-in-course .chemicalequationinput input, .view-in-course .chemicalequationinput textarea, .view-in-course .chemicalequationinput select, .view-in-course .designprotein2dinput input, .view-in-course .designprotein2dinput textarea, .view-in-course .designprotein2dinput select {
     width: auto; }
   .view-in-course .capa_inputtype .sr.status,
@@ -2950,7 +2951,12 @@ input[type="radio"] {
     content: "\f00c"; }
   .view-in-course .capa_inputtype label.choicegroup_incorrect:before, .view-in-course .inputtype label.choicegroup_incorrect:before, .view-in-course .chemicalequationinput label.choicegroup_incorrect:before, .view-in-course .designprotein2dinput label.choicegroup_incorrect:before {
     color: #F44336;
-    content: "\f00d"; }
+    content: "\f00d";
+    z-index: 10; }
+  .view-in-course .capa_inputtype label.choicegroup_correct, .view-in-course .inputtype label.choicegroup_correct, .view-in-course .chemicalequationinput label.choicegroup_correct, .view-in-course .designprotein2dinput label.choicegroup_correct {
+    background: #92cf94; }
+  .view-in-course .capa_inputtype label.choicegroup_incorrect, .view-in-course .inputtype label.choicegroup_incorrect, .view-in-course .chemicalequationinput label.choicegroup_incorrect, .view-in-course .designprotein2dinput label.choicegroup_incorrect {
+    background: #f99d97; }
   .view-in-course .capa_inputtype label:first-of-type, .view-in-course .inputtype label:first-of-type, .view-in-course .chemicalequationinput label:first-of-type, .view-in-course .designprotein2dinput label:first-of-type {
     margin-top: 0; }
   .view-in-course .capa_inputtype label:last-of-type, .view-in-course .inputtype label:last-of-type, .view-in-course .chemicalequationinput label:last-of-type, .view-in-course .designprotein2dinput label:last-of-type {
