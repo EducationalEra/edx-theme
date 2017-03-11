@@ -319,7 +319,7 @@
 }
 
 .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider .ui-widget-header {
-    background: #8e3e63;
+    background: #0ea6ec;
     box-shadow: none
 }
 
@@ -338,12 +338,12 @@
     border: 0;
     border-radius: 4px;
     padding: 0;
-    background: #cb598d;
+    background: #0ea6ec;
     box-shadow: none
 }
 
 .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider .ui-slider-handle:focus,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider .ui-slider-handle:hover {
-    background-color: #db8baf
+    background-color: #0ea6ec
 }
 
 .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .vcr {
@@ -530,16 +530,16 @@
     border: 0;
     border-radius: 4px;
     padding: 0;
-    background: #cb598d;
+    background: #0ea6ec;
     box-shadow: none
 }
 
 .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-handle:hover,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-handle:focus {
-    background: #db8baf
+    background: #0ea6ec
 }
 
 .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-range {
-    background: #8e3e63
+    background: #0ea6ec
 }
 
 .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .quality-control {
@@ -1247,4 +1247,9 @@
 
 .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu {
   bottom: 38px;
+}
+
+// hide youtube captions
+.caption-window {
+  display: none;
 }
