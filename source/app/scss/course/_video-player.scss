@@ -1,247 +1,1250 @@
-.tc-wrapper {
-  .video-wrapper {
-    @include span-columns(12);
-  }
-  .subtitles {
-    display: none;
-  }
-
-  @include media($mobile-l) {
-    .video-wrapper {
-      @include span-columns(12);
-      @include omega;
-    }
-    .subtitles {
-      display: none;
-    }
-  }
+.xmodule_display.xmodule_VideoModule {
+    margin-bottom: 30px
 }
 
-.has-captions {
-  .tc-wrapper {
-    .video-wrapper {
-      @include span-columns(9);
-    }
-    .subtitles {
-      @include span-columns(3);
-    }
-  }
+.xmodule_display.xmodule_VideoModule .is-hidden,.xmodule_display.xmodule_VideoModule .video.closed .subtitles,.xmodule_display.xmodule_VideoModule .mast.has-actions .nav-actions .button.is-hidden,.mast.has-actions .nav-actions .xmodule_display.xmodule_VideoModule .button.is-hidden {
+    display: none
 }
 
-.tc-wrapper {
-  .video-wrapper {
-    .video-player {
-      overflow: hidden;
-      width: 100%;
+.xmodule_display.xmodule_VideoModule .video {
+    background: #f0f3f5;
+    display: block;
+    margin: 0 -12px;
+    padding: 12px;
+    border-radius: 5px;
+    outline: none
+}
 
-      iframe {
-        border: none;
-        display: block;
-        margin: 0 auto;
-        width: auto;
-        height: auto;
-      }
-    }
-    .video-controls, .closed-captions {
-      @include row;
-      background-color: $dark-gray;
-      .slider {
-        background: darken($dark-gray, 10%);
-        border: none;
-        .ui-slider-range {
-          background: $bb;
-        }
-      }
-    }
+.xmodule_display.xmodule_VideoModule .video:after {
+    content: "";
+    display: table;
+    clear: both
+}
 
-    & .control, & .vidtime {
-      line-height: $base-line-height;
-      display: inline-block;
-      border: 0;
-      color: $bb;
-      background-color: transparent;
-      vertical-align: middle;
-    }
+.xmodule_display.xmodule_VideoModule .video:focus,.xmodule_display.xmodule_VideoModule .video:active,.xmodule_display.xmodule_VideoModule .video:hover {
+    border: 0
+}
 
-    .vcr {
-      padding: .5em;
-      display: block;
-      float: left;
-      .vidtime {
-        vertical-align: inherit;
-        margin: 0 2em;
-      }
-    }
+.xmodule_display.xmodule_VideoModule .video.is-initialized .video-wrapper .spinner {
+    display: none
+}
 
+.xmodule_display.xmodule_VideoModule .video.is-pre-roll .slider {
+    visibility: hidden
+}
 
-    .secondary-controls {
-      padding: .5em;
-      display: block;
-      float: right;
-      @include media($mobile-l) {
-        display: none;
-      }
+.xmodule_display.xmodule_VideoModule .video.is-pre-roll .video-player {
+    position: relative
+}
 
-      .control.is-hidden {
-        display: none;
-      }
+.xmodule_display.xmodule_VideoModule .video.is-pre-roll .video-player:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 55%
+}
 
-      .speeds.menu-container {
-        position: relative;
-        float: right;
+.xmodule_display.xmodule_VideoModule .video .tc-wrapper {
+    position: relative
+}
 
-        .control.speed-button {
-          & > span {
-            margin: 0 .2em;
-          }
-        }
+.xmodule_display.xmodule_VideoModule .video .tc-wrapper:after {
+    content: "";
+    display: table;
+    clear: both
+}
 
-        .video-speeds.menu {
-          display: none;
-        }
+.xmodule_display.xmodule_VideoModule .video .focus_grabber {
+    position: relative;
+    display: inline;
+    width: 0px;
+    height: 0px
+}
 
-        &.is-opened {
-          background-color: darken($dark-gray, 5%);
-          .video-speeds.menu {
-            display: block;
-            position: absolute;
-            bottom: 1.5em;
-            right: 0;
-            left: 0;
-            z-index: 1000;
-            padding-bottom: 1em;
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads {
+    margin: 0;
+    padding: 0
+}
 
-            background-color: darken($dark-gray, 5%);
-            & .is-active {
-              font-weight: bold;
-            }
-            .control.speed-option {
-              width: 100%;
-              border: 0;
-              text-align: center;
-              padding: .5em 0;
-              color: $bb;
-              background-color: transparent;
-            }
-          }
-        }
-      }
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads .video-download-button {
+    display: inline-block;
+    vertical-align: top;
+    margin: 15px 10px 0 0
+}
 
-      .volume {
-        position: relative;
-        float: right;
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads .video-download-button>a {
+    transition: all 0.25s ease-in-out 0s;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 14px;
+    float: left;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 15px;
+    color: #646464 #3c3c3c
+}
 
-        .control {
-          width: 1.5em;
-        }
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads .video-download-button>a:hover,.xmodule_display.xmodule_VideoModule .video .wrapper-downloads .video-download-button>a:focus {
+    background-color: #1AA1DE;
+    color: #fff
+}
 
-        .volume-slider-container {
-          display: none;
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads .video-tracks>a {
+    border-radius: 3px 0 0 3px
+}
 
-          .volume-slider {
-            background: none;
-            border: none;
-            width: 100%;
-            .ui-slider-handle {
-              width: 1.9em;
-            }
-            .ui-slider-range {
-              width: 100%;
-              background: $bb;
-            }
-          }
-        }
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads .video-tracks>a.external-track {
+    border-radius: 3px
+}
 
-        &.is-opened {
-          background-color: darken($dark-gray, 5%);
-          .volume-slider-container {
-            display: block;
-            position: absolute;
-            bottom: 1.5em;
-            padding-bottom: 1em;
-            right: 0;
-            left: 0;
-            z-index: 1000;
-            background: darken($dark-gray, 5%);
-          }
-        }
-      }
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads .branding {
+    display: inline-block;
+    float: right;
+    margin: 15px 0 0 10px;
+    vertical-align: top
+}
 
-      .control.quality-control {
-        position: relative;
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads .branding .host-tag {
+    margin-right: 10px;
+    position: absolute;
+    left: -9999em;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 70%;
+    color: #777
+}
 
-      }
+.xmodule_display.xmodule_VideoModule .video .wrapper-downloads .branding .brand-logo {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 40px;
+    padding: 5px 0;
+    vertical-align: middle
+}
 
-      .control.add-fullscreen {
-        position: relative;
-      }
+.xmodule_display.xmodule_VideoModule .video .video-wrapper {
+    float: left;
+    margin-right: 2.85714%;
+    width: 65.71429%;
+    background-color: black;
+    position: relative
+}
 
-      .grouped-controls {
-        position: relative;
-        float: right;
-      }
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player-pre,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player-post {
+    height: 50px;
+    background-color: #111010
+}
 
-      // TODO: tbd
-      // display: none;
-      .sr {
-        display: none;
-      }
-    }
-  }
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .spinner {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
+    background: rgba(0,0,0,0.7);
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    border-radius: 25%
+}
 
-  .closed-captions {
-    display: none !important;
-    text-align: center;
-    font-size: 1.5em;
-    color: $brand-blue;
-    text-shadow: 0 0 1px black;
-    font-weight: bold;
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .spinner:after {
+    animation: rotateCW 3s infinite linear;
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 7px solid white;
+    border-top-color: transparent;
+    border-radius: 100%;
+    position: relative
+}
 
-    // &.is-visible {
-    //   display: block;
-    // }
-  }
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .btn-play {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 1;
+    background: rgba(0,0,0,0.7);
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    border-radius: 25%
+}
 
-  .subtitles {
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .btn-play:after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 30px 0 30px 50px;
+    border-color: transparent transparent transparent #fff;
+    position: relative
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .closed-captions {
+    position: absolute;
+    width: 85%;
+    left: 5%;
+    top: 70%;
+    text-align: center
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .closed-captions.is-visible {
+    max-height: 60px;
+    border-radius: 4px;
+    padding: 8px 10px 8px 30px;
+    background: rgba(0,0,0,0.75);
+    color: #fffcdd
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .closed-captions.is-visible:before {
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 20px;
+    margin-top: -.6em;
+    font-family: 'FontAwesome';
+    content: "\f142";
+    color: #fff;
+    opacity: 0.5
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .closed-captions.is-visible:hover,.xmodule_display.xmodule_VideoModule .video .video-wrapper .closed-captions.is-visible.is-dragging {
+    background: #000;
+    cursor: move
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .closed-captions.is-visible:hover:before,.xmodule_display.xmodule_VideoModule .video .video-wrapper .closed-captions.is-visible.is-dragging:before {
+    opacity: 1.0
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player {
     overflow: hidden;
-    li[role="link"] {
-      display: none;
-      &.current {
-        display: block;
-      }
-    }
-  }
+    min-height: 300px
 }
 
-.wrapper-downloads {
-  // TODO: tbd
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player>div {
+    height: 100%
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player>div.hidden {
+    display: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player .video-error {
+    padding: 4px;
+    background: black;
+    color: white !important
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player object,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player iframe,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player video {
+    display: block;
+    border: none;
+    width: 100%
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player h4 {
+    text-align: center;
+    color: white
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-player h4.hidden {
+    display: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls {
+    position: relative;
+    border: 0;
+    background: #282c2e;
+    color: #f0f3f5
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls:hover ul,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls:hover div,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls:focus ul,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls:focus div {
+    opacity: 1
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .control {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 10px 13.33333px;
+    background: #282c2e;
+    box-shadow: none;
+    text-shadow: none;
+    color: #cfd8dc
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .control:hover,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .control:focus {
+    background: #171a1b
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .control:active,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .is-active.control,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .active.control {
+    color: #0ea6ec
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .control .icon {
+    width: 1em
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .control .icon.icon-hd {
+    width: auto
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider {
+    transform-origin: bottom left;
+    transition: height 0.7s ease-in-out 0s;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 5px;
+    margin-left: 0;
+    border: 0;
+    border-radius: 0;
+    background: #4f595d
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider .ui-widget-header {
+    background: #8e3e63;
+    box-shadow: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider .ui-corner-all.slider-range {
+    opacity: 0.3;
+    background-color: #1e91d3
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider .ui-slider-handle {
+    transform-origin: bottom left;
+    transition: all 0.7s ease-in-out 0s;
+    top: 0;
+    height: 5px;
+    width: 5px;
+    margin-left: -2.5px;
+    border: 0;
+    border-radius: 4px;
+    padding: 0;
+    background: #cb598d;
+    box-shadow: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider .ui-slider-handle:focus,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .slider .ui-slider-handle:hover {
+    background-color: #db8baf
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .vcr {
+    float: left;
+    list-style: none;
+    border-right: 1px solid #282c2e;
+    padding: 0
+}
+
+@media (max-width: 1120px) {
+    .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .vcr {
+        margin-right:0.70788em;
+        font-size: 0.875em
+    }
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .vcr .video_control:focus {
+    position: relative
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .vcr .video_control.skip {
+    white-space: nowrap
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .vcr .vidtime {
+    padding-left: 1.06181em;
+    display: inline-block;
+    color: #cfd8dc;
+    -webkit-font-smoothing: antialiased
+}
+
+@media (max-width: 1120px) {
+    .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .vcr .vidtime {
+        padding-left:0.70788em
+    }
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls {
+    float: right;
+    border-left: 1px dotted #4f595d
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .add-fullscreen,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .grouped-controls,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .quality-control {
+    border-left: 1px dotted #4f595d
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .speed-button:focus,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume>.control:focus,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .add-fullscreen:focus,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .quality-control:focus,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .toggle-transcript:focus {
+    position: relative
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container {
+    position: relative
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu {
+    transition: none;
+    position: absolute;
+    display: none;
+    bottom: 40px;
+    right: 0;
+    width: 120px;
+    margin: 0;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    background-color: #282c2e;
+    list-style: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu li {
+    color: #e7ecee
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu li .speed-option,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu li .control-lang {
+    text-align: left;
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 0;
+    padding: 0.70788em;
+    background: #282c2e;
+    box-shadow: none;
+    color: #e7ecee;
+    overflow: hidden;
+    text-shadow: none;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu li .speed-option:hover,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu li .speed-option:focus,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu li .control-lang:hover,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu li .control-lang:focus {
+    background-color: #4f595d;
+    color: #fcfcfc
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu li.is-active .speed-option,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu li.is-active .control-lang {
+    border-left: 2px solid #0ea6ec;
+    font-weight: 700;
+    color: #0ea6ec
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container.is-opened .menu {
+    display: block
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .speeds,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .lang,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .grouped-controls {
+    display: inline-block
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .speeds.is-opened .control .icon {
+    transform: rotate(-90deg)
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .speeds .speed-button .label {
+    padding: 0 6.66667px 0 0;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #e7ecee
+}
+
+@media (max-width: 1120px) {
+    .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .speeds .speed-button .label {
+        display:none
+    }
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .speeds .speed-button .value {
+    padding: 0 0.70788em 0 0;
+    color: #e7ecee;
+    font-weight: bold
+}
+
+@media (max-width: 1120px) {
+    .xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .speeds .speed-button .value {
+        padding:0 0.70788em
+    }
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .lang .language-menu {
+    width: 20px;
+    padding: 10px 0
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .lang.is-opened .control .icon {
+    transform: rotate(90deg)
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume {
+    display: inline-block;
+    position: relative
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume.is-opened .volume-slider-container {
+    display: block;
+    opacity: 1
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume:not(:first-child)>a {
+    border-left: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container {
+    transition: none;
+    display: none;
+    position: absolute;
+    bottom: 40px;
+    right: 0;
+    width: 41px;
+    height: 120px;
+    background-color: #282c2e
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container .volume-slider {
+    height: 100px;
+    width: 5px;
+    margin: 14px auto;
+    border: 0;
+    background: #4f595d
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-handle {
+    transition: height 2s ease-in-out 0s,width 2s ease-in-out 0s;
+    left: -5px;
+    height: 15px;
+    width: 15px;
+    border: 0;
+    border-radius: 4px;
+    padding: 0;
+    background: #cb598d;
+    box-shadow: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-handle:hover,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-handle:focus {
+    background: #db8baf
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container .volume-slider .ui-slider-range {
+    background: #8e3e63
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .quality-control {
+    font-weight: 700;
+    letter-spacing: -1px
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .quality-control.active {
+    color: #0ea6ec
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .quality-control.is-hidden,.xmodule_display.xmodule_VideoModule .video.closed .video-wrapper .video-controls .secondary-controls .quality-control.subtitles {
+    display: none !important
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .toggle-transcript.is-active {
+    color: #0ea6ec
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .lang>.hide-subtitles {
+    transition: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper:hover .video-controls .slider {
+    height: 13.33333px
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-wrapper:hover .video-controls .slider .ui-slider-handle {
+    height: 13.33333px;
+    width: 13.33333px
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .closed-captions {
+    width: 60%
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles {
+    float: left;
+    overflow: auto;
+    max-height: 460px;
+    width: 31.42857%;
+    padding: 0;
+    font-size: 14px;
+    visibility: visible
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles a {
+    color: #0074b5
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li {
+    margin-bottom: 8px;
+    border: 0;
+    padding: 0;
+    color: #0074b5;
+    line-height: 1.41575em
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li.current {
+    color: #333;
+    font-weight: 700
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li.focused {
+    outline: #000 dotted thin;
+    outline-offset: -1px
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:hover,.xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:focus {
+    text-decoration: underline
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li:empty {
+    margin-bottom: 0
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li.spacing:last-of-type {
+    position: relative
+}
+
+.xmodule_display.xmodule_VideoModule .video .subtitles .subtitles-menu li.spacing:last-of-type .transcript-end {
+    position: absolute;
+    bottom: 0
+}
+
+.xmodule_display.xmodule_VideoModule .video.closed .video-wrapper {
+    width: 100%;
+    background-color: inherit
+}
+
+.xmodule_display.xmodule_VideoModule .video.closed .video-wrapper .video-controls.html5 {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 1
+}
+
+.xmodule_display.xmodule_VideoModule .video.closed .video-wrapper .video-player-pre,.xmodule_display.xmodule_VideoModule .video.closed .video-wrapper .video-player-post {
+    height: 0
+}
+
+.xmodule_display.xmodule_VideoModule .video.closed .video-wrapper .video-player h3 {
+    color: black
+}
+
+.xmodule_display.xmodule_VideoModule .video.closed .subtitles.html5 {
+    background-color: rgba(243,243,243,0.8);
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 275px;
+    padding: 0 20px;
+    display: none
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen {
+    background: rgba(0,0,0,0.95);
+    border: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    vertical-align: middle;
+    border-radius: 0
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen.closed .tc-wrapper .video-wrapper {
+    width: 100%
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .video-wrapper .video-player-pre,.xmodule_display.xmodule_VideoModule .video.video-fullscreen .video-wrapper .video-player-post {
+    height: 0
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .video-wrapper {
+    position: static
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .video-wrapper .video-player h3 {
+    color: white
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .tc-wrapper {
+    width: 100%;
+    height: 100%;
+    position: static
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .tc-wrapper:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .tc-wrapper .video-wrapper {
+    height: 100%;
+    width: 75%;
+    margin-right: 0;
+    vertical-align: middle
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .tc-wrapper .video-wrapper object,.xmodule_display.xmodule_VideoModule .video.video-fullscreen .tc-wrapper .video-wrapper iframe,.xmodule_display.xmodule_VideoModule .video.video-fullscreen .tc-wrapper .video-wrapper video {
+    position: absolute;
+    width: auto;
+    height: auto
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .tc-wrapper .video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .subtitles {
+    height: 100%;
+    width: 25%;
+    padding: 1.41575em;
+    box-sizing: border-box;
+    transition: none;
+    background: #000;
+    visibility: visible
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .subtitles li {
+    color: #aaa
+}
+
+.xmodule_display.xmodule_VideoModule .video.video-fullscreen .subtitles li.current {
+    color: #fff
+}
+
+.xmodule_display.xmodule_VideoModule .video.is-touch .tc-wrapper .video-wrapper object,.xmodule_display.xmodule_VideoModule .video.is-touch .tc-wrapper .video-wrapper iframe,.xmodule_display.xmodule_VideoModule .video.is-touch .tc-wrapper .video-wrapper video {
+    width: 100%;
+    height: 100%
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-pre-roll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #000
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-pre-roll.is-html5 {
+    background-size: 15%
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-pre-roll .btn-play.btn-pre-roll {
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.5);
+    box-shadow: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-pre-roll .btn-play.btn-pre-roll:after {
+    display: none
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-pre-roll .btn-play.btn-pre-roll img {
+    height: 80px;
+    width: 80px
+}
+
+.xmodule_display.xmodule_VideoModule .video .video-pre-roll .btn-play.btn-pre-roll:hover,.xmodule_display.xmodule_VideoModule .video .video-pre-roll .btn-play.btn-pre-roll:focus {
+    background: #0079bc
+}
+
+.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_correct:after,.xmodule_display.xmodule_CapaModule div.problem .choicegroup .xmodule_display.xmodule_VideoModule label.choicegroup_correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicegroup_correct:after,.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicegroup_correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicetextgroup_correct:after,.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicetextgroup_correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup section.choicetextgroup_correct:after,.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule section.choicetextgroup_correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_partially-correct:after,.xmodule_display.xmodule_CapaModule div.problem .choicegroup .xmodule_display.xmodule_VideoModule label.choicegroup_partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicegroup_partially-correct:after,.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicegroup_partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicetextgroup_partially-correct:after,.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicetextgroup_partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup section.choicetextgroup_partially-correct:after,.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule section.choicetextgroup_partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicegroup label.choicegroup_incorrect:after,.xmodule_display.xmodule_CapaModule div.problem .choicegroup .xmodule_display.xmodule_VideoModule label.choicegroup_incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicegroup_incorrect:after,.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicegroup_incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup label.choicetextgroup_incorrect:after,.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicetextgroup_incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .choicetextgroup section.choicetextgroup_incorrect:after,.xmodule_display.xmodule_CapaModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule section.choicetextgroup_incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .indicator-container .status.correct:after,.xmodule_display.xmodule_CapaModule div.problem .indicator-container .xmodule_display.xmodule_VideoModule .status.correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .indicator-container .status.partially-correct:after,.xmodule_display.xmodule_CapaModule div.problem .indicator-container .xmodule_display.xmodule_VideoModule .status.partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .indicator-container .status.incorrect:after,.xmodule_display.xmodule_CapaModule div.problem .indicator-container .xmodule_display.xmodule_VideoModule .status.incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule div.problem .indicator-container .status.unanswered:after,.xmodule_display.xmodule_CapaModule div.problem .indicator-container .xmodule_display.xmodule_VideoModule .status.unanswered:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.incorrect .status:after,.xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.incorrect .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.incorrect .status:after,.xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.incorrect .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.partially-correct .status:after,.xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.partially-correct .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.partially-correct .status:after,.xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.partially-correct .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.correct .status:after,.xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.correct .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.correct .status:after,.xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.correct .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.unanswered .status:after,.xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.unanswered .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.unsubmitted .status:after,.xmodule_display.xmodule_CapaModule .problem .capa_inputtype.textline>.unsubmitted .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.unanswered .status:after,.xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.unanswered .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.unsubmitted .status:after,.xmodule_display.xmodule_CapaModule .problem .inputtype.formulaequationinput>.unsubmitted .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .video-tracks .a11y-menu-container>a:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicegroup label.choicegroup_correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicegroup .xmodule_display.xmodule_VideoModule label.choicegroup_correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup label.choicegroup_correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicegroup_correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup label.choicetextgroup_correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicetextgroup_correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup section.choicetextgroup_correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule section.choicetextgroup_correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicegroup label.choicegroup_partially-correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicegroup .xmodule_display.xmodule_VideoModule label.choicegroup_partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup label.choicegroup_partially-correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicegroup_partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup label.choicetextgroup_partially-correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicetextgroup_partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup section.choicetextgroup_partially-correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule section.choicetextgroup_partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicegroup label.choicegroup_incorrect:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicegroup .xmodule_display.xmodule_VideoModule label.choicegroup_incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup label.choicegroup_incorrect:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicegroup_incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup label.choicetextgroup_incorrect:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule label.choicetextgroup_incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup section.choicetextgroup_incorrect:after,.xmodule_display.xmodule_ConditionalModule div.problem .choicetextgroup .xmodule_display.xmodule_VideoModule section.choicetextgroup_incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .indicator-container .status.correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .indicator-container .xmodule_display.xmodule_VideoModule .status.correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .indicator-container .status.partially-correct:after,.xmodule_display.xmodule_ConditionalModule div.problem .indicator-container .xmodule_display.xmodule_VideoModule .status.partially-correct:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .indicator-container .status.incorrect:after,.xmodule_display.xmodule_ConditionalModule div.problem .indicator-container .xmodule_display.xmodule_VideoModule .status.incorrect:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule div.problem .indicator-container .status.unanswered:after,.xmodule_display.xmodule_ConditionalModule div.problem .indicator-container .xmodule_display.xmodule_VideoModule .status.unanswered:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.incorrect .status:after,.xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.incorrect .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.incorrect .status:after,.xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.incorrect .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.partially-correct .status:after,.xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.partially-correct .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.partially-correct .status:after,.xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.partially-correct .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.correct .status:after,.xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.correct .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.correct .status:after,.xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.correct .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.unanswered .status:after,.xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.unanswered .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.unsubmitted .status:after,.xmodule_display.xmodule_ConditionalModule .problem .capa_inputtype.textline>.unsubmitted .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.unanswered .status:after,.xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.unanswered .xmodule_display.xmodule_VideoModule .status:after,.xmodule_display.xmodule_VideoModule .xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.unsubmitted .status:after,.xmodule_display.xmodule_ConditionalModule .problem .inputtype.formulaequationinput>.unsubmitted .xmodule_display.xmodule_VideoModule .status:after {
+    font-family: FontAwesome;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    speak: none
+}
+
+.xmodule_display.xmodule_VideoModule .a11y-menu-container {
+    position: relative
+}
+
+.xmodule_display.xmodule_VideoModule .a11y-menu-container.open .a11y-menu-list {
+    display: block
+}
+
+.xmodule_display.xmodule_VideoModule .a11y-menu-container .a11y-menu-list {
+    top: 100%;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    list-style: none;
+    background-color: #fff;
+    border: 1px solid #eee
+}
+
+.xmodule_display.xmodule_VideoModule .a11y-menu-container .a11y-menu-list li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+    color: #fff
+}
+
+.xmodule_display.xmodule_VideoModule .a11y-menu-container .a11y-menu-list li a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #b2b2b2;
+    font-size: 14px;
+    line-height: 23px
+}
+
+.xmodule_display.xmodule_VideoModule .a11y-menu-container .a11y-menu-list li a:hover,.xmodule_display.xmodule_VideoModule .a11y-menu-container .a11y-menu-list li a:focus {
+    color: #666
+}
+
+.xmodule_display.xmodule_VideoModule .a11y-menu-container .a11y-menu-list li.active a {
+    color: #009fe6
+}
+
+.xmodule_display.xmodule_VideoModule .a11y-menu-container .a11y-menu-list li:last-child {
+    box-shadow: none;
+    border-bottom: 0;
+    margin-top: 0
+}
+
+.xmodule_display.xmodule_VideoModule .video-tracks .a11y-menu-container {
+    display: inline-block;
+    vertical-align: top;
+    border-left: 1px solid #eee
+}
+
+.xmodule_display.xmodule_VideoModule .video-tracks .a11y-menu-container.open>a {
+    background-color: #1AA1DE;
+    color: #fff
+}
+
+.xmodule_display.xmodule_VideoModule .video-tracks .a11y-menu-container.open>a:after {
+    color: #fff
+}
+
+.xmodule_display.xmodule_VideoModule .video-tracks .a11y-menu-container>a {
+    transition: all 0.25s ease-in-out 0s;
+    font-size: 12px;
+    font-size: 1.2rem;
+    display: block;
+    border-radius: 0 3px 3px 0;
+    background-color: #fff;
+    padding: 15px 25px 15px 15px;
+    color: #b2b2b2;
+    min-width: 1.5em;
+    line-height: 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.xmodule_display.xmodule_VideoModule .video-tracks .a11y-menu-container>a:after {
+    content: "\f0d7";
+    position: absolute;
+    right: 10px;
+    top: 33%;
+    color: #646464 #3c3c3c
+}
+
+.xmodule_display.xmodule_VideoModule .video-tracks .a11y-menu-container .a11y-menu-list {
+    right: 0
+}
+
+.xmodule_display.xmodule_VideoModule .video-tracks .a11y-menu-container .a11y-menu-list li {
+    font-size: 0.875em
+}
+
+.xmodule_display.xmodule_VideoModule .video-tracks .a11y-menu-container .a11y-menu-list li a {
+    border: 0;
+    display: block;
+    padding: 0.70788em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu,.xmodule_display.xmodule_VideoModule .submenu {
+    border: 1px solid #333;
+    background: #fff;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    top: 0;
+    display: none;
+    outline: none;
+    cursor: default;
+    white-space: nowrap
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu.is-opened,.xmodule_display.xmodule_VideoModule .submenu.is-opened {
+    display: block
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .menu-item,.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item,.xmodule_display.xmodule_VideoModule .submenu .menu-item,.xmodule_display.xmodule_VideoModule .submenu .submenu-item {
+    border-top: 1px solid #ccc;
+    padding: 5px 10px;
+    outline: none
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .menu-item>span,.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item>span,.xmodule_display.xmodule_VideoModule .submenu .menu-item>span,.xmodule_display.xmodule_VideoModule .submenu .submenu-item>span {
+    color: #333
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .menu-item:first-child,.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item:first-child,.xmodule_display.xmodule_VideoModule .submenu .menu-item:first-child,.xmodule_display.xmodule_VideoModule .submenu .submenu-item:first-child {
+    border-top: none
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .menu-item:focus,.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item:focus,.xmodule_display.xmodule_VideoModule .submenu .menu-item:focus,.xmodule_display.xmodule_VideoModule .submenu .submenu-item:focus {
+    background: #333;
+    color: #fff
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .menu-item:focus>span,.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item:focus>span,.xmodule_display.xmodule_VideoModule .submenu .menu-item:focus>span,.xmodule_display.xmodule_VideoModule .submenu .submenu-item:focus>span {
+    color: #fff
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item,.xmodule_display.xmodule_VideoModule .submenu .submenu-item {
+    position: relative;
+    padding: 5px 20px 5px 10px
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item:after,.xmodule_display.xmodule_VideoModule .submenu .submenu-item:after {
+    content: '\25B6';
+    position: absolute;
+    right: 5px;
+    line-height: 25px;
+    font-size: 10px
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item .submenu,.xmodule_display.xmodule_VideoModule .submenu .submenu-item .submenu {
+    display: none
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item.is-opened,.xmodule_display.xmodule_VideoModule .submenu .submenu-item.is-opened {
+    background: #333;
+    color: #fff
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item.is-opened>span,.xmodule_display.xmodule_VideoModule .submenu .submenu-item.is-opened>span {
+    color: #fff
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item.is-opened>.submenu,.xmodule_display.xmodule_VideoModule .submenu .submenu-item.is-opened>.submenu {
+    display: block
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .submenu-item .is-selected,.xmodule_display.xmodule_VideoModule .submenu .submenu-item .is-selected {
+    font-weight: bold
+}
+
+.xmodule_display.xmodule_VideoModule .contextmenu .is-disabled,.xmodule_display.xmodule_VideoModule .submenu .is-disabled {
+    pointer-events: none;
+    color: #ccc
+}
+
+.xmodule_display.xmodule_VideoModule .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-wrapper {
+    position: relative
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-header {
+    margin-bottom: .5em
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section {
+    position: relative;
+    padding: .5em 1em;
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    margin-bottom: 0.5em
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section.shaded {
+    background-color: #EDEDED
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section .annotatable-section-title {
+    font-weight: bold
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section .annotatable-section-title a {
+    font-weight: normal
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section .annotatable-section-body {
+    border-top: 1px solid #ccc;
+    margin-top: 0.5em;
+    padding-top: 0.5em
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section .annotatable-section-body:after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section ul.instructions-template {
+    list-style: disc;
+    margin-left: 4em
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section ul.instructions-template b {
+    font-weight: bold
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section ul.instructions-template i {
+    font-style: italic
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-section ul.instructions-template code {
+    display: inline;
+    white-space: pre;
+    font-family: Courier New, monospace
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-toggle {
+    position: absolute;
+    right: 0;
+    margin: 2px 1em 2px 0
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-toggle.expanded:after {
+    content: " \2191"
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-toggle.collapsed:after {
+    content: " \2193"
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span {
+    display: inline
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight {
+    background-color: rgba(255,255,10,0.3)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight.selected {
+    background-color: rgba(255,255,10,0.9)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-#ff0 {
+    background-color: rgba(255,255,10,0.3)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-#ff0.selected {
+    background-color: rgba(255,255,10,0.9)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-red {
+    background-color: rgba(178,19,16,0.3)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-red.selected {
+    background-color: rgba(178,19,16,0.9)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-orange {
+    background-color: rgba(255,165,0,0.3)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-orange.selected {
+    background-color: rgba(255,165,0,0.9)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-green {
+    background-color: rgba(25,255,132,0.3)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-green.selected {
+    background-color: rgba(25,255,132,0.9)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-blue {
+    background-color: rgba(35,163,255,0.3)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-blue.selected {
+    background-color: rgba(35,163,255,0.9)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-purple {
+    background-color: rgba(115,9,178,0.3)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.highlight-purple.selected {
+    background-color: rgba(115,9,178,0.9)
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.hide {
+    cursor: none;
+    background-color: inherit
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span.hide .annotatable-icon {
+    display: none
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .annotatable-span .annotatable-comment {
+    display: none
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip {
+    font-size: 0.875em;
+    border: 1px solid #333;
+    border-radius: 1em;
+    background-color: rgba(0,0,0,0.85);
+    color: #fff;
+    -webkit-font-smoothing: antialiased
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip .ui-tooltip-titlebar {
+    font-size: 1em;
+    color: inherit;
+    background-color: transparent;
+    padding: 5px 10px;
+    border: none
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip .ui-tooltip-titlebar .ui-tooltip-title {
+    padding: 5px 0;
+    border-bottom: 2px solid #333;
+    font-weight: bold
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip .ui-tooltip-titlebar .ui-tooltip-icon {
+    right: 10px;
+    background: #333
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip .ui-tooltip-titlebar .ui-state-hover {
+    color: inherit;
+    border: 1px solid #ccc
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip .ui-tooltip-content {
+    color: inherit;
+    font-size: 0.875em;
+    text-align: left;
+    font-weight: 400;
+    padding: 0 10px 10px 10px;
+    background-color: transparent;
+    border-color: transparent
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip p {
+    color: inherit;
+    line-height: normal
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip-annotatable {
+    max-width: 375px
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip-annotatable .ui-tooltip-content {
+    padding: 0 10px
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip-annotatable .ui-tooltip-content .annotatable-comment {
+    display: block;
+    margin: 0 0 10px 0;
+    max-height: 225px;
+    overflow: auto;
+    line-height: normal
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip-annotatable .ui-tooltip-content .annotatable-reply {
+    display: block;
+    border-top: 2px solid #333;
+    padding: 5px 0;
+    margin: 0;
+    text-align: center
+}
+
+.xmodule_display.xmodule_VideoAnnotationModule .ui-tooltip.qtip.ui-tooltip-annotatable:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    height: 0;
+    width: 0;
+    margin-left: -5px;
+    border: 10px solid transparent;
+    border-top-color: rgba(0,0,0,0.85)
+}
+
+//
+
+.wrapper-sock .wrapper-inner,.xmodule_display.xmodule_VideoModule .video.closed .subtitles.html5 {
+    z-index: 0
+}
+
+.wrapper-xblock .container-paging-header .pagination .current-page,.wrapper-xblock .container-paging-footer .pagination .current-page,.wrapper-assets .assets-library .pagination .current-page,.wrapper-sock .list-cta,.view-uploads .assets-library .pagination .current-page,.view-dashboard .wrapper-creationrights .ui-toggle-target,.view-static-pages .component .drag-handle,.view-static-pages .course-nav-item .drag-handle,.xmodule_display.xmodule_CourseModule .sequence-nav ol li button.active,.xmodule_display.xmodule_CapaModule div.problem .CodeMirror pre.CodeMirror-cursor,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu,.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .volume .volume-slider-container,.xmodule_display.xmodule_ConditionalModule div.problem .CodeMirror pre.CodeMirror-cursor,.xmodule_display.xmodule_SequenceModule .sequence-nav ol li button.active {
+    z-index: 10
+}
+
+.is-dragging,.modal,#lean_overlay,.course-updates .update-list>li.editing,.edit-handouts-form,.view-static-pages .unit-body .wrapper-component-editor,.xmodule_display.xmodule_CourseModule .sequence-nav .left-shadow,.xmodule_display.xmodule_CourseModule .sequence-nav .right-shadow,.xmodule_display.xmodule_VideoModule .video.video-fullscreen,.xmodule_display.xmodule_VideoModule .video.video-fullscreen .tc-wrapper .video-controls,.xmodule_display.xmodule_VideoModule .overlay,.xmodule_display.xmodule_SequenceModule .sequence-nav .left-shadow,.xmodule_display.xmodule_SequenceModule .sequence-nav .right-shadow {
+    z-index: 10000
+}
+
+// actually do not show closed-captions
+.closed-captions.is-visible {
+  display: none;
+}
+//
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .control.toggle-captions {
   display: none;
 }
 
-.video-fullscreen {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #323232;
-
-  .tc-wrapper {
-    width: 100%;
-    height: 100%;
-    position: static;
-  }
-
-  .video-wrapper {
-    height: 100%;
-    position: static;
-    vertical-align: middle;
-  }
-
-  .subtitles {
-    li[role="link"].current {
-      color: white;
-    }
-  }
+.xmodule_display.xmodule_VideoModule .video .video-wrapper .video-controls .secondary-controls .menu-container .menu {
+  bottom: 38px;
 }
