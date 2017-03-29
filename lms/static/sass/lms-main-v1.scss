@@ -5729,3 +5729,11 @@ figure.highlight:hover a img {
 @media screen and (max-width: 20em) {
   .mh {
     display: none !important; } }
+
+.slick-header-column.ui-state-default {
+  height: 27px;
+}
+
+.slick-viewport {
+  height: auto!important;
+}
