@@ -411,6 +411,7 @@ html {
 
 ul,
 ol {
+  list-style-type: none;
   margin: 0 0 0 25px;
   padding: 0; }
 
@@ -2483,6 +2484,10 @@ input[type="radio"] {
 .discussion .xmodule_display.xmodule_SequenceModule .seq_contents,
 .view-in-course .xmodule_display.xmodule_SequenceModule .seq_contents {
   display: none; }
+
+.course-content ol,
+.course-content ul {
+  list-style-type: disc; }
 
 .view-in-course .course-index {
   border-radius: 3px;
