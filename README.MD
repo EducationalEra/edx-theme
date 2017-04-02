@@ -10,10 +10,18 @@ npm i
 ```
 
 ## Development
+In system file `/etc/hosts`
+add line
+```
+127.0.0.1 dev.ed-era.com
+```
+
 In order to start development environment perform
 ```
 npm start
 ```
+
+Open browser with url https://dev.ed-era.com.
 
 ## Deployment
 Build produces final `.css` file under `source/app/css/lms-main-v1.css` and
