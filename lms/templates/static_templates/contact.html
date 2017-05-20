@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-</head>
-<body>
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%inherit file="../main.html" />
 
-</body>
-</html>
+<%block name="pagetitle">${_("Contacts")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+  <section class="container about">
+    <h1>${_("Contacts")}</h1>
+    <p><a href="mailto:info@ed-era.com" title="">info@ed-era.com</a></p>
+    <p><a href="tel:+380633806042" title="" class="phone">+38 063 380-60-42</a></p>
+    <p><a href="https://www.google.com.ua/maps/place/Frolivska+St,+1,+Kyiv/@50.4629475,30.5139948,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4ce41c1471395:0x406d4ecc25d11a6a!8m2!3d50.4629475!4d30.5161835" target="_blank">Фролівська 1/6, поверх 5</a></p>
+  </section>
+</main>
