@@ -76,12 +76,8 @@
             .forum-nav-filter-main,
             .forum-nav-sort {
                 display: inline-block;
-            }
-            .forum-nav-filter-main {
-                float: left;
-            }
-            .forum-nav-sort {
-                float: left;
+                float:left;
+                width: 100%;
             }
             .sr {
                 // TODO: tbd
@@ -109,8 +105,13 @@
                     display: none;
                 }
                 .forum-nav-thread-labels {
-                    // TODO: tbd
-                    display: none;
+                    list-style: none;
+                    li {
+                      display: inline-block;
+                      border: 1px solid #ccc;
+                      padding: 0 .25em;
+                      font-size: .75em;
+                    }
                 }
 
                 .forum-nav-thread-wrapper-0,
@@ -148,8 +149,8 @@
                       content: "\f075";
                       position: absolute;
                       left:0;
-                      top: -3px;
-                      font-size: 2em;
+                      top: -8px;
+                      font-size: 2.75em;
                       color: lighten($gray, 30);
                       z-index: -1;
                     }
@@ -166,6 +167,7 @@
                   position: relative;
                   color: white;
                   text-align: center;
+                  font-size: .75em;
                 }
             }
         }

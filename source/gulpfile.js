@@ -19,7 +19,7 @@ gulp.task('serve', ['sass'], function () {
     // from current directory + ./app/css
     browserSync.init({
         proxy: 'https://courses.ed-era.com/',
-        https: true,
+        https: false,
         serveStatic: ['app/css', 'app/js', '../lms'],
         rewriteRules: [
             {

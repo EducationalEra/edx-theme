@@ -3,10 +3,30 @@
     padding: 1em;
 
     .home-helpgrid {
-      td, tr, th {
-        display: block;
+      .row-item,
+      .row-item-full {
+        label {
+          width: 50px;
+        }
+        .icon, label {
+          font-size: 1em;
+          padding-right: .5em;
+        }
+        .row-description {
+          font-size: .75em;
+        }
+        .icon, label, .email-setting, .row-description {
+          vertical-align: middle;
+          display: table-cell;
+        }
       }
     }
+
+    // .home-helpgrid {
+    //   td, tr, th {
+    //     display: block;
+    //   }
+    // }
     // .thread-main-wrapper {
     //   background-color: $white;
     //   padding: 1em;
@@ -15,6 +35,30 @@
     //   background-color: $white;
     // }
 }
+
+.course-wrapper {
+  section.user-profile {
+    @include span-columns(3 of 12);
+    .sidebar-user-roles,
+    .sidebar-threads-count,
+    .sidebar-comments-count {
+      font-size: .9em;
+      &>span {
+        font-weight: bold;
+      }
+    }
+  }
+  .discussion-user-threads {
+    @include span-columns(9 of 12);
+  }
+  @include media($mobile-l) {
+    section.user-profile,
+    .discussion-user-thread {
+        @include span-columns(12 of 12);
+    }
+  }
+}
+
     .discussion-article {
         .forum-thread-expand,
         .forum-thread-collapse {
@@ -137,6 +181,7 @@
         .comment-actions-list,
         .post-actions-list,
         .response-actions-list {
+          list-style: none;
             text-align: right;
             .action-button {
                 &.action-vote {
