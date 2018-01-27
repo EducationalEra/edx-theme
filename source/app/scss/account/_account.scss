@@ -27,6 +27,9 @@ $menu-breakpoint: $tablet;
           width: 100%;
         }
       }
+      #orders-tab {
+        display: none;
+      }
     }
   }
 }

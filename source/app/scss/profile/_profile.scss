@@ -27,6 +27,9 @@ $u-field-height: 2.5em;
     line-height: normal;
     float: none;
   }
+  &.u-field-username {
+    margin: auto;
+  }
 
   // following only applies for in-place editables
   &.editable-toggle {
@@ -71,7 +74,7 @@ $u-field-height: 2.5em;
     }
   }
   &.u-field-textarea {
-    max-width: em(450);
+    max-width: 100%;
     cursor: pointer;
 
     &.mode-placeholder {
@@ -112,31 +115,31 @@ $u-field-height: 2.5em;
 
 .wrapper-profile-sections {
   .wrapper-profile-section-one {
-    @include row;
+    @include span-columns(3);
   }
 
-  .page-content-nav, .page-content-main {
-    @include row;
+  .page-content-main {
+    @include span-columns(9);
   }
 
-  .profile-image-field {
-    @include span-columns(2);
-  }
+  // .profile-image-field {
+  //   @include span-columns(2);
+  // }
+  //
+  // .profile-section-one-fields {
+  //   @include span-columns(10);
+  // }
 
-  .profile-section-one-fields {
-    @include span-columns(10);
-  }
-
-  @include media($mobile-l) {
-    .profile-image-field {
-      @include span-columns(12);
-    }
-
-    .profile-section-one-fields {
-      @include span-columns(12);
-      @include omega;
-    }
-  }
+  // @include media($mobile-l) {
+  //   .profile-image-field {
+  //     @include span-columns(12);
+  //   }
+  //
+  //   .profile-section-one-fields {
+  //     @include span-columns(12);
+  //     @include omega;
+  //   }
+  // }
 
   .profile-section-one-fields {
     .u-field {
@@ -158,6 +161,7 @@ $u-field-height: 2.5em;
   }
 
   .profile-image-field {
+    text-align: center;
     .wrapper-profile-section-one {
       @include row;
     }

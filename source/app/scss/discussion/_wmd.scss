@@ -1,4 +1,7 @@
 .wmd-panel {
+  textarea {
+    padding: .7em 1em !important;
+  }
   .wmd-preview-container {
     border: 1px solid $light-gray;
     padding: 2em 1em 1em 1em;

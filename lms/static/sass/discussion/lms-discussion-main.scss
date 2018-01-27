@@ -1520,9 +1520,12 @@ input[type="radio"] {
       list-style: none; }
       .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li {
         display: inline-block;
-        border: 1px solid #ccc;
+        border: 1px solid #65b2e1;
+        color: #65b2e1;
         padding: 0 .25em;
         font-size: .75em; }
+        .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .icon, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-labels li .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .wmd-button > span, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li button:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li button:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .bookmarks-results-list-item:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li label:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li label:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li label:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li label:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .status:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .status:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .status:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .status:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-labels li .status:before {
+          margin-right: .5em; }
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-0,
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-1,
     .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 {
@@ -1658,6 +1661,73 @@ input[type="radio"] {
   .discussion .discussion-body .discussion-column .home-helpgrid .row-item-full .row-description {
     vertical-align: middle;
     display: table-cell; }
+  .discussion .discussion-body .discussion-column .posted-details {
+    font-size: .75em; }
+  .discussion .discussion-body .discussion-column .post-label-pinned,
+  .discussion .discussion-body .discussion-column .post-label-by-staff {
+    display: inline-block;
+    border: 1px solid #65b2e1;
+    color: #65b2e1;
+    padding: 0 .25em;
+    font-size: .75em; }
+    .discussion .discussion-body .discussion-column .post-label-pinned .icon, .discussion .discussion-body .discussion-column .post-label-pinned .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .discussion-column .post-label-pinned .forum-nav-thread-comments-count:before, .discussion .discussion-body .discussion-column .post-label-pinned .wmd-panel .wmd-button > span, .wmd-panel .discussion .discussion-body .discussion-column .post-label-pinned .wmd-button > span, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button .discussion .discussion-body .discussion-column .post-label-pinned button:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper .discussion .discussion-body .discussion-column .post-label-pinned button:before, .discussion .discussion-body .discussion-column .post-label-pinned .bookmarks-results-list-item:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype .discussion .discussion-body .discussion-column .post-label-pinned label:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .inputtype label:before, .view-in-course .inputtype .discussion .discussion-body .discussion-column .post-label-pinned label:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput .discussion .discussion-body .discussion-column .post-label-pinned label:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput .discussion .discussion-body .discussion-column .post-label-pinned label:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype .discussion .discussion-body .discussion-column .post-label-pinned .status:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput .discussion .discussion-body .discussion-column .post-label-pinned .status:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput .discussion .discussion-body .discussion-column .post-label-pinned .status:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput .discussion .discussion-body .discussion-column .post-label-pinned .status:before, .discussion .discussion-body .discussion-column .post-label-pinned .view-in-course .indicator-container .status:before, .view-in-course .indicator-container .discussion .discussion-body .discussion-column .post-label-pinned .status:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .icon, .discussion .discussion-body .discussion-column .post-label-by-staff .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .forum-nav-thread-comments-count:before, .discussion .discussion-body .forum-nav .forum-nav-thread-list-wrapper .forum-nav-thread-list .forum-nav-thread-link .forum-nav-thread-wrapper-2 .discussion-column .post-label-by-staff .forum-nav-thread-comments-count:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .wmd-panel .wmd-button > span, .wmd-panel
+    .discussion .discussion-body .discussion-column .post-label-by-staff .wmd-button > span,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .course-index .courseware-bookmarks-button button:before, .view-in-course .course-index .courseware-bookmarks-button
+    .discussion .discussion-body .discussion-column .post-label-by-staff button:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .bookmark-button-wrapper button:before, .view-in-course .bookmark-button-wrapper
+    .discussion .discussion-body .discussion-column .post-label-by-staff button:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .bookmarks-results-list-item:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .capa_inputtype label:before, .view-in-course .capa_inputtype
+    .discussion .discussion-body .discussion-column .post-label-by-staff label:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .inputtype label:before, .view-in-course .inputtype
+    .discussion .discussion-body .discussion-column .post-label-by-staff label:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .chemicalequationinput label:before, .view-in-course .chemicalequationinput
+    .discussion .discussion-body .discussion-column .post-label-by-staff label:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .designprotein2dinput label:before, .view-in-course .designprotein2dinput
+    .discussion .discussion-body .discussion-column .post-label-by-staff label:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .capa_inputtype .status:before, .view-in-course .capa_inputtype
+    .discussion .discussion-body .discussion-column .post-label-by-staff .status:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .chemicalequationinput .status:before, .view-in-course .chemicalequationinput
+    .discussion .discussion-body .discussion-column .post-label-by-staff .status:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .designprotein2dinput .status:before, .view-in-course .designprotein2dinput
+    .discussion .discussion-body .discussion-column .post-label-by-staff .status:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .formulaequationinput .status:before, .view-in-course .formulaequationinput
+    .discussion .discussion-body .discussion-column .post-label-by-staff .status:before,
+    .discussion .discussion-body .discussion-column .post-label-by-staff .view-in-course .indicator-container .status:before, .view-in-course .indicator-container
+    .discussion .discussion-body .discussion-column .post-label-by-staff .status:before {
+      margin-right: .5em; }
+  .discussion .discussion-body .discussion-column .response-pagination .response-display-count {
+    display: none; }
+  .discussion .discussion-body .discussion-column .response-pagination .load-response-button {
+    display: block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    line-height: 1.5;
+    padding: .5em 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: normal;
+    font-family: "Noto Sans";
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-color: #65b2e1;
+    color: #ffffff;
+    transition: .1s ease-out; }
+    .discussion .discussion-body .discussion-column .response-pagination .load-response-button:disabled {
+      cursor: not-allowed;
+      opacity: 0.5; }
+    .discussion .discussion-body .discussion-column .response-pagination .load-response-button:hover {
+      background-color: #8fc7ea; }
+    @media screen and (max-width: 45em) {
+      .discussion .discussion-body .discussion-column .response-pagination .load-response-button {
+        white-space: normal; } }
+  .discussion .discussion-body .discussion-column .discussion-reply-new {
+    margin-top: 1em; }
 
 .course-wrapper section.user-profile {
   float: left;
@@ -1912,7 +1982,8 @@ input[type="radio"] {
 .discussion-article .discussion-comment {
   border: 1px solid #dddddd;
   padding: 1em;
-  margin-top: 1em; }
+  margin-top: 1em;
+  background: #f2f2f2; }
 
 .discussion-article .forum-response {
   padding: 1em;
@@ -2207,6 +2278,8 @@ input[type="radio"] {
 .wmd-panel {
   min-width: 500px;
   width: 100%; }
+  .wmd-panel textarea {
+    padding: .7em 1em !important; }
   .wmd-panel .wmd-preview-container {
     border: 1px solid #dddddd;
     padding: 2em 1em 1em 1em;
@@ -3212,6 +3285,9 @@ input[type="radio"] {
   overflow-x: auto; }
   .profile-wrapper .course-info .grade-detail-graph .overlay {
     max-width: 100%; }
+  .profile-wrapper .course-info .grade-detail-graph canvas {
+    margin-right: 5px;
+    margin-bottom: 5px; }
 
 .profile-wrapper .course-info #course-success {
   margin-bottom: 30px;
@@ -5179,6 +5255,9 @@ figure.highlight:hover a img {
       background-color: #baddf2;
       color: #ffffff; }
 
+.wrapper-account-settings .wrapper-header .account-nav #orders-tab {
+  display: none; }
+
 .account-settings-header-subtitle {
   padding: 20px 0; }
 
@@ -5239,6 +5318,8 @@ figure.highlight:hover a img {
     color: #999;
     line-height: normal;
     float: none; }
+  .u-field.u-field-username {
+    margin: auto; }
   .u-field.editable-toggle {
     max-width: 18.75em;
     margin: 0.625em 0;
@@ -5264,7 +5345,7 @@ figure.highlight:hover a img {
       display: inline;
       line-height: 1; }
   .u-field.u-field-textarea {
-    max-width: 28.125em;
+    max-width: 100%;
     cursor: pointer; }
     .u-field.u-field-textarea.mode-placeholder {
       border: 6px dotted #dddddd;
@@ -5294,51 +5375,20 @@ figure.highlight:hover a img {
     display: block; }
 
 .wrapper-profile-sections .wrapper-profile-section-one {
-  display: block; }
-  .wrapper-profile-sections .wrapper-profile-section-one::after {
-    clear: both;
-    content: "";
-    display: block; }
-
-.wrapper-profile-sections .page-content-nav, .wrapper-profile-sections .page-content-main {
-  display: block; }
-  .wrapper-profile-sections .page-content-nav::after, .wrapper-profile-sections .page-content-main::after {
-    clear: both;
-    content: "";
-    display: block; }
-
-.wrapper-profile-sections .profile-image-field {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 14.70196%; }
-  .wrapper-profile-sections .profile-image-field:last-child {
+  width: 23.23176%; }
+  .wrapper-profile-sections .wrapper-profile-section-one:last-child {
     margin-right: 0; }
 
-.wrapper-profile-sections .profile-section-one-fields {
+.wrapper-profile-sections .page-content-main {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%; }
-  .wrapper-profile-sections .profile-section-one-fields:last-child {
+  width: 74.41059%; }
+  .wrapper-profile-sections .page-content-main:last-child {
     margin-right: 0; }
-
-@media screen and (max-width: 45em) {
-  .wrapper-profile-sections .profile-image-field {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%; }
-    .wrapper-profile-sections .profile-image-field:last-child {
-      margin-right: 0; }
-  .wrapper-profile-sections .profile-section-one-fields {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin-right: 0; }
-    .wrapper-profile-sections .profile-section-one-fields:last-child {
-      margin-right: 0; } }
 
 .wrapper-profile-sections .profile-section-one-fields .u-field.mode-display, .wrapper-profile-sections .profile-section-one-fields .u-field.mode-placeholder {
   background-color: #dddddd; }
@@ -5352,39 +5402,40 @@ figure.highlight:hover a img {
 .wrapper-profile-sections .profile-section-one-fields .u-field.u-field-readonly:hover {
   background-color: transparent; }
 
-.wrapper-profile-sections .profile-image-field .wrapper-profile-section-one {
-  display: block; }
-  .wrapper-profile-sections .profile-image-field .wrapper-profile-section-one::after {
-    clear: both;
-    content: "";
+.wrapper-profile-sections .profile-image-field {
+  text-align: center; }
+  .wrapper-profile-sections .profile-image-field .wrapper-profile-section-one {
     display: block; }
-
-.wrapper-profile-sections .profile-image-field .u-field-image {
-  position: relative; }
-  .wrapper-profile-sections .profile-image-field .u-field-image .image-wrapper img {
-    width: 7.5em;
-    max-height: 7.5em; }
-  .wrapper-profile-sections .profile-image-field .u-field-image .image-wrapper:hover .u-field-upload-button {
-    display: block; }
-  .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button {
-    display: none;
-    background: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 7.5em;
-    height: 7.5em;
-    line-height: 1.5;
-    text-align: center; }
-    .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button .upload-button-icon {
-      display: block;
-      font-size: 3em; }
-    .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button .upload-button-icon {
-      display: block;
-      font-weight: bold; }
-    .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button .upload-button-input {
-      display: none; }
+    .wrapper-profile-sections .profile-image-field .wrapper-profile-section-one::after {
+      clear: both;
+      content: "";
+      display: block; }
+  .wrapper-profile-sections .profile-image-field .u-field-image {
+    position: relative; }
+    .wrapper-profile-sections .profile-image-field .u-field-image .image-wrapper img {
+      width: 7.5em;
+      max-height: 7.5em; }
+    .wrapper-profile-sections .profile-image-field .u-field-image .image-wrapper:hover .u-field-upload-button {
+      display: block; }
+    .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button {
+      display: none;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffffff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 7.5em;
+      height: 7.5em;
+      line-height: 1.5;
+      text-align: center; }
+      .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button .upload-button-icon {
+        display: block;
+        font-size: 3em; }
+      .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button .upload-button-icon {
+        display: block;
+        font-weight: bold; }
+      .wrapper-profile-sections .profile-image-field .u-field-image .u-field-actions .u-field-upload-button .upload-button-input {
+        display: none; }
 
 .wiki-wrapper .control-group .asteriskField {
   display: none; }
