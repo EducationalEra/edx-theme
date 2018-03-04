@@ -169,7 +169,9 @@
         }
       }
       .correct.status,
-      .correct .status {
+      .correct .status,
+      .partially-correct.status,
+      .partially-correct .status {
         &:before {
           @include answer-correct;
         }
@@ -192,10 +194,12 @@
                 @include default-unanswered;
             }
             &.correct:before,
+            &.partially-correct:before,
             &.incorrect:before {
                 background-color: white;
                 z-index: 1;
             }
+            &.partially-correct:before,
             &.correct:before {
                 @include answer-correct;
             }

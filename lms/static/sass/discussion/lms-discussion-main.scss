@@ -3221,10 +3221,18 @@ input[type="radio"] {
   color: #dddddd; }
 
 .view-in-course .capa_inputtype .correct.status:before,
-.view-in-course .capa_inputtype .correct .status:before, .view-in-course .chemicalequationinput .correct.status:before,
-.view-in-course .chemicalequationinput .correct .status:before, .view-in-course .designprotein2dinput .correct.status:before,
-.view-in-course .designprotein2dinput .correct .status:before, .view-in-course .formulaequationinput .correct.status:before,
-.view-in-course .formulaequationinput .correct .status:before {
+.view-in-course .capa_inputtype .correct .status:before,
+.view-in-course .capa_inputtype .partially-correct.status:before,
+.view-in-course .capa_inputtype .partially-correct .status:before, .view-in-course .chemicalequationinput .correct.status:before,
+.view-in-course .chemicalequationinput .correct .status:before,
+.view-in-course .chemicalequationinput .partially-correct.status:before,
+.view-in-course .chemicalequationinput .partially-correct .status:before, .view-in-course .designprotein2dinput .correct.status:before,
+.view-in-course .designprotein2dinput .correct .status:before,
+.view-in-course .designprotein2dinput .partially-correct.status:before,
+.view-in-course .designprotein2dinput .partially-correct .status:before, .view-in-course .formulaequationinput .correct.status:before,
+.view-in-course .formulaequationinput .correct .status:before,
+.view-in-course .formulaequationinput .partially-correct.status:before,
+.view-in-course .formulaequationinput .partially-correct .status:before {
   color: #4CAF50;
   content: "\f00c"; }
 
@@ -3250,10 +3258,10 @@ input[type="radio"] {
       width: 1em;
       top: 0;
       color: #dddddd; }
-    .view-in-course .indicator-container .status.correct:before, .view-in-course .indicator-container .status.incorrect:before {
+    .view-in-course .indicator-container .status.correct:before, .view-in-course .indicator-container .status.partially-correct:before, .view-in-course .indicator-container .status.incorrect:before {
       background-color: white;
       z-index: 1; }
-    .view-in-course .indicator-container .status.correct:before {
+    .view-in-course .indicator-container .status.partially-correct:before, .view-in-course .indicator-container .status.correct:before {
       color: #4CAF50;
       content: "\f00c"; }
     .view-in-course .indicator-container .status.incorrect:before {
