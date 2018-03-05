@@ -14,6 +14,11 @@
   content: "\f00c";
 }
 
+@mixin answer-partially-correct {
+  color: #4CAF50;
+  content: "";
+}
+
 @mixin answer-incorrect {
   color: #F44336;
   content: "\f00d";
@@ -168,10 +173,14 @@
           @include default-unanswered;
         }
       }
-      .correct.status,
-      .correct .status,
       .partially-correct.status,
       .partially-correct .status {
+        &:before {
+          @include answer-partially-correct;
+        }
+      }
+      .correct.status,
+      .correct .status {
         &:before {
           @include answer-correct;
         }
@@ -199,7 +208,9 @@
                 background-color: white;
                 z-index: 1;
             }
-            &.partially-correct:before,
+            &.partially-correct:before {
+                @include answer-partially-correct;
+            }
             &.correct:before {
                 @include answer-correct;
             }

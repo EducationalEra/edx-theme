@@ -14,6 +14,23 @@
   }
 }
 
+.tooltip {
+    z-index: 99999;
+    transition: opacity 0.125s ease-out 0s;
+    font-size: 12px;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 10px;
+    border-radius: 3px;
+    background: rgba(0,0,0,0.85);
+    line-height: 26px;
+    color: #fff;
+    pointer-events: none;
+    opacity: 0.0;
+}
+
 .sr {
   display: none;
 }
