@@ -122,8 +122,10 @@ from student.models import UserProfile
     % if ask_for_email:
 
     <li class="field required text" id="field-email">
-      <label for="email">${_("E-mail")}</label>
-      <input class="" id="email" type="email" name="email" value="" placeholder="${_('example: username@domain.com')}" />
+      <label for="email">${_('E-mail')}</label>
+      <input class="" id="email" type="email" name="email" value="${email}" placeholder="${_('example: username@domain.com')}" required aria-required="true" />
+      <span class="tip tip-input" id="name-tip">Будьте уважні вказуючи вашу <strong>електрону адресу</strong>, оскільки ви отримаєте на неї повідомлення
+        з підтвердженням про реєстрацію!</span>
     </li>
 
     % endif
